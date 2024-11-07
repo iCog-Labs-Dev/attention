@@ -1,10 +1,10 @@
-Start testing: Nov 07 13:57 EAT
+Start testing: Nov 07 16:10 EAT
 ----------------------------------------------------------
 1/8 Testing: AttentionValueUTest
 1/8 Test: AttentionValueUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionValueUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionValueUTest" start time: Nov 07 13:57 EAT
+"AttentionValueUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
@@ -12,7 +12,7 @@ Running cxxtest tests (8 tests)........OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionValueUTest" end time: Nov 07 13:57 EAT
+"AttentionValueUTest" end time: Nov 07 16:10 EAT
 "AttentionValueUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -20,7 +20,7 @@ Test Passed.
 2/8 Test: AttentionUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionUTest" start time: Nov 07 13:57 EAT
+"AttentionUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (3 tests)...OK!
@@ -28,7 +28,7 @@ Running cxxtest tests (3 tests)...OK!
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionUTest" end time: Nov 07 13:57 EAT
+"AttentionUTest" end time: Nov 07 16:10 EAT
 "AttentionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -36,7 +36,7 @@ Test Passed.
 3/8 Test: BankImplUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/BankImplUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"BankImplUTest" start time: Nov 07 13:57 EAT
+"BankImplUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (10 tests)..........OK!
@@ -44,7 +44,7 @@ Running cxxtest tests (10 tests)..........OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankImplUTest" end time: Nov 07 13:57 EAT
+"BankImplUTest" end time: Nov 07 16:10 EAT
 "BankImplUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -52,7 +52,7 @@ Test Passed.
 4/8 Test: BankAsyncUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/BankAsyncUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"BankAsyncUTest" start time: Nov 07 13:57 EAT
+"BankAsyncUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test).OK!
@@ -60,7 +60,7 @@ Running cxxtest tests (1 test).OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankAsyncUTest" end time: Nov 07 13:57 EAT
+"BankAsyncUTest" end time: Nov 07 16:10 EAT
 "BankAsyncUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -68,28 +68,22 @@ Test Passed.
 5/8 Test: AttentionalFocusCBUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionalFocusCBUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionalFocusCBUTest" start time: Nov 07 13:57 EAT
+"AttentionalFocusCBUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (1 test)[2024-11-07 10:57:39:076] [DEBUG] BEGIN TEST: test_af_bindlink
+Running cxxtest tests (1 test)[2024-11-07 13:10:58:948] [DEBUG] BEGIN TEST: test_af_bindlink
 .OK!
+;;; note: source file /home/yeab/attention/build/opencog/scm/opencog/attention-config.scm
+;;;       newer than compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attention-config.scm.go
 ;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
 ;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling /home/yeab/attention/tests/attentionbank/af-filtering-test.scm
-;;; compiling /home/yeab/attention/build/opencog/scm/opencog/attention-bank.scm
 ;;; compiling /home/yeab/attention/build/opencog/scm/opencog/attention-config.scm
 ;;; compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attention-config.scm.go
-WARNING: Use of `load' in declarative module (opencog attention-bank).  Add #:declarative? #f to your define-module invocation.
-;;; opencog/attention-bank.scm:37:9: warning: possibly unbound variable `AttentionValue'
-;;; compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attention-bank.scm.go
-;;; compiling /home/yeab/attention/build/opencog/scm/opencog/attentionbank/types/attention_types.scm
-;;; compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attentionbank/types/attention_types.scm.go
-;;; compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/tests/attentionbank/af-filtering-test.scm.go
 <end of output>
-Test time =   0.37 sec
+Test time =   0.08 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionalFocusCBUTest" end time: Nov 07 13:57 EAT
+"AttentionalFocusCBUTest" end time: Nov 07 16:10 EAT
 "AttentionalFocusCBUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -97,19 +91,15 @@ Test Passed.
 6/8 Test: AttentionParamQueryUTest
 Command: "/home/yeab/attention/build/tests/attention/AttentionParamQueryUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"AttentionParamQueryUTest" start time: Nov 07 13:57 EAT
+"AttentionParamQueryUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (4 tests)....OK!
-;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
-;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling /home/yeab/attention/build/opencog/scm/opencog/attention/default-param-values.scm
-;;; compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attention/default-param-values.scm.go
 <end of output>
-Test time =   0.18 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionParamQueryUTest" end time: Nov 07 13:57 EAT
+"AttentionParamQueryUTest" end time: Nov 07 16:10 EAT
 "AttentionParamQueryUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -117,24 +107,15 @@ Test Passed.
 7/8 Test: ImportanceDiffusionUTest
 Command: "/home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"ImportanceDiffusionUTest" start time: Nov 07 13:57 EAT
+"ImportanceDiffusionUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
-;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
-;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling /home/yeab/attention/build/opencog/scm/opencog/attention.scm
-WARNING: Use of `load' in declarative module (opencog attention).  Add #:declarative? #f to your define-module invocation.
-;;; opencog/attention.scm:18:5: warning: possibly unbound variable `StateLink'
-;;; opencog/attention.scm:19:6: warning: possibly unbound variable `SPREADING_FILTER'
-;;; opencog/attention.scm:20:7: warning: possibly unbound variable `MemberLink'
-;;; opencog/attention.scm:21:26: warning: possibly unbound variable `TypeNode'
-;;; compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attention.scm.go
 <end of output>
-Test time =   0.10 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"ImportanceDiffusionUTest" end time: Nov 07 13:57 EAT
+"ImportanceDiffusionUTest" end time: Nov 07 16:10 EAT
 "ImportanceDiffusionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -142,7 +123,7 @@ Test Passed.
 8/8 Test: HebbianCreationModuleUTest
 Command: "/home/yeab/attention/build/tests/attention/HebbianCreationModuleUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"HebbianCreationModuleUTest" start time: Nov 07 13:57 EAT
+"HebbianCreationModuleUTest" start time: Nov 07 16:10 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test)
@@ -157,8 +138,8 @@ count(HebLinks) = 12
 Test time =   1.07 sec
 ----------------------------------------------------------
 Test Passed.
-"HebbianCreationModuleUTest" end time: Nov 07 13:57 EAT
+"HebbianCreationModuleUTest" end time: Nov 07 16:11 EAT
 "HebbianCreationModuleUTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: Nov 07 13:57 EAT
+End testing: Nov 07 16:11 EAT

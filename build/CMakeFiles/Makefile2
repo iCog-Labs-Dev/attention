@@ -543,7 +543,7 @@ opencog/attentionbank/types/CMakeFiles/attention-types.dir/clean:
 # Target rules for target opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir
 
 # All Build rule for target.
-opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/all: opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/all
+opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/all:
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/build.make opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/depend
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/build.make opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num= "Built target COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types"
@@ -551,7 +551,7 @@ opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home
 
 # Build rule for subdir invocation for target.
 opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
 .PHONY : opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/rule
