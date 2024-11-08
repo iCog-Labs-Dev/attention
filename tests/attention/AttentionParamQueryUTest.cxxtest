@@ -38,7 +38,7 @@ AtomSpace as;
 AttentionParamQuery _atq;
 
 std::vector<std::string> params = {"param-1", "param-2", "param-3", "param-4"
-                                   ,"param-5"};
+                                   ,"param-5", "param-6"};
 Handle h1,h2,h3,h4, hvalue;
 
 public:
@@ -47,6 +47,7 @@ AttentionParamQueryUTest(): _atq(&as){
     _atq.set_param(params[1], 2.5f);
     _atq.set_param(params[2], 4.5);
     _atq.set_param(params[3], 2);
+    _atq.set_param(params[5], 5);
 
     Handle h1 = as.add_node(TYPE_NODE, "MemberLink");
     hvalue = as.add_link(MEMBER_LINK, h1);
@@ -68,6 +69,8 @@ void AttentionParamQueryUTest::test_get_param_value()
     TS_ASSERT_EQUALS("2.5", _atq.get_param_value(params[1]));
     TS_ASSERT_EQUALS("4.5", _atq.get_param_value(params[2]));
     TS_ASSERT_EQUALS("2", _atq.get_param_value(params[3]));
+    TS_ASSERT_EQUALS("5", _atq.get_param_value(params[5]));
+
 }
 
 void AttentionParamQueryUTest::test_get_param_hvalue()
@@ -92,7 +95,7 @@ void AttentionParamQueryUTest::test_get_params()
     // AttentionParamQuery is created. This unit test
     // creates 5 more, so that there are 27 in total now.
     // This number subject to change.
-    TS_ASSERT_EQUALS(27, hseq.size());
+    TS_ASSERT_EQUALS(28, hseq.size());
     for (std::string pname : params) {
         Handle h = as.add_node(CONCEPT_NODE, std::move(pname));
         auto it = std::find(hseq.begin(), hseq.end(), h);

@@ -9,7 +9,8 @@
 #define PLNDYNAMICSEXPSETUPMODULE_H_
 
 #include "SentenceGenStimulateAgent.h"
-#include <opencog/cogserver/server/Agent.h>
+#include <opencog/cogserver/modules/agents/Agent.h>
+#include <boost/signals2.hpp>
 #include <opencog/cogserver/server/Factory.h>
 #include <opencog/attention/AttentionModule.h>
 

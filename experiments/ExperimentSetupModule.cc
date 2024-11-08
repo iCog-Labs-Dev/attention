@@ -18,7 +18,7 @@
 #include <opencog/atomspace/AtomSpace.h>
 #include <opencog/guile/SchemeEval.h>
 
-#include <opencog/attention/atom_types.h>
+#include <opencog/atoms/atom_types/atom_types.h>
 
 #include <opencog/cogserver/server/CogServer.h>
 #include <opencog/cogserver/server/Module.h>
