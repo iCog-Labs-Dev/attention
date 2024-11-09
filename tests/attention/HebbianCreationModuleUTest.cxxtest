@@ -109,6 +109,10 @@ public:
             PREDICATE_NODE, "slimy");
         slimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
 
+        Handle myslimy = as->add_node(
+            PREDICATE_NODE, "myslimy");
+        myslimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
+
         Handle kermitFrog = as->add_link(
                     INHERITANCE_LINK, kermit, frog);
         kermitFrog->setTruthValue(
@@ -126,6 +130,11 @@ public:
         frogSlimy->setTruthValue(
                     SimpleTruthValue::createTV(0.9, conf90));
 
+        Handle slimyAnimal = as->add_link(
+                    EVALUATION_LINK, animal, myslimy);
+        slimyAnimal->setTruthValue(
+                    SimpleTruthValue::createTV(0.9, conf90));
+
         // Populate the AtomSpace with some additional dummy atoms
         Handle dummy1 = as->add_node(
                     CONCEPT_NODE, "Dummy1");
@@ -135,9 +144,17 @@ public:
                     CONCEPT_NODE, "Dummy2");
         dummy2->setTruthValue(
                     SimpleTruthValue::createTV(0.001, conf90));
+        Handle dummy3 = as->add_node(
+                    CONCEPT_NODE, "Dummy3");
+        dummy3->setTruthValue(
+                    SimpleTruthValue::createTV(0.001, conf90));
         Handle dummyLink = as->add_link(
                     INHERITANCE_LINK, dummy1, dummy2);
         dummyLink->setTruthValue(
+                    SimpleTruthValue::createTV(0.9, conf90));
+        Handle dummyLink2 = as->add_link(
+                    INHERITANCE_LINK, dummy2, dummy3);
+        dummyLink2->setTruthValue(
                     SimpleTruthValue::createTV(0.9, conf90));
 
         // Put these atoms in the AttentionalFocus:
@@ -146,11 +163,12 @@ public:
         ab.stimulate(frog, 200);
         ab.stimulate(animal, 200);
         ab.stimulate(alive, 200);
+        ab.stimulate(slimyAnimal, 200);
 
         HandleSeq attentionalFocus;
         ab.get_handle_set_in_attentional_focus(back_inserter(attentionalFocus));
 
-        TS_ASSERT_EQUALS(attentionalFocus.size() , 4);
+        TS_ASSERT_EQUALS(attentionalFocus.size() , 5);
         // Allow the events to propagate
         sleep(1);
 
@@ -171,7 +189,7 @@ public:
         HandleSeq hebbianLinks;
         as->get_handles_by_type(back_inserter(hebbianLinks), ASYMMETRIC_HEBBIAN_LINK);
         std::cout << "count(HebLinks) = " << hebbianLinks.size() << "\n";
-        TS_ASSERT(hebbianLinks.size() == 12);
+        TS_ASSERT(hebbianLinks.size() == 20);
 
         _scheduler->stopAgent(_hebbiancreation_agentptr);
     }
