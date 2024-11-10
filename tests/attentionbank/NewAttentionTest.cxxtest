@@ -1,0 +1,156 @@
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/util/Logger.h>
+
+using namespace opencog;
+using namespace std;
+
+#define NUM_AVS 4
+#define AV1_STI 0
+#define AV2_STI 500
+#define AV3_STI 20000
+#define AV1_LTI 0
+#define AV2_LTI 700
+#define AV3_LTI 30000
+#define AV3_VLTI 1
+
+class NewAttentionTest : public CxxTest::TestSuite {
+private:
+    AtomSpace* atomSpace;   // Pointer to AtomSpace instance
+    AttentionBank* bank;    // Pointer to AttentionBank instance
+
+    AttentionValue::sti_t sti[NUM_AVS];  // Short-term importance array
+    AttentionValue::lti_t lti[NUM_AVS];  // Long-term importance array
+    AttentionValue::vlti_t vlti[NUM_AVS]; // Very-long-term importance array
+
+    AttentionValuePtr avs[NUM_AVS];  // AttentionValue pointers
+
+    // Helper function to retrieve VLTI from the atom's AttentionValue
+    AttentionValue::vlti_t getVLTI(Handle h) {
+        return get_vlti(h);
+    }
+
+    // Change VLTI by a specified unit (increment or decrement)
+    void chgVLTI(Handle h, int unit) {
+        AttentionValuePtr old_av = get_av(h);
+        AttentionValuePtr new_av = AttentionValue::createAV(
+            old_av->getSTI(),
+            old_av->getLTI(),
+            old_av->getVLTI() + unit);
+        bank->change_av(h, new_av);
+    }
+
+    // Increment or decrement VLTI
+    void incVLTI(Handle h) { chgVLTI(h, +1); }
+    void decVLTI(Handle h) { chgVLTI(h, -1); }
+
+    // Set the STI value for a specific atom
+    void setSTI(Handle h, AttentionValue::sti_t stiValue) {
+        AttentionValuePtr old_av = get_av(h);
+        AttentionValuePtr new_av = AttentionValue::createAV(
+            stiValue,
+            old_av->getLTI(),
+            old_av->getVLTI());
+        bank->change_av(h, new_av);
+    }
+
+    // Set the LTI value for a specific atom
+    void setLTI(Handle h, AttentionValue::lti_t ltiValue) {
+        AttentionValuePtr old_av = get_av(h);
+        AttentionValuePtr new_av = AttentionValue::createAV(
+            old_av->getSTI(),
+            ltiValue,
+            old_av->getVLTI());
+        bank->change_av(h, new_av);
+    }
+
+public:
+    // Constructor to initialize default values
+    NewAttentionTest() {
+        logger().set_level(Logger::DEBUG);  // Set log level to debug
+
+        sti[0] = AttentionValue::DEFAULTATOMSTI;
+        sti[1] = AV1_STI;
+        sti[2] = AV2_STI;
+        sti[3] = AV3_STI;
+
+        lti[0] = AttentionValue::DEFAULTATOMLTI;
+        lti[1] = AttentionValue::DEFAULTATOMLTI;
+        lti[2] = AV2_LTI;
+        lti[3] = AV3_LTI;
+
+        vlti[0] = AttentionValue::DEFAULTATOMVLTI;
+        vlti[1] = AttentionValue::DEFAULTATOMVLTI;
+        vlti[2] = AttentionValue::DEFAULTATOMVLTI;
+        vlti[3] = AV3_VLTI;
+    }
+
+    // Setup function to initialize AtomSpace and AttentionBank
+    void setUp() {
+        atomSpace = new AtomSpace();
+        bank = &attentionbank(atomSpace);
+
+        // Create AttentionValue instances
+        avs[0] = AttentionValue::createAV();
+        avs[1] = AttentionValue::createAV(sti[1]);
+        avs[2] = AttentionValue::createAV(sti[2], lti[2]);
+        avs[3] = AttentionValue::createAV(sti[3], lti[3], vlti[3]);
+    }
+
+    // Cleanup function to destroy AtomSpace
+    void tearDown() {
+        attentionbank(nullptr);  // Clean up AttentionBank
+        delete atomSpace;        // Delete AtomSpace instance
+    }
+
+    // Function to create a simple graph and return the handles
+    HandleSeq createSimpleGraph(AtomSpace* atomSpace, const char* baseName) {
+        HandleSeq testAtoms;
+        char buf[256];
+        int baseNameLength = strlen(baseName);
+
+        strncpy(buf, baseName, sizeof(buf) - 1); // Safe copy with null termination
+        buf[sizeof(buf) - 1] = '\0';             // Ensure null termination
+
+        // Create nodes with different truth values
+        TruthValuePtr tv1 = SimpleTruthValue::createTV(0.001f, 0.00001f);
+        TruthValuePtr tv2 = SimpleTruthValue::createTV(0.05f, 0.005f);
+        TruthValuePtr tv3 = SimpleTruthValue::createTV(0.06f, 0.005f);
+        TruthValuePtr tv4 = SimpleTruthValue::createTV(0.5f, 0.05f);
+
+        buf[baseNameLength] = '1'; Handle h1 = atomSpace->add_node(CONCEPT_NODE, buf); h1->setTruthValue(tv1); setSTI(h1, 0); setLTI(h1, 300);
+        buf[baseNameLength] = '2'; Handle h2 = atomSpace->add_node(CONCEPT_NODE, buf); h2->setTruthValue(tv2); setSTI(h2, 500); setLTI(h2, 7000);
+        buf[baseNameLength] = '3'; Handle h3 = atomSpace->add_node(CONCEPT_NODE, buf); h3->setTruthValue(tv3); setSTI(h3, 500); setLTI(h3, 7000);
+        buf[baseNameLength] = '4'; Handle h4 = atomSpace->add_node(CONCEPT_NODE, buf); h4->setTruthValue(tv4); setSTI(h4, 500); setLTI(h4, 20000);
+
+        testAtoms.push_back(h1);
+        testAtoms.push_back(h2);
+        testAtoms.push_back(h3);
+        testAtoms.push_back(h4);
+
+        return testAtoms;
+    }
+
+    // Test function to verify the creation of a simple graph
+    void testCreateSimpleGraph() {
+        HandleSeq atoms = createSimpleGraph(atomSpace, "simple_graph");
+        TS_ASSERT_EQUALS(atoms.size(), 4);  // Assert the size of the created graph
+    }
+
+    // Test function to verify AttentionValue creation
+    void testAttentionValueCreation() {
+        AttentionValuePtr av1 = AttentionValue::createAV(100, 200, 3);
+        AttentionValuePtr av2 = AttentionValue::createAV(500, 600, 1);
+
+        // Verify the attributes of AttentionValue instances
+        TS_ASSERT_EQUALS(av1->getSTI(), 100);
+        TS_ASSERT_EQUALS(av1->getLTI(), 200);
+        TS_ASSERT_EQUALS(av1->getVLTI(), 3);
+
+        TS_ASSERT_EQUALS(av2->getSTI(), 500);
+        TS_ASSERT_EQUALS(av2->getLTI(), 600);
+        TS_ASSERT_EQUALS(av2->getVLTI(), 1);
+    }
+};
