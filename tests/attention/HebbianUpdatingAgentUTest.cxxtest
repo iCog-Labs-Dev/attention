@@ -1,0 +1,109 @@
+/*
+ * tests/dynamics/HebbianUpdatingAgentUTest.cxxtest
+ *
+ * Unit test for HebbianUpdatingAgent
+ *
+ * This test is designed to verify that Hebbian links are updated correctly
+ * in the AtomSpace by the HebbianUpdatingAgent.
+ */
+
+#include <cxxtest/TestSuite.h>
+#include <iostream>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attention/HebbianUpdatingAgent.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/attentionbank/types/atom_types.h>
+
+using namespace opencog;
+
+class HebbianUpdatingAgentUTest : public CxxTest::TestSuite
+{
+private:
+    AtomSpace* as;
+    CogServer* cogServer;
+    Scheduler* scheduler;
+    HebbianUpdatingAgent* hebbianUpdatingAgent;
+
+public:
+    void setUp()
+    {
+        cogServer = &cogserver();
+        config().set("MODULES", "opencog/attention/libattention.so");
+        cogServer->loadModules();
+        config().set("MODULES", "libagents.so");
+
+        Module* amod = cogServer->getModule("opencog::AgentsModule");
+        AgentsModule* agmod = static_cast<AgentsModule*>(amod);
+        scheduler = &agmod->get_scheduler();
+
+        as = &cogserver().getAtomSpace();
+        hebbianUpdatingAgent = new HebbianUpdatingAgent(*cogServer);
+
+        // Add the HebbianUpdatingAgent to the scheduler
+        AbstractFactory<Agent>* hebbianUpdatingFactory = new Factory<HebbianUpdatingAgent, Agent>();
+        scheduler->registerAgent(HebbianUpdatingAgent::info().id, hebbianUpdatingFactory);
+
+        std::cout << "Setup completed for HebbianUpdatingAgentUTest." << std::endl;
+    }
+
+    void tearDown()
+    {
+        delete hebbianUpdatingAgent;
+        cogServer->stop();
+        std::cout << "TearDown completed for HebbianUpdatingAgentUTest." << std::endl;
+    }
+
+    void testHebbianLinkUpdate()
+    {
+        // Create sample atoms in AtomSpace
+        Handle source = as->add_node(CONCEPT_NODE, "Source");
+        Handle target1 = as->add_node(CONCEPT_NODE, "Target1");
+        Handle target2 = as->add_node(CONCEPT_NODE, "Target2");
+
+        std::cout << "Atoms created: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+
+        // Set truth values for each node
+        double initialConfidence = 0.9;
+        source->setTruthValue(SimpleTruthValue::createTV(0.1, initialConfidence));
+        target1->setTruthValue(SimpleTruthValue::createTV(0.3, initialConfidence));
+        target2->setTruthValue(SimpleTruthValue::createTV(0.7, initialConfidence));
+
+        std::cout << "Truth values set: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+
+        // Create a Hebbian link between source and target nodes
+        Handle hebbianLink = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source, target1);
+        hebbianLink->setTruthValue(SimpleTruthValue::createTV(0.01, initialConfidence));
+        
+        std::cout << "Hebbian link created between Source and Target1 with initial truth value 0.01 "<< hebbianLink->to_string() << std::endl;
+
+        // Stimulate the atoms to bring them into the attentional focus
+        AttentionBank& ab = attentionbank(as);
+        ab.stimulate(source, 200);
+        ab.stimulate(target1, 200);
+        ab.stimulate(target2, 200);
+
+        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
+
+        // Run the HebbianUpdatingAgent to update the Hebbian links
+        hebbianUpdatingAgent->run();
+
+        std::cout << "HebbianUpdatingAgent run completed." << std::endl;
+
+        // Retrieve the updated truth value of the Hebbian link
+        TruthValuePtr updatedTV = hebbianLink->getTruthValue();
+        double updatedMean = updatedTV->get_mean();
+
+        std::cout << "Updated truth value of Hebbian link: " << updatedMean << std::endl;
+        std::cout << "Hebbian link updated"<< hebbianLink->to_string() << std::endl;
+
+        // Check that the truth value of the link has changed based on the agent's logic
+        // Intentionally made error by making the mean 0.9 so that we can see what's happening
+
+        TS_ASSERT_DELTA(updatedMean, 0.9, 0.1); // Expected value within a delta range
+    }
+};
