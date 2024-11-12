@@ -1,9 +1,9 @@
-AttentionValueUTest 28 0.000271509
-AttentionUTest 28 0.00115003
-BankImplUTest 28 0.000238612
-BankAsyncUTest 28 0.00021924
-AttentionalFocusCBUTest 28 0.00293595
-AttentionParamQueryUTest 26 0.00146399
-ImportanceDiffusionUTest 28 0.00188559
-HebbianCreationModuleUTest 11 0.0975166
+AttentionValueUTest 29 0.000224162
+AttentionUTest 29 0.00104231
+BankImplUTest 29 0.000218067
+BankAsyncUTest 29 0.000254804
+AttentionalFocusCBUTest 29 0.00267337
+AttentionParamQueryUTest 27 0.00158029
+ImportanceDiffusionUTest 29 0.00193736
+HebbianCreationModuleUTest 12 0.0886357
 ---
