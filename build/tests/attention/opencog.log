@@ -574,3 +574,1155 @@
 [2024-11-09 06:38:33:840] [INFO] Loading module "../../opencog/attention/libattention.so"
 [2024-11-09 06:38:33:840] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
 [2024-11-09 06:38:33:878] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:07:03:997] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:07:03:998] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:07:03:999] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:07:04:003] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:07:04:003] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:07:04:004] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ./
+[2024-11-09 11:07:04:004] [WARN] Searched for module at .//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ..//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../../
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../..//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../../../
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../../../../
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 11:07:04:004] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 11:07:04:004] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/lib/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/share/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /opt/
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /opt//opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 11:07:04:004] [WARN] Searched for module at /
+[2024-11-09 11:07:04:004] [WARN] Searched for module at //opencog
+[2024-11-09 11:07:04:004] [WARN] Searched for module at //opencog/modules
+[2024-11-09 11:07:04:004] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:07:04:026] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:07:04:026] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:07:04:064] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:09:42:558] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:09:42:558] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:09:42:558] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:09:42:560] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:09:42:561] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:09:42:561] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ./
+[2024-11-09 11:09:42:561] [WARN] Searched for module at .//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ..//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../../
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../..//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../../../
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../../../../
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 11:09:42:561] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 11:09:42:561] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/lib/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/share/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /opt/
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /opt//opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 11:09:42:561] [WARN] Searched for module at /
+[2024-11-09 11:09:42:561] [WARN] Searched for module at //opencog
+[2024-11-09 11:09:42:561] [WARN] Searched for module at //opencog/modules
+[2024-11-09 11:09:42:561] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:09:42:580] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:09:42:581] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:09:42:621] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:10:28:063] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:10:28:063] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:10:28:064] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:10:28:066] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:10:28:066] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:10:28:066] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ./
+[2024-11-09 11:10:28:066] [WARN] Searched for module at .//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ..//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../../
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../..//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../../../
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../../../../
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 11:10:28:066] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 11:10:28:066] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/lib/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/share/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /opt/
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /opt//opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 11:10:28:066] [WARN] Searched for module at /
+[2024-11-09 11:10:28:066] [WARN] Searched for module at //opencog
+[2024-11-09 11:10:28:066] [WARN] Searched for module at //opencog/modules
+[2024-11-09 11:10:28:066] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:10:28:085] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:10:28:085] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:10:28:124] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:11:04:461] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:11:04:461] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:11:04:461] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:11:04:464] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:11:04:464] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:11:04:464] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ./
+[2024-11-09 11:11:04:464] [WARN] Searched for module at .//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ..//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../../
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../..//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../../../
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../../../../
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 11:11:04:464] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 11:11:04:464] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/lib/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/share/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /opt/
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /opt//opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 11:11:04:464] [WARN] Searched for module at /
+[2024-11-09 11:11:04:464] [WARN] Searched for module at //opencog
+[2024-11-09 11:11:04:464] [WARN] Searched for module at //opencog/modules
+[2024-11-09 11:11:04:464] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:11:04:484] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:11:04:484] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:11:04:522] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:11:42:607] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:11:42:607] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:11:42:608] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:11:42:610] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:11:42:610] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:11:42:610] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ./
+[2024-11-09 11:11:42:610] [WARN] Searched for module at .//opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ..//opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../../
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../..//opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../../../
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../../../../
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 11:11:42:610] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 11:11:42:610] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 11:11:42:610] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 11:11:42:610] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 11:11:42:610] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/lib/
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/share/
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /opt/
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /opt//opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 11:11:42:611] [WARN] Searched for module at /
+[2024-11-09 11:11:42:611] [WARN] Searched for module at //opencog
+[2024-11-09 11:11:42:611] [WARN] Searched for module at //opencog/modules
+[2024-11-09 11:11:42:611] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:11:42:630] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:11:42:630] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:11:42:670] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 12:00:32:508] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 12:00:32:508] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 12:00:32:509] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 12:00:32:511] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 12:00:32:512] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 12:00:32:513] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ./
+[2024-11-09 12:00:32:513] [WARN] Searched for module at .//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ..//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../../
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../..//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../../../
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../../../../
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 12:00:32:513] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 12:00:32:513] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/lib/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/share/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /opt/
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /opt//opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 12:00:32:513] [WARN] Searched for module at /
+[2024-11-09 12:00:32:513] [WARN] Searched for module at //opencog
+[2024-11-09 12:00:32:513] [WARN] Searched for module at //opencog/modules
+[2024-11-09 12:00:32:513] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:00:32:536] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 12:00:32:537] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:00:32:579] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 12:01:03:681] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 12:01:03:681] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 12:01:03:681] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 12:01:03:684] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 12:01:03:685] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 12:01:03:685] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ./
+[2024-11-09 12:01:03:685] [WARN] Searched for module at .//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ..//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../../
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../..//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../../../
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../../../../
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 12:01:03:685] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 12:01:03:685] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/lib/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/share/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /opt/
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /opt//opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 12:01:03:685] [WARN] Searched for module at /
+[2024-11-09 12:01:03:685] [WARN] Searched for module at //opencog
+[2024-11-09 12:01:03:685] [WARN] Searched for module at //opencog/modules
+[2024-11-09 12:01:03:685] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:01:03:706] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 12:01:03:706] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:01:03:747] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 13:52:59:500] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 13:52:59:501] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 13:52:59:502] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 13:52:59:505] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 13:52:59:506] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 13:52:59:507] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ./
+[2024-11-09 13:52:59:507] [WARN] Searched for module at .//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ..//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../../
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../..//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../../../
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../../../../
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 13:52:59:507] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 13:52:59:507] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/lib/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/share/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /opt/
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /opt//opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 13:52:59:507] [WARN] Searched for module at /
+[2024-11-09 13:52:59:507] [WARN] Searched for module at //opencog
+[2024-11-09 13:52:59:507] [WARN] Searched for module at //opencog/modules
+[2024-11-09 13:52:59:507] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:52:59:526] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 13:52:59:527] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:52:59:567] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 13:54:39:778] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 13:54:39:778] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 13:54:39:779] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 13:54:39:781] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 13:54:39:781] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 13:54:39:781] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ./
+[2024-11-09 13:54:39:781] [WARN] Searched for module at .//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ..//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../../
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../..//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../../../
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../../../../
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 13:54:39:781] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 13:54:39:781] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/lib/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/share/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /opt/
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /opt//opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 13:54:39:781] [WARN] Searched for module at /
+[2024-11-09 13:54:39:781] [WARN] Searched for module at //opencog
+[2024-11-09 13:54:39:781] [WARN] Searched for module at //opencog/modules
+[2024-11-09 13:54:39:781] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:54:39:802] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 13:54:39:802] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:54:39:843] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 13:56:50:785] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 13:56:50:785] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 13:56:50:785] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 13:56:50:788] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 13:56:50:789] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 13:56:50:789] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ./
+[2024-11-09 13:56:50:789] [WARN] Searched for module at .//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ..//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../../
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../..//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../../../
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../../../../
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 13:56:50:789] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 13:56:50:789] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/lib/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/share/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /opt/
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /opt//opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 13:56:50:789] [WARN] Searched for module at /
+[2024-11-09 13:56:50:789] [WARN] Searched for module at //opencog
+[2024-11-09 13:56:50:789] [WARN] Searched for module at //opencog/modules
+[2024-11-09 13:56:50:790] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:56:50:810] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 13:56:50:810] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:56:50:849] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 13:58:07:459] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 13:58:07:459] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 13:58:07:459] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 13:58:07:462] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 13:58:07:462] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 13:58:07:462] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ./
+[2024-11-09 13:58:07:462] [WARN] Searched for module at .//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ..//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../../
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../..//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../../../
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../../../../
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 13:58:07:462] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 13:58:07:462] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/lib/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/share/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /opt/
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /opt//opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 13:58:07:462] [WARN] Searched for module at /
+[2024-11-09 13:58:07:462] [WARN] Searched for module at //opencog
+[2024-11-09 13:58:07:462] [WARN] Searched for module at //opencog/modules
+[2024-11-09 13:58:07:462] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:58:07:482] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 13:58:07:482] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:58:07:523] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 13:59:59:358] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 13:59:59:359] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 13:59:59:359] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 13:59:59:361] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 13:59:59:361] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 13:59:59:361] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ./
+[2024-11-09 13:59:59:361] [WARN] Searched for module at .//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ..//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../../
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../..//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../../../
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../../../../
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 13:59:59:361] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 13:59:59:361] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/lib/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/share/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /opt/
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /opt//opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 13:59:59:361] [WARN] Searched for module at /
+[2024-11-09 13:59:59:361] [WARN] Searched for module at //opencog
+[2024-11-09 13:59:59:361] [WARN] Searched for module at //opencog/modules
+[2024-11-09 13:59:59:361] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:59:59:382] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 13:59:59:383] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:59:59:422] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 14:10:01:364] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 14:10:01:364] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 14:10:01:364] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 14:10:01:366] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 14:10:01:367] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 14:10:01:367] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ./
+[2024-11-09 14:10:01:367] [WARN] Searched for module at .//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ..//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../../
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../..//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../../../
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../../../../
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 14:10:01:367] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 14:10:01:367] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/lib/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/share/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /opt/
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /opt//opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 14:10:01:367] [WARN] Searched for module at /
+[2024-11-09 14:10:01:367] [WARN] Searched for module at //opencog
+[2024-11-09 14:10:01:367] [WARN] Searched for module at //opencog/modules
+[2024-11-09 14:10:01:367] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 14:10:01:387] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 14:10:01:387] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 14:10:01:428] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 14:12:24:598] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 14:12:24:598] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 14:12:24:598] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 14:12:24:601] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 14:12:24:602] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 14:12:24:602] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ./
+[2024-11-09 14:12:24:602] [WARN] Searched for module at .//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ..//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../../
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../..//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../../../
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../../../../
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 14:12:24:602] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 14:12:24:602] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/lib/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/share/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /opt/
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /opt//opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 14:12:24:602] [WARN] Searched for module at /
+[2024-11-09 14:12:24:602] [WARN] Searched for module at //opencog
+[2024-11-09 14:12:24:602] [WARN] Searched for module at //opencog/modules
+[2024-11-09 14:12:24:602] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 14:12:24:624] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 14:12:24:624] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 14:12:24:665] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 14:13:47:647] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 14:13:47:649] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 14:13:47:650] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 14:13:47:652] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 14:13:47:653] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 14:13:47:653] [WARN] Failed to load module libpy-shell.so
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ./
+[2024-11-09 14:13:47:653] [WARN] Searched for module at .//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at .//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ..//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ..//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../../
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../..//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../../../
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../../..//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../../../../
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../../../..//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-09 14:13:47:653] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at "/usr/local"/share
+[2024-11-09 14:13:47:653] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/lib/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/share/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/lib64/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/lib/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/share/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/share//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /opt/
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /opt//opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-09 14:13:47:653] [WARN] Searched for module at /
+[2024-11-09 14:13:47:653] [WARN] Searched for module at //opencog
+[2024-11-09 14:13:47:653] [WARN] Searched for module at //opencog/modules
+[2024-11-09 14:13:47:653] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 14:13:47:673] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 14:13:47:674] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 14:13:47:715] [INFO] Module "libagents.so" is already loaded.
+[2024-11-12 05:50:33:146] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-12 05:50:33:147] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-12 05:50:33:149] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-12 05:50:33:151] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-12 05:50:33:152] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-12 05:50:33:154] [WARN] Failed to load module libpy-shell.so
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ./
+[2024-11-12 05:50:33:154] [WARN] Searched for module at .//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at .//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ..//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ..//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../../
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../..//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../../../
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../../..//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../../../../
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../../../..//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-12 05:50:33:154] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at "/usr/local"/share
+[2024-11-12 05:50:33:154] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/lib/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/share/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/lib64/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/lib/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/share/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/share//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /opt/
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /opt//opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-12 05:50:33:154] [WARN] Searched for module at /
+[2024-11-12 05:50:33:154] [WARN] Searched for module at //opencog
+[2024-11-12 05:50:33:154] [WARN] Searched for module at //opencog/modules
+[2024-11-12 05:50:33:154] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-12 05:50:33:175] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-12 05:50:33:176] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-12 05:50:33:226] [INFO] Module "libagents.so" is already loaded.
+[2024-11-12 05:51:45:586] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-12 05:51:45:586] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-12 05:51:45:587] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-12 05:51:45:589] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-12 05:51:45:589] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-12 05:51:45:589] [WARN] Failed to load module libpy-shell.so
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ./
+[2024-11-12 05:51:45:589] [WARN] Searched for module at .//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at .//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ..//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ..//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../../
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../..//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../../../
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../../..//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../../../../
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../../../..//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-12 05:51:45:589] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at "/usr/local"/share
+[2024-11-12 05:51:45:589] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/lib/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/share/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/lib64/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/lib/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/share/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/share//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /opt/
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /opt//opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-12 05:51:45:589] [WARN] Searched for module at /
+[2024-11-12 05:51:45:589] [WARN] Searched for module at //opencog
+[2024-11-12 05:51:45:589] [WARN] Searched for module at //opencog/modules
+[2024-11-12 05:51:45:589] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-12 05:51:45:608] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-12 05:51:45:609] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-12 05:51:45:649] [INFO] Module "libagents.so" is already loaded.
+[2024-11-12 05:52:02:328] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-12 05:52:02:328] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-12 05:52:02:328] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-12 05:52:02:330] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-12 05:52:02:330] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-12 05:52:02:331] [WARN] Failed to load module libpy-shell.so
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ./
+[2024-11-12 05:52:02:331] [WARN] Searched for module at .//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at .//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ..//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ..//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../../
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../..//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../..//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../../../
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../../..//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../../..//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../../../../
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../../../..//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at "/usr/local"/lib
+[2024-11-12 05:52:02:331] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at "/usr/local"/share
+[2024-11-12 05:52:02:331] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/share/opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/lib64/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/lib/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/share/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/share//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/lib64/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/lib64//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/lib/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/lib//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/share/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/share//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /opt/
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /opt//opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /opt//opencog/modules
+[2024-11-12 05:52:02:331] [WARN] Searched for module at /
+[2024-11-12 05:52:02:331] [WARN] Searched for module at //opencog
+[2024-11-12 05:52:02:331] [WARN] Searched for module at //opencog/modules
+[2024-11-12 05:52:02:331] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-12 05:52:02:350] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-12 05:52:02:351] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-12 05:52:02:391] [INFO] Module "libagents.so" is already loaded.

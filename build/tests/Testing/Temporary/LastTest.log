@@ -1,10 +1,10 @@
-Start testing: Nov 09 09:38 EAT
+Start testing: Nov 12 08:52 EAT
 ----------------------------------------------------------
 1/8 Testing: AttentionValueUTest
 1/8 Test: AttentionValueUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionValueUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionValueUTest" start time: Nov 09 09:38 EAT
+"AttentionValueUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
@@ -12,7 +12,7 @@ Running cxxtest tests (8 tests)........OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionValueUTest" end time: Nov 09 09:38 EAT
+"AttentionValueUTest" end time: Nov 12 08:52 EAT
 "AttentionValueUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -20,7 +20,7 @@ Test Passed.
 2/8 Test: AttentionUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionUTest" start time: Nov 09 09:38 EAT
+"AttentionUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (3 tests)...OK!
@@ -28,7 +28,7 @@ Running cxxtest tests (3 tests)...OK!
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionUTest" end time: Nov 09 09:38 EAT
+"AttentionUTest" end time: Nov 12 08:52 EAT
 "AttentionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -36,7 +36,7 @@ Test Passed.
 3/8 Test: BankImplUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/BankImplUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"BankImplUTest" start time: Nov 09 09:38 EAT
+"BankImplUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (10 tests)..........OK!
@@ -44,7 +44,7 @@ Running cxxtest tests (10 tests)..........OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankImplUTest" end time: Nov 09 09:38 EAT
+"BankImplUTest" end time: Nov 12 08:52 EAT
 "BankImplUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -52,7 +52,7 @@ Test Passed.
 4/8 Test: BankAsyncUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/BankAsyncUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"BankAsyncUTest" start time: Nov 09 09:38 EAT
+"BankAsyncUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test).OK!
@@ -60,7 +60,7 @@ Running cxxtest tests (1 test).OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankAsyncUTest" end time: Nov 09 09:38 EAT
+"BankAsyncUTest" end time: Nov 12 08:52 EAT
 "BankAsyncUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -68,16 +68,16 @@ Test Passed.
 5/8 Test: AttentionalFocusCBUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionalFocusCBUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionalFocusCBUTest" start time: Nov 09 09:38 EAT
+"AttentionalFocusCBUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (1 test)[2024-11-09 06:38:33:734] [DEBUG] BEGIN TEST: test_af_bindlink
+Running cxxtest tests (1 test)[2024-11-12 05:52:02:231] [DEBUG] BEGIN TEST: test_af_bindlink
 .OK!
 <end of output>
-Test time =   0.05 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionalFocusCBUTest" end time: Nov 09 09:38 EAT
+"AttentionalFocusCBUTest" end time: Nov 12 08:52 EAT
 "AttentionalFocusCBUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,15 +85,15 @@ Test Passed.
 6/8 Test: AttentionParamQueryUTest
 Command: "/home/yeab/attention/build/tests/attention/AttentionParamQueryUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"AttentionParamQueryUTest" start time: Nov 09 09:38 EAT
+"AttentionParamQueryUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (4 tests)....OK!
 <end of output>
-Test time =   0.04 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionParamQueryUTest" end time: Nov 09 09:38 EAT
+"AttentionParamQueryUTest" end time: Nov 12 08:52 EAT
 "AttentionParamQueryUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -101,7 +101,7 @@ Test Passed.
 7/8 Test: ImportanceDiffusionUTest
 Command: "/home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"ImportanceDiffusionUTest" start time: Nov 09 09:38 EAT
+"ImportanceDiffusionUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
@@ -109,7 +109,7 @@ Running cxxtest tests (8 tests)........OK!
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"ImportanceDiffusionUTest" end time: Nov 09 09:38 EAT
+"ImportanceDiffusionUTest" end time: Nov 12 08:52 EAT
 "ImportanceDiffusionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -117,31 +117,20 @@ Test Passed.
 8/8 Test: HebbianCreationModuleUTest
 Command: "/home/yeab/attention/build/tests/attention/HebbianCreationModuleUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"HebbianCreationModuleUTest" start time: Nov 09 09:38 EAT
+"HebbianCreationModuleUTest" start time: Nov 12 08:52 EAT
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (1 test)
-AF: 
-(ConceptNode "Kermit" (stv 0.001 900)) ; [5eb698a26f3ce69c][1]
-(ConceptNode "Frog" (stv 0.01 900)) ; [3dd97786ac33020][1]
-(ConceptNode "Animal" (stv 0.1 900)) ; [e984dcc8320aa56][1]
-(PredicateNode "alive" (stv 0.01 900)) ; [688a177a9bccc9c2][1]
-(EvaluationLink (stv 0.9 900)
-  (ConceptNode "Animal" (stv 0.1 900)) ; [e984dcc8320aa56][1]
-  (PredicateNode "myslimy" (stv 0.01 900)) ; [1882d8d6a548ceb][1]
-) ; [b04ec1f77628f899][1]
-count(HebLinks) = 20
+Running cxxtest tests (1 test)AF: 
 
-In HebbianCreationModuleUTest::testHebbianLinkCreation:
-/home/yeab/attention/build/tests/attention/../../../tests/attention/HebbianCreationModuleUTest.cxxtest:192: Error: Assertion failed: hebbianLinks.size() == 21
-Failed 1 and Skipped 0 of 1 test
-Success rate: 0%
+AF: 
+count(HebLinks) = 20
+.OK!
 <end of output>
-Test time =   1.06 sec
+Test time =   1.07 sec
 ----------------------------------------------------------
-Test Failed.
-"HebbianCreationModuleUTest" end time: Nov 09 09:38 EAT
+Test Passed.
+"HebbianCreationModuleUTest" end time: Nov 12 08:52 EAT
 "HebbianCreationModuleUTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: Nov 09 09:38 EAT
+End testing: Nov 12 08:52 EAT

@@ -109,9 +109,6 @@ public:
             PREDICATE_NODE, "slimy");
         slimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
 
-        Handle myslimy = as->add_node(
-            PREDICATE_NODE, "myslimy");
-        myslimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
 
         Handle kermitFrog = as->add_link(
                     INHERITANCE_LINK, kermit, frog);
@@ -131,7 +128,7 @@ public:
                     SimpleTruthValue::createTV(0.9, conf90));
 
         Handle slimyAnimal = as->add_link(
-                    EVALUATION_LINK, animal, myslimy);
+                    EVALUATION_LINK, animal, slimy);
         slimyAnimal->setTruthValue(
                     SimpleTruthValue::createTV(0.9, conf90));
 
@@ -167,8 +164,10 @@ public:
 
         HandleSeq attentionalFocus;
         ab.get_handle_set_in_attentional_focus(back_inserter(attentionalFocus));
-
+        cout << "AF: "<< endl;
         TS_ASSERT_EQUALS(attentionalFocus.size() , 5);
+    
+
         // Allow the events to propagate
         sleep(1);
 
@@ -179,7 +178,6 @@ public:
             HandleSeq existingAsSource = get_target_neighbors(node, ASYMMETRIC_HEBBIAN_LINK);
             HandleSeq existingAsTarget = get_source_neighbors(node, ASYMMETRIC_HEBBIAN_LINK);
 
-            std::cout << node->to_string() << std::endl;
             //TS_ASSERT(existingAsSource.size() == 3);
            // TS_ASSERT(existingAsTarget.size() == 3);
         }
