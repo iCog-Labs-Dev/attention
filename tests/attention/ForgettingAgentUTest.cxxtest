@@ -1,0 +1,129 @@
+#include <cxxtest/TestSuite.h>
+
+#include <opencog/attention/AttentionModule.h>
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/util/algorithm.h>
+#include <opencog/cogserver/server/Factory.h>
+
+
+using namespace opencog;
+using namespace std;
+
+class ForgettingAgentUTest : public CxxTest::TestSuite
+{
+private:
+    AtomSpace* as;
+    AgentPtr _forgettingAgentPtr;
+    CogServer* _cogServer;
+    Scheduler* _scheduler;
+
+public:
+  void tearDown(){
+      _cogServer->stop();
+   }
+
+
+  void InitCogServer() 
+  {
+    _cogServer = &cogserver();
+    config().set("MODULES", "opencog/attention/libattention.so");
+    _cogServer->loadModules();
+    config().set("MODULES", "libagents.so");
+    Module* amod = _cogServer->getModule("opencog::AgentsModule");
+    AgentsModule* agmod = (AgentsModule*) amod;
+    _scheduler = &agmod->get_scheduler();
+
+    AttentionParamQuery _atq(&cogserver().getAtomSpace());
+    _atq.load_default_values();
+
+    Factory<ForgettingAgent, Agent> forgettingAgentFactory;
+    _scheduler->registerAgent(ForgettingAgent::info().id, &forgettingAgentFactory);
+    _forgettingAgentPtr = _scheduler->createAgent(ForgettingAgent::info().id, false);
+
+    this->as = &cogserver().getAtomSpace();
+    
+  }
+
+#define ACCEPTABLE_DEV_SIZE "1"
+#define FORGET_THRESHOLD "5"
+#define MAX_ATOMSPACE_SIZE "10"
+  void testForgetAtom()
+  {
+    InitCogServer();
+    _scheduler->startAgent(_forgettingAgentPtr, true, "fa"); // agentPtr, dedicatedThread bool, threadName
+    
+    // configure forgettingThreshold, maxSize and accDivSize values
+    config().set("ECAN_FORGET_THRESHOLD", FORGET_THRESHOLD);
+    config().set("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", ACCEPTABLE_DEV_SIZE);
+    config().set("ECAN_ATOMSPACE_MAXSIZE", MAX_ATOMSPACE_SIZE);
+
+    int forgettingThreshold = config().get_int("ECAN_FORGET_THRESHOLD"); 
+    int maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE"); 
+    int accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD"); 
+
+    // assert whethere configurations are set correctly
+    TS_ASSERT_EQUALS(forgettingThreshold, 5);
+    TS_ASSERT_EQUALS(maxSize, 10);
+    TS_ASSERT_EQUALS(accDivSize, 1);
+
+    AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
+    count_t conf90 = 900;
+    
+    Handle a = as->add_node(CONCEPT_NODE, "a");
+    a->setTruthValue(SimpleTruthValue::createTV(0.001, conf90));
+    Handle b = as->add_node(CONCEPT_NODE, "b");
+    b->setTruthValue(SimpleTruthValue::createTV(0.01, conf90));
+    Handle c = as->add_node(CONCEPT_NODE, "c");
+    c->setTruthValue(SimpleTruthValue::createTV(0.1, conf90));
+    Handle importantAtom = as->add_node(CONCEPT_NODE, "d");
+    importantAtom->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
+
+    // set lti values for atoms in atomspace
+    ab.set_lti(a, 6);
+    ab.set_lti(b, 5);
+    ab.set_lti(c, 1);
+
+    // get attention values for atoms
+    AttentionValuePtr aval = get_av(a);
+    AttentionValuePtr bval = get_av(b);
+    AttentionValuePtr cval = get_av(c);
+
+
+    // assert lti value being set properly.
+    TS_ASSERT_EQUALS(aval->getLTI(), 6);
+    TS_ASSERT_EQUALS(bval->getLTI(), 5);
+    TS_ASSERT_EQUALS(cval->getLTI(), 1);
+
+    // change vlti for one atom so that it is non disposable
+    AttentionValuePtr old_dval = get_av(importantAtom);
+    AttentionValuePtr new_dval = AttentionValue::createAV(
+      old_dval->getSTI(),
+      old_dval->getLTI(),
+      old_dval->getVLTI() + 1
+    );
+    ab.change_av(importantAtom, new_dval);
+
+    // assert vlti value being changed.
+    AttentionValuePtr d_val = get_av(importantAtom);
+    TS_ASSERT_EQUALS(d_val->getVLTI(), 1);
+
+    // Allow events to propagate.
+    sleep(1);
+    AttentionValuePtr finalCVal = get_av(c);
+
+    // check if the atom with `lti < forgettingThreshold` i.e atom c, has sti and lti values equal to 0.
+    TS_ASSERT_EQUALS(finalCVal->getLTI(), 0);
+    TS_ASSERT_EQUALS(finalCVal->getSTI(), 0);
+
+    _scheduler->stopAgent(_forgettingAgentPtr);
+  }
+};
