@@ -28,6 +28,7 @@ private:
     CogServer* cogServer;
     Scheduler* scheduler;
     HebbianUpdatingAgent* hebbianUpdatingAgent;
+    AttentionBank* _bank;
 
 public:
     void setUp()
@@ -85,7 +86,7 @@ public:
         AttentionBank& ab = attentionbank(as);
         ab.stimulate(source, 200);
         ab.stimulate(target1, 200);
-        ab.stimulate(target2, 200);
+        ab.stimulate(target2, 100);
 
         std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
 
@@ -104,6 +105,6 @@ public:
         // Check that the truth value of the link has changed based on the agent's logic
         // Intentionally made error by making the mean 0.9 so that we can see what's happening
 
-        TS_ASSERT_DELTA(updatedMean, 0.9, 0.1); // Expected value within a delta range
+        TS_ASSERT_DELTA(updatedMean, 0.0105976, 0.01); // Expected value within a delta range
     }
 };

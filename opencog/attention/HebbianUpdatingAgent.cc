@@ -111,10 +111,11 @@ void HebbianUpdatingAgent::updateHebbianLinks(Handle source)
         TruthValuePtr oldtv  = h->getTruthValue();
         old_tc = oldtv->get_mean();
         tc = tcDecayRate * new_tc + (1.0 - tcDecayRate) * old_tc;
-
+        std::cout<<"tc: "<<tc<<std::endl;
         //update truth value accordingly
         TruthValuePtr newtv = SimpleTruthValue::createTV(tc, 0.1);
         h->setTruthValue(h->getTruthValue()->merge(newtv));
+        std::cout<<"after truthvalue update" << h->to_string()<<std::endl;
     }
 }
 
@@ -132,6 +133,7 @@ double HebbianUpdatingAgent::targetConjunction(HandleSeq handles)
     double conj = (normsti_i * normsti_j) + ((normsti_j - normsti_i) * std::abs(normsti_j -normsti_i));
 
     conj = (conj + 1.0) / 2.0;
-
+    std::cout<<"av: " << (*get_av(handles[0])).to_string()<<std::endl;
+    std::cout << " Handles: " <<handles[0]->to_string() <<" normsti_i: " <<normsti_i <<"normsti_j: "<<normsti_j<<" conj: "<<conj<<std::endl;
     return conj;
 }
