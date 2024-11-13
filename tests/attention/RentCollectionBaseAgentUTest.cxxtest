@@ -130,7 +130,7 @@ public:
 
     void testCalculateLTIRent() {
         // Here, expectedRent is set to 0.0 based on simplified conditions 
-        // where differences between current(10000) and target(10000) 
+        // where differences between currentLTI(10000) and targetLTI(10000) 
         // funds is zero or negeative meaning current fund >= target fund it return 0.
         double expectedRent = 0.0; 
         double calculatedRent = _dummy_agent->calculate_LTI_Rent();
@@ -139,7 +139,7 @@ public:
 
     void testCalculateSTIRent() {
          // Here, expectedRent is set to 0.0 based on simplified conditions 
-        // where differences between current(10000) and target(10000) 
+        // where differences between currentSTI(10000) and targetSTI(10000) 
         // funds is zero or negeative meaning current fund >= target fund it return 0
         double expectedRent = 0.0; 
         double calculatedRent = _dummy_agent->calculate_STI_Rent();
