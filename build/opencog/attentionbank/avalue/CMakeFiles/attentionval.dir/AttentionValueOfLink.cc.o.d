@@ -1,5 +1,5 @@
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o: \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc \
  /usr/include/stdc-predef.h /usr/local/include/opencog/atoms/base/Node.h \
  /usr/local/include/opencog/atoms/base/Atom.h \
  /usr/include/c++/11/functional \
@@ -585,8 +585,8 @@ opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc
  /usr/local/include/opencog/util/macros.h \
  /usr/local/include/opencog/atoms/value/FloatValue.h \
  /usr/local/include/opencog/atoms/base/ClassServer.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValueOfLink.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValueOfLink.h \
  /usr/local/include/opencog/atoms/flow/ValueOfLink.h \
  /usr/local/include/opencog/atoms/core/FunctionLink.h \
  /usr/local/include/opencog/atoms/core/FreeLink.h \
@@ -594,4 +594,4 @@ opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc
  /usr/local/include/opencog/atoms/core/FreeVariables.h \
  /usr/local/include/opencog/atoms/core/Replacement.h \
  /usr/local/include/opencog/atoms/core/Quotation.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h

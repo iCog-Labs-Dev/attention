@@ -26,7 +26,7 @@ bool suite_BankAsyncUTest_init = false;
 static BankAsyncUTest suite_BankAsyncUTest;
 
 static CxxTest::List Tests_BankAsyncUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_BankAsyncUTest( "/home/yeab/attention/tests/attentionbank/BankAsyncUTest.cxxtest", 42, "BankAsyncUTest", suite_BankAsyncUTest, Tests_BankAsyncUTest );
+CxxTest::StaticSuiteDescription suiteDescription_BankAsyncUTest( "/home/tarik/attention/attention/tests/attentionbank/BankAsyncUTest.cxxtest", 42, "BankAsyncUTest", suite_BankAsyncUTest, Tests_BankAsyncUTest );
 
 static class TestDescription_suite_BankAsyncUTest_testAFSignals : public CxxTest::RealTestDescription {
 public:

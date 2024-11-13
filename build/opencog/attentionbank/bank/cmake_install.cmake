@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attentionbank/bank
+# Install script for directory: /home/tarik/attention/attention/opencog/attentionbank/bank
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so"
          RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/bank/libattentionbank.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/opencog/attentionbank/bank/libattentionbank.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so"
-         OLD_RPATH "/home/yeab/attention/build/opencog/attentionbank/avalue:/home/yeab/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:"
+         OLD_RPATH "/home/tarik/attention/attention/build/opencog/attentionbank/avalue:/home/tarik/attention/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:"
          NEW_RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so")
@@ -67,12 +67,12 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attentionbank/bank" TYPE FILE MESSAGE_LAZY FILES
-    "/home/yeab/attention/opencog/attentionbank/bank/AFImplicator.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/AtomBins.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/AVUtils.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/bank/AFImplicator.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h"
     )
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/tests/attentionbank
+# Install script for directory: /home/tarik/attention/attention/tests/attentionbank
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

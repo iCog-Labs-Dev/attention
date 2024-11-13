@@ -1,7 +1,7 @@
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o: \
- /home/yeab/attention/opencog/attentionbank/types/atom_types_init.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/types/atom_types_init.cc \
  /usr/include/stdc-predef.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.definitions \
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.definitions \
  /usr/local/include/opencog/atoms/atom_types/NameServer.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/tuple \
  /usr/include/c++/11/utility \
@@ -174,6 +174,6 @@ opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o:
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/local/include/opencog/atoms/atom_types/types.h \
  /usr/local/include/opencog/atoms/atom_types/atom_types.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h \
  /usr/local/include/opencog/atoms/atom_types/atom_types.cc \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.inheritance
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.inheritance

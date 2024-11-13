@@ -1,5 +1,5 @@
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o: \
- /home/yeab/attention/build/tests/attentionbank/AttentionValueUTest.cpp \
+ /home/tarik/attention/attention/build/tests/attentionbank/AttentionValueUTest.cpp \
  /usr/include/stdc-predef.h /usr/include/cxxtest/TestListener.h \
  /usr/include/cxxtest/Descriptions.h /usr/include/cxxtest/LinkedList.h \
  /usr/include/cxxtest/Flags.h /usr/include/cxxtest/TestTracker.h \
@@ -209,7 +209,7 @@ tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o
  /usr/include/cxxtest/TestMain.h /usr/include/c++/11/iostream \
  /usr/include/cxxtest/ErrorPrinter.h \
  /usr/include/cxxtest/ErrorFormatter.h \
- /home/yeab/attention/build/tests/attentionbank/../../../tests/attentionbank/AttentionValueUTest.cxxtest \
+ /home/tarik/attention/attention/build/tests/attentionbank/../../../tests/attentionbank/AttentionValueUTest.cxxtest \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/local/include/opencog/util/exceptions.h \
  /usr/local/include/opencog/util/macros.h \
@@ -641,14 +641,14 @@ tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
  /usr/local/include/opencog/atoms/truthvalue/SimpleTruthValue.h \
- /home/yeab/attention/build/tests/attentionbank/../../../tests/attentionbank/sorting.h \
+ /home/tarik/attention/attention/build/tests/attentionbank/../../../tests/attentionbank/sorting.h \
  /usr/include/cxxtest/Root.cpp /usr/include/cxxtest/ValueTraits.cpp \
  /usr/include/cxxtest/Descriptions.cpp \
  /usr/include/cxxtest/DummyDescriptions.cpp \

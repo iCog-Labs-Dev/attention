@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o: \
- /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.cc \
+ /home/tarik/attention/attention/opencog/attention/ImportanceDiffusionBase.cc \
  /usr/include/stdc-predef.h /usr/include/time.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -1572,16 +1572,16 @@ opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o: \
  /usr/local/include/opencog/cogserver/server/Factory.h \
  /usr/local/include/opencog/cogserver/server/Request.h \
  /usr/local/include/opencog/cogserver/server/RequestClassInfo.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/opencog/attention/ImportanceDiffusionBase.h \
  /usr/local/include/opencog/cogserver/modules/agents/Agent.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
- /home/yeab/attention/opencog/attention/AttentionStat.h \
- /home/yeab/attention/opencog/attention/AttentionUtils.h \
- /home/yeab/attention/opencog/attention/Neighbors.h
+ /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.h \
+ /home/tarik/attention/attention/opencog/attention/AttentionStat.h \
+ /home/tarik/attention/attention/opencog/attention/AttentionUtils.h \
+ /home/tarik/attention/attention/opencog/attention/Neighbors.h

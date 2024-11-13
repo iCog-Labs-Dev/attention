@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Utility rule file for SCM_CONFIG.
 
@@ -74,10 +74,10 @@ opencog/CMakeFiles/SCM_CONFIG.dir/build: SCM_CONFIG
 .PHONY : opencog/CMakeFiles/SCM_CONFIG.dir/build
 
 opencog/CMakeFiles/SCM_CONFIG.dir/clean:
-	cd /home/yeab/attention/build/opencog && $(CMAKE_COMMAND) -P CMakeFiles/SCM_CONFIG.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/opencog && $(CMAKE_COMMAND) -P CMakeFiles/SCM_CONFIG.dir/cmake_clean.cmake
 .PHONY : opencog/CMakeFiles/SCM_CONFIG.dir/clean
 
 opencog/CMakeFiles/SCM_CONFIG.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/opencog /home/yeab/attention/build /home/yeab/attention/build/opencog /home/yeab/attention/build/opencog/CMakeFiles/SCM_CONFIG.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/opencog /home/tarik/attention/attention/build /home/tarik/attention/attention/build/opencog /home/tarik/attention/attention/build/opencog/CMakeFiles/SCM_CONFIG.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : opencog/CMakeFiles/SCM_CONFIG.dir/depend
 

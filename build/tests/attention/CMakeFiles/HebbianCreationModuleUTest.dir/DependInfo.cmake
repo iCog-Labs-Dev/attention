@@ -8,15 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/yeab/attention/build/tests/attention/HebbianCreationModuleUTest.cpp" "tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.o" "gcc" "tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.o.d"
+  "/home/tarik/attention/attention/build/tests/attention/HebbianCreationModuleUTest.cpp" "tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.o" "gcc" "tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/yeab/attention/build/opencog/attention/CMakeFiles/attention.dir/DependInfo.cmake"
-  "/home/yeab/attention/build/opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/DependInfo.cmake"
-  "/home/yeab/attention/build/opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/DependInfo.cmake"
-  "/home/yeab/attention/build/opencog/attentionbank/types/CMakeFiles/attention-types.dir/DependInfo.cmake"
+  "/home/tarik/attention/attention/build/opencog/attention/CMakeFiles/attention.dir/DependInfo.cmake"
+  "/home/tarik/attention/attention/build/opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/DependInfo.cmake"
+  "/home/tarik/attention/attention/build/opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/DependInfo.cmake"
+  "/home/tarik/attention/attention/build/opencog/attentionbank/types/CMakeFiles/attention-types.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

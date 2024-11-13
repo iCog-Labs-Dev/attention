@@ -1,5 +1,5 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AtomBins.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -200,7 +200,7 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AtomBins.cc.o: \
  /usr/include/c++/11/bits/stl_numeric.h /usr/include/c++/11/bit \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/tuple \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \

@@ -1,5 +1,5 @@
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o: \
- /home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest.cpp \
+ /home/tarik/attention/attention/build/tests/attention/ImportanceDiffusionUTest.cpp \
  /usr/include/stdc-predef.h /usr/include/cxxtest/TestListener.h \
  /usr/include/cxxtest/Descriptions.h /usr/include/cxxtest/LinkedList.h \
  /usr/include/cxxtest/Flags.h /usr/include/cxxtest/TestTracker.h \
@@ -209,8 +209,8 @@ tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest
  /usr/include/cxxtest/TestMain.h /usr/include/c++/11/iostream \
  /usr/include/cxxtest/ErrorPrinter.h \
  /usr/include/cxxtest/ErrorFormatter.h \
- /home/yeab/attention/build/tests/attention/../../../tests/attention/ImportanceDiffusionUTest.cxxtest \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
+ /home/tarik/attention/attention/build/tests/attention/../../../tests/attention/ImportanceDiffusionUTest.cxxtest \
+ /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.h \
  /usr/local/include/opencog/atoms/atom_types/atom_types.h \
  /usr/local/include/opencog/atoms/atom_types/types.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
@@ -642,12 +642,12 @@ tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.h \
+ /home/tarik/attention/attention/opencog/attention/ImportanceDiffusionBase.h \
  /usr/include/c++/11/math.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
  /usr/local/include/opencog/cogserver/modules/agents/Agent.h \
  /usr/local/include/opencog/cogserver/server/Factory.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
+ /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.h \
  /usr/local/include/opencog/guile/SchemeEval.h \
  /usr/include/guile/3.0/libguile.h /usr/include/guile/3.0/libguile/scm.h \
  /usr/include/guile/3.0/libguile/scmconfig.h \
@@ -809,7 +809,7 @@ tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest
  /usr/include/guile/3.0/libguile/inline.h \
  /usr/include/guile/3.0/libguile/deprecated.h \
  /usr/local/include/opencog/eval/GenericEval.h \
- /home/yeab/attention/opencog/attention/Neighbors.h \
+ /home/tarik/attention/attention/opencog/attention/Neighbors.h \
  /usr/local/include/opencog/cogserver/server/CogServer.h \
  /usr/local/include/opencog/cogserver/server/Module.h \
  /usr/local/include/opencog/cogserver/server/ModuleManager.h \
@@ -1545,12 +1545,12 @@ tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerThread.h \
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerBase.h \
  /usr/local/include/opencog/cogserver/modules/agents/SystemActivityTable.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h \
  /usr/local/include/opencog/atoms/truthvalue/SimpleTruthValue.h \
  /usr/local/include/opencog/util/Config.h /usr/include/c++/11/fstream \
  /usr/include/c++/11/bits/codecvt.h \

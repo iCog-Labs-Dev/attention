@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Utility rule file for tests.
 
@@ -78,6 +78,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention /home/yeab/attention/build /home/yeab/attention/build /home/yeab/attention/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention /home/tarik/attention/attention/build /home/tarik/attention/attention/build /home/tarik/attention/attention/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

@@ -1,7 +1,7 @@
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o: \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.cc \
  /usr/include/stdc-predef.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h \
  /usr/local/include/opencog/atoms/atom_types/types.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
@@ -206,7 +206,7 @@ opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
  /usr/local/include/opencog/util/macros.h \
  /usr/include/boost/current_function.hpp /usr/include/c++/11/typeindex \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \

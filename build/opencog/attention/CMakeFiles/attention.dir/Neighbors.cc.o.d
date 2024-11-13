@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o: \
- /home/yeab/attention/opencog/attention/Neighbors.cc \
+ /home/tarik/attention/attention/opencog/attention/Neighbors.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -587,4 +587,4 @@ opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o: \
  /usr/local/include/opencog/atoms/value/FloatValue.h \
  /usr/local/include/opencog/atoms/base/ClassServer.h \
  /usr/local/include/opencog/atoms/base/Node.h \
- /home/yeab/attention/opencog/attention/Neighbors.h
+ /home/tarik/attention/attention/opencog/attention/Neighbors.h

@@ -1,5 +1,5 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AFImplicator.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/AFImplicator.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AFImplicator.cc \
  /usr/include/stdc-predef.h \
  /usr/local/include/opencog/atoms/core/UnorderedLink.h \
  /usr/local/include/opencog/atoms/base/Link.h \
@@ -612,8 +612,8 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AFImplicator.cc.o: \
  /usr/local/include/opencog/atoms/value/QueueValue.h \
  /usr/local/include/opencog/atoms/value/LinkStreamValue.h \
  /usr/local/include/opencog/atoms/value/LinkValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/AFImplicator.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionalFocusCB.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AFImplicator.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionalFocusCB.h \
  /usr/local/include/opencog/query/TermMatchMixin.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \

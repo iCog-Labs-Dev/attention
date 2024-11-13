@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/yeab/attention/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tarik/attention/attention/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,9 +152,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles /home/yeab/attention/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles /home/tarik/attention/attention/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -234,17 +234,17 @@ SCM_CONFIG/fast:
 .PHONY : SCM_CONFIG/fast
 
 #=============================================================================
-# Target rules for targets named COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank
+# Target rules for targets named COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank
 
 # Build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank
 
 # fast build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank/fast:
-	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank.dir/build.make opencog/attentionbank/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank.dir/build
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank/fast
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank/fast:
+	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank.dir/build.make opencog/attentionbank/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank.dir/build
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank/fast
 
 #=============================================================================
 # Target rules for targets named attentionval
@@ -299,17 +299,17 @@ attention-types/fast:
 .PHONY : attention-types/fast
 
 #=============================================================================
-# Target rules for targets named COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types
+# Target rules for targets named COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types
 
 # Build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types
 
 # fast build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types/fast:
-	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/build.make opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/build
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types/fast
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types/fast:
+	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/build.make opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/build
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types/fast
 
 #=============================================================================
 # Target rules for targets named attention
@@ -325,17 +325,17 @@ attention/fast:
 .PHONY : attention/fast
 
 #=============================================================================
-# Target rules for targets named COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention
+# Target rules for targets named COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention
 
 # Build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention
 
 # fast build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention/fast:
-	$(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/build.make opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/build
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention/fast
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention/fast:
+	$(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/build.make opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/build
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention/fast
 
 #=============================================================================
 # Target rules for targets named crudexample
@@ -467,6 +467,19 @@ HebbianCreationModuleUTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build
 .PHONY : HebbianCreationModuleUTest/fast
 
+#=============================================================================
+# Target rules for targets named RentCollectionBaseAgentUTest
+
+# Build rule for target.
+RentCollectionBaseAgentUTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RentCollectionBaseAgentUTest
+.PHONY : RentCollectionBaseAgentUTest
+
+# fast build rule for target.
+RentCollectionBaseAgentUTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build.make tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build
+.PHONY : RentCollectionBaseAgentUTest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -481,9 +494,9 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention"
-	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank"
-	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types"
+	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention"
+	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank"
+	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types"
 	@echo "... SCM_CONFIG"
 	@echo "... attention_atom_types"
 	@echo "... test"
@@ -497,6 +510,7 @@ help:
 	@echo "... BankImplUTest"
 	@echo "... HebbianCreationModuleUTest"
 	@echo "... ImportanceDiffusionUTest"
+	@echo "... RentCollectionBaseAgentUTest"
 	@echo "... aseventsexample"
 	@echo "... attention"
 	@echo "... attention-types"

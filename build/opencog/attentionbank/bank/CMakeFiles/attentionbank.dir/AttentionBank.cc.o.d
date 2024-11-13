@@ -1,5 +1,5 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/functional \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -628,10 +628,10 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o: \
  /usr/local/include/opencog/atomspace/TypeIndex.h \
  /usr/local/include/opencog/atoms/base/Atom.h \
  /usr/include/c++/11/shared_mutex \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h

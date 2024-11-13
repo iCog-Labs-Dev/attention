@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/yeab/attention/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/yeab/attention/build/CPackSourceConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tarik/attention/attention/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles /home/yeab/attention/build/tests/attention//CMakeFiles/progress.marks
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles /home/tarik/attention/attention/build/tests/attention//CMakeFiles/progress.marks
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/clean
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
 .PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ AttentionParamQueryUTest: tests/attention/CMakeFiles/AttentionParamQueryUTest.di
 
 # fast build rule for target.
 AttentionParamQueryUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build
 .PHONY : AttentionParamQueryUTest/fast
 
 # Convenience name for target.
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
 .PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
 
 # Convenience name for target.
@@ -206,12 +206,12 @@ ImportanceDiffusionUTest: tests/attention/CMakeFiles/ImportanceDiffusionUTest.di
 
 # fast build rule for target.
 ImportanceDiffusionUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build
 .PHONY : ImportanceDiffusionUTest/fast
 
 # Convenience name for target.
 tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/rule
 .PHONY : tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/rule
 
 # Convenience name for target.
@@ -220,15 +220,29 @@ HebbianCreationModuleUTest: tests/attention/CMakeFiles/HebbianCreationModuleUTes
 
 # fast build rule for target.
 HebbianCreationModuleUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build
 .PHONY : HebbianCreationModuleUTest/fast
+
+# Convenience name for target.
+tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/rule:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/rule
+.PHONY : tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/rule
+
+# Convenience name for target.
+RentCollectionBaseAgentUTest: tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/rule
+.PHONY : RentCollectionBaseAgentUTest
+
+# fast build rule for target.
+RentCollectionBaseAgentUTest/fast:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build.make tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build
+.PHONY : RentCollectionBaseAgentUTest/fast
 
 AttentionParamQueryUTest.o: AttentionParamQueryUTest.cpp.o
 .PHONY : AttentionParamQueryUTest.o
 
 # target to build an object file
 AttentionParamQueryUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o
 .PHONY : AttentionParamQueryUTest.cpp.o
 
 AttentionParamQueryUTest.i: AttentionParamQueryUTest.cpp.i
@@ -236,7 +250,7 @@ AttentionParamQueryUTest.i: AttentionParamQueryUTest.cpp.i
 
 # target to preprocess a source file
 AttentionParamQueryUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.i
 .PHONY : AttentionParamQueryUTest.cpp.i
 
 AttentionParamQueryUTest.s: AttentionParamQueryUTest.cpp.s
@@ -244,7 +258,7 @@ AttentionParamQueryUTest.s: AttentionParamQueryUTest.cpp.s
 
 # target to generate assembly for a file
 AttentionParamQueryUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.s
 .PHONY : AttentionParamQueryUTest.cpp.s
 
 HebbianCreationModuleUTest.o: HebbianCreationModuleUTest.cpp.o
@@ -252,7 +266,7 @@ HebbianCreationModuleUTest.o: HebbianCreationModuleUTest.cpp.o
 
 # target to build an object file
 HebbianCreationModuleUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.o
 .PHONY : HebbianCreationModuleUTest.cpp.o
 
 HebbianCreationModuleUTest.i: HebbianCreationModuleUTest.cpp.i
@@ -260,7 +274,7 @@ HebbianCreationModuleUTest.i: HebbianCreationModuleUTest.cpp.i
 
 # target to preprocess a source file
 HebbianCreationModuleUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.i
 .PHONY : HebbianCreationModuleUTest.cpp.i
 
 HebbianCreationModuleUTest.s: HebbianCreationModuleUTest.cpp.s
@@ -268,7 +282,7 @@ HebbianCreationModuleUTest.s: HebbianCreationModuleUTest.cpp.s
 
 # target to generate assembly for a file
 HebbianCreationModuleUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.s
 .PHONY : HebbianCreationModuleUTest.cpp.s
 
 ImportanceDiffusionUTest.o: ImportanceDiffusionUTest.cpp.o
@@ -276,7 +290,7 @@ ImportanceDiffusionUTest.o: ImportanceDiffusionUTest.cpp.o
 
 # target to build an object file
 ImportanceDiffusionUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o
 .PHONY : ImportanceDiffusionUTest.cpp.o
 
 ImportanceDiffusionUTest.i: ImportanceDiffusionUTest.cpp.i
@@ -284,7 +298,7 @@ ImportanceDiffusionUTest.i: ImportanceDiffusionUTest.cpp.i
 
 # target to preprocess a source file
 ImportanceDiffusionUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.i
 .PHONY : ImportanceDiffusionUTest.cpp.i
 
 ImportanceDiffusionUTest.s: ImportanceDiffusionUTest.cpp.s
@@ -292,8 +306,32 @@ ImportanceDiffusionUTest.s: ImportanceDiffusionUTest.cpp.s
 
 # target to generate assembly for a file
 ImportanceDiffusionUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.s
 .PHONY : ImportanceDiffusionUTest.cpp.s
+
+RentCollectionBaseAgentUTest.o: RentCollectionBaseAgentUTest.cpp.o
+.PHONY : RentCollectionBaseAgentUTest.o
+
+# target to build an object file
+RentCollectionBaseAgentUTest.cpp.o:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build.make tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAgentUTest.cpp.o
+.PHONY : RentCollectionBaseAgentUTest.cpp.o
+
+RentCollectionBaseAgentUTest.i: RentCollectionBaseAgentUTest.cpp.i
+.PHONY : RentCollectionBaseAgentUTest.i
+
+# target to preprocess a source file
+RentCollectionBaseAgentUTest.cpp.i:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build.make tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAgentUTest.cpp.i
+.PHONY : RentCollectionBaseAgentUTest.cpp.i
+
+RentCollectionBaseAgentUTest.s: RentCollectionBaseAgentUTest.cpp.s
+.PHONY : RentCollectionBaseAgentUTest.s
+
+# target to generate assembly for a file
+RentCollectionBaseAgentUTest.cpp.s:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build.make tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAgentUTest.cpp.s
+.PHONY : RentCollectionBaseAgentUTest.cpp.s
 
 # Help Target
 help:
@@ -312,6 +350,7 @@ help:
 	@echo "... AttentionParamQueryUTest"
 	@echo "... HebbianCreationModuleUTest"
 	@echo "... ImportanceDiffusionUTest"
+	@echo "... RentCollectionBaseAgentUTest"
 	@echo "... AttentionParamQueryUTest.o"
 	@echo "... AttentionParamQueryUTest.i"
 	@echo "... AttentionParamQueryUTest.s"
@@ -321,6 +360,9 @@ help:
 	@echo "... ImportanceDiffusionUTest.o"
 	@echo "... ImportanceDiffusionUTest.i"
 	@echo "... ImportanceDiffusionUTest.s"
+	@echo "... RentCollectionBaseAgentUTest.o"
+	@echo "... RentCollectionBaseAgentUTest.i"
+	@echo "... RentCollectionBaseAgentUTest.s"
 .PHONY : help
 
 
@@ -332,6 +374,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

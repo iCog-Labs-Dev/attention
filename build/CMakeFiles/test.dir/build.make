@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Utility rule file for test.
 
@@ -67,8 +67,8 @@ include CMakeFiles/test.dir/compiler_depend.make
 include CMakeFiles/test.dir/progress.make
 
 CMakeFiles/test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running tests..."
-	cd /home/yeab/attention/build/tests && /usr/bin/ctest --force-new-ctest-process --output-on-failure $(ARGS)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running tests..."
+	cd /home/tarik/attention/attention/build/tests && /usr/bin/ctest --force-new-ctest-process --output-on-failure $(ARGS)
 
 test: CMakeFiles/test
 test: CMakeFiles/test.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention /home/yeab/attention/build /home/yeab/attention/build /home/yeab/attention/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention /home/tarik/attention/attention/build /home/tarik/attention/attention/build /home/tarik/attention/attention/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 

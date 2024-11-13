@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attention
+# Install script for directory: /home/tarik/attention/attention/opencog/attention
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention.so"
          RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attention/libattention.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/opencog/attention/libattention.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention.so"
-         OLD_RPATH "/home/yeab/attention/build/opencog/attentionbank/bank:/home/yeab/attention/build/opencog/attentionbank/avalue:/home/yeab/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:"
+         OLD_RPATH "/home/tarik/attention/attention/build/opencog/attentionbank/bank:/home/tarik/attention/attention/build/opencog/attentionbank/avalue:/home/tarik/attention/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:"
          NEW_RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention.so")
@@ -68,19 +68,19 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   
               IF(EXISTS
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                  AND NOT
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                    STREQUAL
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                  AND
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                    IS_NEWER_THAN
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                  )
-                 MESSAGE("-- Touch: /home/yeab/attention/opencog/attention/attention.scm")
-                 MESSAGE("-- Newer: /home/yeab/attention/opencog/attention/attention.scm")
-                 FILE(TOUCH /home/yeab/attention/opencog/attention/attention.scm)
+                 MESSAGE("-- Touch: /home/tarik/attention/attention/opencog/attention/attention.scm")
+                 MESSAGE("-- Newer: /home/tarik/attention/attention/opencog/attention/attention.scm")
+                 FILE(TOUCH /home/tarik/attention/attention/opencog/attention/attention.scm)
               ENDIF()
             
 endif()
@@ -88,19 +88,19 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   
               IF(EXISTS
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                  AND NOT
-                     /home/yeab/attention/opencog/attention/default-param-values.scm
+                     /home/tarik/attention/attention/opencog/attention/default-param-values.scm
                    STREQUAL
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                  AND
-                     /home/yeab/attention/opencog/attention/default-param-values.scm
+                     /home/tarik/attention/attention/opencog/attention/default-param-values.scm
                    IS_NEWER_THAN
-                     /home/yeab/attention/opencog/attention/attention.scm
+                     /home/tarik/attention/attention/opencog/attention/attention.scm
                  )
-                 MESSAGE("-- Touch: /home/yeab/attention/opencog/attention/attention.scm")
-                 MESSAGE("-- Newer: /home/yeab/attention/opencog/attention/default-param-values.scm")
-                 FILE(TOUCH /home/yeab/attention/opencog/attention/attention.scm)
+                 MESSAGE("-- Touch: /home/tarik/attention/attention/opencog/attention/attention.scm")
+                 MESSAGE("-- Newer: /home/tarik/attention/attention/opencog/attention/default-param-values.scm")
+                 FILE(TOUCH /home/tarik/attention/attention/opencog/attention/attention.scm)
               ENDIF()
             
 endif()
@@ -114,7 +114,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/opencog/attention/attention.scm")
+  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY FILES "/home/tarik/attention/attention/opencog/attention/attention.scm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -126,15 +126,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog/attention" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/opencog/attention/default-param-values.scm")
+  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog/attention" TYPE FILE MESSAGE_LAZY FILES "/home/tarik/attention/attention/opencog/attention/default-param-values.scm")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attention" TYPE FILE MESSAGE_LAZY FILES
-    "/home/yeab/attention/opencog/attention/AttentionModule.h"
-    "/home/yeab/attention/opencog/attention/AttentionStat.h"
-    "/home/yeab/attention/opencog/attention/ForgettingAgent.h"
-    "/home/yeab/attention/opencog/attention/HebbianUpdatingAgent.h"
+    "/home/tarik/attention/attention/opencog/attention/AttentionModule.h"
+    "/home/tarik/attention/attention/opencog/attention/AttentionStat.h"
+    "/home/tarik/attention/attention/opencog/attention/ForgettingAgent.h"
+    "/home/tarik/attention/attention/opencog/attention/HebbianUpdatingAgent.h"
     )
 endif()
 

@@ -26,7 +26,7 @@ bool suite_ImportanceDiffusionUTest_init = false;
 static ImportanceDiffusionUTest suite_ImportanceDiffusionUTest;
 
 static CxxTest::List Tests_ImportanceDiffusionUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_ImportanceDiffusionUTest( "/home/yeab/attention/tests/attention/ImportanceDiffusionUTest.cxxtest", 51, "ImportanceDiffusionUTest", suite_ImportanceDiffusionUTest, Tests_ImportanceDiffusionUTest );
+CxxTest::StaticSuiteDescription suiteDescription_ImportanceDiffusionUTest( "/home/tarik/attention/attention/tests/attention/ImportanceDiffusionUTest.cxxtest", 51, "ImportanceDiffusionUTest", suite_ImportanceDiffusionUTest, Tests_ImportanceDiffusionUTest );
 
 static class TestDescription_suite_ImportanceDiffusionUTest_testDiffuseAtom : public CxxTest::RealTestDescription {
 public:

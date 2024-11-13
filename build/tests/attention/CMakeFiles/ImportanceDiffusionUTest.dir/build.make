@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/depend.make
@@ -70,22 +70,22 @@ include tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/progress.make
 include tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/flags.make
 
 tests/attention/ImportanceDiffusionUTest.cpp: ../tests/attention/ImportanceDiffusionUTest.cxxtest
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ImportanceDiffusionUTest.cpp"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest.cpp /home/yeab/attention/tests/attention/ImportanceDiffusionUTest.cxxtest
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ImportanceDiffusionUTest.cpp"
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/tarik/attention/attention/build/tests/attention/ImportanceDiffusionUTest.cpp /home/tarik/attention/attention/tests/attention/ImportanceDiffusionUTest.cxxtest
 
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/flags.make
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o: tests/attention/ImportanceDiffusionUTest.cpp
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o -MF CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o.d -o CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o -c /home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o"
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o -MF CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o.d -o CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o -c /home/tarik/attention/attention/build/tests/attention/ImportanceDiffusionUTest.cpp
 
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.i"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest.cpp > CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.i
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/build/tests/attention/ImportanceDiffusionUTest.cpp > CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.i
 
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.s"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest.cpp -o CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.s
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/build/tests/attention/ImportanceDiffusionUTest.cpp -o CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.s
 
 # Object files for target ImportanceDiffusionUTest
 ImportanceDiffusionUTest_OBJECTS = \
@@ -125,18 +125,18 @@ tests/attention/ImportanceDiffusionUTest: /usr/local/lib/opencog/libatom_types.s
 tests/attention/ImportanceDiffusionUTest: /usr/lib/x86_64-linux-gnu/libguile-3.0.so
 tests/attention/ImportanceDiffusionUTest: /usr/local/lib/opencog/libcogutil.so
 tests/attention/ImportanceDiffusionUTest: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ImportanceDiffusionUTest"
-	cd /home/yeab/attention/build/tests/attention && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ImportanceDiffusionUTest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ImportanceDiffusionUTest"
+	cd /home/tarik/attention/attention/build/tests/attention && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ImportanceDiffusionUTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build: tests/attention/ImportanceDiffusionUTest
 .PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build
 
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/clean:
-	cd /home/yeab/attention/build/tests/attention && $(CMAKE_COMMAND) -P CMakeFiles/ImportanceDiffusionUTest.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/tests/attention && $(CMAKE_COMMAND) -P CMakeFiles/ImportanceDiffusionUTest.dir/cmake_clean.cmake
 .PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/clean
 
 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/depend: tests/attention/ImportanceDiffusionUTest.cpp
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/tests/attention /home/yeab/attention/build /home/yeab/attention/build/tests/attention /home/yeab/attention/build/tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/tests/attention /home/tarik/attention/attention/build /home/tarik/attention/attention/build/tests/attention /home/tarik/attention/attention/build/tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/depend
 

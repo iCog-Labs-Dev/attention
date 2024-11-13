@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/yeab/attention/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/yeab/attention/build/CPackSourceConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tarik/attention/attention/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles /home/yeab/attention/build/opencog/attention//CMakeFiles/progress.marks
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles /home/tarik/attention/attention/build/opencog/attention//CMakeFiles/progress.marks
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/clean
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 opencog/attention/CMakeFiles/attention.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/CMakeFiles/attention.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/CMakeFiles/attention.dir/rule
 .PHONY : opencog/attention/CMakeFiles/attention.dir/rule
 
 # Convenience name for target.
@@ -192,29 +192,29 @@ attention: opencog/attention/CMakeFiles/attention.dir/rule
 
 # fast build rule for target.
 attention/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/build
 .PHONY : attention/fast
 
 # Convenience name for target.
-opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/rule
-.PHONY : opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/rule
+opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/rule:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/rule
+.PHONY : opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/rule
 
 # Convenience name for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention: opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/rule
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention: opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/rule
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention
 
 # fast build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/build.make opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention.dir/build
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention/fast
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention/fast:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/build.make opencog/attention/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention.dir/build
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention/fast
 
 AFImportanceDiffusionAgent.o: AFImportanceDiffusionAgent.cc.o
 .PHONY : AFImportanceDiffusionAgent.o
 
 # target to build an object file
 AFImportanceDiffusionAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o
 .PHONY : AFImportanceDiffusionAgent.cc.o
 
 AFImportanceDiffusionAgent.i: AFImportanceDiffusionAgent.cc.i
@@ -222,7 +222,7 @@ AFImportanceDiffusionAgent.i: AFImportanceDiffusionAgent.cc.i
 
 # target to preprocess a source file
 AFImportanceDiffusionAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.i
 .PHONY : AFImportanceDiffusionAgent.cc.i
 
 AFImportanceDiffusionAgent.s: AFImportanceDiffusionAgent.cc.s
@@ -230,7 +230,7 @@ AFImportanceDiffusionAgent.s: AFImportanceDiffusionAgent.cc.s
 
 # target to generate assembly for a file
 AFImportanceDiffusionAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.s
 .PHONY : AFImportanceDiffusionAgent.cc.s
 
 AFRentCollectionAgent.o: AFRentCollectionAgent.cc.o
@@ -238,7 +238,7 @@ AFRentCollectionAgent.o: AFRentCollectionAgent.cc.o
 
 # target to build an object file
 AFRentCollectionAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o
 .PHONY : AFRentCollectionAgent.cc.o
 
 AFRentCollectionAgent.i: AFRentCollectionAgent.cc.i
@@ -246,7 +246,7 @@ AFRentCollectionAgent.i: AFRentCollectionAgent.cc.i
 
 # target to preprocess a source file
 AFRentCollectionAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.i
 .PHONY : AFRentCollectionAgent.cc.i
 
 AFRentCollectionAgent.s: AFRentCollectionAgent.cc.s
@@ -254,7 +254,7 @@ AFRentCollectionAgent.s: AFRentCollectionAgent.cc.s
 
 # target to generate assembly for a file
 AFRentCollectionAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.s
 .PHONY : AFRentCollectionAgent.cc.s
 
 AttentionModule.o: AttentionModule.cc.o
@@ -262,7 +262,7 @@ AttentionModule.o: AttentionModule.cc.o
 
 # target to build an object file
 AttentionModule.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o
 .PHONY : AttentionModule.cc.o
 
 AttentionModule.i: AttentionModule.cc.i
@@ -270,7 +270,7 @@ AttentionModule.i: AttentionModule.cc.i
 
 # target to preprocess a source file
 AttentionModule.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.i
 .PHONY : AttentionModule.cc.i
 
 AttentionModule.s: AttentionModule.cc.s
@@ -278,7 +278,7 @@ AttentionModule.s: AttentionModule.cc.s
 
 # target to generate assembly for a file
 AttentionModule.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.s
 .PHONY : AttentionModule.cc.s
 
 AttentionParamQuery.o: AttentionParamQuery.cc.o
@@ -286,7 +286,7 @@ AttentionParamQuery.o: AttentionParamQuery.cc.o
 
 # target to build an object file
 AttentionParamQuery.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o
 .PHONY : AttentionParamQuery.cc.o
 
 AttentionParamQuery.i: AttentionParamQuery.cc.i
@@ -294,7 +294,7 @@ AttentionParamQuery.i: AttentionParamQuery.cc.i
 
 # target to preprocess a source file
 AttentionParamQuery.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.i
 .PHONY : AttentionParamQuery.cc.i
 
 AttentionParamQuery.s: AttentionParamQuery.cc.s
@@ -302,7 +302,7 @@ AttentionParamQuery.s: AttentionParamQuery.cc.s
 
 # target to generate assembly for a file
 AttentionParamQuery.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.s
 .PHONY : AttentionParamQuery.cc.s
 
 AttentionUtils.o: AttentionUtils.cc.o
@@ -310,7 +310,7 @@ AttentionUtils.o: AttentionUtils.cc.o
 
 # target to build an object file
 AttentionUtils.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o
 .PHONY : AttentionUtils.cc.o
 
 AttentionUtils.i: AttentionUtils.cc.i
@@ -318,7 +318,7 @@ AttentionUtils.i: AttentionUtils.cc.i
 
 # target to preprocess a source file
 AttentionUtils.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.i
 .PHONY : AttentionUtils.cc.i
 
 AttentionUtils.s: AttentionUtils.cc.s
@@ -326,7 +326,7 @@ AttentionUtils.s: AttentionUtils.cc.s
 
 # target to generate assembly for a file
 AttentionUtils.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.s
 .PHONY : AttentionUtils.cc.s
 
 ForgettingAgent.o: ForgettingAgent.cc.o
@@ -334,7 +334,7 @@ ForgettingAgent.o: ForgettingAgent.cc.o
 
 # target to build an object file
 ForgettingAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o
 .PHONY : ForgettingAgent.cc.o
 
 ForgettingAgent.i: ForgettingAgent.cc.i
@@ -342,7 +342,7 @@ ForgettingAgent.i: ForgettingAgent.cc.i
 
 # target to preprocess a source file
 ForgettingAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.i
 .PHONY : ForgettingAgent.cc.i
 
 ForgettingAgent.s: ForgettingAgent.cc.s
@@ -350,7 +350,7 @@ ForgettingAgent.s: ForgettingAgent.cc.s
 
 # target to generate assembly for a file
 ForgettingAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.s
 .PHONY : ForgettingAgent.cc.s
 
 HebbianCreationAgent.o: HebbianCreationAgent.cc.o
@@ -358,7 +358,7 @@ HebbianCreationAgent.o: HebbianCreationAgent.cc.o
 
 # target to build an object file
 HebbianCreationAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o
 .PHONY : HebbianCreationAgent.cc.o
 
 HebbianCreationAgent.i: HebbianCreationAgent.cc.i
@@ -366,7 +366,7 @@ HebbianCreationAgent.i: HebbianCreationAgent.cc.i
 
 # target to preprocess a source file
 HebbianCreationAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.i
 .PHONY : HebbianCreationAgent.cc.i
 
 HebbianCreationAgent.s: HebbianCreationAgent.cc.s
@@ -374,7 +374,7 @@ HebbianCreationAgent.s: HebbianCreationAgent.cc.s
 
 # target to generate assembly for a file
 HebbianCreationAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.s
 .PHONY : HebbianCreationAgent.cc.s
 
 HebbianUpdatingAgent.o: HebbianUpdatingAgent.cc.o
@@ -382,7 +382,7 @@ HebbianUpdatingAgent.o: HebbianUpdatingAgent.cc.o
 
 # target to build an object file
 HebbianUpdatingAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o
 .PHONY : HebbianUpdatingAgent.cc.o
 
 HebbianUpdatingAgent.i: HebbianUpdatingAgent.cc.i
@@ -390,7 +390,7 @@ HebbianUpdatingAgent.i: HebbianUpdatingAgent.cc.i
 
 # target to preprocess a source file
 HebbianUpdatingAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.i
 .PHONY : HebbianUpdatingAgent.cc.i
 
 HebbianUpdatingAgent.s: HebbianUpdatingAgent.cc.s
@@ -398,7 +398,7 @@ HebbianUpdatingAgent.s: HebbianUpdatingAgent.cc.s
 
 # target to generate assembly for a file
 HebbianUpdatingAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.s
 .PHONY : HebbianUpdatingAgent.cc.s
 
 ImportanceDiffusionBase.o: ImportanceDiffusionBase.cc.o
@@ -406,7 +406,7 @@ ImportanceDiffusionBase.o: ImportanceDiffusionBase.cc.o
 
 # target to build an object file
 ImportanceDiffusionBase.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o
 .PHONY : ImportanceDiffusionBase.cc.o
 
 ImportanceDiffusionBase.i: ImportanceDiffusionBase.cc.i
@@ -414,7 +414,7 @@ ImportanceDiffusionBase.i: ImportanceDiffusionBase.cc.i
 
 # target to preprocess a source file
 ImportanceDiffusionBase.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.i
 .PHONY : ImportanceDiffusionBase.cc.i
 
 ImportanceDiffusionBase.s: ImportanceDiffusionBase.cc.s
@@ -422,7 +422,7 @@ ImportanceDiffusionBase.s: ImportanceDiffusionBase.cc.s
 
 # target to generate assembly for a file
 ImportanceDiffusionBase.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.s
 .PHONY : ImportanceDiffusionBase.cc.s
 
 Neighbors.o: Neighbors.cc.o
@@ -430,7 +430,7 @@ Neighbors.o: Neighbors.cc.o
 
 # target to build an object file
 Neighbors.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o
 .PHONY : Neighbors.cc.o
 
 Neighbors.i: Neighbors.cc.i
@@ -438,7 +438,7 @@ Neighbors.i: Neighbors.cc.i
 
 # target to preprocess a source file
 Neighbors.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.i
 .PHONY : Neighbors.cc.i
 
 Neighbors.s: Neighbors.cc.s
@@ -446,7 +446,7 @@ Neighbors.s: Neighbors.cc.s
 
 # target to generate assembly for a file
 Neighbors.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.s
 .PHONY : Neighbors.cc.s
 
 RentCollectionBaseAgent.o: RentCollectionBaseAgent.cc.o
@@ -454,7 +454,7 @@ RentCollectionBaseAgent.o: RentCollectionBaseAgent.cc.o
 
 # target to build an object file
 RentCollectionBaseAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o
 .PHONY : RentCollectionBaseAgent.cc.o
 
 RentCollectionBaseAgent.i: RentCollectionBaseAgent.cc.i
@@ -462,7 +462,7 @@ RentCollectionBaseAgent.i: RentCollectionBaseAgent.cc.i
 
 # target to preprocess a source file
 RentCollectionBaseAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.i
 .PHONY : RentCollectionBaseAgent.cc.i
 
 RentCollectionBaseAgent.s: RentCollectionBaseAgent.cc.s
@@ -470,7 +470,7 @@ RentCollectionBaseAgent.s: RentCollectionBaseAgent.cc.s
 
 # target to generate assembly for a file
 RentCollectionBaseAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.s
 .PHONY : RentCollectionBaseAgent.cc.s
 
 WAImportanceDiffusionAgent.o: WAImportanceDiffusionAgent.cc.o
@@ -478,7 +478,7 @@ WAImportanceDiffusionAgent.o: WAImportanceDiffusionAgent.cc.o
 
 # target to build an object file
 WAImportanceDiffusionAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o
 .PHONY : WAImportanceDiffusionAgent.cc.o
 
 WAImportanceDiffusionAgent.i: WAImportanceDiffusionAgent.cc.i
@@ -486,7 +486,7 @@ WAImportanceDiffusionAgent.i: WAImportanceDiffusionAgent.cc.i
 
 # target to preprocess a source file
 WAImportanceDiffusionAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.i
 .PHONY : WAImportanceDiffusionAgent.cc.i
 
 WAImportanceDiffusionAgent.s: WAImportanceDiffusionAgent.cc.s
@@ -494,7 +494,7 @@ WAImportanceDiffusionAgent.s: WAImportanceDiffusionAgent.cc.s
 
 # target to generate assembly for a file
 WAImportanceDiffusionAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.s
 .PHONY : WAImportanceDiffusionAgent.cc.s
 
 WARentCollectionAgent.o: WARentCollectionAgent.cc.o
@@ -502,7 +502,7 @@ WARentCollectionAgent.o: WARentCollectionAgent.cc.o
 
 # target to build an object file
 WARentCollectionAgent.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o
 .PHONY : WARentCollectionAgent.cc.o
 
 WARentCollectionAgent.i: WARentCollectionAgent.cc.i
@@ -510,7 +510,7 @@ WARentCollectionAgent.i: WARentCollectionAgent.cc.i
 
 # target to preprocess a source file
 WARentCollectionAgent.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.i
 .PHONY : WARentCollectionAgent.cc.i
 
 WARentCollectionAgent.s: WARentCollectionAgent.cc.s
@@ -518,7 +518,7 @@ WARentCollectionAgent.s: WARentCollectionAgent.cc.s
 
 # target to generate assembly for a file
 WARentCollectionAgent.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.s
 .PHONY : WARentCollectionAgent.cc.s
 
 # Help Target
@@ -535,7 +535,7 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attention"
+	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attention"
 	@echo "... attention"
 	@echo "... AFImportanceDiffusionAgent.o"
 	@echo "... AFImportanceDiffusionAgent.i"
@@ -587,6 +587,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attentionbank
+# Install script for directory: /home/tarik/attention/attention/opencog/attentionbank
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,19 +45,19 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   
               IF(EXISTS
-                     /home/yeab/attention/opencog/attentionbank/opencog.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/opencog.scm
                  AND NOT
-                     /home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/scm/attention-bank.scm
                    STREQUAL
-                     /home/yeab/attention/opencog/attentionbank/opencog.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/opencog.scm
                  AND
-                     /home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/scm/attention-bank.scm
                    IS_NEWER_THAN
-                     /home/yeab/attention/opencog/attentionbank/opencog.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/opencog.scm
                  )
-                 MESSAGE("-- Touch: /home/yeab/attention/opencog/attentionbank/opencog.scm")
-                 MESSAGE("-- Newer: /home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm")
-                 FILE(TOUCH /home/yeab/attention/opencog/attentionbank/opencog.scm)
+                 MESSAGE("-- Touch: /home/tarik/attention/attention/opencog/attentionbank/opencog.scm")
+                 MESSAGE("-- Newer: /home/tarik/attention/attention/opencog/attentionbank/scm/attention-bank.scm")
+                 FILE(TOUCH /home/tarik/attention/attention/opencog/attentionbank/opencog.scm)
               ENDIF()
             
 endif()
@@ -71,14 +71,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm")
+  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY FILES "/home/tarik/attention/attention/opencog/attentionbank/scm/attention-bank.scm")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yeab/attention/build/opencog/attentionbank/avalue/cmake_install.cmake")
-  include("/home/yeab/attention/build/opencog/attentionbank/bank/cmake_install.cmake")
-  include("/home/yeab/attention/build/opencog/attentionbank/types/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/opencog/attentionbank/avalue/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/opencog/attentionbank/bank/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/opencog/attentionbank/types/cmake_install.cmake")
 
 endif()
 

@@ -26,7 +26,7 @@ bool suite_HebbianCreationModuleUTest_init = false;
 static HebbianCreationModuleUTest suite_HebbianCreationModuleUTest;
 
 static CxxTest::List Tests_HebbianCreationModuleUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_HebbianCreationModuleUTest( "/home/yeab/attention/tests/attention/HebbianCreationModuleUTest.cxxtest", 48, "HebbianCreationModuleUTest", suite_HebbianCreationModuleUTest, Tests_HebbianCreationModuleUTest );
+CxxTest::StaticSuiteDescription suiteDescription_HebbianCreationModuleUTest( "/home/tarik/attention/attention/tests/attention/HebbianCreationModuleUTest.cxxtest", 48, "HebbianCreationModuleUTest", suite_HebbianCreationModuleUTest, Tests_HebbianCreationModuleUTest );
 
 static class TestDescription_suite_HebbianCreationModuleUTest_testHebbianLinkCreation : public CxxTest::RealTestDescription {
 public:

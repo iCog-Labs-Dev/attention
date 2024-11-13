@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include opencog/attentionbank/types/CMakeFiles/attention-types.dir/depend.make
@@ -72,16 +72,16 @@ include opencog/attentionbank/types/CMakeFiles/attention-types.dir/flags.make
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o: opencog/attentionbank/types/CMakeFiles/attention-types.dir/flags.make
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o: ../opencog/attentionbank/types/atom_types_init.cc
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o: opencog/attentionbank/types/CMakeFiles/attention-types.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o"
-	cd /home/yeab/attention/build/opencog/attentionbank/types && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o -MF CMakeFiles/attention-types.dir/atom_types_init.cc.o.d -o CMakeFiles/attention-types.dir/atom_types_init.cc.o -c /home/yeab/attention/opencog/attentionbank/types/atom_types_init.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/types && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o -MF CMakeFiles/attention-types.dir/atom_types_init.cc.o.d -o CMakeFiles/attention-types.dir/atom_types_init.cc.o -c /home/tarik/attention/attention/opencog/attentionbank/types/atom_types_init.cc
 
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention-types.dir/atom_types_init.cc.i"
-	cd /home/yeab/attention/build/opencog/attentionbank/types && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attentionbank/types/atom_types_init.cc > CMakeFiles/attention-types.dir/atom_types_init.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/types && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attentionbank/types/atom_types_init.cc > CMakeFiles/attention-types.dir/atom_types_init.cc.i
 
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention-types.dir/atom_types_init.cc.s"
-	cd /home/yeab/attention/build/opencog/attentionbank/types && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attentionbank/types/atom_types_init.cc -o CMakeFiles/attention-types.dir/atom_types_init.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/types && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attentionbank/types/atom_types_init.cc -o CMakeFiles/attention-types.dir/atom_types_init.cc.s
 
 # Object files for target attention-types
 attention__types_OBJECTS = \
@@ -108,18 +108,18 @@ opencog/attentionbank/types/libattention-types.so: /usr/local/lib/opencog/libval
 opencog/attentionbank/types/libattention-types.so: /usr/local/lib/opencog/libatom_types.so
 opencog/attentionbank/types/libattention-types.so: /usr/local/lib/opencog/libcogutil.so
 opencog/attentionbank/types/libattention-types.so: opencog/attentionbank/types/CMakeFiles/attention-types.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libattention-types.so"
-	cd /home/yeab/attention/build/opencog/attentionbank/types && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attention-types.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libattention-types.so"
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/types && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attention-types.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/build: opencog/attentionbank/types/libattention-types.so
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention-types.dir/build
 
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/clean:
-	cd /home/yeab/attention/build/opencog/attentionbank/types && $(CMAKE_COMMAND) -P CMakeFiles/attention-types.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/types && $(CMAKE_COMMAND) -P CMakeFiles/attention-types.dir/cmake_clean.cmake
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention-types.dir/clean
 
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/opencog/attentionbank/types /home/yeab/attention/build /home/yeab/attention/build/opencog/attentionbank/types /home/yeab/attention/build/opencog/attentionbank/types/CMakeFiles/attention-types.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/opencog/attentionbank/types /home/tarik/attention/attention/build /home/tarik/attention/attention/build/opencog/attentionbank/types /home/tarik/attention/attention/build/opencog/attentionbank/types/CMakeFiles/attention-types.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention-types.dir/depend
 

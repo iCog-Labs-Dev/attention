@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o: \
- /home/yeab/attention/opencog/attention/HebbianUpdatingAgent.cc \
+ /home/tarik/attention/attention/opencog/attention/HebbianUpdatingAgent.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/algorithm \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -219,7 +219,7 @@ opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o: \
  /usr/include/c++/11/bits/random.tcc /usr/include/c++/11/numeric \
  /usr/include/c++/11/bits/stl_numeric.h /usr/include/c++/11/bit \
  /usr/include/c++/11/pstl/glue_numeric_defs.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h \
  /usr/local/include/opencog/atoms/atom_types/types.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
@@ -638,14 +638,14 @@ opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o: \
  /usr/local/include/opencog/atoms/base/Link.h \
  /usr/local/include/opencog/atoms/base/ClassServer.h \
  /usr/local/include/opencog/atoms/base/Node.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
  /usr/local/include/opencog/atoms/truthvalue/SimpleTruthValue.h \
- /home/yeab/attention/opencog/attention/HebbianUpdatingAgent.h \
+ /home/tarik/attention/attention/opencog/attention/HebbianUpdatingAgent.h \
  /usr/local/include/opencog/cogserver/modules/agents/Agent.h \
  /usr/local/include/opencog/cogserver/server/Factory.h \
- /home/yeab/attention/opencog/attention/Neighbors.h
+ /home/tarik/attention/attention/opencog/attention/Neighbors.h

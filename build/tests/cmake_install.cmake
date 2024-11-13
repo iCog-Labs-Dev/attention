@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/tests
+# Install script for directory: /home/tarik/attention/attention/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yeab/attention/build/tests/attentionbank/cmake_install.cmake")
-  include("/home/yeab/attention/build/tests/attention/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/tests/attentionbank/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/tests/attention/cmake_install.cmake")
 
 endif()
 

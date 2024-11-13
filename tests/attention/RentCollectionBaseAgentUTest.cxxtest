@@ -1,0 +1,148 @@
+#include <cxxtest/TestSuite.h>
+#include <opencog/attention/RentCollectionBaseAgent.h>
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/util/Config.h>
+#include <opencog/util/Logger.h>
+#include <memory>
+
+using namespace opencog;
+// DummyRentCollectionAgent is used here to instantiate and 
+// test abstract methods from RentCollectionBaseAgent
+class DummyRentCollectionAgent : public RentCollectionBaseAgent {
+public:
+    DummyRentCollectionAgent(CogServer& cs) : RentCollectionBaseAgent(cs) {}
+
+    void selectTargets(HandleSeq &targetSetOut) override {
+        // Dummy implementation for selecting targets
+        Handle atom1 = _as->add_node(CONCEPT_NODE, "DummyAtom1");
+        Handle atom2 = _as->add_node(CONCEPT_NODE, "DummyAtom2");
+        targetSetOut.push_back(atom1);
+        targetSetOut.push_back(atom2);
+    }
+
+    void collectRent(HandleSeq& targetSet) override {
+        // Dummy implementation for collecting rent
+        AttentionBank& ab = attentionbank(_as);
+        for (const auto& target : targetSet) {
+            // Directly manipulate the STI value in the AttentionBank
+            ab.set_sti(target, 0); 
+        }
+    }
+
+    // Expose protected members for testing
+    void loadParams() { load_params(); }
+    double getSTIAtomRent() const { return STIAtomRent; }
+    double getLTIAtomRent() const { return LTIAtomRent; }
+    double getTargetSTI() const { return targetSTI; }
+    double getSTIFundsBuffer() const { return stiFundsBuffer; }
+    double getTargetLTI() const { return targetLTI; }
+    double getLTIFundsBuffer() const { return ltiFundsBuffer; }
+
+    const ClassInfo& classinfo() const override {
+        static ClassInfo ci("DummyRentCollectionAgent");
+        return ci;
+    }
+};
+
+class RentCollectionAgentUTest : public CxxTest::TestSuite {
+private:
+    AtomSpace* _as;
+    CogServer* _cogserver;
+    Scheduler* _scheduler;
+    std::shared_ptr<DummyRentCollectionAgent> _dummy_agent;
+
+public:
+    RentCollectionAgentUTest() : _as(nullptr), _cogserver(nullptr), _scheduler(nullptr) {}
+
+    void setUp() {
+        _cogserver = &cogserver();
+        if (_as) {
+            delete _as; // Ensure previous AtomSpace is deleted
+        }
+        _as = new AtomSpace();
+
+        // Configure and load necessary modules
+        config().set("MODULES", "opencog/attention/libattention.so");
+        _cogserver->loadModules();
+
+        Module* amod = _cogserver->getModule("opencog::AgentsModule");
+        AgentsModule* agmod = dynamic_cast<AgentsModule*>(amod);
+        _scheduler = &agmod->get_scheduler();
+
+        // Initialize AttentionParamQuery and manually load parameters
+        auto _atq = std::make_shared<AttentionParamQuery>(_as);
+        try {
+            _atq->set_param(AttentionParamQuery::rent_starting_sti_rent, 1.0);
+            _atq->set_param(AttentionParamQuery::rent_starting_lti_rent, 1.0);
+            _atq->set_param(AttentionParamQuery::rent_target_sti_funds, 10000.0);
+            _atq->set_param(AttentionParamQuery::rent_sti_funds_buffer, 10000.0);
+            _atq->set_param(AttentionParamQuery::rent_target_lti_funds, 10000.0);
+            _atq->set_param(AttentionParamQuery::rent_lti_funds_buffer, 10000.0);
+        } catch (const opencog::RuntimeException& e) {
+            TS_FAIL("Parameter setting error: " + std::string(e.what()));
+        }
+
+        // Create DummyRentCollectionAgent with the fresh CogServer
+        _dummy_agent = std::make_shared<DummyRentCollectionAgent>(*_cogserver);
+        _dummy_agent->loadParams(); // Ensure parameters are loaded
+    }
+
+    void tearDown() {
+        if (_scheduler && _dummy_agent) {
+            _scheduler->stopAgent(std::static_pointer_cast<Agent>(_dummy_agent));
+        }
+        if (_as) {
+            delete _as; // Clean up AtomSpace
+            _as = nullptr;
+        }
+    }
+
+    void testRentCollection() {
+        // Test the rent collection functionality
+        AttentionBank& ab = attentionbank(_as);
+        Handle atom1 = _as->add_node(CONCEPT_NODE, "Atom1");
+        Handle atom2 = _as->add_node(CONCEPT_NODE, "Atom2");
+        ab.set_sti(atom1, 200);
+        ab.set_sti(atom2, 300);
+        
+        HandleSeq targetSet;
+        _dummy_agent->selectTargets(targetSet);
+        TS_ASSERT_EQUALS(targetSet.size(), 2); 
+        
+        _dummy_agent->collectRent(targetSet);
+        TS_ASSERT_EQUALS(ab.getSTIFunds(), 100000.0000);
+    }
+
+    // Additional test for verifying parameter loading
+    void testParameterLoading() {
+        TS_ASSERT_EQUALS(_dummy_agent->getSTIAtomRent(), 1.0);
+        TS_ASSERT_EQUALS(_dummy_agent->getLTIAtomRent(), 1.0);
+        TS_ASSERT_EQUALS(_dummy_agent->getTargetSTI(), 10000.0);
+        TS_ASSERT_EQUALS(_dummy_agent->getSTIFundsBuffer(), 10000.0);
+        TS_ASSERT_EQUALS(_dummy_agent->getTargetLTI(), 10000.0);
+        TS_ASSERT_EQUALS(_dummy_agent->getLTIFundsBuffer(), 10000.0);
+    }
+
+    void testCalculateLTIRent() {
+        // Here, expectedRent is set to 0.0 based on simplified conditions 
+        // where differences between current(10000) and target(10000) 
+        // funds is zero or negeative meaning current fund >= target fund it return 0.
+        double expectedRent = 0.0; 
+        double calculatedRent = _dummy_agent->calculate_LTI_Rent();
+        TS_ASSERT_EQUALS(calculatedRent, expectedRent);
+    }
+
+    void testCalculateSTIRent() {
+         // Here, expectedRent is set to 0.0 based on simplified conditions 
+        // where differences between current(10000) and target(10000) 
+        // funds is zero or negeative meaning current fund >= target fund it return 0
+        double expectedRent = 0.0; 
+        double calculatedRent = _dummy_agent->calculate_STI_Rent();
+        TS_ASSERT_EQUALS(calculatedRent, expectedRent);
+    }
+};

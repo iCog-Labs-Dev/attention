@@ -1,5 +1,5 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AttentionSCM.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionSCM.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionSCM.cc \
  /usr/include/stdc-predef.h /usr/local/include/opencog/atoms/base/Link.h \
  /usr/include/c++/11/functional \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -583,13 +583,13 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AttentionSCM.cc.o: \
  /usr/local/include/opencog/util/macros.h \
  /usr/local/include/opencog/atoms/value/FloatValue.h \
  /usr/local/include/opencog/atoms/base/ClassServer.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
  /usr/include/c++/11/atomic \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc \
@@ -794,8 +794,8 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AttentionSCM.cc.o: \
  /usr/include/guile/3.0/libguile/deprecated.h \
  /usr/local/include/opencog/guile/SchemeSmob.h \
  /usr/local/include/opencog/atoms/value/LinkValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/AFImplicator.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionalFocusCB.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AFImplicator.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionalFocusCB.h \
  /usr/local/include/opencog/query/TermMatchMixin.h \
  /usr/local/include/opencog/atoms/core/Quotation.h \
  /usr/local/include/opencog/query/PatternMatchCallback.h \

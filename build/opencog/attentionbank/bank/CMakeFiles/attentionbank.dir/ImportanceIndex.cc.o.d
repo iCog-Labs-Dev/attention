@@ -1,5 +1,5 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/cmath \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -439,8 +439,8 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o: \
  /usr/include/boost/detail/call_traits.hpp \
  /usr/include/boost/operators.hpp \
  /usr/include/boost/utility/addressof.hpp \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -643,6 +643,6 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o: \
  /usr/local/include/opencog/atomspace/TypeIndex.h \
  /usr/local/include/opencog/atoms/base/Atom.h \
  /usr/include/c++/11/shared_mutex \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h

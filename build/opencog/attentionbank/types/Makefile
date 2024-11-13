@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/yeab/attention/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/yeab/attention/build/CPackSourceConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tarik/attention/attention/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles /home/yeab/attention/build/opencog/attentionbank/types//CMakeFiles/progress.marks
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles /home/tarik/attention/attention/build/opencog/attentionbank/types//CMakeFiles/progress.marks
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/clean
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/rule
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ attention_atom_types: opencog/attentionbank/types/CMakeFiles/attention_atom_type
 
 # fast build rule for target.
 attention_atom_types/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build
 .PHONY : attention_atom_types/fast
 
 # Convenience name for target.
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/CMakeFiles/attention-types.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/CMakeFiles/attention-types.dir/rule
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention-types.dir/rule
 
 # Convenience name for target.
@@ -206,29 +206,29 @@ attention-types: opencog/attentionbank/types/CMakeFiles/attention-types.dir/rule
 
 # fast build rule for target.
 attention-types/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/build
 .PHONY : attention-types/fast
 
 # Convenience name for target.
-opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/rule
-.PHONY : opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/rule
+opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/rule:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/rule
+.PHONY : opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/rule
 
 # Convenience name for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types: opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/rule
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types: opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/rule
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types
 
 # fast build rule for target.
-COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/build.make opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types.dir/build
-.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types/fast
+COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types/fast:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/build.make opencog/attentionbank/types/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types.dir/build
+.PHONY : COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types/fast
 
 atom_types_init.o: atom_types_init.cc.o
 .PHONY : atom_types_init.o
 
 # target to build an object file
 atom_types_init.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o
 .PHONY : atom_types_init.cc.o
 
 atom_types_init.i: atom_types_init.cc.i
@@ -236,7 +236,7 @@ atom_types_init.i: atom_types_init.cc.i
 
 # target to preprocess a source file
 atom_types_init.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.i
 .PHONY : atom_types_init.cc.i
 
 atom_types_init.s: atom_types_init.cc.s
@@ -244,7 +244,7 @@ atom_types_init.s: atom_types_init.cc.s
 
 # target to generate assembly for a file
 atom_types_init.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.s
 .PHONY : atom_types_init.cc.s
 
 # Help Target
@@ -261,7 +261,7 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_yeab_attention_opencog_attentionbank_types"
+	@echo "... COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_tarik_attention_attention_opencog_attentionbank_types"
 	@echo "... attention_atom_types"
 	@echo "... attention-types"
 	@echo "... atom_types_init.o"
@@ -278,6 +278,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

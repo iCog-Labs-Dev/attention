@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attentionbank/avalue
+# Install script for directory: /home/tarik/attention/attention/opencog/attentionbank/avalue
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,12 +49,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionval.so"
          RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/avalue/libattentionval.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/opencog/attentionbank/avalue/libattentionval.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionval.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionval.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionval.so"
-         OLD_RPATH "/home/yeab/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:"
+         OLD_RPATH "/home/tarik/attention/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:"
          NEW_RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionval.so")
@@ -67,8 +67,8 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attentionbank/avalue" TYPE FILE MESSAGE_LAZY FILES
-    "/home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h"
-    "/home/yeab/attention/opencog/attentionbank/avalue/AttentionValueOfLink.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h"
+    "/home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValueOfLink.h"
     )
 endif()
 

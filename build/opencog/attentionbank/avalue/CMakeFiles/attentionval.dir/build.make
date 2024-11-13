@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/depend.make
@@ -72,30 +72,30 @@ include opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/flags.make
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/flags.make
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o: ../opencog/attentionbank/avalue/AttentionValue.cc
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o"
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o -MF CMakeFiles/attentionval.dir/AttentionValue.cc.o.d -o CMakeFiles/attentionval.dir/AttentionValue.cc.o -c /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.o -MF CMakeFiles/attentionval.dir/AttentionValue.cc.o.d -o CMakeFiles/attentionval.dir/AttentionValue.cc.o -c /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.cc
 
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attentionval.dir/AttentionValue.cc.i"
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.cc > CMakeFiles/attentionval.dir/AttentionValue.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.cc > CMakeFiles/attentionval.dir/AttentionValue.cc.i
 
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attentionval.dir/AttentionValue.cc.s"
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.cc -o CMakeFiles/attentionval.dir/AttentionValue.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.cc -o CMakeFiles/attentionval.dir/AttentionValue.cc.s
 
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/flags.make
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o: ../opencog/attentionbank/avalue/AttentionValueOfLink.cc
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o"
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o -MF CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o.d -o CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o -c /home/yeab/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o -MF CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o.d -o CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.o -c /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc
 
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.i"
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc > CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc > CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.i
 
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.s"
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc -o CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValueOfLink.cc -o CMakeFiles/attentionval.dir/AttentionValueOfLink.cc.s
 
 # Object files for target attentionval
 attentionval_OBJECTS = \
@@ -133,18 +133,18 @@ opencog/attentionbank/avalue/libattentionval.so: /usr/local/lib/opencog/libvalue
 opencog/attentionbank/avalue/libattentionval.so: /usr/local/lib/opencog/libatom_types.so
 opencog/attentionbank/avalue/libattentionval.so: /usr/local/lib/opencog/libcogutil.so
 opencog/attentionbank/avalue/libattentionval.so: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libattentionval.so"
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attentionval.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libattentionval.so"
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attentionval.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/build: opencog/attentionbank/avalue/libattentionval.so
 .PHONY : opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/build
 
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/clean:
-	cd /home/yeab/attention/build/opencog/attentionbank/avalue && $(CMAKE_COMMAND) -P CMakeFiles/attentionval.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/avalue && $(CMAKE_COMMAND) -P CMakeFiles/attentionval.dir/cmake_clean.cmake
 .PHONY : opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/clean
 
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/opencog/attentionbank/avalue /home/yeab/attention/build /home/yeab/attention/build/opencog/attentionbank/avalue /home/yeab/attention/build/opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/opencog/attentionbank/avalue /home/tarik/attention/attention/build /home/tarik/attention/attention/build/opencog/attentionbank/avalue /home/tarik/attention/attention/build/opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/depend
 

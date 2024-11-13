@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/depend.make
@@ -70,22 +70,22 @@ include tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/progress.make
 include tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/flags.make
 
 tests/attentionbank/AttentionValueUTest.cpp: ../tests/attentionbank/AttentionValueUTest.cxxtest
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating AttentionValueUTest.cpp"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/yeab/attention/build/tests/attentionbank/AttentionValueUTest.cpp /home/yeab/attention/tests/attentionbank/AttentionValueUTest.cxxtest
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating AttentionValueUTest.cpp"
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/tarik/attention/attention/build/tests/attentionbank/AttentionValueUTest.cpp /home/tarik/attention/attention/tests/attentionbank/AttentionValueUTest.cxxtest
 
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o: tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/flags.make
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o: tests/attentionbank/AttentionValueUTest.cpp
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o: tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o -MF CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o.d -o CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o -c /home/yeab/attention/build/tests/attentionbank/AttentionValueUTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o"
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o -MF CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o.d -o CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o -c /home/tarik/attention/attention/build/tests/attentionbank/AttentionValueUTest.cpp
 
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.i"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/build/tests/attentionbank/AttentionValueUTest.cpp > CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.i
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/build/tests/attentionbank/AttentionValueUTest.cpp > CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.i
 
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.s"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/build/tests/attentionbank/AttentionValueUTest.cpp -o CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.s
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/build/tests/attentionbank/AttentionValueUTest.cpp -o CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.s
 
 # Object files for target AttentionValueUTest
 AttentionValueUTest_OBJECTS = \
@@ -122,18 +122,18 @@ tests/attentionbank/AttentionValueUTest: /usr/local/lib/opencog/libatom_types.so
 tests/attentionbank/AttentionValueUTest: /usr/lib/x86_64-linux-gnu/libguile-3.0.so
 tests/attentionbank/AttentionValueUTest: /usr/local/lib/opencog/libcogutil.so
 tests/attentionbank/AttentionValueUTest: tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AttentionValueUTest"
-	cd /home/yeab/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AttentionValueUTest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AttentionValueUTest"
+	cd /home/tarik/attention/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AttentionValueUTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build: tests/attentionbank/AttentionValueUTest
 .PHONY : tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build
 
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/clean:
-	cd /home/yeab/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -P CMakeFiles/AttentionValueUTest.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -P CMakeFiles/AttentionValueUTest.dir/cmake_clean.cmake
 .PHONY : tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/clean
 
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/depend: tests/attentionbank/AttentionValueUTest.cpp
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/tests/attentionbank /home/yeab/attention/build /home/yeab/attention/build/tests/attentionbank /home/yeab/attention/build/tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/tests/attentionbank /home/tarik/attention/attention/build /home/tarik/attention/attention/build/tests/attentionbank /home/tarik/attention/attention/build/tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/depend
 

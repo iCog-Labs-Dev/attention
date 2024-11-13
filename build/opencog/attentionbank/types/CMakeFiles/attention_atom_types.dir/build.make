@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Utility rule file for attention_atom_types.
 
@@ -70,8 +70,8 @@ opencog/attentionbank/types/CMakeFiles/attention_atom_types: opencog/attentionba
 
 opencog/attentionbank/types/atom_types.h: ../opencog/attentionbank/types/atom_types.script
 opencog/attentionbank/types/atom_types.h: /usr/local/share/opencog/cmake/OpenCogAtomTypes.cmake
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencog types"
-	cd /home/yeab/attention/build/opencog/attentionbank/types && /usr/bin/cmake -DSCRIPT_FILE="/home/yeab/attention/opencog/attentionbank/types/atom_types.script" -DHEADER_FILE="/home/yeab/attention/build/opencog/attentionbank/types/atom_types.h" -DDEFINITIONS_FILE="/home/yeab/attention/build/opencog/attentionbank/types/atom_types.definitions" -DINHERITANCE_FILE="/home/yeab/attention/build/opencog/attentionbank/types/atom_types.inheritance" -DSCM_FILE="/home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm" -DPYTHON_FILE="/home/yeab/attention/build/opencog/attentionbank/types/attention_types.pyx" -P /usr/local/share/opencog/cmake/OpenCogAtomTypes.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating opencog types"
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/types && /usr/bin/cmake -DSCRIPT_FILE="/home/tarik/attention/attention/opencog/attentionbank/types/atom_types.script" -DHEADER_FILE="/home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h" -DDEFINITIONS_FILE="/home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.definitions" -DINHERITANCE_FILE="/home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.inheritance" -DSCM_FILE="/home/tarik/attention/attention/build/opencog/attentionbank/types/attention_types.scm" -DPYTHON_FILE="/home/tarik/attention/attention/build/opencog/attentionbank/types/attention_types.pyx" -P /usr/local/share/opencog/cmake/OpenCogAtomTypes.cmake
 
 opencog/attentionbank/types/atom_types.definitions: opencog/attentionbank/types/atom_types.h
 	@$(CMAKE_COMMAND) -E touch_nocreate opencog/attentionbank/types/atom_types.definitions
@@ -99,10 +99,10 @@ opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build: attention
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build
 
 opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/clean:
-	cd /home/yeab/attention/build/opencog/attentionbank/types && $(CMAKE_COMMAND) -P CMakeFiles/attention_atom_types.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/opencog/attentionbank/types && $(CMAKE_COMMAND) -P CMakeFiles/attention_atom_types.dir/cmake_clean.cmake
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/clean
 
 opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/opencog/attentionbank/types /home/yeab/attention/build /home/yeab/attention/build/opencog/attentionbank/types /home/yeab/attention/build/opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/opencog/attentionbank/types /home/tarik/attention/attention/build /home/tarik/attention/attention/build/opencog/attentionbank/types /home/tarik/attention/attention/build/opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/depend
 

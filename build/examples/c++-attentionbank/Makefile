@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/yeab/attention/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/yeab/attention/build/CPackSourceConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tarik/attention/attention/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles /home/yeab/attention/build/examples/c++-attentionbank//CMakeFiles/progress.marks
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles /home/tarik/attention/attention/build/examples/c++-attentionbank//CMakeFiles/progress.marks
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/clean
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/c++-attentionbank/CMakeFiles/crudexample.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/CMakeFiles/crudexample.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/CMakeFiles/crudexample.dir/rule
 .PHONY : examples/c++-attentionbank/CMakeFiles/crudexample.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ crudexample: examples/c++-attentionbank/CMakeFiles/crudexample.dir/rule
 
 # fast build rule for target.
 crudexample/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/build
 .PHONY : crudexample/fast
 
 # Convenience name for target.
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/rule
 .PHONY : examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/rule
 
 # Convenience name for target.
@@ -206,7 +206,7 @@ aseventsexample: examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/rule
 
 # fast build rule for target.
 aseventsexample/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build
 .PHONY : aseventsexample/fast
 
 AtomSpaceEventSubscribeExample.o: AtomSpaceEventSubscribeExample.cc.o
@@ -214,7 +214,7 @@ AtomSpaceEventSubscribeExample.o: AtomSpaceEventSubscribeExample.cc.o
 
 # target to build an object file
 AtomSpaceEventSubscribeExample.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o
 .PHONY : AtomSpaceEventSubscribeExample.cc.o
 
 AtomSpaceEventSubscribeExample.i: AtomSpaceEventSubscribeExample.cc.i
@@ -222,7 +222,7 @@ AtomSpaceEventSubscribeExample.i: AtomSpaceEventSubscribeExample.cc.i
 
 # target to preprocess a source file
 AtomSpaceEventSubscribeExample.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.i
 .PHONY : AtomSpaceEventSubscribeExample.cc.i
 
 AtomSpaceEventSubscribeExample.s: AtomSpaceEventSubscribeExample.cc.s
@@ -230,7 +230,7 @@ AtomSpaceEventSubscribeExample.s: AtomSpaceEventSubscribeExample.cc.s
 
 # target to generate assembly for a file
 AtomSpaceEventSubscribeExample.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.s
 .PHONY : AtomSpaceEventSubscribeExample.cc.s
 
 CRUDExample.o: CRUDExample.cc.o
@@ -238,7 +238,7 @@ CRUDExample.o: CRUDExample.cc.o
 
 # target to build an object file
 CRUDExample.cc.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/CRUDExample.cc.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/CRUDExample.cc.o
 .PHONY : CRUDExample.cc.o
 
 CRUDExample.i: CRUDExample.cc.i
@@ -246,7 +246,7 @@ CRUDExample.i: CRUDExample.cc.i
 
 # target to preprocess a source file
 CRUDExample.cc.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/CRUDExample.cc.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/CRUDExample.cc.i
 .PHONY : CRUDExample.cc.i
 
 CRUDExample.s: CRUDExample.cc.s
@@ -254,7 +254,7 @@ CRUDExample.s: CRUDExample.cc.s
 
 # target to generate assembly for a file
 CRUDExample.cc.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/CRUDExample.cc.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/CRUDExample.cc.s
 .PHONY : CRUDExample.cc.s
 
 # Help Target
@@ -290,6 +290,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

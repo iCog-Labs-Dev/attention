@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attentionbank/types
+# Install script for directory: /home/tarik/attention/attention/opencog/attentionbank/types
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so"
          RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/types/libattention-types.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/opencog/attentionbank/types/libattention-types.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so")
     file(RPATH_CHANGE
@@ -66,25 +66,25 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/types/atom_types.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/opencog/attentionbank/types/atom_types.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   
               IF(EXISTS
-                     /home/yeab/attention/opencog/attentionbank/types/types.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/types/types.scm
                  AND NOT
-                     /home/yeab/attention/opencog/attentionbank/types//home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/types//home/tarik/attention/attention/build/opencog/attentionbank/types/attention_types.scm
                    STREQUAL
-                     /home/yeab/attention/opencog/attentionbank/types/types.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/types/types.scm
                  AND
-                     /home/yeab/attention/opencog/attentionbank/types//home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/types//home/tarik/attention/attention/build/opencog/attentionbank/types/attention_types.scm
                    IS_NEWER_THAN
-                     /home/yeab/attention/opencog/attentionbank/types/types.scm
+                     /home/tarik/attention/attention/opencog/attentionbank/types/types.scm
                  )
-                 MESSAGE("-- Touch: /home/yeab/attention/opencog/attentionbank/types/types.scm")
-                 MESSAGE("-- Newer: /home/yeab/attention/opencog/attentionbank/types//home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm")
-                 FILE(TOUCH /home/yeab/attention/opencog/attentionbank/types/types.scm)
+                 MESSAGE("-- Touch: /home/tarik/attention/attention/opencog/attentionbank/types/types.scm")
+                 MESSAGE("-- Newer: /home/tarik/attention/attention/opencog/attentionbank/types//home/tarik/attention/attention/build/opencog/attentionbank/types/attention_types.scm")
+                 FILE(TOUCH /home/tarik/attention/attention/opencog/attentionbank/types/types.scm)
               ENDIF()
             
 endif()
@@ -98,6 +98,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm")
+  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/opencog/attentionbank/types/attention_types.scm")
 endif()
 

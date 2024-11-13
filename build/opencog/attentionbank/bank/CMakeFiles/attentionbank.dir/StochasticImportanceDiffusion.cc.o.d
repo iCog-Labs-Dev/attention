@@ -1,5 +1,5 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/StochasticImportanceDiffusion.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.cc \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/algorithm \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -125,7 +125,7 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/StochasticImportanceDiff
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AttentionBank.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
@@ -193,7 +193,7 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/StochasticImportanceDiff
  /usr/local/include/opencog/util/sigslot.h /usr/include/c++/11/map \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/tarik/attention/attention/opencog/attentionbank/avalue/AttentionValue.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -222,9 +222,9 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/StochasticImportanceDiff
  /usr/include/c++/11/bits/stl_multiset.h \
  /usr/local/include/opencog/atoms/atom_types/NameServer.h \
  /usr/local/include/opencog/atoms/atom_types/atom_types.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
  /usr/include/c++/11/atomic \
  /usr/local/include/opencog/atoms/base/Handle.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
@@ -610,7 +610,7 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/StochasticImportanceDiff
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc \
@@ -636,4 +636,4 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/StochasticImportanceDiff
  /usr/local/include/opencog/atomspace/TypeIndex.h \
  /usr/local/include/opencog/atoms/base/Atom.h \
  /usr/include/c++/11/shared_mutex \
- /home/yeab/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h
+ /home/tarik/attention/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h

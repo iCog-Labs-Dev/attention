@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/lib
+# Install script for directory: /home/tarik/attention/attention/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -46,7 +46,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank/AttentionBankTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank/AttentionBankTargets.cmake"
-         "/home/yeab/attention/build/lib/CMakeFiles/Export/lib/cmake/AttentionBank/AttentionBankTargets.cmake")
+         "/home/tarik/attention/attention/build/lib/CMakeFiles/Export/lib/cmake/AttentionBank/AttentionBankTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank/AttentionBankTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -55,16 +55,16 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/build/lib/CMakeFiles/Export/lib/cmake/AttentionBank/AttentionBankTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank" TYPE FILE MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/lib/CMakeFiles/Export/lib/cmake/AttentionBank/AttentionBankTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/build/lib/CMakeFiles/Export/lib/cmake/AttentionBank/AttentionBankTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank" TYPE FILE MESSAGE_LAZY FILES "/home/tarik/attention/attention/build/lib/CMakeFiles/Export/lib/cmake/AttentionBank/AttentionBankTargets-release.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/AttentionBank" TYPE FILE MESSAGE_LAZY FILES
-    "/home/yeab/attention/build/lib/AttentionBankConfigVersion.cmake"
-    "/home/yeab/attention/build/lib/AttentionBankConfig.cmake"
+    "/home/tarik/attention/attention/build/lib/AttentionBankConfigVersion.cmake"
+    "/home/tarik/attention/attention/build/lib/AttentionBankConfig.cmake"
     )
 endif()
 

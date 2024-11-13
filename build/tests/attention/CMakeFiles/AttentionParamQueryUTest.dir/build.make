@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/depend.make
@@ -70,22 +70,22 @@ include tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/progress.make
 include tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/flags.make
 
 tests/attention/AttentionParamQueryUTest.cpp: ../tests/attention/AttentionParamQueryUTest.cxxtest
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating AttentionParamQueryUTest.cpp"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/yeab/attention/build/tests/attention/AttentionParamQueryUTest.cpp /home/yeab/attention/tests/attention/AttentionParamQueryUTest.cxxtest
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating AttentionParamQueryUTest.cpp"
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/tarik/attention/attention/build/tests/attention/AttentionParamQueryUTest.cpp /home/tarik/attention/attention/tests/attention/AttentionParamQueryUTest.cxxtest
 
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/flags.make
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o: tests/attention/AttentionParamQueryUTest.cpp
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o -MF CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o.d -o CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o -c /home/yeab/attention/build/tests/attention/AttentionParamQueryUTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o"
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o -MF CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o.d -o CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o -c /home/tarik/attention/attention/build/tests/attention/AttentionParamQueryUTest.cpp
 
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.i"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/build/tests/attention/AttentionParamQueryUTest.cpp > CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.i
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/build/tests/attention/AttentionParamQueryUTest.cpp > CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.i
 
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.s"
-	cd /home/yeab/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/build/tests/attention/AttentionParamQueryUTest.cpp -o CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.s
+	cd /home/tarik/attention/attention/build/tests/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/build/tests/attention/AttentionParamQueryUTest.cpp -o CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.s
 
 # Object files for target AttentionParamQueryUTest
 AttentionParamQueryUTest_OBJECTS = \
@@ -125,18 +125,18 @@ tests/attention/AttentionParamQueryUTest: /usr/local/lib/opencog/libatom_types.s
 tests/attention/AttentionParamQueryUTest: /usr/lib/x86_64-linux-gnu/libguile-3.0.so
 tests/attention/AttentionParamQueryUTest: /usr/local/lib/opencog/libcogutil.so
 tests/attention/AttentionParamQueryUTest: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AttentionParamQueryUTest"
-	cd /home/yeab/attention/build/tests/attention && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AttentionParamQueryUTest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AttentionParamQueryUTest"
+	cd /home/tarik/attention/attention/build/tests/attention && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AttentionParamQueryUTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build: tests/attention/AttentionParamQueryUTest
 .PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build
 
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/clean:
-	cd /home/yeab/attention/build/tests/attention && $(CMAKE_COMMAND) -P CMakeFiles/AttentionParamQueryUTest.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/tests/attention && $(CMAKE_COMMAND) -P CMakeFiles/AttentionParamQueryUTest.dir/cmake_clean.cmake
 .PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/clean
 
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/depend: tests/attention/AttentionParamQueryUTest.cpp
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/tests/attention /home/yeab/attention/build /home/yeab/attention/build/tests/attention /home/yeab/attention/build/tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/tests/attention /home/tarik/attention/attention/build /home/tarik/attention/attention/build/tests/attention /home/tarik/attention/attention/build/tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/depend
 

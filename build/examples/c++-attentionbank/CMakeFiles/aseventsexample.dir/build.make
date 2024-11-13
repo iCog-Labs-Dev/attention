@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/depend.make
@@ -72,16 +72,16 @@ include examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/flags.make
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o: examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/flags.make
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o: ../examples/c++-attentionbank/AtomSpaceEventSubscribeExample.cc
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o: examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o"
-	cd /home/yeab/attention/build/examples/c++-attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o -MF CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o.d -o CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o -c /home/yeab/attention/examples/c++-attentionbank/AtomSpaceEventSubscribeExample.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o"
+	cd /home/tarik/attention/attention/build/examples/c++-attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o -MF CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o.d -o CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.o -c /home/tarik/attention/attention/examples/c++-attentionbank/AtomSpaceEventSubscribeExample.cc
 
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.i"
-	cd /home/yeab/attention/build/examples/c++-attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/examples/c++-attentionbank/AtomSpaceEventSubscribeExample.cc > CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.i
+	cd /home/tarik/attention/attention/build/examples/c++-attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/examples/c++-attentionbank/AtomSpaceEventSubscribeExample.cc > CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.i
 
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.s"
-	cd /home/yeab/attention/build/examples/c++-attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/examples/c++-attentionbank/AtomSpaceEventSubscribeExample.cc -o CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.s
+	cd /home/tarik/attention/attention/build/examples/c++-attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/examples/c++-attentionbank/AtomSpaceEventSubscribeExample.cc -o CMakeFiles/aseventsexample.dir/AtomSpaceEventSubscribeExample.cc.s
 
 # Object files for target aseventsexample
 aseventsexample_OBJECTS = \
@@ -118,18 +118,18 @@ examples/c++-attentionbank/aseventsexample: /usr/local/lib/opencog/libatom_types
 examples/c++-attentionbank/aseventsexample: /usr/lib/x86_64-linux-gnu/libguile-3.0.so
 examples/c++-attentionbank/aseventsexample: /usr/local/lib/opencog/libcogutil.so
 examples/c++-attentionbank/aseventsexample: examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable aseventsexample"
-	cd /home/yeab/attention/build/examples/c++-attentionbank && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aseventsexample.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable aseventsexample"
+	cd /home/tarik/attention/attention/build/examples/c++-attentionbank && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aseventsexample.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build: examples/c++-attentionbank/aseventsexample
 .PHONY : examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build
 
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/clean:
-	cd /home/yeab/attention/build/examples/c++-attentionbank && $(CMAKE_COMMAND) -P CMakeFiles/aseventsexample.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/examples/c++-attentionbank && $(CMAKE_COMMAND) -P CMakeFiles/aseventsexample.dir/cmake_clean.cmake
 .PHONY : examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/clean
 
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/examples/c++-attentionbank /home/yeab/attention/build /home/yeab/attention/build/examples/c++-attentionbank /home/yeab/attention/build/examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/examples/c++-attentionbank /home/tarik/attention/attention/build /home/tarik/attention/attention/build/examples/c++-attentionbank /home/tarik/attention/attention/build/examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/depend
 

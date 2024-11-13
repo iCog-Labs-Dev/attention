@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/yeab/attention/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/yeab/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/yeab/attention/build/CPackSourceConfig.cmake
+	cd /home/tarik/attention/attention/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/tarik/attention/attention/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles /home/yeab/attention/build/tests/attentionbank//CMakeFiles/progress.marks
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yeab/attention/build/CMakeFiles 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles /home/tarik/attention/attention/build/tests/attentionbank//CMakeFiles/progress.marks
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tarik/attention/attention/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/clean
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/preinstall
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/rule
 .PHONY : tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ AttentionValueUTest: tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/rule
 
 # fast build rule for target.
 AttentionValueUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build
 .PHONY : AttentionValueUTest/fast
 
 # Convenience name for target.
 tests/attentionbank/CMakeFiles/AttentionUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/AttentionUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/AttentionUTest.dir/rule
 .PHONY : tests/attentionbank/CMakeFiles/AttentionUTest.dir/rule
 
 # Convenience name for target.
@@ -206,12 +206,12 @@ AttentionUTest: tests/attentionbank/CMakeFiles/AttentionUTest.dir/rule
 
 # fast build rule for target.
 AttentionUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/build
 .PHONY : AttentionUTest/fast
 
 # Convenience name for target.
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/BankImplUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/BankImplUTest.dir/rule
 .PHONY : tests/attentionbank/CMakeFiles/BankImplUTest.dir/rule
 
 # Convenience name for target.
@@ -220,12 +220,12 @@ BankImplUTest: tests/attentionbank/CMakeFiles/BankImplUTest.dir/rule
 
 # fast build rule for target.
 BankImplUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/build
 .PHONY : BankImplUTest/fast
 
 # Convenience name for target.
 tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/rule
 .PHONY : tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/rule
 
 # Convenience name for target.
@@ -234,12 +234,12 @@ BankAsyncUTest: tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/rule
 
 # fast build rule for target.
 BankAsyncUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build
 .PHONY : BankAsyncUTest/fast
 
 # Convenience name for target.
 tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/rule:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/rule
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/rule
 .PHONY : tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/rule
 
 # Convenience name for target.
@@ -248,7 +248,7 @@ AttentionalFocusCBUTest: tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.
 
 # fast build rule for target.
 AttentionalFocusCBUTest/fast:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build
 .PHONY : AttentionalFocusCBUTest/fast
 
 AttentionUTest.o: AttentionUTest.cpp.o
@@ -256,7 +256,7 @@ AttentionUTest.o: AttentionUTest.cpp.o
 
 # target to build an object file
 AttentionUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.o
 .PHONY : AttentionUTest.cpp.o
 
 AttentionUTest.i: AttentionUTest.cpp.i
@@ -264,7 +264,7 @@ AttentionUTest.i: AttentionUTest.cpp.i
 
 # target to preprocess a source file
 AttentionUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.i
 .PHONY : AttentionUTest.cpp.i
 
 AttentionUTest.s: AttentionUTest.cpp.s
@@ -272,7 +272,7 @@ AttentionUTest.s: AttentionUTest.cpp.s
 
 # target to generate assembly for a file
 AttentionUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.s
 .PHONY : AttentionUTest.cpp.s
 
 AttentionValueUTest.o: AttentionValueUTest.cpp.o
@@ -280,7 +280,7 @@ AttentionValueUTest.o: AttentionValueUTest.cpp.o
 
 # target to build an object file
 AttentionValueUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o
 .PHONY : AttentionValueUTest.cpp.o
 
 AttentionValueUTest.i: AttentionValueUTest.cpp.i
@@ -288,7 +288,7 @@ AttentionValueUTest.i: AttentionValueUTest.cpp.i
 
 # target to preprocess a source file
 AttentionValueUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.i
 .PHONY : AttentionValueUTest.cpp.i
 
 AttentionValueUTest.s: AttentionValueUTest.cpp.s
@@ -296,7 +296,7 @@ AttentionValueUTest.s: AttentionValueUTest.cpp.s
 
 # target to generate assembly for a file
 AttentionValueUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.s
 .PHONY : AttentionValueUTest.cpp.s
 
 AttentionalFocusCBUTest.o: AttentionalFocusCBUTest.cpp.o
@@ -304,7 +304,7 @@ AttentionalFocusCBUTest.o: AttentionalFocusCBUTest.cpp.o
 
 # target to build an object file
 AttentionalFocusCBUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.o
 .PHONY : AttentionalFocusCBUTest.cpp.o
 
 AttentionalFocusCBUTest.i: AttentionalFocusCBUTest.cpp.i
@@ -312,7 +312,7 @@ AttentionalFocusCBUTest.i: AttentionalFocusCBUTest.cpp.i
 
 # target to preprocess a source file
 AttentionalFocusCBUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.i
 .PHONY : AttentionalFocusCBUTest.cpp.i
 
 AttentionalFocusCBUTest.s: AttentionalFocusCBUTest.cpp.s
@@ -320,7 +320,7 @@ AttentionalFocusCBUTest.s: AttentionalFocusCBUTest.cpp.s
 
 # target to generate assembly for a file
 AttentionalFocusCBUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/build.make tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.s
 .PHONY : AttentionalFocusCBUTest.cpp.s
 
 BankAsyncUTest.o: BankAsyncUTest.cpp.o
@@ -328,7 +328,7 @@ BankAsyncUTest.o: BankAsyncUTest.cpp.o
 
 # target to build an object file
 BankAsyncUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.o
 .PHONY : BankAsyncUTest.cpp.o
 
 BankAsyncUTest.i: BankAsyncUTest.cpp.i
@@ -336,7 +336,7 @@ BankAsyncUTest.i: BankAsyncUTest.cpp.i
 
 # target to preprocess a source file
 BankAsyncUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.i
 .PHONY : BankAsyncUTest.cpp.i
 
 BankAsyncUTest.s: BankAsyncUTest.cpp.s
@@ -344,7 +344,7 @@ BankAsyncUTest.s: BankAsyncUTest.cpp.s
 
 # target to generate assembly for a file
 BankAsyncUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/build.make tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.s
 .PHONY : BankAsyncUTest.cpp.s
 
 BankImplUTest.o: BankImplUTest.cpp.o
@@ -352,7 +352,7 @@ BankImplUTest.o: BankImplUTest.cpp.o
 
 # target to build an object file
 BankImplUTest.cpp.o:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o
 .PHONY : BankImplUTest.cpp.o
 
 BankImplUTest.i: BankImplUTest.cpp.i
@@ -360,7 +360,7 @@ BankImplUTest.i: BankImplUTest.cpp.i
 
 # target to preprocess a source file
 BankImplUTest.cpp.i:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.i
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.i
 .PHONY : BankImplUTest.cpp.i
 
 BankImplUTest.s: BankImplUTest.cpp.s
@@ -368,7 +368,7 @@ BankImplUTest.s: BankImplUTest.cpp.s
 
 # target to generate assembly for a file
 BankImplUTest.cpp.s:
-	cd /home/yeab/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.s
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/BankImplUTest.dir/build.make tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.s
 .PHONY : BankImplUTest.cpp.s
 
 # Help Target
@@ -416,6 +416,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

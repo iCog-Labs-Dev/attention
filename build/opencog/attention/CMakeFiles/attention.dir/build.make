@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include opencog/attention/CMakeFiles/attention.dir/depend.make
@@ -72,184 +72,184 @@ include opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o: ../opencog/attention/AttentionModule.cc
 opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o -MF CMakeFiles/attention.dir/AttentionModule.cc.o.d -o CMakeFiles/attention.dir/AttentionModule.cc.o -c /home/yeab/attention/opencog/attention/AttentionModule.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o -MF CMakeFiles/attention.dir/AttentionModule.cc.o.d -o CMakeFiles/attention.dir/AttentionModule.cc.o -c /home/tarik/attention/attention/opencog/attention/AttentionModule.cc
 
 opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/AttentionModule.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/AttentionModule.cc > CMakeFiles/attention.dir/AttentionModule.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/AttentionModule.cc > CMakeFiles/attention.dir/AttentionModule.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/AttentionModule.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/AttentionModule.cc -o CMakeFiles/attention.dir/AttentionModule.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/AttentionModule.cc -o CMakeFiles/attention.dir/AttentionModule.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o: ../opencog/attention/AttentionParamQuery.cc
 opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o -MF CMakeFiles/attention.dir/AttentionParamQuery.cc.o.d -o CMakeFiles/attention.dir/AttentionParamQuery.cc.o -c /home/yeab/attention/opencog/attention/AttentionParamQuery.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o -MF CMakeFiles/attention.dir/AttentionParamQuery.cc.o.d -o CMakeFiles/attention.dir/AttentionParamQuery.cc.o -c /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.cc
 
 opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/AttentionParamQuery.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/AttentionParamQuery.cc > CMakeFiles/attention.dir/AttentionParamQuery.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.cc > CMakeFiles/attention.dir/AttentionParamQuery.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/AttentionParamQuery.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/AttentionParamQuery.cc -o CMakeFiles/attention.dir/AttentionParamQuery.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.cc -o CMakeFiles/attention.dir/AttentionParamQuery.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o: ../opencog/attention/AttentionUtils.cc
 opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o -MF CMakeFiles/attention.dir/AttentionUtils.cc.o.d -o CMakeFiles/attention.dir/AttentionUtils.cc.o -c /home/yeab/attention/opencog/attention/AttentionUtils.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o -MF CMakeFiles/attention.dir/AttentionUtils.cc.o.d -o CMakeFiles/attention.dir/AttentionUtils.cc.o -c /home/tarik/attention/attention/opencog/attention/AttentionUtils.cc
 
 opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/AttentionUtils.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/AttentionUtils.cc > CMakeFiles/attention.dir/AttentionUtils.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/AttentionUtils.cc > CMakeFiles/attention.dir/AttentionUtils.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/AttentionUtils.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/AttentionUtils.cc -o CMakeFiles/attention.dir/AttentionUtils.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/AttentionUtils.cc -o CMakeFiles/attention.dir/AttentionUtils.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o: ../opencog/attention/Neighbors.cc
 opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o -MF CMakeFiles/attention.dir/Neighbors.cc.o.d -o CMakeFiles/attention.dir/Neighbors.cc.o -c /home/yeab/attention/opencog/attention/Neighbors.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.o -MF CMakeFiles/attention.dir/Neighbors.cc.o.d -o CMakeFiles/attention.dir/Neighbors.cc.o -c /home/tarik/attention/attention/opencog/attention/Neighbors.cc
 
 opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/Neighbors.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/Neighbors.cc > CMakeFiles/attention.dir/Neighbors.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/Neighbors.cc > CMakeFiles/attention.dir/Neighbors.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/Neighbors.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/Neighbors.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/Neighbors.cc -o CMakeFiles/attention.dir/Neighbors.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/Neighbors.cc -o CMakeFiles/attention.dir/Neighbors.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o: ../opencog/attention/ImportanceDiffusionBase.cc
 opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o -MF CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o.d -o CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o -c /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o -MF CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o.d -o CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o -c /home/tarik/attention/attention/opencog/attention/ImportanceDiffusionBase.cc
 
 opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.cc > CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/ImportanceDiffusionBase.cc > CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.cc -o CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/ImportanceDiffusionBase.cc -o CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o: ../opencog/attention/AFImportanceDiffusionAgent.cc
 opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o -MF CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o.d -o CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o -c /home/yeab/attention/opencog/attention/AFImportanceDiffusionAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o -MF CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o.d -o CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/AFImportanceDiffusionAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/AFImportanceDiffusionAgent.cc > CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/AFImportanceDiffusionAgent.cc > CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/AFImportanceDiffusionAgent.cc -o CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/AFImportanceDiffusionAgent.cc -o CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o: ../opencog/attention/WAImportanceDiffusionAgent.cc
 opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o -MF CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o.d -o CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o -c /home/yeab/attention/opencog/attention/WAImportanceDiffusionAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o -MF CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o.d -o CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/WAImportanceDiffusionAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/WAImportanceDiffusionAgent.cc > CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/WAImportanceDiffusionAgent.cc > CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/WAImportanceDiffusionAgent.cc -o CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/WAImportanceDiffusionAgent.cc -o CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o: ../opencog/attention/RentCollectionBaseAgent.cc
 opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o -MF CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o.d -o CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o -c /home/yeab/attention/opencog/attention/RentCollectionBaseAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o -MF CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o.d -o CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/RentCollectionBaseAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/RentCollectionBaseAgent.cc > CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/RentCollectionBaseAgent.cc > CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/RentCollectionBaseAgent.cc -o CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/RentCollectionBaseAgent.cc -o CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o: ../opencog/attention/AFRentCollectionAgent.cc
 opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o -MF CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o.d -o CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o -c /home/yeab/attention/opencog/attention/AFRentCollectionAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o -MF CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o.d -o CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/AFRentCollectionAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/AFRentCollectionAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/AFRentCollectionAgent.cc > CMakeFiles/attention.dir/AFRentCollectionAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/AFRentCollectionAgent.cc > CMakeFiles/attention.dir/AFRentCollectionAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/AFRentCollectionAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/AFRentCollectionAgent.cc -o CMakeFiles/attention.dir/AFRentCollectionAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/AFRentCollectionAgent.cc -o CMakeFiles/attention.dir/AFRentCollectionAgent.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o: ../opencog/attention/WARentCollectionAgent.cc
 opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o -MF CMakeFiles/attention.dir/WARentCollectionAgent.cc.o.d -o CMakeFiles/attention.dir/WARentCollectionAgent.cc.o -c /home/yeab/attention/opencog/attention/WARentCollectionAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o -MF CMakeFiles/attention.dir/WARentCollectionAgent.cc.o.d -o CMakeFiles/attention.dir/WARentCollectionAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/WARentCollectionAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/WARentCollectionAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/WARentCollectionAgent.cc > CMakeFiles/attention.dir/WARentCollectionAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/WARentCollectionAgent.cc > CMakeFiles/attention.dir/WARentCollectionAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/WARentCollectionAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/WARentCollectionAgent.cc -o CMakeFiles/attention.dir/WARentCollectionAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/WARentCollectionAgent.cc -o CMakeFiles/attention.dir/WARentCollectionAgent.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o: ../opencog/attention/ForgettingAgent.cc
 opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o -MF CMakeFiles/attention.dir/ForgettingAgent.cc.o.d -o CMakeFiles/attention.dir/ForgettingAgent.cc.o -c /home/yeab/attention/opencog/attention/ForgettingAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o -MF CMakeFiles/attention.dir/ForgettingAgent.cc.o.d -o CMakeFiles/attention.dir/ForgettingAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/ForgettingAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/ForgettingAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/ForgettingAgent.cc > CMakeFiles/attention.dir/ForgettingAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/ForgettingAgent.cc > CMakeFiles/attention.dir/ForgettingAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/ForgettingAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/ForgettingAgent.cc -o CMakeFiles/attention.dir/ForgettingAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/ForgettingAgent.cc -o CMakeFiles/attention.dir/ForgettingAgent.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o: ../opencog/attention/HebbianCreationAgent.cc
 opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o -MF CMakeFiles/attention.dir/HebbianCreationAgent.cc.o.d -o CMakeFiles/attention.dir/HebbianCreationAgent.cc.o -c /home/yeab/attention/opencog/attention/HebbianCreationAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o -MF CMakeFiles/attention.dir/HebbianCreationAgent.cc.o.d -o CMakeFiles/attention.dir/HebbianCreationAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/HebbianCreationAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/HebbianCreationAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/HebbianCreationAgent.cc > CMakeFiles/attention.dir/HebbianCreationAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/HebbianCreationAgent.cc > CMakeFiles/attention.dir/HebbianCreationAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/HebbianCreationAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/HebbianCreationAgent.cc -o CMakeFiles/attention.dir/HebbianCreationAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/HebbianCreationAgent.cc -o CMakeFiles/attention.dir/HebbianCreationAgent.cc.s
 
 opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/flags.make
 opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o: ../opencog/attention/HebbianUpdatingAgent.cc
 opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o: opencog/attention/CMakeFiles/attention.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o -MF CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o.d -o CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o -c /home/yeab/attention/opencog/attention/HebbianUpdatingAgent.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o"
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o -MF CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o.d -o CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o -c /home/tarik/attention/attention/opencog/attention/HebbianUpdatingAgent.cc
 
 opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.i"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/opencog/attention/HebbianUpdatingAgent.cc > CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.i
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/opencog/attention/HebbianUpdatingAgent.cc > CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.i
 
 opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.s"
-	cd /home/yeab/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/opencog/attention/HebbianUpdatingAgent.cc -o CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.s
+	cd /home/tarik/attention/attention/build/opencog/attention && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/opencog/attention/HebbianUpdatingAgent.cc -o CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.s
 
 # Object files for target attention
 attention_OBJECTS = \
@@ -312,18 +312,18 @@ opencog/attention/libattention.so: /usr/local/lib/opencog/libatom_types.so
 opencog/attention/libattention.so: /usr/local/lib/opencog/libnetwork.so
 opencog/attention/libattention.so: /usr/local/lib/opencog/libcogutil.so
 opencog/attention/libattention.so: opencog/attention/CMakeFiles/attention.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libattention.so"
-	cd /home/yeab/attention/build/opencog/attention && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attention.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libattention.so"
+	cd /home/tarik/attention/attention/build/opencog/attention && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attention.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 opencog/attention/CMakeFiles/attention.dir/build: opencog/attention/libattention.so
 .PHONY : opencog/attention/CMakeFiles/attention.dir/build
 
 opencog/attention/CMakeFiles/attention.dir/clean:
-	cd /home/yeab/attention/build/opencog/attention && $(CMAKE_COMMAND) -P CMakeFiles/attention.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/opencog/attention && $(CMAKE_COMMAND) -P CMakeFiles/attention.dir/cmake_clean.cmake
 .PHONY : opencog/attention/CMakeFiles/attention.dir/clean
 
 opencog/attention/CMakeFiles/attention.dir/depend:
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/opencog/attention /home/yeab/attention/build /home/yeab/attention/build/opencog/attention /home/yeab/attention/build/opencog/attention/CMakeFiles/attention.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/opencog/attention /home/tarik/attention/attention/build /home/tarik/attention/attention/build/opencog/attention /home/tarik/attention/attention/build/opencog/attention/CMakeFiles/attention.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : opencog/attention/CMakeFiles/attention.dir/depend
 

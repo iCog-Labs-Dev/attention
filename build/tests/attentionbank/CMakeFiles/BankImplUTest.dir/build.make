@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yeab/attention
+CMAKE_SOURCE_DIR = /home/tarik/attention/attention
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yeab/attention/build
+CMAKE_BINARY_DIR = /home/tarik/attention/attention/build
 
 # Include any dependencies generated for this target.
 include tests/attentionbank/CMakeFiles/BankImplUTest.dir/depend.make
@@ -70,22 +70,22 @@ include tests/attentionbank/CMakeFiles/BankImplUTest.dir/progress.make
 include tests/attentionbank/CMakeFiles/BankImplUTest.dir/flags.make
 
 tests/attentionbank/BankImplUTest.cpp: ../tests/attentionbank/BankImplUTest.cxxtest
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating BankImplUTest.cpp"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/yeab/attention/build/tests/attentionbank/BankImplUTest.cpp /home/yeab/attention/tests/attentionbank/BankImplUTest.cxxtest
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating BankImplUTest.cpp"
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/cxxtestgen --runner=ErrorPrinter --have-eh -o /home/tarik/attention/attention/build/tests/attentionbank/BankImplUTest.cpp /home/tarik/attention/attention/tests/attentionbank/BankImplUTest.cxxtest
 
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o: tests/attentionbank/CMakeFiles/BankImplUTest.dir/flags.make
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o: tests/attentionbank/BankImplUTest.cpp
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o: tests/attentionbank/CMakeFiles/BankImplUTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o -MF CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o.d -o CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o -c /home/yeab/attention/build/tests/attentionbank/BankImplUTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o"
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o -MF CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o.d -o CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.o -c /home/tarik/attention/attention/build/tests/attentionbank/BankImplUTest.cpp
 
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.i"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yeab/attention/build/tests/attentionbank/BankImplUTest.cpp > CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.i
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tarik/attention/attention/build/tests/attentionbank/BankImplUTest.cpp > CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.i
 
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.s"
-	cd /home/yeab/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yeab/attention/build/tests/attentionbank/BankImplUTest.cpp -o CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.s
+	cd /home/tarik/attention/attention/build/tests/attentionbank && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tarik/attention/attention/build/tests/attentionbank/BankImplUTest.cpp -o CMakeFiles/BankImplUTest.dir/BankImplUTest.cpp.s
 
 # Object files for target BankImplUTest
 BankImplUTest_OBJECTS = \
@@ -122,18 +122,18 @@ tests/attentionbank/BankImplUTest: /usr/local/lib/opencog/libatom_types.so
 tests/attentionbank/BankImplUTest: /usr/lib/x86_64-linux-gnu/libguile-3.0.so
 tests/attentionbank/BankImplUTest: /usr/local/lib/opencog/libcogutil.so
 tests/attentionbank/BankImplUTest: tests/attentionbank/CMakeFiles/BankImplUTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yeab/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable BankImplUTest"
-	cd /home/yeab/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BankImplUTest.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tarik/attention/attention/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable BankImplUTest"
+	cd /home/tarik/attention/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BankImplUTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/build: tests/attentionbank/BankImplUTest
 .PHONY : tests/attentionbank/CMakeFiles/BankImplUTest.dir/build
 
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/clean:
-	cd /home/yeab/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -P CMakeFiles/BankImplUTest.dir/cmake_clean.cmake
+	cd /home/tarik/attention/attention/build/tests/attentionbank && $(CMAKE_COMMAND) -P CMakeFiles/BankImplUTest.dir/cmake_clean.cmake
 .PHONY : tests/attentionbank/CMakeFiles/BankImplUTest.dir/clean
 
 tests/attentionbank/CMakeFiles/BankImplUTest.dir/depend: tests/attentionbank/BankImplUTest.cpp
-	cd /home/yeab/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yeab/attention /home/yeab/attention/tests/attentionbank /home/yeab/attention/build /home/yeab/attention/build/tests/attentionbank /home/yeab/attention/build/tests/attentionbank/CMakeFiles/BankImplUTest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tarik/attention/attention/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tarik/attention/attention /home/tarik/attention/attention/tests/attentionbank /home/tarik/attention/attention/build /home/tarik/attention/attention/build/tests/attentionbank /home/tarik/attention/attention/build/tests/attentionbank/CMakeFiles/BankImplUTest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/attentionbank/CMakeFiles/BankImplUTest.dir/depend
 

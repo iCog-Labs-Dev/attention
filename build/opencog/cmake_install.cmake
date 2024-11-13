@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog
+# Install script for directory: /home/tarik/attention/attention/opencog
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -51,13 +51,13 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY RENAME "attention-config.scm" FILES "/home/yeab/attention/build/opencog/scm/opencog/attention-config-installable.scm")
+  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY RENAME "attention-config.scm" FILES "/home/tarik/attention/attention/build/opencog/scm/opencog/attention-config-installable.scm")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yeab/attention/build/opencog/attentionbank/cmake_install.cmake")
-  include("/home/yeab/attention/build/opencog/attention/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/opencog/attentionbank/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/opencog/attention/cmake_install.cmake")
 
 endif()
 

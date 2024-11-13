@@ -26,7 +26,7 @@ bool suite_AttentionUTest_init = false;
 static AttentionUTest suite_AttentionUTest;
 
 static CxxTest::List Tests_AttentionUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_AttentionUTest( "/home/yeab/attention/tests/attentionbank/AttentionUTest.cxxtest", 30, "AttentionUTest", suite_AttentionUTest, Tests_AttentionUTest );
+CxxTest::StaticSuiteDescription suiteDescription_AttentionUTest( "/home/tarik/attention/attention/tests/attentionbank/AttentionUTest.cxxtest", 30, "AttentionUTest", suite_AttentionUTest, Tests_AttentionUTest );
 
 static class TestDescription_suite_AttentionUTest_testTopSTIValues : public CxxTest::RealTestDescription {
 public:

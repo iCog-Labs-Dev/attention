@@ -26,7 +26,7 @@ bool suite_AttentionalFocusCBUTest_init = false;
 static AttentionalFocusCBUTest suite_AttentionalFocusCBUTest;
 
 static CxxTest::List Tests_AttentionalFocusCBUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_AttentionalFocusCBUTest( "/home/yeab/attention/tests/attentionbank/AttentionalFocusCBUTest.cxxtest", 31, "AttentionalFocusCBUTest", suite_AttentionalFocusCBUTest, Tests_AttentionalFocusCBUTest );
+CxxTest::StaticSuiteDescription suiteDescription_AttentionalFocusCBUTest( "/home/tarik/attention/attention/tests/attentionbank/AttentionalFocusCBUTest.cxxtest", 31, "AttentionalFocusCBUTest", suite_AttentionalFocusCBUTest, Tests_AttentionalFocusCBUTest );
 
 static class TestDescription_suite_AttentionalFocusCBUTest_test_af_bindlink : public CxxTest::RealTestDescription {
 public:

@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/examples
+# Install script for directory: /home/tarik/attention/attention/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yeab/attention/build/examples/c++-attentionbank/cmake_install.cmake")
+  include("/home/tarik/attention/attention/build/examples/c++-attentionbank/cmake_install.cmake")
 
 endif()
 
