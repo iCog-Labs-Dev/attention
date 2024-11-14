@@ -52,16 +52,7 @@ public:
     this->as = &cogserver().getAtomSpace();
     this->as->clear();
     TS_ASSERT_EQUALS(this->as->get_size() ,0);
-  }
 
-#define ACCEPTABLE_DEV_SIZE "1"
-#define FORGET_THRESHOLD "5"
-#define MAX_ATOMSPACE_SIZE "2"
-  void testForgetAtom()
-  {
-    InitCogServer();
-    _scheduler->startAgent(_forgettingAgentPtr, true, "fa"); // agentPtr, dedicatedThread bool, threadName
-    
     // configure forgettingThreshold, maxSize and accDivSize values
     config().set("ECAN_FORGET_THRESHOLD", FORGET_THRESHOLD);
     config().set("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", ACCEPTABLE_DEV_SIZE);
@@ -75,7 +66,16 @@ public:
     TS_ASSERT_EQUALS(forgettingThreshold, 5);
     TS_ASSERT_EQUALS(maxSize, 2);
     TS_ASSERT_EQUALS(accDivSize, 1);
+  }
 
+#define ACCEPTABLE_DEV_SIZE "1"
+#define FORGET_THRESHOLD "5"
+#define MAX_ATOMSPACE_SIZE "2"
+  void testForgetAtom()
+  {
+    InitCogServer();
+    _scheduler->startAgent(_forgettingAgentPtr, true, "fa"); // agentPtr, dedicatedThread bool, threadName
+    
     AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
     count_t conf90 = 900;
     
@@ -97,7 +97,6 @@ public:
     AttentionValuePtr aval = get_av(a);
     AttentionValuePtr bval = get_av(b);
     AttentionValuePtr cval = get_av(c);
-
 
     // assert lti value being set properly.
     TS_ASSERT_EQUALS(aval->getLTI(), 6);
