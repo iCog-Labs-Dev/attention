@@ -125,6 +125,16 @@ public:
     TS_ASSERT_EQUALS(finalCVal->getLTI(), 0);
     TS_ASSERT_EQUALS(finalCVal->getSTI(), 0);
 
+    //TODO may be check if the number of atoms that must remain in atomspace is equal to the expected.
+
+    // TS_ASSERT(maxSize == this->as->getSize());
     _scheduler->stopAgent(_forgettingAgentPtr);
+  }
+
+  void testRecursiveRemoval()
+  {
+    InitCogServer();
+    _scheduler->startAgent(_forgettingAgentPtr);
+
   }
 };
