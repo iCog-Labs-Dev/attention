@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o: \
- /home/yeab/attention/opencog/attention/HebbianCreationAgent.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/HebbianCreationAgent.cc \
  /usr/include/stdc-predef.h /usr/local/include/opencog/util/Config.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
@@ -854,7 +854,7 @@ opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o: \
  /usr/local/include/opencog/atoms/base/ClassServer.h \
  /usr/local/include/opencog/atoms/truthvalue/IndefiniteTruthValue.h \
  /usr/local/include/opencog/atoms/truthvalue/SimpleTruthValue.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc \
@@ -876,12 +876,12 @@ opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
  /usr/include/c++/11/bits/random.tcc \
  /usr/local/include/opencog/atomspace/TypeIndex.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h \
  /usr/local/include/opencog/cogserver/server/CogServer.h \
  /usr/local/include/opencog/cogserver/server/Module.h \
  /usr/local/include/opencog/cogserver/server/ModuleManager.h \
@@ -1579,22 +1579,22 @@ opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o: \
  /usr/local/include/opencog/cogserver/server/Factory.h \
  /usr/local/include/opencog/cogserver/server/Request.h \
  /usr/local/include/opencog/cogserver/server/RequestClassInfo.h \
- /home/yeab/attention/opencog/attention/AttentionModule.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionModule.h \
  /usr/local/include/opencog/cogserver/modules/agents/Scheduler.h \
  /usr/local/include/opencog/cogserver/modules/agents/Agent.h \
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerThread.h \
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerBase.h \
  /usr/local/include/opencog/cogserver/modules/agents/SystemActivityTable.h \
- /home/yeab/attention/opencog/attention/AFImportanceDiffusionAgent.h \
- /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
- /home/yeab/attention/opencog/attention/AFRentCollectionAgent.h \
- /home/yeab/attention/opencog/attention/RentCollectionBaseAgent.h \
- /home/yeab/attention/opencog/attention/WAImportanceDiffusionAgent.h \
- /home/yeab/attention/opencog/attention/WARentCollectionAgent.h \
- /home/yeab/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h \
- /home/yeab/attention/opencog/attention/ForgettingAgent.h \
- /home/yeab/attention/opencog/attention/HebbianUpdatingAgent.h \
- /home/yeab/attention/opencog/attention/HebbianCreationAgent.h \
- /home/yeab/attention/opencog/attention/AttentionUtils.h \
- /home/yeab/attention/opencog/attention/Neighbors.h
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFImportanceDiffusionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ImportanceDiffusionBase.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFRentCollectionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/RentCollectionBaseAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/WAImportanceDiffusionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/WARentCollectionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ForgettingAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/HebbianUpdatingAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/HebbianCreationAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/Neighbors.h

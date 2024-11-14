@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o: \
- /home/yeab/attention/opencog/attention/ForgettingAgent.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ForgettingAgent.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/algorithm \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -1386,17 +1386,17 @@ opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o: \
  /usr/local/include/opencog/cogserver/server/RequestManager.h \
  /usr/local/include/opencog/cogserver/server/Request.h \
  /usr/local/include/opencog/cogserver/server/RequestClassInfo.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h \
  /usr/local/include/opencog/util/Config.h /usr/include/c++/11/fstream \
  /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/yeab/attention/opencog/attention/ForgettingAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ForgettingAgent.h \
  /usr/include/c++/11/math.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h

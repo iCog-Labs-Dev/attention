@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention
+# Install script for directory: /home/stationone/Desktop/Singularitynet/attention
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yeab/attention/build/lib/cmake_install.cmake")
-  include("/home/yeab/attention/build/opencog/cmake_install.cmake")
+  include("/home/stationone/Desktop/Singularitynet/attention/build/lib/cmake_install.cmake")
+  include("/home/stationone/Desktop/Singularitynet/attention/build/opencog/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yeab/attention/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/stationone/Desktop/Singularitynet/attention/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

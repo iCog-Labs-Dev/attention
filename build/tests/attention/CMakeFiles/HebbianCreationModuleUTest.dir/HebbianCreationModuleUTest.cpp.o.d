@@ -1,5 +1,5 @@
 tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.o: \
- /home/yeab/attention/build/tests/attention/HebbianCreationModuleUTest.cpp \
+ /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/HebbianCreationModuleUTest.cpp \
  /usr/include/stdc-predef.h /usr/include/cxxtest/TestListener.h \
  /usr/include/cxxtest/Descriptions.h /usr/include/cxxtest/LinkedList.h \
  /usr/include/cxxtest/Flags.h /usr/include/cxxtest/TestTracker.h \
@@ -209,8 +209,8 @@ tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleU
  /usr/include/cxxtest/TestMain.h /usr/include/c++/11/iostream \
  /usr/include/cxxtest/ErrorPrinter.h \
  /usr/include/cxxtest/ErrorFormatter.h \
- /home/yeab/attention/build/tests/attention/../../../tests/attention/HebbianCreationModuleUTest.cxxtest \
- /home/yeab/attention/opencog/attention/AttentionModule.h \
+ /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/../../../tests/attention/HebbianCreationModuleUTest.cxxtest \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionModule.h \
  /usr/local/include/opencog/util/concurrent_queue.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
@@ -1400,29 +1400,29 @@ tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleU
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerThread.h \
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerBase.h \
  /usr/local/include/opencog/cogserver/modules/agents/SystemActivityTable.h \
- /home/yeab/attention/opencog/attention/AFImportanceDiffusionAgent.h \
- /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFImportanceDiffusionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ImportanceDiffusionBase.h \
  /usr/include/c++/11/math.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
- /home/yeab/attention/opencog/attention/AFRentCollectionAgent.h \
- /home/yeab/attention/opencog/attention/RentCollectionBaseAgent.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFRentCollectionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/RentCollectionBaseAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/opencog/attention/WAImportanceDiffusionAgent.h \
- /home/yeab/attention/opencog/attention/WARentCollectionAgent.h \
- /home/yeab/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h \
- /home/yeab/attention/opencog/attention/ForgettingAgent.h \
- /home/yeab/attention/opencog/attention/HebbianUpdatingAgent.h \
- /home/yeab/attention/opencog/attention/HebbianCreationAgent.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
- /home/yeab/attention/opencog/attention/HebbianCreationAgent.h \
- /home/yeab/attention/opencog/attention/Neighbors.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/WAImportanceDiffusionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/WARentCollectionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ForgettingAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/HebbianUpdatingAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/HebbianCreationAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/HebbianCreationAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/Neighbors.h \
  /usr/local/include/opencog/cogserver/modules/agents/AgentsModule.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h \
  /usr/local/include/opencog/atoms/truthvalue/SimpleTruthValue.h \
  /usr/local/include/opencog/util/Config.h /usr/include/c++/11/fstream \
  /usr/include/c++/11/bits/codecvt.h \

@@ -1,5 +1,5 @@
 tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.o: \
- /home/yeab/attention/build/tests/attentionbank/BankAsyncUTest.cpp \
+ /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/BankAsyncUTest.cpp \
  /usr/include/stdc-predef.h /usr/include/cxxtest/TestListener.h \
  /usr/include/cxxtest/Descriptions.h /usr/include/cxxtest/LinkedList.h \
  /usr/include/cxxtest/Flags.h /usr/include/cxxtest/TestTracker.h \
@@ -209,7 +209,7 @@ tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.o: \
  /usr/include/cxxtest/TestMain.h /usr/include/c++/11/iostream \
  /usr/include/cxxtest/ErrorPrinter.h \
  /usr/include/cxxtest/ErrorFormatter.h \
- /home/yeab/attention/build/tests/attentionbank/../../../tests/attentionbank/BankAsyncUTest.cxxtest \
+ /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/../../../tests/attentionbank/BankAsyncUTest.cxxtest \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
@@ -641,12 +641,12 @@ tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/BankAsyncUTest.cpp.o: \
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h \
  /usr/local/include/opencog/atoms/truthvalue/SimpleTruthValue.h \
  /usr/include/cxxtest/Root.cpp /usr/include/cxxtest/ValueTraits.cpp \
  /usr/include/cxxtest/Descriptions.cpp \

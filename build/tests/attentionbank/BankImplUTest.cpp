@@ -26,7 +26,7 @@ bool suite_BankImplUTest_init = false;
 static BankImplUTest suite_BankImplUTest;
 
 static CxxTest::List Tests_BankImplUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_BankImplUTest( "/home/yeab/attention/tests/attentionbank/BankImplUTest.cxxtest", 287, "BankImplUTest", suite_BankImplUTest, Tests_BankImplUTest );
+CxxTest::StaticSuiteDescription suiteDescription_BankImplUTest( "/home/stationone/Desktop/Singularitynet/attention/tests/attentionbank/BankImplUTest.cxxtest", 287, "BankImplUTest", suite_BankImplUTest, Tests_BankImplUTest );
 
 static class TestDescription_suite_BankImplUTest_testMiscellaneous : public CxxTest::RealTestDescription {
 public:

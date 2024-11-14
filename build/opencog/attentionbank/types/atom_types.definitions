@@ -2,7 +2,7 @@
 #include <opencog/atoms/atom_types/NameServer.h>
 #include <opencog/atoms/atom_types/atom_types.h>
 #include <opencog/atoms/atom_types/types.h>
-#include "/home/yeab/attention/build/opencog/attentionbank/types/atom_types.h"
+#include "/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h"
 opencog::Type opencog::ATTENTION_VALUE;
 opencog::Type opencog::ATTENTION_VALUE_OF_LINK;
 opencog::Type opencog::STI_OF_LINK;

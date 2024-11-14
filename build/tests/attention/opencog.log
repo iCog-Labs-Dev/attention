@@ -1,64 +1,756 @@
-[2024-11-07 10:57:39:609] [WARN] No configuration file was loaded! Param=MODULES
-[2024-11-07 10:57:39:610] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
-[2024-11-07 10:57:39:612] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
-[2024-11-07 10:57:39:614] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
-[2024-11-07 10:57:39:615] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
-[2024-11-07 10:57:39:616] [WARN] Failed to load module libpy-shell.so
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/agents
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/commands
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/python
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/modules/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/server/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /home/yeab/cogserver/build/opencog/cogserver/shell/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ./
-[2024-11-07 10:57:39:616] [WARN] Searched for module at .//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at .//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ..//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ..//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../../
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../..//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../..//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../../../
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../../..//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../../..//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../../../../
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../../../..//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at ../../../..//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at "/usr/local"/lib
-[2024-11-07 10:57:39:616] [WARN] Searched for module at "/usr/local"/lib/opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at "/usr/local"/share
-[2024-11-07 10:57:39:616] [WARN] Searched for module at "/usr/local"/share/opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at "/usr/local"/share/opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/share/opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/share/opencog/opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/lib64/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/lib64//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/lib64//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/lib/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/lib//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/lib//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/share/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/share//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/local/share//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/lib64/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/lib64//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/lib64//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/lib/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/lib//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/lib//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/share/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/share//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /usr/share//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /opt/
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /opt//opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /opt//opencog/modules
-[2024-11-07 10:57:39:616] [WARN] Searched for module at /
-[2024-11-07 10:57:39:616] [WARN] Searched for module at //opencog
-[2024-11-07 10:57:39:616] [WARN] Searched for module at //opencog/modules
-[2024-11-07 10:57:39:616] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
-[2024-11-07 10:57:39:680] [INFO] Loading module "../../opencog/attention/libattention.so"
-[2024-11-07 10:57:39:681] [INFO] Loading module "/home/yeab/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
-[2024-11-07 10:57:39:720] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 00:04:45:150] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 00:04:45:151] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 00:04:45:154] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 00:04:45:158] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 00:04:45:160] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 00:04:45:162] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 00:04:45:165] [INFO] [global_python_initialize] Start
+[2024-11-09 00:04:45:199] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 00:04:45:203] [INFO] [global_python_initialize] Finish
+[2024-11-09 00:04:45:203] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 00:04:45:203] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:04:45:288] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 00:04:45:288] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:04:45:335] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 00:04:59:268] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 00:04:59:268] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 00:04:59:268] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 00:04:59:271] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 00:04:59:271] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 00:04:59:272] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 00:04:59:272] [INFO] [global_python_initialize] Start
+[2024-11-09 00:04:59:285] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 00:04:59:288] [INFO] [global_python_initialize] Finish
+[2024-11-09 00:04:59:288] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 00:04:59:288] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:04:59:311] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 00:04:59:311] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:04:59:357] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 00:15:18:600] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 00:15:18:600] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 00:15:18:602] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 00:15:18:606] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 00:15:18:608] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 00:15:18:610] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 00:15:18:613] [INFO] [global_python_initialize] Start
+[2024-11-09 00:15:18:625] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 00:15:18:628] [INFO] [global_python_initialize] Finish
+[2024-11-09 00:15:18:628] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 00:15:18:628] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:15:18:655] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 00:15:18:655] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:15:18:702] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 00:27:34:218] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 00:27:34:218] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 00:27:34:220] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 00:27:34:223] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 00:27:34:225] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 00:27:34:225] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 00:27:34:227] [INFO] [global_python_initialize] Start
+[2024-11-09 00:27:34:261] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 00:27:34:263] [INFO] [global_python_initialize] Finish
+[2024-11-09 00:27:34:263] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 00:27:34:263] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:27:34:291] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 00:27:34:292] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 00:27:34:342] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 09:31:15:826] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 09:31:15:826] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 09:31:15:828] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 09:31:15:834] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 09:31:15:836] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 09:31:15:839] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 09:31:15:842] [INFO] [global_python_initialize] Start
+[2024-11-09 09:31:15:878] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 09:31:15:881] [INFO] [global_python_initialize] Finish
+[2024-11-09 09:31:15:881] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 09:31:15:881] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:31:15:911] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 09:31:15:912] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:31:15:967] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 09:38:57:978] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 09:38:57:978] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 09:38:57:979] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 09:38:57:985] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 09:38:57:986] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 09:38:57:986] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 09:38:57:987] [INFO] [global_python_initialize] Start
+[2024-11-09 09:38:58:004] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 09:38:58:007] [INFO] [global_python_initialize] Finish
+[2024-11-09 09:38:58:007] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 09:38:58:007] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:38:58:034] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 09:38:58:035] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:38:58:089] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 09:39:41:257] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 09:39:41:257] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 09:39:41:257] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 09:39:41:260] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 09:39:41:260] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 09:39:41:261] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 09:39:41:261] [INFO] [global_python_initialize] Start
+[2024-11-09 09:39:41:275] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 09:39:41:278] [INFO] [global_python_initialize] Finish
+[2024-11-09 09:39:41:278] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 09:39:41:278] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:39:41:304] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 09:39:41:305] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:39:41:357] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 09:40:20:432] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 09:40:20:432] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 09:40:20:432] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 09:40:20:436] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 09:40:20:436] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 09:40:20:436] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 09:40:20:437] [INFO] [global_python_initialize] Start
+[2024-11-09 09:40:20:455] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 09:40:20:457] [INFO] [global_python_initialize] Finish
+[2024-11-09 09:40:20:457] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 09:40:20:457] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:40:20:486] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 09:40:20:486] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:40:20:537] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 09:54:46:665] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 09:54:46:665] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 09:54:46:666] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 09:54:46:671] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 09:54:46:671] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 09:54:46:672] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 09:54:46:673] [INFO] [global_python_initialize] Start
+[2024-11-09 09:54:46:687] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 09:54:46:689] [INFO] [global_python_initialize] Finish
+[2024-11-09 09:54:46:689] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 09:54:46:689] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:54:46:716] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 09:54:46:717] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 09:54:46:769] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 10:40:26:513] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 10:40:26:513] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 10:40:26:515] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 10:40:26:520] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 10:40:26:522] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 10:40:26:523] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 10:40:26:527] [INFO] [global_python_initialize] Start
+[2024-11-09 10:40:26:560] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 10:40:26:565] [INFO] [global_python_initialize] Finish
+[2024-11-09 10:40:26:565] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 10:40:26:565] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:40:26:786] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 10:40:26:786] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:40:26:840] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 10:45:17:536] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 10:45:17:536] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 10:45:17:536] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 10:45:17:539] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 10:45:17:540] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 10:45:17:540] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 10:45:17:540] [INFO] [global_python_initialize] Start
+[2024-11-09 10:45:17:554] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 10:45:17:556] [INFO] [global_python_initialize] Finish
+[2024-11-09 10:45:17:556] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 10:45:17:556] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:45:17:583] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 10:45:17:583] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:45:17:636] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 10:46:45:433] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 10:46:45:433] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 10:46:45:434] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 10:46:45:437] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 10:46:45:437] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 10:46:45:438] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 10:46:45:438] [INFO] [global_python_initialize] Start
+[2024-11-09 10:46:45:451] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 10:46:45:454] [INFO] [global_python_initialize] Finish
+[2024-11-09 10:46:45:454] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 10:46:45:454] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:46:45:540] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 10:46:45:540] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:46:45:592] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 10:55:48:579] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 10:55:48:580] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 10:55:48:580] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 10:55:48:584] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 10:55:48:585] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 10:55:48:585] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 10:55:48:585] [INFO] [global_python_initialize] Start
+[2024-11-09 10:55:48:600] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 10:55:48:602] [INFO] [global_python_initialize] Finish
+[2024-11-09 10:55:48:602] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 10:55:48:602] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:55:48:628] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 10:55:48:629] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:55:48:683] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 10:56:22:144] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 10:56:22:144] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 10:56:22:145] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 10:56:22:148] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 10:56:22:148] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 10:56:22:148] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 10:56:22:149] [INFO] [global_python_initialize] Start
+[2024-11-09 10:56:22:163] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 10:56:22:165] [INFO] [global_python_initialize] Finish
+[2024-11-09 10:56:22:165] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 10:56:22:165] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:56:22:190] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 10:56:22:191] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:56:22:243] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 10:56:29:868] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 10:56:29:868] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 10:56:29:869] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 10:56:29:872] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 10:56:29:872] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 10:56:29:873] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 10:56:29:874] [INFO] [global_python_initialize] Start
+[2024-11-09 10:56:29:888] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 10:56:29:892] [INFO] [global_python_initialize] Finish
+[2024-11-09 10:56:29:892] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 10:56:29:892] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:56:29:916] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 10:56:29:917] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:56:29:971] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 10:57:00:451] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 10:57:00:451] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 10:57:00:452] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 10:57:00:462] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 10:57:00:463] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 10:57:00:463] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 10:57:00:464] [INFO] [global_python_initialize] Start
+[2024-11-09 10:57:00:500] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 10:57:00:504] [INFO] [global_python_initialize] Finish
+[2024-11-09 10:57:00:504] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 10:57:00:504] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:57:00:548] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 10:57:00:548] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 10:57:00:616] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:00:10:005] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:00:10:005] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:00:10:006] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:00:10:009] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:00:10:010] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:00:10:010] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 11:00:10:011] [INFO] [global_python_initialize] Start
+[2024-11-09 11:00:10:025] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 11:00:10:027] [INFO] [global_python_initialize] Finish
+[2024-11-09 11:00:10:027] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 11:00:10:027] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:00:10:058] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:00:10:058] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:00:10:110] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:04:55:189] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:04:55:189] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:04:55:190] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:04:55:192] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:04:55:193] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:04:55:193] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 11:04:55:194] [INFO] [global_python_initialize] Start
+[2024-11-09 11:04:55:208] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 11:04:55:210] [INFO] [global_python_initialize] Finish
+[2024-11-09 11:04:55:210] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 11:04:55:210] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:04:55:238] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:04:55:238] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:04:55:292] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:05:31:212] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:05:31:213] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:05:31:213] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:05:31:216] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:05:31:216] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:05:31:217] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 11:05:31:217] [INFO] [global_python_initialize] Start
+[2024-11-09 11:05:31:232] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 11:05:31:235] [INFO] [global_python_initialize] Finish
+[2024-11-09 11:05:31:235] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 11:05:31:235] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:05:31:261] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:05:31:261] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:05:31:314] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 11:33:22:180] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 11:33:22:180] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 11:33:22:181] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 11:33:22:187] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 11:33:22:188] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 11:33:22:189] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 11:33:22:190] [INFO] [global_python_initialize] Start
+[2024-11-09 11:33:22:206] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 11:33:22:208] [INFO] [global_python_initialize] Finish
+[2024-11-09 11:33:22:208] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 11:33:22:209] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:33:22:238] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 11:33:22:239] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 11:33:22:299] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 12:00:52:534] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 12:00:52:534] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 12:00:52:537] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 12:00:52:543] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 12:00:52:544] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 12:00:52:546] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 12:00:52:550] [INFO] [global_python_initialize] Start
+[2024-11-09 12:00:52:592] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 12:00:52:596] [INFO] [global_python_initialize] Finish
+[2024-11-09 12:00:52:596] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 12:00:52:596] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:00:52:636] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 12:00:52:636] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:00:52:714] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 12:01:34:421] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 12:01:34:421] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 12:01:34:421] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 12:01:34:425] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 12:01:34:425] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 12:01:34:426] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 12:01:34:427] [INFO] [global_python_initialize] Start
+[2024-11-09 12:01:34:449] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 12:01:34:452] [INFO] [global_python_initialize] Finish
+[2024-11-09 12:01:34:452] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 12:01:34:452] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:01:34:490] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 12:01:34:490] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:01:34:562] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 12:02:18:499] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 12:02:18:499] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 12:02:18:500] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 12:02:18:506] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 12:02:18:506] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 12:02:18:507] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 12:02:18:508] [INFO] [global_python_initialize] Start
+[2024-11-09 12:02:18:525] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 12:02:18:528] [INFO] [global_python_initialize] Finish
+[2024-11-09 12:02:18:528] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 12:02:18:528] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:02:18:561] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 12:02:18:562] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 12:02:18:636] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 13:13:19:507] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 13:13:19:507] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 13:13:19:511] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 13:13:19:517] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 13:13:19:518] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 13:13:19:519] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 13:13:19:521] [INFO] [global_python_initialize] Start
+[2024-11-09 13:13:19:541] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 13:13:19:545] [INFO] [global_python_initialize] Finish
+[2024-11-09 13:13:19:545] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 13:13:19:545] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:13:19:596] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 13:13:19:596] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:13:19:683] [INFO] Module "libagents.so" is already loaded.
+[2024-11-09 13:14:31:396] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-09 13:14:31:397] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-09 13:14:31:398] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-09 13:14:31:404] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-09 13:14:31:405] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-09 13:14:31:407] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-09 13:14:31:408] [INFO] [global_python_initialize] Start
+[2024-11-09 13:14:31:439] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-09 13:14:31:443] [INFO] [global_python_initialize] Finish
+[2024-11-09 13:14:31:443] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-09 13:14:31:443] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:14:31:492] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-09 13:14:31:493] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-09 13:14:31:597] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:23:56:589] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:23:56:589] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:23:56:592] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:23:56:598] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:23:56:600] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:23:56:602] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:23:56:605] [INFO] [global_python_initialize] Start
+[2024-11-10 20:23:56:640] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:23:56:643] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:23:56:643] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:23:56:643] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:23:56:674] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:23:56:675] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:23:56:741] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:25:43:734] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:25:43:734] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:25:43:735] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:25:43:739] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:25:43:739] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:25:43:740] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:25:43:741] [INFO] [global_python_initialize] Start
+[2024-11-10 20:25:43:756] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:25:43:759] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:25:43:759] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:25:43:759] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:25:43:790] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:25:43:791] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:25:43:855] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:26:24:301] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:26:24:301] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:26:24:302] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:26:24:306] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:26:24:306] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:26:24:306] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:26:24:307] [INFO] [global_python_initialize] Start
+[2024-11-10 20:26:24:322] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:26:24:326] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:26:24:326] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:26:24:326] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:26:24:355] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:26:24:356] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:26:24:430] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:26:44:029] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:26:44:029] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:26:44:030] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:26:44:034] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:26:44:034] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:26:44:035] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:26:44:035] [INFO] [global_python_initialize] Start
+[2024-11-10 20:26:44:051] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:26:44:054] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:26:44:054] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:26:44:054] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:26:44:084] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:26:44:085] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:26:44:149] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:27:31:545] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:27:31:545] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:27:31:545] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:27:31:549] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:27:31:550] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:27:31:550] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:27:31:551] [INFO] [global_python_initialize] Start
+[2024-11-10 20:27:31:565] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:27:31:569] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:27:31:569] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:27:31:569] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:27:31:599] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:27:31:599] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:27:31:666] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:28:07:249] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:28:07:249] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:28:07:250] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:28:07:254] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:28:07:254] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:28:07:255] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:28:07:255] [INFO] [global_python_initialize] Start
+[2024-11-10 20:28:07:275] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:28:07:277] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:28:07:278] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:28:07:278] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:28:07:310] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:28:07:310] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:28:07:377] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:28:31:745] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:28:31:745] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:28:31:745] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:28:31:749] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:28:31:749] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:28:31:749] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:28:31:750] [INFO] [global_python_initialize] Start
+[2024-11-10 20:28:31:766] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:28:31:769] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:28:31:769] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:28:31:769] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:28:31:803] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:28:31:804] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:28:31:887] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:29:31:160] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:29:31:160] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:29:31:160] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:29:31:166] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:29:31:167] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:29:31:167] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:29:31:168] [INFO] [global_python_initialize] Start
+[2024-11-10 20:29:31:184] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:29:31:188] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:29:31:188] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:29:31:188] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:29:31:229] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:29:31:230] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:29:31:302] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:30:17:310] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:30:17:310] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:30:17:311] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:30:17:314] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:30:17:315] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:30:17:315] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:30:17:316] [INFO] [global_python_initialize] Start
+[2024-11-10 20:30:17:332] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:30:17:335] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:30:17:335] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:30:17:335] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:30:17:366] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:30:17:366] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:30:17:430] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:30:44:850] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:30:44:850] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:30:44:851] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:30:44:855] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:30:44:855] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:30:44:856] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:30:44:856] [INFO] [global_python_initialize] Start
+[2024-11-10 20:30:44:873] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:30:44:877] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:30:44:877] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:30:44:877] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:30:44:908] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:30:44:909] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:30:44:973] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:35:39:761] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:35:39:761] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:35:39:762] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:35:39:765] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:35:39:765] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:35:39:765] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:35:39:766] [INFO] [global_python_initialize] Start
+[2024-11-10 20:35:39:781] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:35:39:784] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:35:39:784] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:35:39:784] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:35:39:814] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:35:39:815] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:35:39:867] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:36:19:597] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:36:19:597] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:36:19:597] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:36:19:601] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:36:19:601] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:36:19:601] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:36:19:602] [INFO] [global_python_initialize] Start
+[2024-11-10 20:36:19:622] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:36:19:626] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:36:19:626] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:36:19:626] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:36:19:656] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:36:19:656] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:36:19:715] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:54:21:192] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:54:21:192] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:54:21:192] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:54:21:195] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:54:21:196] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:54:21:196] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:54:21:196] [INFO] [global_python_initialize] Start
+[2024-11-10 20:54:21:210] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:54:21:212] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:54:21:212] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:54:21:212] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:54:21:237] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:54:21:238] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:54:21:293] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 20:57:41:479] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 20:57:41:479] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 20:57:41:480] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 20:57:41:483] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 20:57:41:483] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 20:57:41:483] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 20:57:41:484] [INFO] [global_python_initialize] Start
+[2024-11-10 20:57:41:497] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 20:57:41:500] [INFO] [global_python_initialize] Finish
+[2024-11-10 20:57:41:500] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 20:57:41:500] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:57:41:529] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 20:57:41:530] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 20:57:41:606] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:09:43:338] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:09:43:338] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:09:43:339] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:09:43:342] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:09:43:342] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:09:43:342] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:09:43:343] [INFO] [global_python_initialize] Start
+[2024-11-10 21:09:43:356] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:09:43:359] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:09:43:359] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:09:43:359] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:09:43:387] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:09:43:388] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:09:43:468] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:10:58:626] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:10:58:626] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:10:58:627] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:10:58:629] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:10:58:630] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:10:58:630] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:10:58:630] [INFO] [global_python_initialize] Start
+[2024-11-10 21:10:58:644] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:10:58:646] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:10:58:646] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:10:58:646] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:10:58:671] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:10:58:671] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:10:58:730] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:13:28:927] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:13:28:927] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:13:28:927] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:13:28:930] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:13:28:931] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:13:28:931] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:13:28:932] [INFO] [global_python_initialize] Start
+[2024-11-10 21:13:28:945] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:13:28:948] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:13:28:948] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:13:28:948] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:13:29:057] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:13:29:057] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:13:29:109] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:14:41:701] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:14:41:701] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:14:41:701] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:14:41:705] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:14:41:706] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:14:41:707] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:14:41:708] [INFO] [global_python_initialize] Start
+[2024-11-10 21:14:41:723] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:14:41:726] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:14:41:726] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:14:41:726] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:14:41:770] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:14:41:771] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:14:41:838] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:15:06:787] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:15:06:787] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:15:06:787] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:15:06:791] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:15:06:791] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:15:06:791] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:15:06:792] [INFO] [global_python_initialize] Start
+[2024-11-10 21:15:06:806] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:15:06:809] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:15:06:809] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:15:06:809] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:15:06:835] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:15:06:836] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:15:06:888] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:16:30:250] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:16:30:250] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:16:30:250] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:16:30:253] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:16:30:253] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:16:30:254] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:16:30:254] [INFO] [global_python_initialize] Start
+[2024-11-10 21:16:30:271] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:16:30:273] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:16:30:273] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:16:30:273] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:16:30:307] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:16:30:307] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:16:30:379] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:16:41:011] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:16:41:011] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:16:41:012] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:16:41:015] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:16:41:015] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:16:41:015] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:16:41:016] [INFO] [global_python_initialize] Start
+[2024-11-10 21:16:41:031] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:16:41:034] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:16:41:034] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:16:41:034] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:16:41:061] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:16:41:062] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:16:41:117] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:17:45:672] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:17:45:672] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:17:45:673] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:17:45:676] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:17:45:676] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:17:45:676] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:17:45:677] [INFO] [global_python_initialize] Start
+[2024-11-10 21:17:45:691] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:17:45:693] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:17:45:693] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:17:45:693] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:17:45:721] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:17:45:721] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:17:45:778] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:20:41:797] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:20:41:797] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:20:41:797] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:20:41:801] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:20:41:801] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:20:41:801] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:20:41:802] [INFO] [global_python_initialize] Start
+[2024-11-10 21:20:41:819] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:20:41:821] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:20:41:821] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:20:41:821] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:20:41:850] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:20:41:851] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:20:41:906] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:28:04:691] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:28:04:691] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:28:04:691] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:28:04:695] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:28:04:695] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:28:04:695] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:28:04:696] [INFO] [global_python_initialize] Start
+[2024-11-10 21:28:04:710] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:28:04:713] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:28:04:713] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:28:04:713] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:28:04:741] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:28:04:741] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:28:04:797] [INFO] Module "libagents.so" is already loaded.
+[2024-11-10 21:28:38:878] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-10 21:28:38:879] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-10 21:28:38:879] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-10 21:28:38:884] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-10 21:28:38:885] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-10 21:28:38:885] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-10 21:28:38:886] [INFO] [global_python_initialize] Start
+[2024-11-10 21:28:38:903] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-10 21:28:38:906] [INFO] [global_python_initialize] Finish
+[2024-11-10 21:28:38:906] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-10 21:28:38:906] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:28:38:935] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-10 21:28:38:935] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-10 21:28:38:990] [INFO] Module "libagents.so" is already loaded.
+[2024-11-14 06:21:20:832] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-14 06:21:20:832] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-14 06:21:20:835] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-14 06:21:20:840] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-14 06:21:20:842] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-14 06:21:20:843] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-14 06:21:20:846] [INFO] [global_python_initialize] Start
+[2024-11-14 06:21:20:880] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-14 06:21:20:882] [INFO] [global_python_initialize] Finish
+[2024-11-14 06:21:20:882] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-14 06:21:20:882] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 06:21:20:910] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-14 06:21:20:911] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 06:21:20:958] [INFO] Module "libagents.so" is already loaded.
+[2024-11-14 06:28:01:166] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-14 06:28:01:166] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-14 06:28:01:167] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-14 06:28:01:171] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-14 06:28:01:172] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-14 06:28:01:173] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-14 06:28:01:174] [INFO] [global_python_initialize] Start
+[2024-11-14 06:28:01:188] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-14 06:28:01:190] [INFO] [global_python_initialize] Finish
+[2024-11-14 06:28:01:190] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-14 06:28:01:190] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 06:28:01:216] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-14 06:28:01:216] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 06:28:01:265] [INFO] Module "libagents.so" is already loaded.
+[2024-11-14 06:39:08:671] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-14 06:39:08:671] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-14 06:39:08:672] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-14 06:39:08:675] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-14 06:39:08:675] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-14 06:39:08:675] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-14 06:39:08:676] [INFO] [global_python_initialize] Start
+[2024-11-14 06:39:08:689] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-14 06:39:08:692] [INFO] [global_python_initialize] Finish
+[2024-11-14 06:39:08:692] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-14 06:39:08:692] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 06:39:08:790] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-14 06:39:08:791] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 06:39:08:845] [INFO] Module "libagents.so" is already loaded.
+[2024-11-14 07:25:27:036] [WARN] No configuration file was loaded! Param=MODULES
+[2024-11-14 07:25:27:039] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-11-14 07:25:27:042] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-11-14 07:25:27:046] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-11-14 07:25:27:048] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-11-14 07:25:27:049] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/shell/libpy-shell.so"
+[2024-11-14 07:25:27:052] [INFO] [global_python_initialize] Start
+[2024-11-14 07:25:27:085] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
+[2024-11-14 07:25:27:089] [INFO] [global_python_initialize] Finish
+[2024-11-14 07:25:27:089] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
+[2024-11-14 07:25:27:089] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 07:25:27:181] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-11-14 07:25:27:181] [INFO] Loading module "/home/stationone/Desktop/Singularitynet/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-11-14 07:25:27:234] [INFO] Module "libagents.so" is already loaded.

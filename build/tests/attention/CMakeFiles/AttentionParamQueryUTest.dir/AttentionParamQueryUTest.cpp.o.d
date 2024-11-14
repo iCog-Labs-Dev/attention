@@ -1,5 +1,5 @@
 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o: \
- /home/yeab/attention/build/tests/attention/AttentionParamQueryUTest.cpp \
+ /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/AttentionParamQueryUTest.cpp \
  /usr/include/stdc-predef.h /usr/include/cxxtest/TestListener.h \
  /usr/include/cxxtest/Descriptions.h /usr/include/cxxtest/LinkedList.h \
  /usr/include/cxxtest/Flags.h /usr/include/cxxtest/TestTracker.h \
@@ -209,7 +209,7 @@ tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest
  /usr/include/cxxtest/TestMain.h /usr/include/c++/11/iostream \
  /usr/include/cxxtest/ErrorPrinter.h \
  /usr/include/cxxtest/ErrorFormatter.h \
- /home/yeab/attention/build/tests/attention/../../../tests/attention/AttentionParamQueryUTest.cxxtest \
+ /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/../../../tests/attention/AttentionParamQueryUTest.cxxtest \
  /usr/local/include/opencog/util/Config.h /usr/include/c++/11/fstream \
  /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
@@ -646,7 +646,7 @@ tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h \
  /usr/include/cxxtest/Root.cpp /usr/include/cxxtest/ValueTraits.cpp \
  /usr/include/cxxtest/Descriptions.cpp \
  /usr/include/cxxtest/DummyDescriptions.cpp \

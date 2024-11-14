@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/new_test.cpp
+cxxtest/TestListener.h
+-
+cxxtest/TestTracker.h
+-
+cxxtest/TestRunner.h
+-
+cxxtest/RealDescriptions.h
+-
+cxxtest/TestMain.h
+-
+cxxtest/ErrorPrinter.h
+-
+../../../tests/attentionbank/new_test.cxxtest
+/home/stationone/Desktop/Singularitynet/attention/tests/attentionbank/new_test.cxxtest
+cxxtest/Root.cpp
+-
+
+/home/stationone/Desktop/Singularitynet/attention/tests/attentionbank/new_test.cxxtest
+cxxtest/TestSuite.h
+-
+opencog/attention/AttentionValue.h
+-
+

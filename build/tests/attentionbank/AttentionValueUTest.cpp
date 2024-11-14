@@ -26,53 +26,53 @@ bool suite_AttentionValueUTest_init = false;
 static AttentionValueUTest suite_AttentionValueUTest;
 
 static CxxTest::List Tests_AttentionValueUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_AttentionValueUTest( "/home/yeab/attention/tests/attentionbank/AttentionValueUTest.cxxtest", 53, "AttentionValueUTest", suite_AttentionValueUTest, Tests_AttentionValueUTest );
+CxxTest::StaticSuiteDescription suiteDescription_AttentionValueUTest( "/home/stationone/Desktop/Singularitynet/attention/tests/attentionbank/AttentionValueUTest.cxxtest", 53, "AttentionValueUTest", suite_AttentionValueUTest, Tests_AttentionValueUTest );
 
 static class TestDescription_suite_AttentionValueUTest_testConstructors : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testConstructors() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 136, "testConstructors" ) {}
+ TestDescription_suite_AttentionValueUTest_testConstructors() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 138, "testConstructors" ) {}
  void runTest() { suite_AttentionValueUTest.testConstructors(); }
 } testDescription_suite_AttentionValueUTest_testConstructors;
 
 static class TestDescription_suite_AttentionValueUTest_testGets : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testGets() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 152, "testGets" ) {}
+ TestDescription_suite_AttentionValueUTest_testGets() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 154, "testGets" ) {}
  void runTest() { suite_AttentionValueUTest.testGets(); }
 } testDescription_suite_AttentionValueUTest_testGets;
 
 static class TestDescription_suite_AttentionValueUTest_testclone : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testclone() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 165, "testclone" ) {}
+ TestDescription_suite_AttentionValueUTest_testclone() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 167, "testclone" ) {}
  void runTest() { suite_AttentionValueUTest.testclone(); }
 } testDescription_suite_AttentionValueUTest_testclone;
 
 static class TestDescription_suite_AttentionValueUTest_testOperatorEquals : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testOperatorEquals() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 177, "testOperatorEquals" ) {}
+ TestDescription_suite_AttentionValueUTest_testOperatorEquals() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 179, "testOperatorEquals" ) {}
  void runTest() { suite_AttentionValueUTest.testOperatorEquals(); }
 } testDescription_suite_AttentionValueUTest_testOperatorEquals;
 
 static class TestDescription_suite_AttentionValueUTest_testVLTI : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testVLTI() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 190, "testVLTI" ) {}
+ TestDescription_suite_AttentionValueUTest_testVLTI() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 192, "testVLTI" ) {}
  void runTest() { suite_AttentionValueUTest.testVLTI(); }
 } testDescription_suite_AttentionValueUTest_testVLTI;
 
 static class TestDescription_suite_AttentionValueUTest_testComparisons : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testComparisons() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 212, "testComparisons" ) {}
+ TestDescription_suite_AttentionValueUTest_testComparisons() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 214, "testComparisons" ) {}
  void runTest() { suite_AttentionValueUTest.testComparisons(); }
 } testDescription_suite_AttentionValueUTest_testComparisons;
 
 static class TestDescription_suite_AttentionValueUTest_testgetDefault : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testgetDefault() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 309, "testgetDefault" ) {}
+ TestDescription_suite_AttentionValueUTest_testgetDefault() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 311, "testgetDefault" ) {}
  void runTest() { suite_AttentionValueUTest.testgetDefault(); }
 } testDescription_suite_AttentionValueUTest_testgetDefault;
 
 static class TestDescription_suite_AttentionValueUTest_testfactory : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_AttentionValueUTest_testfactory() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 318, "testfactory" ) {}
+ TestDescription_suite_AttentionValueUTest_testfactory() : CxxTest::RealTestDescription( Tests_AttentionValueUTest, suiteDescription_AttentionValueUTest, 320, "testfactory" ) {}
  void runTest() { suite_AttentionValueUTest.testfactory(); }
 } testDescription_suite_AttentionValueUTest_testfactory;
 

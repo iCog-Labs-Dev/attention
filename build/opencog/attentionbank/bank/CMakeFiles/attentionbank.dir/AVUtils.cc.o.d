@@ -1,5 +1,5 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AVUtils.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.cc \
  /usr/include/stdc-predef.h \
  /usr/local/include/opencog/atoms/base/Handle.h \
  /usr/include/c++/11/iostream \
@@ -588,8 +588,8 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AVUtils.cc.o: \
  /usr/local/include/opencog/util/macros.h \
  /usr/local/include/opencog/atoms/value/FloatValue.h \
  /usr/local/include/opencog/atoms/base/ClassServer.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc \

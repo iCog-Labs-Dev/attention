@@ -1,7 +1,7 @@
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AttentionalFocusCB.cc.o: \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionalFocusCB.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionalFocusCB.cc \
  /usr/include/stdc-predef.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionalFocusCB.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionalFocusCB.h \
  /usr/local/include/opencog/query/TermMatchMixin.h \
  /usr/local/include/opencog/atoms/atom_types/types.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
@@ -648,9 +648,9 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/AttentionalFocusCB.cc.o:
  /usr/local/include/opencog/atoms/core/TypeChoice.h \
  /usr/local/include/opencog/atoms/pattern/Pattern.h \
  /usr/local/include/opencog/atoms/pattern/PatternTerm.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h

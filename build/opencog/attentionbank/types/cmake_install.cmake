@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attentionbank/types
+# Install script for directory: /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,14 +42,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so"
          RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/types/libattention-types.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/libattention-types.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattention-types.so")
     file(RPATH_CHANGE
@@ -62,42 +62,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/types/atom_types.h")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   
               IF(EXISTS
-                     /home/yeab/attention/opencog/attentionbank/types/types.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types/types.scm
                  AND NOT
-                     /home/yeab/attention/opencog/attentionbank/types//home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types//home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/attention_types.scm
                    STREQUAL
-                     /home/yeab/attention/opencog/attentionbank/types/types.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types/types.scm
                  AND
-                     /home/yeab/attention/opencog/attentionbank/types//home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types//home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/attention_types.scm
                    IS_NEWER_THAN
-                     /home/yeab/attention/opencog/attentionbank/types/types.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types/types.scm
                  )
-                 MESSAGE("-- Touch: /home/yeab/attention/opencog/attentionbank/types/types.scm")
-                 MESSAGE("-- Newer: /home/yeab/attention/opencog/attentionbank/types//home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm")
-                 FILE(TOUCH /home/yeab/attention/opencog/attentionbank/types/types.scm)
+                 MESSAGE("-- Touch: /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types/types.scm")
+                 MESSAGE("-- Newer: /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types//home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/attention_types.scm")
+                 FILE(TOUCH /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types/types.scm)
               ENDIF()
             
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/share/guile/site/3.0/opencog/attentionbank/types/attention_types.scm")
+   "/usr/local/share/guile/site/3.0/opencog/attentionbank/types/attention_types.scm")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/types/attention_types.scm")
+  file(INSTALL DESTINATION "/usr/local/share/guile/site/3.0/opencog/attentionbank/types" TYPE FILE MESSAGE_LAZY FILES "/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/attention_types.scm")
 endif()
 

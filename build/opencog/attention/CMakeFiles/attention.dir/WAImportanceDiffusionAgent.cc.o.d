@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o: \
- /home/yeab/attention/opencog/attention/WAImportanceDiffusionAgent.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/WAImportanceDiffusionAgent.cc \
  /usr/include/stdc-predef.h /usr/local/include/opencog/util/Config.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
@@ -632,16 +632,16 @@ opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o: \
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h \
- /home/yeab/attention/opencog/attention/AttentionUtils.h \
- /home/yeab/attention/opencog/attention/WAImportanceDiffusionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/WAImportanceDiffusionAgent.h \
  /usr/local/include/opencog/cogserver/server/CogServer.h \
  /usr/local/include/opencog/cogserver/server/Module.h \
  /usr/local/include/opencog/cogserver/server/ModuleManager.h \
@@ -1395,7 +1395,7 @@ opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o: \
  /usr/local/include/opencog/cogserver/server/Factory.h \
  /usr/local/include/opencog/cogserver/server/Request.h \
  /usr/local/include/opencog/cogserver/server/RequestClassInfo.h \
- /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ImportanceDiffusionBase.h \
  /usr/include/c++/11/math.h \
  /usr/local/include/opencog/cogserver/modules/agents/Agent.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h

@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o: \
- /home/yeab/attention/opencog/attention/AFRentCollectionAgent.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFRentCollectionAgent.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/algorithm \
  /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -634,14 +634,14 @@ opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o: \
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h \
  /usr/local/include/opencog/util/recent_val.h \
- /home/yeab/attention/opencog/attentionbank/bank/AtomBins.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h \
- /home/yeab/attention/opencog/attention/AFRentCollectionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFRentCollectionAgent.h \
  /usr/local/include/opencog/cogserver/server/CogServer.h \
  /usr/local/include/opencog/cogserver/server/Module.h \
  /usr/local/include/opencog/cogserver/server/ModuleManager.h \
@@ -1396,6 +1396,6 @@ opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o: \
  /usr/local/include/opencog/cogserver/server/Request.h \
  /usr/local/include/opencog/cogserver/server/RequestClassInfo.h \
  /usr/local/include/opencog/cogserver/modules/agents/Agent.h \
- /home/yeab/attention/opencog/attention/RentCollectionBaseAgent.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
- /home/yeab/attention/opencog/attention/AttentionStat.h
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/RentCollectionBaseAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionStat.h

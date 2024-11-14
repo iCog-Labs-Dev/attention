@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o: \
- /home/yeab/attention/opencog/attention/AFImportanceDiffusionAgent.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFImportanceDiffusionAgent.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -1381,12 +1381,12 @@ opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o: \
  /usr/local/include/opencog/cogserver/server/Factory.h \
  /usr/local/include/opencog/cogserver/server/Request.h \
  /usr/local/include/opencog/cogserver/server/RequestClassInfo.h \
- /home/yeab/attention/opencog/attentionbank/bank/AVUtils.h \
- /home/yeab/attention/opencog/attentionbank/avalue/AttentionValue.h \
- /home/yeab/attention/opencog/attention/AFImportanceDiffusionAgent.h \
- /home/yeab/attention/opencog/attention/ImportanceDiffusionBase.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/avalue/AttentionValue.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AFImportanceDiffusionAgent.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/ImportanceDiffusionBase.h \
  /usr/include/c++/11/math.h \
  /usr/local/include/opencog/cogserver/modules/agents/Agent.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
- /home/yeab/attention/opencog/attention/Attention.h \
- /home/yeab/attention/opencog/attention/AttentionStat.h
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/Attention.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionStat.h

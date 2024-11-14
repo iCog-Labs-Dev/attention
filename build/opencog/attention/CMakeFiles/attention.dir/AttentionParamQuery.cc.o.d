@@ -1,5 +1,5 @@
 opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o: \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.cc \
  /usr/include/stdc-predef.h /usr/local/include/opencog/atoms/base/Link.h \
  /usr/include/c++/11/functional \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -751,7 +751,7 @@ opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o: \
  /usr/include/guile/3.0/libguile/inline.h \
  /usr/include/guile/3.0/libguile/deprecated.h \
  /usr/local/include/opencog/eval/GenericEval.h \
- /home/yeab/attention/opencog/attention/AttentionParamQuery.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionParamQuery.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc \

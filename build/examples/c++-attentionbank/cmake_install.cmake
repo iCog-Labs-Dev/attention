@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/examples/c++-attentionbank
+# Install script for directory: /home/stationone/Desktop/Singularitynet/attention/examples/c++-attentionbank
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

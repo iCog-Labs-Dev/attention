@@ -26,7 +26,7 @@ bool suite_AttentionParamQueryUTest_init = false;
 static AttentionParamQueryUTest suite_AttentionParamQueryUTest;
 
 static CxxTest::List Tests_AttentionParamQueryUTest = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_AttentionParamQueryUTest( "/home/yeab/attention/tests/attention/AttentionParamQueryUTest.cxxtest", 34, "AttentionParamQueryUTest", suite_AttentionParamQueryUTest, Tests_AttentionParamQueryUTest );
+CxxTest::StaticSuiteDescription suiteDescription_AttentionParamQueryUTest( "/home/stationone/Desktop/Singularitynet/attention/tests/attention/AttentionParamQueryUTest.cxxtest", 34, "AttentionParamQueryUTest", suite_AttentionParamQueryUTest, Tests_AttentionParamQueryUTest );
 
 static class TestDescription_suite_AttentionParamQueryUTest_test_get_param_value : public CxxTest::RealTestDescription {
 public:

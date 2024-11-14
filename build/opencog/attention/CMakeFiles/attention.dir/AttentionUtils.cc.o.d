@@ -1,7 +1,7 @@
 opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o: \
- /home/yeab/attention/opencog/attention/AttentionUtils.cc \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionUtils.cc \
  /usr/include/stdc-predef.h \
- /home/yeab/attention/opencog/attention/AttentionUtils.h \
+ /home/stationone/Desktop/Singularitynet/attention/opencog/attention/AttentionUtils.h \
  /usr/local/include/opencog/atomspace/AtomSpace.h \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -630,4 +630,4 @@ opencog/attention/CMakeFiles/attention.dir/AttentionUtils.cc.o: \
  /usr/include/boost/range/iterator_range_io.hpp \
  /usr/include/boost/iterator/transform_iterator.hpp \
  /usr/include/boost/range/reference.hpp \
- /home/yeab/attention/build/opencog/attentionbank/types/atom_types.h
+ /home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/atom_types.h

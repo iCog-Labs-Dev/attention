@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attentionbank
+# Install script for directory: /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,43 +42,44 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   
               IF(EXISTS
-                     /home/yeab/attention/opencog/attentionbank/opencog.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/opencog.scm
                  AND NOT
-                     /home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/scm/attention-bank.scm
                    STREQUAL
-                     /home/yeab/attention/opencog/attentionbank/opencog.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/opencog.scm
                  AND
-                     /home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/scm/attention-bank.scm
                    IS_NEWER_THAN
-                     /home/yeab/attention/opencog/attentionbank/opencog.scm
+                     /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/opencog.scm
                  )
-                 MESSAGE("-- Touch: /home/yeab/attention/opencog/attentionbank/opencog.scm")
-                 MESSAGE("-- Newer: /home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm")
-                 FILE(TOUCH /home/yeab/attention/opencog/attentionbank/opencog.scm)
+                 MESSAGE("-- Touch: /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/opencog.scm")
+                 MESSAGE("-- Newer: /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/scm/attention-bank.scm")
+                 FILE(TOUCH /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/opencog.scm)
               ENDIF()
             
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/share/guile/site/3.0/opencog/attention-bank.scm")
+   "/usr/local/share/guile/site/3.0/opencog/attention-bank.scm")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY FILES "/home/yeab/attention/opencog/attentionbank/scm/attention-bank.scm")
+  file(INSTALL DESTINATION "/usr/local/share/guile/site/3.0/opencog" TYPE FILE MESSAGE_LAZY FILES "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/scm/attention-bank.scm")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yeab/attention/build/opencog/attentionbank/avalue/cmake_install.cmake")
-  include("/home/yeab/attention/build/opencog/attentionbank/bank/cmake_install.cmake")
-  include("/home/yeab/attention/build/opencog/attentionbank/types/cmake_install.cmake")
+  include("/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/avalue/cmake_install.cmake")
+  include("/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/bank/cmake_install.cmake")
+  include("/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types/cmake_install.cmake")
+  include("/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/cython/cmake_install.cmake")
 
 endif()
 

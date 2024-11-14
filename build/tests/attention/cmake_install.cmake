@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/tests/attention
+# Install script for directory: /home/stationone/Desktop/Singularitynet/attention/tests/attention
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

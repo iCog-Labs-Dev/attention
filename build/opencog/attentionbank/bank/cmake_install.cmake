@@ -1,4 +1,4 @@
-# Install script for directory: /home/yeab/attention/opencog/attentionbank/bank
+# Install script for directory: /home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,37 +42,37 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so"
-         RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
+         RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules:/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/yeab/attention/build/opencog/attentionbank/bank/libattentionbank.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/opencog" TYPE SHARED_LIBRARY MESSAGE_LAZY FILES "/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/bank/libattentionbank.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so"
-         OLD_RPATH "/home/yeab/attention/build/opencog/attentionbank/avalue:/home/yeab/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:"
-         NEW_RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules")
+         OLD_RPATH "/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/avalue:/home/stationone/Desktop/Singularitynet/attention/build/opencog/attentionbank/types:/usr/local/lib/opencog:/usr/local/lib/opencog/modules:/usr/local/lib:"
+         NEW_RPATH "/usr/local/lib/opencog:/usr/local/lib/opencog/modules:/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/opencog/libattentionbank.so")
     endif()
   endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencog/attentionbank/bank" TYPE FILE MESSAGE_LAZY FILES
-    "/home/yeab/attention/opencog/attentionbank/bank/AFImplicator.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/AtomBins.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/AttentionBank.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/AVUtils.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/ImportanceIndex.h"
-    "/home/yeab/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h"
+    "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AFImplicator.h"
+    "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AtomBins.h"
+    "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AttentionBank.h"
+    "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/AVUtils.h"
+    "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/ImportanceIndex.h"
+    "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/bank/StochasticImportanceDiffusion.h"
     )
 endif()
 

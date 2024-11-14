@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/yeab/attention/opencog/attentionbank/types/atom_types_init.cc" "opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o" "gcc" "opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o.d"
+  "/home/stationone/Desktop/Singularitynet/attention/opencog/attentionbank/types/atom_types_init.cc" "opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o" "gcc" "opencog/attentionbank/types/CMakeFiles/attention-types.dir/atom_types_init.cc.o.d"
   )
 
 # Targets to which this target links.
