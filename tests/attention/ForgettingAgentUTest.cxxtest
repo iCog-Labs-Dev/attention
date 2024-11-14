@@ -50,12 +50,13 @@ public:
     _forgettingAgentPtr = _scheduler->createAgent(ForgettingAgent::info().id, false);
 
     this->as = &cogserver().getAtomSpace();
-    
+    this->as->clear();
+    TS_ASSERT_EQUALS(this->as->get_size() ,0);
   }
 
 #define ACCEPTABLE_DEV_SIZE "1"
 #define FORGET_THRESHOLD "5"
-#define MAX_ATOMSPACE_SIZE "10"
+#define MAX_ATOMSPACE_SIZE "2"
   void testForgetAtom()
   {
     InitCogServer();
@@ -72,7 +73,7 @@ public:
 
     // assert whethere configurations are set correctly
     TS_ASSERT_EQUALS(forgettingThreshold, 5);
-    TS_ASSERT_EQUALS(maxSize, 10);
+    TS_ASSERT_EQUALS(maxSize, 2);
     TS_ASSERT_EQUALS(accDivSize, 1);
 
     AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
