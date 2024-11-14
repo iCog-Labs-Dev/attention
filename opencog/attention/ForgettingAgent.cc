@@ -45,15 +45,25 @@ ForgettingAgent::ForgettingAgent(CogServer& cs) :
     std::ostringstream buf;
     buf << AttentionValue::MAXLTI;
     std::string defaultForgetThreshold = buf.str();
-    config().set("ECAN_FORGET_THRESHOLD", defaultForgetThreshold);
+    // config().set("ECAN_FORGET_THRESHOLD", defaultForgetThreshold);
+    //
+    // forgetThreshold = (AttentionValue::lti_t)
+    //                   (config().get_int("ECAN_FORGET_THRESHOLD", AttentionValue::MAXLTI));
+    //
+    // //Todo: Make configurable
+    // maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE", 10000);
+    // accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", 100);
+
+    config().set("ECAN_FORGET_THRESHOLD", "5");
 
     forgetThreshold = (AttentionValue::lti_t)
                       (config().get_int("ECAN_FORGET_THRESHOLD", AttentionValue::MAXLTI));
 
     //Todo: Make configurable
-    maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE", 10000);
-    accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", 100);
+    maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE", 2);
+    accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", 1);
 
+  // fprintf(stdout, "forgetThreshold is %f ", forgetThreshold);
     // Provide a logger, but disable it initially
     setLogger(new opencog::Logger("ForgettingAgent.log", Logger::WARN, true));
 }
@@ -78,9 +88,11 @@ void ForgettingAgent::forget()
 
     int asize = atomsVector.size();
     if (asize < (maxSize + accDivSize)) {
+        // fprintf(stdout, "condition passed\natomspace size, maxSize, accDivSize is: %d %d %d", asize, maxSize, accDivSize);
         return;
     }
 
+    // std::cout << "condition passed\natomspace size is: " + asize << std::endl;
     fprintf(stdout,"Forgetting Stuff, Atomspace Size: %d \n",asize);
     // Sort atoms by lti, remove the lowest unless vlti is NONDISPOSABLE
     std::sort(atomsVector.begin(), atomsVector.end(), ForgettingLTIThenTVAscendingSort(_as));
