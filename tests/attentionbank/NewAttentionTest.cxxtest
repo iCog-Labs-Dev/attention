@@ -3,6 +3,8 @@
 #include <opencog/attentionbank/avalue/AttentionValue.h>
 #include <opencog/atoms/truthvalue/SimpleTruthValue.h>
 #include <opencog/util/Logger.h>
+#include "sorting.h"
+
 
 using namespace opencog;
 using namespace std;
@@ -133,11 +135,45 @@ public:
         return testAtoms;
     }
 
+    void testAttentionValueSTI() {
+    // Test the getSTI function of AttentionValue
+    AttentionValuePtr av = AttentionValue::createAV(100, 200, 3);
+    TS_ASSERT_EQUALS(av->getSTI(), 100);
+        }
+
+        void testAttentionValueLTI() {
+            // Test the getLTI function of AttentionValue
+            AttentionValuePtr av = AttentionValue::createAV(100, 200, 3);
+            TS_ASSERT_EQUALS(av->getLTI(), 200);
+        }
+
+        void testAttentionValueVLTI() {
+            // Test the getVLTI function of AttentionValue
+            AttentionValuePtr av = AttentionValue::createAV(100, 200, 3);
+            TS_ASSERT_EQUALS(av->getVLTI(), 3);
+        }
+
     // Test function to verify the creation of a simple graph
     void testCreateSimpleGraph() {
+
         HandleSeq atoms = createSimpleGraph(atomSpace, "simple_graph");
         TS_ASSERT_EQUALS(atoms.size(), 4);  // Assert the size of the created graph
     }
+
+    void testLTIThenTVAscendingSort() {
+    // Test the LTI then TV ascending sort functionality
+    HandleSeq atoms = createSimpleGraph(atomSpace, "lti_then_tv_sort");
+
+    LTIThenTVAscendingSort ltiThenTvSort;
+
+  
+
+    // Verify the sorting order based on LTI then TV
+    TS_ASSERT_EQUALS(ltiThenTvSort(atoms[1], atoms[0]), false);
+    TS_ASSERT_EQUALS(ltiThenTvSort(atoms[0], atoms[1]), true);
+    TS_ASSERT_EQUALS(ltiThenTvSort(atoms[2], atoms[1]), false);
+    TS_ASSERT_EQUALS(ltiThenTvSort(atoms[1], atoms[2]), true);
+}
 
     // Test function to verify AttentionValue creation
     void testAttentionValueCreation() {

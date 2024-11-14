@@ -52,6 +52,22 @@ HebbianCreationAgent::HebbianCreationAgent(CogServer& cs) :
     setLogger(new opencog::Logger("HebbianCreationAgent.log", Logger::FINE, true));
 }
 
+/**
+ * @brief Executes the Hebbian creation process.
+ *
+ * This function performs the following steps:
+ * 1. Retrieves the maximum number of links and the local-to-far link ratio from the attention parameter query.
+ * 2. Checks if there are new atoms in the attentional vector and returns if none are found.
+ * 3. Pops a source atom from the attentional vector and returns if the source is undefined.
+ * 4. Ensures that HebbianLinks do not enter the attentional focus boundary.
+ * 5. Retrieves the atoms in the attentional focus and removes any HebbianLinks.
+ * 6. Excludes the source atom from the attentional focus.
+ * 7. Retrieves neighboring atoms connected by AsymmetricHebbianLinks in either direction.
+ * 8. Determines the set differences between the attentional focus and the sets of existing sources and targets.
+ * 9. Adds new AsymmetricHebbianLinks for atoms that require them.
+ * 10. Creates a specified number of links outside the attentional focus.
+ * 11. Checks the number of HebbianLinks the source atom has and removes excess links if necessary.
+ */
 void HebbianCreationAgent::run()
 {
     maxLinkNum = std::stoi(_atq.get_param_value
