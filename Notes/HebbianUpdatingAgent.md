@@ -20,7 +20,7 @@ The `run()` function first retrieves atoms in `attentional_focus` and passes the
         .
         .
     }
-```
+
 
 2. Declares variables `tc`, `old_tc`, and `new_tc` to hold computed results and old truth values.  
 
@@ -45,7 +45,7 @@ The `run()` function first retrieves atoms in `attentional_focus` and passes the
         h->setTruthValue(h->getTruthValue()->merge(newtv));
         std::cout<<"after truthvalue update" << h->to_string()<<std::endl;
     }
-    ```
+    
 
 4. The loop iterates through the incoming links and performs the following:  
 
@@ -60,7 +60,7 @@ The `run()` function first retrieves atoms in `attentional_focus` and passes the
 
      ```c++
      double HebbianUpdatingAgent::targetConjunction(HandleSeq handles)
-    {
+       {
         if (handles.size() != 2)
         {
             throw RuntimeException(
@@ -76,10 +76,9 @@ The `run()` function first retrieves atoms in `attentional_focus` and passes the
         std::cout<<"av: " << (*get_av(handles[0])).to_string()<<std::endl;
         std::cout << " Handles: " <<handles[0]->to_string() <<" normsti_i: " <<normsti_i <<"normsti_j: "<<normsti_j<<" conj: "<<conj<<std::endl;
         return conj;
-    }
+       }
      ```
 
-code
 
      ```c++
         double AttentionBank::getNormalisedZeroToOneSTI(AttentionValuePtr av,
