@@ -93,24 +93,26 @@ void ForgettingAgent::forget()
     }
 
     // std::cout << "condition passed\natomspace size is: " + asize << std::endl;
-    fprintf(stdout,"Forgetting Stuff, Atomspace Size: %d \n",asize);
+    // fprintf(stdout,"Forgetting Stuff, Atomspace Size: %d \n",asize);
     // Sort atoms by lti, remove the lowest unless vlti is NONDISPOSABLE
     std::sort(atomsVector.begin(), atomsVector.end(), ForgettingLTIThenTVAscendingSort(_as));
 
     removalAmount = asize - (maxSize - accDivSize);
     _log->info("ForgettingAgent::forget - will attempt to remove %d atoms", removalAmount);
-
-    for (unsigned int i = 0; i < atomsVector.size(); i++)
+    
+    for (auto atom : atomsVector)
     {
-        if (get_lti(atomsVector[i]) <= forgetThreshold
+        // fprintf(stdout, "inside the loop removalAmount: %d count: %d ltiAt: %f\n", removalAmount, count, get_lti(atomsVector[i]));
+        if (get_lti(atom) <= forgetThreshold
                 and count < removalAmount)
         {
-            if (get_vlti(atomsVector[i]) == AttentionValue::DISPOSABLE )
+            if (get_vlti(atom) == AttentionValue::DISPOSABLE )
             {
-                std::string atomName = atomsVector[i]->to_string();
+                std::string atomName = atom->to_string();
+                fprintf(stdout, "atomName %s\n", atomName);
                 _log->fine("Removing atom %s", atomName.c_str());
                 // TODO: do recursive remove if neighbours are not very important
-                IncomingSet iset = atomsVector[i]->getIncomingSet(_as);
+                IncomingSet iset = atom->getIncomingSet(_as);
                 recursive = true;
                 for (const Handle& h : iset)
                 {
@@ -122,9 +124,9 @@ void ForgettingAgent::forget()
                 if (!recursive)
                     continue;
 
-                _bank->set_sti(atomsVector[i], 0);
-                _bank->set_lti(atomsVector[i], 0);
-                if (!_as->remove_atom(atomsVector[i],recursive)) {
+                _bank->set_sti(atom, 0);
+                _bank->set_lti(atom, 0);
+                if (!_as->remove_atom(atom,recursive)) {
                     // Atom must have already been removed through having
                     // previously removed atoms in it's outgoing set.
                     _log->error("Couldn't remove atom %s", atomName.c_str());
