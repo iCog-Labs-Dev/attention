@@ -14,6 +14,7 @@
 #include <opencog/util/algorithm.h>
 #include <opencog/cogserver/server/Factory.h>
 
+#include <opencog/attentionbank/types/atom_types.h>
 
 using namespace opencog;
 using namespace std;
@@ -53,19 +54,6 @@ public:
     this->as->clear();
     TS_ASSERT_EQUALS(this->as->get_size() ,0);
 
-    // configure forgettingThreshold, maxSize and accDivSize values
-    config().set("ECAN_FORGET_THRESHOLD", FORGET_THRESHOLD);
-    config().set("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", ACCEPTABLE_DEV_SIZE);
-    config().set("ECAN_ATOMSPACE_MAXSIZE", MAX_ATOMSPACE_SIZE);
-
-    int forgettingThreshold = config().get_int("ECAN_FORGET_THRESHOLD"); 
-    int maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE"); 
-    int accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD"); 
-
-    // assert whethere configurations are set correctly
-    TS_ASSERT_EQUALS(forgettingThreshold, 5);
-    TS_ASSERT_EQUALS(maxSize, 2);
-    TS_ASSERT_EQUALS(accDivSize, 1);
   }
 
 #define ACCEPTABLE_DEV_SIZE "1"
@@ -85,44 +73,83 @@ public:
     b->setTruthValue(SimpleTruthValue::createTV(0.01, conf90));
     Handle c = as->add_node(CONCEPT_NODE, "c");
     c->setTruthValue(SimpleTruthValue::createTV(0.1, conf90));
-    Handle importantAtom = as->add_node(CONCEPT_NODE, "d");
-    importantAtom->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
+    Handle d = as->add_node(CONCEPT_NODE, "d");
+    d->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
 
+    Handle kermit = as->add_node(
+        CONCEPT_NODE, "Kermit");
+    kermit->setTruthValue( SimpleTruthValue::createTV(0.002, conf90));
+    Handle frog = as->add_node(
+        CONCEPT_NODE, "Frog");
+    frog->setTruthValue( SimpleTruthValue::createTV(0.02, conf90));
+    Handle animal = as->add_node(
+        CONCEPT_NODE, "Animal");
+    animal->setTruthValue( SimpleTruthValue::createTV(0.2, conf90));
+
+    Handle link_1 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, kermit, d);
+    link_1->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+    Handle link_2 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, frog, d);
+    link_2->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+    Handle link_3 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, animal, d);
+    link_3->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+
+    std::cout << "after printing the size of the atomspace" << std::endl;
+    TS_ASSERT_EQUALS(this->as->get_size() ,10);
+    std::cout << "after printing the size of the atomspace" << std::endl;
     // set lti values for atoms in atomspace
-    ab.set_lti(a, 6);
-    ab.set_lti(b, 5);
-    ab.set_lti(c, 1);
+    ab.set_lti(a, 7);
+    ab.set_lti(b, 6);
+    ab.set_lti(c, 6);
+    ab.set_lti(d, 2);
+
+    ab.set_lti(kermit, 2);
+    ab.set_lti(frog, 2);
+    ab.set_lti(animal, 2);
+
+    ab.set_sti(a, 7);
+    ab.set_sti(b, 8);
+    ab.set_sti(c, 8);
+    ab.set_sti(d, 8);
 
     // get attention values for atoms
     AttentionValuePtr aval = get_av(a);
     AttentionValuePtr bval = get_av(b);
     AttentionValuePtr cval = get_av(c);
+    AttentionValuePtr dval = get_av(d);
+
 
     // assert lti value being set properly.
-    TS_ASSERT_EQUALS(aval->getLTI(), 6);
-    TS_ASSERT_EQUALS(bval->getLTI(), 5);
-    TS_ASSERT_EQUALS(cval->getLTI(), 1);
+    TS_ASSERT_EQUALS(aval->getLTI(), 7);
+    TS_ASSERT_EQUALS(bval->getLTI(), 6);
+    TS_ASSERT_EQUALS(cval->getLTI(), 6);
+    TS_ASSERT_EQUALS(dval->getLTI(), 2);
 
-    // change vlti for one atom so that it is non disposable
-    AttentionValuePtr old_dval = get_av(importantAtom);
-    AttentionValuePtr new_dval = AttentionValue::createAV(
-      old_dval->getSTI(),
-      old_dval->getLTI(),
-      old_dval->getVLTI() + 1
-    );
-    ab.change_av(importantAtom, new_dval);
+    // configure forgettingThreshold, maxSize and accDivSize values
+    config().set("ECAN_FORGET_THRESHOLD", FORGET_THRESHOLD);
+    config().set("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", ACCEPTABLE_DEV_SIZE);
+    config().set("ECAN_ATOMSPACE_MAXSIZE", MAX_ATOMSPACE_SIZE);
 
-    // assert vlti value being changed.
-    AttentionValuePtr d_val = get_av(importantAtom);
-    TS_ASSERT_EQUALS(d_val->getVLTI(), 1);
+    int forgettingThreshold = config().get_int("ECAN_FORGET_THRESHOLD"); 
+    int maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE"); 
+    int accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD"); 
 
+    // assert whethere configurations are set correctly
+    TS_ASSERT_EQUALS(forgettingThreshold, 5);
+    TS_ASSERT_EQUALS(maxSize, 2);
+    TS_ASSERT_EQUALS(accDivSize, 1);
     // Allow events to propagate.
     sleep(1);
-    AttentionValuePtr finalCVal = get_av(c);
+    AttentionValuePtr dNodeNewAV = get_av(d);
+    AttentionValuePtr kermitNodeNewAV = get_av(kermit);
+    AttentionValuePtr frogNodeNewAV = get_av(frog);
+    AttentionValuePtr animalNodeNewAV = get_av(animal);
 
     // check if the atom with `lti < forgettingThreshold` i.e atom c, has sti and lti values equal to 0.
-    TS_ASSERT_EQUALS(finalCVal->getLTI(), 0);
-    TS_ASSERT_EQUALS(finalCVal->getSTI(), 0);
+    TS_ASSERT_EQUALS(dNodeNewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(dNodeNewAV->getSTI(), 0);
+    TS_ASSERT_EQUALS(kermitNodeNewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(frogNodeNewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(animalNodeNewAV->getLTI(), 0);
 
     //TODO may be check if the number of atoms that must remain in atomspace is equal to the expected.
 
@@ -130,10 +157,4 @@ public:
     _scheduler->stopAgent(_forgettingAgentPtr);
   }
 
-  void testRecursiveRemoval()
-  {
-    InitCogServer();
-    _scheduler->startAgent(_forgettingAgentPtr);
-
-  }
 };
