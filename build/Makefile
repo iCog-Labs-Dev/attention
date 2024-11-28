@@ -467,6 +467,19 @@ HebbianCreationModuleUTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build
 .PHONY : HebbianCreationModuleUTest/fast
 
+#=============================================================================
+# Target rules for targets named AFRentCollectionAgentUTest
+
+# Build rule for target.
+AFRentCollectionAgentUTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AFRentCollectionAgentUTest
+.PHONY : AFRentCollectionAgentUTest
+
+# fast build rule for target.
+AFRentCollectionAgentUTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/build
+.PHONY : AFRentCollectionAgentUTest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -489,6 +502,7 @@ help:
 	@echo "... test"
 	@echo "... tests"
 	@echo "... uninstall"
+	@echo "... AFRentCollectionAgentUTest"
 	@echo "... AttentionParamQueryUTest"
 	@echo "... AttentionUTest"
 	@echo "... AttentionValueUTest"

@@ -90,37 +90,34 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
     // (3) Calculate the probability vector that determines what proportion to
     //     diffuse to each incident atom
     std::map<Handle, double> probabilityVectorIncident =
-            ImportanceDiffusionBase::probabilityVectorIncident(
-                incidentAtoms);
+            ImportanceDiffusionBase::probabilityVectorIncident(incidentAtoms);
 
-#ifdef DEBUG
+// #ifdef DEBUG
     std::cout << "Calculating diffusion for handle # " << source.value() <<
                  std::endl;
     std::cout << "Incident probability vector contains " <<
                  probabilityVectorIncident.size() << " atoms." << std::endl;
-#endif
+// #endif
 
     // (4) Calculate the probability vector that determines what proportion to
     //     diffuse to each hebbian adjacent atom
     std::map<Handle, double> probabilityVectorHebbianAdjacent =
-            ImportanceDiffusionBase::probabilityVectorHebbianAdjacent(
-                source, hebbianAdjacentAtoms);
+            ImportanceDiffusionBase::probabilityVectorHebbianAdjacent(source, hebbianAdjacentAtoms);
 
-#ifdef DEBUG
+// #ifdef DEBUG
     std::cout << "Hebbian adjacent probability vector contains " <<
                  probabilityVectorHebbianAdjacent.size() << " atoms." <<
                  std::endl;
-#endif
+// #endif
 
     // (5) Combine the two probability vectors into one according to the
     //     configuration parameters
-    std::map<Handle, double> probabilityVector = combineIncidentAdjacentVectors(
-                probabilityVectorIncident, probabilityVectorHebbianAdjacent);
+    std::map<Handle, double> probabilityVector = combineIncidentAdjacentVectors(probabilityVectorIncident, probabilityVectorHebbianAdjacent);
 
-#ifdef DEBUG
+// #ifdef DEBUG
     std::cout << "Probability vector contains " << probabilityVector.size() <<
                  " atoms." << std::endl;
-#endif
+// #endif
 
     // (6) Calculate the total amount that will be diffused
     AttentionValue::sti_t totalDiffusionAmount =
@@ -156,9 +153,9 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
     atom_avstat[source].spreading += totalDiffusionAmount;
 #endif
 
-#ifdef DEBUG
+// #ifdef DEBUG
     std::cout << "Total diffusion amount: " << totalDiffusionAmount << std::endl;
-#endif
+// #endif
 
     /* ===================================================================== */
 
@@ -270,7 +267,6 @@ HandleSeq ImportanceDiffusionBase::incidentAtoms(Handle h)
     }
 
     removeHebbianLinks(resultSet);
-
     return resultSet;
 }
 

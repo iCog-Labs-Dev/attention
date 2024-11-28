@@ -1,10 +1,10 @@
-Start testing: Nov 12 09:24 EAT
+Start testing: Nov 28 18:50 EAT
 ----------------------------------------------------------
-1/8 Testing: AttentionValueUTest
-1/8 Test: AttentionValueUTest
+1/9 Testing: AttentionValueUTest
+1/9 Test: AttentionValueUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionValueUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionValueUTest" start time: Nov 12 09:24 EAT
+"AttentionValueUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
@@ -12,15 +12,15 @@ Running cxxtest tests (8 tests)........OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionValueUTest" end time: Nov 12 09:24 EAT
+"AttentionValueUTest" end time: Nov 28 18:50 EAT
 "AttentionValueUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/8 Testing: AttentionUTest
-2/8 Test: AttentionUTest
+2/9 Testing: AttentionUTest
+2/9 Test: AttentionUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionUTest" start time: Nov 12 09:24 EAT
+"AttentionUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (3 tests)...OK!
@@ -28,15 +28,15 @@ Running cxxtest tests (3 tests)...OK!
 Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionUTest" end time: Nov 12 09:24 EAT
+"AttentionUTest" end time: Nov 28 18:50 EAT
 "AttentionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/8 Testing: BankImplUTest
-3/8 Test: BankImplUTest
+3/9 Testing: BankImplUTest
+3/9 Test: BankImplUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/BankImplUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"BankImplUTest" start time: Nov 12 09:24 EAT
+"BankImplUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (10 tests)..........OK!
@@ -44,15 +44,15 @@ Running cxxtest tests (10 tests)..........OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankImplUTest" end time: Nov 12 09:24 EAT
+"BankImplUTest" end time: Nov 28 18:50 EAT
 "BankImplUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/8 Testing: BankAsyncUTest
-4/8 Test: BankAsyncUTest
+4/9 Testing: BankAsyncUTest
+4/9 Test: BankAsyncUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/BankAsyncUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"BankAsyncUTest" start time: Nov 12 09:24 EAT
+"BankAsyncUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test).OK!
@@ -60,38 +60,32 @@ Running cxxtest tests (1 test).OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankAsyncUTest" end time: Nov 12 09:24 EAT
+"BankAsyncUTest" end time: Nov 28 18:50 EAT
 "BankAsyncUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/8 Testing: AttentionalFocusCBUTest
-5/8 Test: AttentionalFocusCBUTest
+5/9 Testing: AttentionalFocusCBUTest
+5/9 Test: AttentionalFocusCBUTest
 Command: "/home/yeab/attention/build/tests/attentionbank/AttentionalFocusCBUTest"
 Directory: /home/yeab/attention/build/tests/attentionbank
-"AttentionalFocusCBUTest" start time: Nov 12 09:24 EAT
+"AttentionalFocusCBUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (1 test)[2024-11-12 06:24:38:509] [DEBUG] BEGIN TEST: test_af_bindlink
+Running cxxtest tests (1 test)[2024-11-28 15:50:34:310] [DEBUG] BEGIN TEST: test_af_bindlink
 .OK!
-;;; note: source file /home/yeab/attention/build/opencog/scm/opencog/attention-config.scm
-;;;       newer than compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attention-config.scm.go
-;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
-;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling /home/yeab/attention/build/opencog/scm/opencog/attention-config.scm
-;;; compiled /home/yeab/.cache/guile/ccache/3.0-LE-8-4.5/home/yeab/attention/build/opencog/scm/opencog/attention-config.scm.go
 <end of output>
-Test time =   0.08 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionalFocusCBUTest" end time: Nov 12 09:24 EAT
+"AttentionalFocusCBUTest" end time: Nov 28 18:50 EAT
 "AttentionalFocusCBUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/8 Testing: AttentionParamQueryUTest
-6/8 Test: AttentionParamQueryUTest
+6/9 Testing: AttentionParamQueryUTest
+6/9 Test: AttentionParamQueryUTest
 Command: "/home/yeab/attention/build/tests/attention/AttentionParamQueryUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"AttentionParamQueryUTest" start time: Nov 12 09:24 EAT
+"AttentionParamQueryUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (4 tests)....OK!
@@ -99,31 +93,36 @@ Running cxxtest tests (4 tests)....OK!
 Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionParamQueryUTest" end time: Nov 12 09:24 EAT
+"AttentionParamQueryUTest" end time: Nov 28 18:50 EAT
 "AttentionParamQueryUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/8 Testing: ImportanceDiffusionUTest
-7/8 Test: ImportanceDiffusionUTest
+7/9 Testing: ImportanceDiffusionUTest
+7/9 Test: ImportanceDiffusionUTest
 Command: "/home/yeab/attention/build/tests/attention/ImportanceDiffusionUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"ImportanceDiffusionUTest" start time: Nov 12 09:24 EAT
+"ImportanceDiffusionUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (8 tests)........OK!
+Running cxxtest tests (8 tests)Calculating diffusion for handle # 6977637845158704541
+Incident probability vector contains 2 atoms.
+Hebbian adjacent probability vector contains 1 atoms.
+Probability vector contains 3 atoms.
+Total diffusion amount: 300
+........OK!
 <end of output>
-Test time =   0.06 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"ImportanceDiffusionUTest" end time: Nov 12 09:24 EAT
+"ImportanceDiffusionUTest" end time: Nov 28 18:50 EAT
 "ImportanceDiffusionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/8 Testing: HebbianCreationModuleUTest
-8/8 Test: HebbianCreationModuleUTest
+8/9 Testing: HebbianCreationModuleUTest
+8/9 Test: HebbianCreationModuleUTest
 Command: "/home/yeab/attention/build/tests/attention/HebbianCreationModuleUTest"
 Directory: /home/yeab/attention/build/tests/attention
-"HebbianCreationModuleUTest" start time: Nov 12 09:24 EAT
+"HebbianCreationModuleUTest" start time: Nov 28 18:50 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test)AF: 
@@ -135,8 +134,29 @@ count(HebLinks) = 20
 Test time =   1.06 sec
 ----------------------------------------------------------
 Test Passed.
-"HebbianCreationModuleUTest" end time: Nov 12 09:24 EAT
+"HebbianCreationModuleUTest" end time: Nov 28 18:50 EAT
 "HebbianCreationModuleUTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: Nov 12 09:24 EAT
+9/9 Testing: AFRentCollectionAgentUTest
+9/9 Test: AFRentCollectionAgentUTest
+Command: "/home/yeab/attention/build/tests/attention/AFRentCollectionAgentUTest"
+Directory: /home/yeab/attention/build/tests/attention
+"AFRentCollectionAgentUTest" start time: Nov 28 18:50 EAT
+Output:
+----------------------------------------------------------
+Running cxxtest tests (1 test)AFRentCollectionAgent registered
+Nodes created
+Atoms stimulated to bring them into attentional focus.
+testSelectTargets passed
+TearDown completed for AFRentCollectionAgentTest.
+.OK!
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"AFRentCollectionAgentUTest" end time: Nov 28 18:50 EAT
+"AFRentCollectionAgentUTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 28 18:50 EAT

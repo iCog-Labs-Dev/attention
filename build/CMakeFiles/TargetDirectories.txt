@@ -116,6 +116,7 @@
 /home/yeab/attention/build/tests/attention/CMakeFiles/AttentionParamQueryUTest.dir
 /home/yeab/attention/build/tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir
 /home/yeab/attention/build/tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir
+/home/yeab/attention/build/tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir
 /home/yeab/attention/build/tests/attention/CMakeFiles/package.dir
 /home/yeab/attention/build/tests/attention/CMakeFiles/package_source.dir
 /home/yeab/attention/build/tests/attention/CMakeFiles/edit_cache.dir

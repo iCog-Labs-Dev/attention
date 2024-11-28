@@ -1,0 +1,128 @@
+
+
+
+#include <cxxtest/TestSuite.h>
+
+#include <opencog/attention/AFRentCollectionAgent.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Config.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+
+
+using namespace opencog;
+
+using namespace std;
+
+
+class AFRentCollectioAgentUTest : public CxxTest::TestSuite
+{
+    private:
+        AtomSpace* as;
+        AFRentCollectionAgent* _afrentcollection_agent;
+        CogServer* _cogserver;
+        Scheduler* _scheduler;
+        AttentionBank* _attention_bank;
+    
+    public:
+
+    void setUp(){
+
+        // Initialize the CogServer
+        _cogserver = &cogserver();
+        config().set("MODULES", "opencog/attention/libattention.so");
+        _cogserver->loadModules();
+        config().set("MODULES", "libagents.so");
+
+        // loading the AgentsModule
+        Module* amod = _cogserver->getModule("opencog::AgentsModule");
+        AgentsModule* agmod = static_cast<AgentsModule*>(amod);
+
+        // loading the AtomSpace
+        as = &_cogserver->getAtomSpace();
+
+        // initializing the AFRentCollectionAgent
+        _afrentcollection_agent = new AFRentCollectionAgent(*_cogserver);
+
+        // registering the AFRentCollectionAgent
+        _scheduler = &agmod->get_scheduler();
+        AbstractFactory<Agent>* afrentcollectionFactory = new Factory<AFRentCollectionAgent, Agent>;
+        _scheduler->registerAgent(AFRentCollectionAgent::info().id, afrentcollectionFactory);
+
+        std::cout << "AFRentCollectionAgent registered" << std::endl;
+    }
+    // function for clearing the memory
+     void tearDown()
+    {
+        delete _afrentcollection_agent;
+        _cogserver->stop();
+        std::cout << "TearDown completed for AFRentCollectionAgentTest." << std::endl;
+    }
+
+    void testSelectTargets(){
+
+        // create sample atoms in atomspace
+        Handle h1 = as->add_node(CONCEPT_NODE, "node1");
+        Handle h2 = as->add_node(CONCEPT_NODE, "node2");
+        Handle h3 = as->add_node(CONCEPT_NODE, "node3");
+
+        std::cout << "Nodes created" << std::endl;
+
+        // why do we intialize attention bank like this here, why not like cogserver or scheduler"
+
+        AttentionBank& ab = attentionbank(as);
+
+        ab.stimulate(h1, 100);
+        ab.stimulate(h2, 200);
+        ab.stimulate(h3, 300);
+
+        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
+
+        HandleSeq targetSet;
+        _afrentcollection_agent->selectTargets(targetSet);
+
+        TS_ASSERT_EQUALS(targetSet.size(), 3);
+
+        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h1) != targetSet.end());
+        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h2) != targetSet.end());
+        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h3) != targetSet.end());
+
+        std::cout << "testSelectTargets passed" << std::endl;
+
+    }
+
+//     void testCollectRent() {
+
+//         // Step 1: Create and stimulate some atoms
+//         Handle h1 = as->add_node(CONCEPT_NODE, "RentNode1");
+//         Handle h2 = as->add_node(CONCEPT_NODE, "RentNode2");
+//         Handle h3 = as->add_node(CONCEPT_NODE, "RentNode3");
+
+//         AttentionBank& ab = attentionbank(as);
+//         ab.stimulate(h1, 300); // STI and LTI values are initialized here
+//         ab.stimulate(h2, 400);
+//         ab.stimulate(h3, 500);
+
+//         // Step 2: Add atoms to a HandleSeq (targetSet)
+//         HandleSeq targetSet = {h1, h2, h3};
+
+//         // Step 3: Call collectRent to apply changes
+//         _afrentcollection_agent->collectRent(targetSet);
+
+//         // Step 4: Verify the STI and LTI changes in the AttentionBank
+//         double sti_h1 = ab->getSTI(h1);
+
+//         double sti_h2 = ab.get_sti(h2);
+//         double sti_h3 = ab.get_sti(h3);
+
+//         TS_ASSERT_LESS_THAN(sti_h1, 300); // Ensure STI was reduced
+//         TS_ASSERT_LESS_THAN(sti_h2, 400);
+//         TS_ASSERT_LESS_THAN(sti_h3, 500);
+
+//         std::cout << "testCollectRent passed" << std::endl;
+// }
+
+};        

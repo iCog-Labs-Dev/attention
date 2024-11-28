@@ -20,6 +20,7 @@ class SentenceGenStimulateAgent: public Agent {
 private:
     UnorderedHandleSet _hword_wordInstance_nodes;
     SchemeEval* _scm_eval;
+    Scheduler scheduler;
 
     int startcount;
     time_t stime;
@@ -28,11 +29,18 @@ public:
     virtual ~ SentenceGenStimulateAgent();
     SentenceGenStimulateAgent(CogServer& cs);
 
-    virtual const ClassInfo& classinfo() const;
-    static const ClassInfo& info();
+    // virtual const ClassInfo& classinfo() const;
+    // static const ClassInfo& info();
     virtual void run();
 
     void generate_stimulate_sentence();
+
+    virtual const ClassInfo& classinfo() const { return info(); }
+    
+    static const ClassInfo& info() {
+        static const ClassInfo _ci("opencog::SentenceGenStimulateAgent");
+        return _ci;
+    }
 };
 
 typedef std::shared_ptr<SentenceGenStimulateAgent> SentenceGenStimulateAgentPtr;

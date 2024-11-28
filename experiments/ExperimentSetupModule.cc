@@ -51,11 +51,10 @@ ExperimentSetupModule::ExperimentSetupModule(CogServer& cs) :
     _as = &_cs.getAtomSpace();
 
     _AVChangedSignalConnection = _as->AVChangedSignal(
-            boost::bind(&ExperimentSetupModule::AVChangedCBListener, this, _1,
-                        _2, _3));
+            boost::bind(&ExperimentSetupModule::AVChangedCBListener, this, _1, 2, _3));
+            
     _AVChangedSignalConnection = _as->TVChangedSignal(
-            boost::bind(&ExperimentSetupModule::TVChangedCBListener, this, _1,
-                        _2, _3));
+            boost::bind(&ExperimentSetupModule::TVChangedCBListener, this, _1, 2, _3));
 
     file_name = std::string(PROJECT_SOURCE_DIR)
                 + "/experiments/attention/dump";
