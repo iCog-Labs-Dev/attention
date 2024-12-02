@@ -34,5 +34,11 @@ public:
  void runTest() { suite_AFRentCollectioAgentUTest.testSelectTargets(); }
 } testDescription_suite_AFRentCollectioAgentUTest_testSelectTargets;
 
+static class TestDescription_suite_AFRentCollectioAgentUTest_testCollectRent : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_AFRentCollectioAgentUTest_testCollectRent() : CxxTest::RealTestDescription( Tests_AFRentCollectioAgentUTest, suiteDescription_AFRentCollectioAgentUTest, 97, "testCollectRent" ) {}
+ void runTest() { suite_AFRentCollectioAgentUTest.testCollectRent(); }
+} testDescription_suite_AFRentCollectioAgentUTest_testCollectRent;
+
 #include <cxxtest/Root.cpp>
 const char* CxxTest::RealWorldDescription::_worldName = "cxxtest";

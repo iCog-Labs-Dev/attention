@@ -59,12 +59,14 @@ public:
         _cogserver->stop();
     }
 
-    void InitCogServer()
+    void setUp()
     {
         _cogserver = &cogserver();
         config().set("MODULES", "opencog/attention/libattention.so");
         _cogserver->loadModules();
         config().set("MODULES", "libagents.so");
+
+
         Module* amod = _cogserver->getModule("opencog::AgentsModule");
         AgentsModule* agmod = (AgentsModule*) amod;
         _scheduler = &agmod->get_scheduler();
@@ -75,20 +77,20 @@ public:
         Factory<HebbianCreationAgent, Agent> hebbianCreationFactory;
         _scheduler->registerAgent(HebbianCreationAgent::info().id,&hebbianCreationFactory);
         _hebbiancreation_agentptr =
-            _scheduler->createAgent(HebbianCreationAgent::info().id,false);
+        _scheduler->createAgent(HebbianCreationAgent::info().id,false);
 
-        this->as = &cogserver().getAtomSpace();
+        as = &cogserver().getAtomSpace();
+        std:: cout << "HebbianCreationAgent registered" << std::endl;
     }
 
     void testHebbianLinkCreation(void)
     {
-        InitCogServer();
+        // InitCogServer();
         _scheduler->startAgent(_hebbiancreation_agentptr,true,"hca");
 
 
-         AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
-        // Set the AttentionalFocusBoundary
-        //as->setAttentionalFocusBoundary(100);
+        AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
+    
 
         count_t conf90 = 900; //SimpleTruthValue::confidenceToCount(0.90);
 
