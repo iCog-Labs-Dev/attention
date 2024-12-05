@@ -9,9 +9,12 @@
 #define PLNDYNAMICSEXPSETUPMODULE_H_
 
 #include "SentenceGenStimulateAgent.h"
-#include <opencog/cogserver/server/Agent.h>
+#include <opencog/cogserver/modules/agents/Agent.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
 #include <opencog/cogserver/server/Factory.h>
 #include <opencog/attention/AttentionModule.h>
+#include <boost/signals2.hpp>
 
 namespace opencog {
 
@@ -20,6 +23,7 @@ class CogServer;
 class SchemeEval;
 class Module;
 class Logger;
+class Scheduler;
 
 namespace ECANExperiment {
 
@@ -37,8 +41,10 @@ private:
     Factory<SentenceGenStimulateAgent, Agent> sentenceGenStimulateFactory;
 
     AtomSpace * _as;
-    CogServer& _cs;
+    CogServer* _cs;
     Logger * _log;
+    Scheduler* _scheduler;
+    AttentionBank* _ab;
 
     boost::signals2::connection _AVChangedSignalConnection,_TVChangedSignalConnection,_AtomAddedSignalConnection;
 

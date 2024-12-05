@@ -10,10 +10,10 @@
 #include <thread>
 #include <boost/filesystem.hpp>
 
-#include <opencog/neighbors/GetPredicates.h>
-#include <opencog/attention/atom_types.h>
+// #include <opencog/neighbors/GetPredicates.h>
+#include <opencog/attentionbank/types/atom_types.h>
 #include <opencog/cogserver/server/Factory.h>
-#include <opencog/nlp/types/atom_types.h>
+// #include <opencog/nlp/types/atom_types.h>
 
 #include "ExperimentSetupModule.h"
 #include "SentenceGenStimulateAgent.h"
@@ -31,9 +31,11 @@ SentenceGenStimulateAgent::~SentenceGenStimulateAgent()
 SentenceGenStimulateAgent::SentenceGenStimulateAgent(CogServer& cs) :
         Agent(cs)
 {
-    _scm_eval = new SchemeEval(_as);
+ //   _scm_eval = new SchemeEval(_as);
+      _scm_eval = make_shared<SchemeEval>(_as);
+
     current_group = 0;
-    startcount = _cogserver.getCycleCount();
+    startcount = _scheduler.getCycleCount();
     stime = std::time(nullptr);
 }
 
@@ -52,7 +54,7 @@ void SentenceGenStimulateAgent::run(void)
 {
     generate_stimulate_sentence();
 
-    if(_cogserver.getCycleCount() % 10 == 0){
+    if(_scheduler.getCycleCount() % 10 == 0){
         //Print counts
         printf("WORD_NODE = %d \n",_as->get_num_atoms_of_type(WORD_NODE));
         printf("WORD_INSTANCE_NODE = %d \n",_as->get_num_atoms_of_type(WORD_INSTANCE_NODE));
@@ -87,7 +89,7 @@ void SentenceGenStimulateAgent::generate_stimulate_sentence()
         stime = time(nullptr);
     }
 
-    if (_cogserver.getCycleCount() % special_word_occurence_period == 0) { // and
+    if (_scheduler.getCycleCount() % special_word_occurence_period == 0) { // and
     //(_cogserver.getCycleCount() - startcount) > 5 ) {
       select(4,swords[current_group],selected_words);
       select(2,words,selected_words);
@@ -101,10 +103,10 @@ void SentenceGenStimulateAgent::generate_stimulate_sentence()
     }
 
     for (Handle h : hwords)
-        _as->stimulate(h,2);
+        _ab.stimulate(h,2);
     for (Handle h : hword_instances)
-        _as->stimulate(h,0.5);
+        _ab.stimulate(h,0.5);
     this_thread::sleep_for(milliseconds(400));
 
-    printf("stifunds: %ld \n",_as->get_STI_funds());
+    printf("stifunds: %ld \n",_ab.get_STI_funds());
 }

@@ -1,0 +1,3 @@
+/home/sam/Documents/repos/ecan-work/attention/experiments/build/CMakeFiles/attentionexperiment.dir
+/home/sam/Documents/repos/ecan-work/attention/experiments/build/CMakeFiles/edit_cache.dir
+/home/sam/Documents/repos/ecan-work/attention/experiments/build/CMakeFiles/rebuild_cache.dir
