@@ -745,7 +745,6 @@ tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAg
   ../opencog/attentionbank/bank/AtomBins.h \
   ../opencog/attentionbank/bank/AVUtils.h \
   ../opencog/attention/AttentionParamQuery.h \
-  ../opencog/attention/AttentionParamQuery.h \
   /usr/local/include/opencog/cogserver/server/CogServer.h \
   /usr/local/include/opencog/cogserver/server/Module.h \
   /usr/local/include/opencog/cogserver/server/ModuleManager.h \
@@ -1536,11 +1535,6 @@ tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAg
   /usr/local/include/opencog/cogserver/server/RequestManager.h \
   /usr/local/include/opencog/cogserver/server/Request.h \
   /usr/local/include/opencog/cogserver/server/RequestClassInfo.h \
-  /usr/local/include/opencog/cogserver/modules/agents/AgentsModule.h \
-  /usr/local/include/opencog/cogserver/modules/agents/Scheduler.h \
-  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerThread.h \
-  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerBase.h \
-  /usr/local/include/opencog/cogserver/modules/agents/SystemActivityTable.h \
   /usr/local/include/opencog/util/Config.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -1573,8 +1567,6 @@ tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAg
 /usr/include/c++/11/fstream:
 
 /usr/local/include/opencog/util/Config.h:
-
-/usr/local/include/opencog/cogserver/modules/agents/Scheduler.h:
 
 /usr/local/include/opencog/cogserver/server/RequestManager.h:
 
@@ -1657,8 +1649,6 @@ tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAg
 /usr/include/boost/predef/os/solaris.h:
 
 /usr/include/boost/predef/os/qnxnto.h:
-
-/usr/local/include/opencog/cogserver/modules/agents/SystemActivityTable.h:
 
 /usr/include/boost/predef/detail/os_detected.h:
 
@@ -2187,8 +2177,6 @@ tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAg
 /usr/include/boost/mpl/aux_/type_wrapper.hpp:
 
 /usr/include/boost/none.hpp:
-
-/usr/local/include/opencog/cogserver/modules/agents/AgentRunnerBase.h:
 
 /usr/include/boost/range/detail/implementation_help.hpp:
 
@@ -3712,8 +3700,6 @@ tests/attention/RentCollectionBaseAgentUTest.cpp:
 
 /usr/include/boost/system/api_config.hpp:
 
-/usr/local/include/opencog/cogserver/modules/agents/AgentRunnerThread.h:
-
 /usr/include/boost/range/size_type.hpp:
 
 /usr/include/boost/type_traits/make_unsigned.hpp:
@@ -4155,8 +4141,6 @@ tests/attention/RentCollectionBaseAgentUTest.cpp:
 /usr/include/boost/asio/detail/is_executor.hpp:
 
 /usr/include/boost/asio/system_executor.hpp:
-
-/usr/local/include/opencog/cogserver/modules/agents/AgentsModule.h:
 
 /usr/include/boost/asio/execution/allocator.hpp:
 

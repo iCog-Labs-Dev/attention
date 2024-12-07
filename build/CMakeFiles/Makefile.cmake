@@ -224,4 +224,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/DependInfo.cmake"
   "tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/DependInfo.cmake"
   "tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/DependInfo.cmake"
+  "tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/DependInfo.cmake"
   )

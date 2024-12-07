@@ -1402,22 +1402,20 @@ tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/AFRentCollectionAgentU
  /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h \
  /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h \
  /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.h \
- /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.h \
- /usr/local/include/opencog/cogserver/modules/agents/AgentsModule.h \
  /usr/local/include/opencog/cogserver/modules/agents/Scheduler.h \
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerThread.h \
  /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerBase.h \
  /usr/local/include/opencog/cogserver/modules/agents/SystemActivityTable.h \
- /usr/local/include/opencog/atoms/truthvalue/SimpleTruthValue.h \
+ /usr/local/include/opencog/util/Config.h /usr/include/c++/11/fstream \
+ /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc \
+ /usr/local/include/opencog/cogserver/modules/agents/AgentsModule.h \
  /usr/include/cxxtest/Root.cpp /usr/include/cxxtest/ValueTraits.cpp \
  /usr/include/cxxtest/Descriptions.cpp \
  /usr/include/cxxtest/DummyDescriptions.cpp \
  /usr/include/cxxtest/GlobalFixture.cpp \
  /usr/include/cxxtest/LinkedList.cpp \
  /usr/include/cxxtest/RealDescriptions.cpp \
- /usr/include/cxxtest/TestSuite.cpp /usr/include/c++/11/fstream \
- /usr/include/c++/11/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc \
- /usr/include/cxxtest/TestTracker.cpp
+ /usr/include/cxxtest/TestSuite.cpp /usr/include/cxxtest/TestTracker.cpp

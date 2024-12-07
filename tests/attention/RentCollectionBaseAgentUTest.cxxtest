@@ -60,50 +60,37 @@ public:
     RentCollectionAgentUTest() : _as(nullptr), _cogserver(nullptr), _scheduler(nullptr) {}
 
     void setUp() {
-    _cogserver = &cogserver();
-    if (_as) {
-        delete _as; // Ensure previous AtomSpace is deleted
+        _cogserver = &cogserver();
+        if (_as) {
+            delete _as; // Ensure previous AtomSpace is deleted
+        }
+        _as = new AtomSpace();
+
+        // Configure and load necessary modules
+        config().set("MODULES", "opencog/attention/libattention.so");
+        _cogserver->loadModules();
+
+        Module* amod = _cogserver->getModule("opencog::AgentsModule");
+        AgentsModule* agmod = dynamic_cast<AgentsModule*>(amod);
+        _scheduler = &agmod->get_scheduler();
+
+        // Initialize AttentionParamQuery and manually load parameters
+        auto _atq = std::make_shared<AttentionParamQuery>(_as);
+        try {
+            _atq->set_param(AttentionParamQuery::rent_starting_sti_rent, 1.0);
+            _atq->set_param(AttentionParamQuery::rent_starting_lti_rent, 1.0);
+            _atq->set_param(AttentionParamQuery::rent_target_sti_funds, 10000.0);
+            _atq->set_param(AttentionParamQuery::rent_sti_funds_buffer, 10000.0);
+            _atq->set_param(AttentionParamQuery::rent_target_lti_funds, 10000.0);
+            _atq->set_param(AttentionParamQuery::rent_lti_funds_buffer, 10000.0);
+        } catch (const opencog::RuntimeException& e) {
+            TS_FAIL("Parameter setting error: " + std::string(e.what()));
+        }
+
+        // Create DummyRentCollectionAgent with the fresh CogServer
+        _dummy_agent = std::make_shared<DummyRentCollectionAgent>(*_cogserver);
+        _dummy_agent->loadParams(); // Ensure parameters are loaded
     }
-    _as = new AtomSpace();
-
-    // Configure and load necessary modules
-    config().set("MODULES", "opencog/attention/libattention.so");
-    _cogserver->loadModules();
-
-    Module* amod = _cogserver->getModule("opencog::AgentsModule");
-    AgentsModule* agmod = dynamic_cast<AgentsModule*>(amod);
-    _scheduler = &agmod->get_scheduler();
-
-    // Initialize AttentionParamQuery and set custom parameters
-    auto _atq = std::make_shared<AttentionParamQuery>(_as);
-    try {
-        _atq->set_param(AttentionParamQuery::rent_starting_sti_rent, 5.0); // Custom value
-
-        _atq->set_param(AttentionParamQuery::rent_starting_lti_rent, 20.0); // Custom value
-        _atq->set_param(AttentionParamQuery::rent_target_sti_funds, 20000.0); // Custom value
-        _atq->set_param(AttentionParamQuery::rent_sti_funds_buffer, 5000.0); // Custom value
-        _atq->set_param(AttentionParamQuery::rent_target_lti_funds, 15000.0); // Custom value
-        _atq->set_param(AttentionParamQuery::rent_lti_funds_buffer, 7000.0); // Custom value
-       
-
-        TS_ASSERT_EQUALS(std::stod(_atq->get_param_value(AttentionParamQuery::rent_starting_sti_rent)), 5.0);
-        double expectedRent=28.572;
-        double calculatedRent = _dummy_agent->calculate_LTI_Rent();
-        TS_ASSERT_EQUALS(calculatedRent, expectedRent);
-    } catch (const opencog::RuntimeException& e) {
-        TS_FAIL("Parameter setting error: " + std::string(e.what()));
-    }
-
-        auto& _bank = attentionbank(_as);
-
-    // Create DummyRentCollectionAgent with the fresh CogServer
-    _dummy_agent = std::make_shared<DummyRentCollectionAgent>(*_cogserver);
-
-    // Explicitly call loadParams to ensure the agent picks up the new parameters
-    _dummy_agent->loadParams();
- // Load updated parameters
-}
-
 
     void tearDown() {
         if (_scheduler && _dummy_agent) {

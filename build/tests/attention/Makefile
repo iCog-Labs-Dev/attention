@@ -237,6 +237,44 @@ RentCollectionBaseAgentUTest/fast:
 	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build.make tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/build
 .PHONY : RentCollectionBaseAgentUTest/fast
 
+# Convenience name for target.
+tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/rule:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/rule
+.PHONY : tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/rule
+
+# Convenience name for target.
+AFRentCollectionAgentUTest: tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/rule
+.PHONY : AFRentCollectionAgentUTest
+
+# fast build rule for target.
+AFRentCollectionAgentUTest/fast:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/build
+.PHONY : AFRentCollectionAgentUTest/fast
+
+AFRentCollectionAgentUTest.o: AFRentCollectionAgentUTest.cpp.o
+.PHONY : AFRentCollectionAgentUTest.o
+
+# target to build an object file
+AFRentCollectionAgentUTest.cpp.o:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/AFRentCollectionAgentUTest.cpp.o
+.PHONY : AFRentCollectionAgentUTest.cpp.o
+
+AFRentCollectionAgentUTest.i: AFRentCollectionAgentUTest.cpp.i
+.PHONY : AFRentCollectionAgentUTest.i
+
+# target to preprocess a source file
+AFRentCollectionAgentUTest.cpp.i:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/AFRentCollectionAgentUTest.cpp.i
+.PHONY : AFRentCollectionAgentUTest.cpp.i
+
+AFRentCollectionAgentUTest.s: AFRentCollectionAgentUTest.cpp.s
+.PHONY : AFRentCollectionAgentUTest.s
+
+# target to generate assembly for a file
+AFRentCollectionAgentUTest.cpp.s:
+	cd /home/tarik/attention/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir/AFRentCollectionAgentUTest.cpp.s
+.PHONY : AFRentCollectionAgentUTest.cpp.s
+
 AttentionParamQueryUTest.o: AttentionParamQueryUTest.cpp.o
 .PHONY : AttentionParamQueryUTest.o
 
@@ -347,10 +385,14 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... AFRentCollectionAgentUTest"
 	@echo "... AttentionParamQueryUTest"
 	@echo "... HebbianCreationModuleUTest"
 	@echo "... ImportanceDiffusionUTest"
 	@echo "... RentCollectionBaseAgentUTest"
+	@echo "... AFRentCollectionAgentUTest.o"
+	@echo "... AFRentCollectionAgentUTest.i"
+	@echo "... AFRentCollectionAgentUTest.s"
 	@echo "... AttentionParamQueryUTest.o"
 	@echo "... AttentionParamQueryUTest.i"
 	@echo "... AttentionParamQueryUTest.s"

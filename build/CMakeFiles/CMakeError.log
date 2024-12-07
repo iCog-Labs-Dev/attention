@@ -2168,3 +2168,127 @@ int main(int argc, char** argv)
   return 0;
 #endif
 }
+Determining if the secure_getenv exist failed with the following output:
+Change Dir: /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a9fe3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a9fe3.dir/build.make CMakeFiles/cmTC_a9fe3.dir/build
+gmake[1]: Entering directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9fe3.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -Wall -fPIC -fstack-protector  -o CMakeFiles/cmTC_a9fe3.dir/CheckSymbolExists.c.o -c /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘secure_getenv’ undeclared (first use in this function)
+    8 |   return ((int*)(&secure_getenv))[argc];
+      |                   ^~~~~~~~~~~~~
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_a9fe3.dir/build.make:78: CMakeFiles/cmTC_a9fe3.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a9fe3/fast] Error 2
+
+
+File /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef secure_getenv
+  return ((int*)(&secure_getenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the secure_getenv exist failed with the following output:
+Change Dir: /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_eb47c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_eb47c.dir/build.make CMakeFiles/cmTC_eb47c.dir/build
+gmake[1]: Entering directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eb47c.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -Wall -fPIC -fstack-protector  -o CMakeFiles/cmTC_eb47c.dir/CheckSymbolExists.c.o -c /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘secure_getenv’ undeclared (first use in this function)
+    8 |   return ((int*)(&secure_getenv))[argc];
+      |                   ^~~~~~~~~~~~~
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_eb47c.dir/build.make:78: CMakeFiles/cmTC_eb47c.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_eb47c/fast] Error 2
+
+
+File /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef secure_getenv
+  return ((int*)(&secure_getenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the secure_getenv exist failed with the following output:
+Change Dir: /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1da12/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1da12.dir/build.make CMakeFiles/cmTC_1da12.dir/build
+gmake[1]: Entering directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1da12.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -Wall -fPIC -fstack-protector  -o CMakeFiles/cmTC_1da12.dir/CheckSymbolExists.c.o -c /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘secure_getenv’ undeclared (first use in this function)
+    8 |   return ((int*)(&secure_getenv))[argc];
+      |                   ^~~~~~~~~~~~~
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_1da12.dir/build.make:78: CMakeFiles/cmTC_1da12.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1da12/fast] Error 2
+
+
+File /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef secure_getenv
+  return ((int*)(&secure_getenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the secure_getenv exist failed with the following output:
+Change Dir: /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_73c48/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_73c48.dir/build.make CMakeFiles/cmTC_73c48.dir/build
+gmake[1]: Entering directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73c48.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -Wall -fPIC -fstack-protector  -o CMakeFiles/cmTC_73c48.dir/CheckSymbolExists.c.o -c /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘secure_getenv’ undeclared (first use in this function)
+    8 |   return ((int*)(&secure_getenv))[argc];
+      |                   ^~~~~~~~~~~~~
+/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_73c48.dir/build.make:78: CMakeFiles/cmTC_73c48.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/tarik/attention/attention/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_73c48/fast] Error 2
+
+
+File /home/tarik/attention/attention/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef secure_getenv
+  return ((int*)(&secure_getenv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

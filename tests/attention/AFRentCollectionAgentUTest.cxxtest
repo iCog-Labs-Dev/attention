@@ -1,154 +1,190 @@
+
+
+
 #include <cxxtest/TestSuite.h>
+
 #include <opencog/attention/AFRentCollectionAgent.h>
-#include <opencog/attention/AttentionParamQuery.h>
-#include <opencog/atomspace/AtomSpace.h>
-#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
 #include <opencog/cogserver/server/CogServer.h>
-#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
 #include <opencog/attentionbank/avalue/AttentionValue.h>
-#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
-#include <memory>
-#include <iostream>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Config.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+
 
 using namespace opencog;
 
-class TestAFRentCollectionAgent : public AFRentCollectionAgent {
-public:
-    using AFRentCollectionAgent::AFRentCollectionAgent;
+using namespace std;
 
-    void loadParams() { load_params(); }
-    double getSTIAtomRent() const { return STIAtomRent; }
-    double getLTIAtomRent() const { return LTIAtomRent; }
-    double getTargetSTI() const { return targetSTI; }
-    double getSTIFundsBuffer() const { return stiFundsBuffer; }
-    double getTargetLTI() const { return targetLTI; }
-    double getLTIFundsBuffer() const { return ltiFundsBuffer; }
 
-    // Override selectTargets for debugging purposes
-    void selectTargets(HandleSeq& targetSet) override {
-        std::cerr << "Debugging selectTargets...\n";
-        AFRentCollectionAgent::selectTargets(targetSet);
-        std::cerr << "selectTargets found " << targetSet.size() << " targets.\n";
-    }
-};
+class AFRentCollectioAgentUTest : public CxxTest::TestSuite
+{
+    private:
+        AtomSpace* as;
+        AFRentCollectionAgent* _afrentcollection_agent;
+        CogServer* _cogserver;
+        Scheduler* _scheduler;
+        AttentionBank* _attention_bank;
+    
+    public:
 
-class AFRentCollectionAgentUTest : public CxxTest::TestSuite {
-private:
-    AtomSpace* _as;
-    CogServer* _cogserver;
-    Scheduler* _scheduler;
-    std::shared_ptr<TestAFRentCollectionAgent> _af_agent;
+    void setUp(){
 
-public:
-    AFRentCollectionAgentUTest() : _as(nullptr), _cogserver(nullptr), _scheduler(nullptr) {}
-
-    void setUp() {
+        // Initialize the CogServer
         _cogserver = &cogserver();
-        _as = new AtomSpace();
-
-        // Load necessary modules
+        config().set("MODULES", "opencog/attention/libattention.so");
         _cogserver->loadModules();
+        config().set("MODULES", "libagents.so");
 
-        // Initialize AgentsModule and Scheduler
-        AgentsModule* agmod = dynamic_cast<AgentsModule*>(_cogserver->getModule("opencog::AgentsModule"));
+        // loading the AgentsModule
+        Module* amod = _cogserver->getModule("opencog::AgentsModule");
+        AgentsModule* agmod = static_cast<AgentsModule*>(amod);
+
+        // loading the AtomSpace
+        as = &_cogserver->getAtomSpace();
+
+        // initializing the AFRentCollectionAgent
+        _afrentcollection_agent = new AFRentCollectionAgent(*_cogserver);
+
+        // registering the AFRentCollectionAgent
         _scheduler = &agmod->get_scheduler();
+        AbstractFactory<Agent>* afrentcollectionFactory = new Factory<AFRentCollectionAgent, Agent>;
+        _scheduler->registerAgent(AFRentCollectionAgent::info().id, afrentcollectionFactory);
 
-        // Initialize the test subclass of AFRentCollectionAgent
-        _af_agent = std::make_shared<TestAFRentCollectionAgent>(*_cogserver);
-        setParameters();
-        _af_agent->loadParams();
+        std::cout << "AFRentCollectionAgent registered" << std::endl;
+    }
+    // function for clearing the memory
+     void tearDown()
+    {
+        delete _afrentcollection_agent;
+        _cogserver->stop();
+        std::cout << "TearDown completed for AFRentCollectionAgentTest." << std::endl;
     }
 
-    void tearDown() {
-        if (_scheduler && _af_agent) {
-            _scheduler->stopAgent(std::static_pointer_cast<Agent>(_af_agent));
-        }
-        delete _as;
-        _as = nullptr;
-    }
+    void testSelectTargets(){
 
-    void setParameters() {
-        auto _atq = std::make_shared<AttentionParamQuery>(_as);
-        _atq->set_param(AttentionParamQuery::rent_starting_sti_rent, 1.0);
-        _atq->set_param(AttentionParamQuery::rent_starting_lti_rent, 1.0);
-        _atq->set_param(AttentionParamQuery::rent_target_sti_funds, 10000.0);
-        _atq->set_param(AttentionParamQuery::rent_sti_funds_buffer, 10000.0);
-        _atq->set_param(AttentionParamQuery::rent_target_lti_funds, 10000.0);
-        _atq->set_param(AttentionParamQuery::rent_lti_funds_buffer, 10000.0);
-    }
+        // create sample atoms in atomspace
+        Handle h1 = as->add_node(CONCEPT_NODE, "node1");
+        Handle h2 = as->add_node(CONCEPT_NODE, "node2");
+        Handle h3 = as->add_node(CONCEPT_NODE, "node3");
 
-    void testSelectTargets() {
-        AttentionBank& ab = attentionbank(_as);
+        std::cout << "Nodes created" << std::endl;
 
-        // Add atoms to AtomSpace and set initial STI and LTI values
-        Handle atom1 = _as->add_node(CONCEPT_NODE, "Atom1");
-        Handle atom2 = _as->add_node(CONCEPT_NODE, "Atom2");
+        // why do we intialize attention bank like this here, why not like cogserver or scheduler"
 
-        // Debug: Confirm atom addition
-        std::cerr << "Added atom1 and atom2 to AtomSpace.\n";
+        AttentionBank& ab = attentionbank(as);
 
-        // Set LTI and STI values to ensure they are part of attentional focus
-        ab.set_lti(atom1, 6);
-        ab.set_sti(atom1, 200);
-        ab.set_lti(atom2, 5);
-        ab.set_sti(atom2, 300);
+        ab.stimulate(h1, 100);
+        ab.stimulate(h2, 200);
+        ab.stimulate(h3, 300);
+
+        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
 
         HandleSeq targetSet;
-        _af_agent->selectTargets(targetSet);
+        _afrentcollection_agent->selectTargets(targetSet);
 
-        // Debugging: Check if attentional focus contains the expected nodes
-        std::cerr << "Attentional focus should contain 2 targets. Found " << targetSet.size() << " targets.\n";
-        for (const auto& target : targetSet) {
-            std::cerr << "Target found: " << target << "\n";
-        }
+        TS_ASSERT_EQUALS(targetSet.size(), 3);
 
-        // Assertions
-        TS_ASSERT_EQUALS(targetSet.size(), 2);
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), atom1) != targetSet.end());
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), atom2) != targetSet.end());
+        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h1) != targetSet.end());
+        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h2) != targetSet.end());
+        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h3) != targetSet.end());
+
+        std::cout << "testSelectTargets passed" << std::endl;
+
     }
+void testCollectRent() {
+    //Create and stimulate some atoms
+    Handle h1 = as->add_node(CONCEPT_NODE, "RentNode1");
+    Handle h2 = as->add_node(CONCEPT_NODE, "RentNode2");
+    Handle h3 = as->add_node(CONCEPT_NODE, "RentNode3");
 
-    void testCollectRent() {
-        AttentionBank& ab = attentionbank(_as);
+    AttentionBank& ab = attentionbank(as);
 
-        // Add atoms and set STI/LTI values using AttentionBank
-        Handle atom1 = _as->add_node(CONCEPT_NODE, "Atom1");
-        Handle atom2 = _as->add_node(CONCEPT_NODE, "Atom2");
+    // Set initial STI and LTI values for the atoms
+    ab.set_sti(h1, 300);
+    ab.set_sti(h2, 400);
+    ab.set_sti(h3, 500);
 
-        ab.set_lti(atom1, 6);
-        ab.set_sti(atom1, 500);
-        ab.set_lti(atom2, 5);
-        ab.set_sti(atom2, 300);
+    ab.set_lti(h1, 1000);
+    ab.set_lti(h2, 1200);
+    ab.set_lti(h3, 1500);
 
-        HandleSeq targetSet;
-        _af_agent->selectTargets(targetSet);
-        _af_agent->collectRent(targetSet);
+    // Log initial STI and LTI values
+    AttentionValuePtr av1 = get_av(h1);
+    AttentionValuePtr av2 = get_av(h2);
+    AttentionValuePtr av3 = get_av(h3);
 
-        // Verify that rent has been deducted correctly
-        double stiRent = _af_agent->calculate_STI_Rent();
-        double ltiRent = _af_agent->calculate_LTI_Rent();
-        TS_ASSERT_LESS_THAN_EQUALS(ab.getTotalSTI(), 10000.0 - stiRent);
-        TS_ASSERT_LESS_THAN_EQUALS(ab.getTotalLTI(), 10000.0 - ltiRent);
-    }
+    std::cout << "Initial STI and LTI values:" << std::endl;
+    std::cout << "h1 STI: " << av1->getSTI() << ", LTI: " << av1->getLTI() << std::endl;
+    std::cout << "h2 STI: " << av2->getSTI() << ", LTI: " << av2->getLTI() << std::endl;
+    std::cout << "h3 STI: " << av3->getSTI() << ", LTI: " << av3->getLTI() << std::endl;
 
-    void testParameterLoading() {
-        TS_ASSERT_EQUALS(_af_agent->getSTIAtomRent(), 1.0);
-        TS_ASSERT_EQUALS(_af_agent->getLTIAtomRent(), 1.0);
-        TS_ASSERT_EQUALS(_af_agent->getTargetSTI(), 10000.0);
-        TS_ASSERT_EQUALS(_af_agent->getSTIFundsBuffer(), 10000.0);
-        TS_ASSERT_EQUALS(_af_agent->getTargetLTI(), 10000.0);
-        TS_ASSERT_EQUALS(_af_agent->getLTIFundsBuffer(), 10000.0);
-    }
+    // Add atoms to the target set
+    HandleSeq targetSet = {h1, h2, h3};
+    std::cout << "Target set for collectRent contains: " << targetSet.size() << " atoms." << std::endl;
 
-    void testCalculateSTIRent() {
-        double expectedRent = 0.0; // Assuming STI >= targetSTI
-        double calculatedRent = _af_agent->calculate_STI_Rent();
-        TS_ASSERT_EQUALS(calculatedRent, expectedRent);
-    }
+    // Ensure sufficient elapsed time
+    std::this_thread::sleep_for(std::chrono::milliseconds(1100));
 
-    void testCalculateLTIRent() {
-        double expectedRent = 0.0; // Assuming LTI >= targetLTI
-        double calculatedRent = _af_agent->calculate_LTI_Rent();
-        TS_ASSERT_EQUALS(calculatedRent, expectedRent);
-    }
-};
+    // Call collectRent to apply changes
+    _afrentcollection_agent->collectRent(targetSet);
+
+    // Log STI and LTI values after collectRent
+    AttentionValuePtr av1_after = get_av(h1);
+    AttentionValuePtr av2_after = get_av(h2);
+    AttentionValuePtr av3_after = get_av(h3);
+
+    std::cout << "STI and LTI values after rent collection:" << std::endl;
+    std::cout << "h1 STI: " << av1_after->getSTI() << ", LTI: " << av1_after->getLTI() << std::endl;
+    std::cout << "h2 STI: " << av2_after->getSTI() << ", LTI: " << av2_after->getLTI() << std::endl;
+    std::cout << "h3 STI: " << av3_after->getSTI() << ", LTI: " << av3_after->getLTI() << std::endl;
+
+    // Verify STI and LTI reductions
+    TS_ASSERT_LESS_THAN_EQUALS(av1_after->getSTI(), 300);
+    TS_ASSERT_LESS_THAN_EQUALS(av2_after->getSTI(), 400);
+    TS_ASSERT_LESS_THAN_EQUALS(av3_after->getSTI(), 500);
+
+    TS_ASSERT_LESS_THAN_EQUALS(av1_after->getLTI(), 1000);
+    TS_ASSERT_LESS_THAN_EQUALS(av2_after->getLTI(), 1200);
+    TS_ASSERT_LESS_THAN_EQUALS(av3_after->getLTI(), 1500);
+
+    //Stimulate STI again after collectRent
+    ab.stimulate(h1, 100); // Add STI stimulation
+    ab.stimulate(h2, 100);
+    ab.stimulate(h3, 100);
+
+    //Increase LTI after collectRent
+    ab.set_lti(h1, av1_after->getLTI() + 200);
+    ab.set_lti(h2, av2_after->getLTI() + 200);
+    ab.set_lti(h3, av3_after->getLTI() + 200);
+
+    AttentionValuePtr av1_final = get_av(h1);
+    AttentionValuePtr av2_final = get_av(h2);
+    AttentionValuePtr av3_final = get_av(h3);
+
+    std::cout << "STI and LTI values after stimulation:" << std::endl;
+    std::cout << "h1 STI: " << av1_final->getSTI() << ", LTI: " << av1_final->getLTI() << std::endl;
+    std::cout << "h2 STI: " << av2_final->getSTI() << ", LTI: " << av2_final->getLTI() << std::endl;
+    std::cout << "h3 STI: " << av3_final->getSTI() << ", LTI: " << av3_final->getLTI() << std::endl;
+
+    // Ensure STI and LTI values increase after stimulation
+    TS_ASSERT_LESS_THAN(av1_after->getSTI(), av1_final->getSTI());
+    TS_ASSERT_LESS_THAN(av2_after->getSTI(), av2_final->getSTI());
+    TS_ASSERT_LESS_THAN(av3_after->getSTI(), av3_final->getSTI());
+
+    TS_ASSERT_LESS_THAN(av1_after->getLTI(), av1_final->getLTI());
+    TS_ASSERT_LESS_THAN(av2_after->getLTI(), av2_final->getLTI());
+    TS_ASSERT_LESS_THAN(av3_after->getLTI(), av3_final->getLTI());
+
+    std::cout << "testCollectRent completed." << std::endl;
+}
+
+
+
+
+
+
+
+
+};        

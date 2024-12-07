@@ -117,6 +117,7 @@
 /home/tarik/attention/attention/build/tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir
 /home/tarik/attention/attention/build/tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir
 /home/tarik/attention/attention/build/tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir
+/home/tarik/attention/attention/build/tests/attention/CMakeFiles/AFRentCollectionAgentUTest.dir
 /home/tarik/attention/attention/build/tests/attention/CMakeFiles/package.dir
 /home/tarik/attention/attention/build/tests/attention/CMakeFiles/package_source.dir
 /home/tarik/attention/attention/build/tests/attention/CMakeFiles/edit_cache.dir

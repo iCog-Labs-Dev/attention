@@ -746,7 +746,6 @@ tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAg
  /home/tarik/attention/attention/opencog/attentionbank/bank/AtomBins.h
  /home/tarik/attention/attention/opencog/attentionbank/bank/AVUtils.h
  /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.h
- /home/tarik/attention/attention/opencog/attention/AttentionParamQuery.h
  /usr/local/include/opencog/cogserver/server/CogServer.h
  /usr/local/include/opencog/cogserver/server/Module.h
  /usr/local/include/opencog/cogserver/server/ModuleManager.h
@@ -1537,11 +1536,6 @@ tests/attention/CMakeFiles/RentCollectionBaseAgentUTest.dir/RentCollectionBaseAg
  /usr/local/include/opencog/cogserver/server/RequestManager.h
  /usr/local/include/opencog/cogserver/server/Request.h
  /usr/local/include/opencog/cogserver/server/RequestClassInfo.h
- /usr/local/include/opencog/cogserver/modules/agents/AgentsModule.h
- /usr/local/include/opencog/cogserver/modules/agents/Scheduler.h
- /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerThread.h
- /usr/local/include/opencog/cogserver/modules/agents/AgentRunnerBase.h
- /usr/local/include/opencog/cogserver/modules/agents/SystemActivityTable.h
  /usr/local/include/opencog/util/Config.h
  /usr/include/c++/11/fstream
  /usr/include/c++/11/bits/codecvt.h

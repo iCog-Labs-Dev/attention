@@ -30,25 +30,25 @@ CxxTest::StaticSuiteDescription suiteDescription_RentCollectionAgentUTest( "/hom
 
 static class TestDescription_suite_RentCollectionAgentUTest_testRentCollection : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_RentCollectionAgentUTest_testRentCollection() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 118, "testRentCollection" ) {}
+ TestDescription_suite_RentCollectionAgentUTest_testRentCollection() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 105, "testRentCollection" ) {}
  void runTest() { suite_RentCollectionAgentUTest.testRentCollection(); }
 } testDescription_suite_RentCollectionAgentUTest_testRentCollection;
 
 static class TestDescription_suite_RentCollectionAgentUTest_testParameterLoading : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_RentCollectionAgentUTest_testParameterLoading() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 135, "testParameterLoading" ) {}
+ TestDescription_suite_RentCollectionAgentUTest_testParameterLoading() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 122, "testParameterLoading" ) {}
  void runTest() { suite_RentCollectionAgentUTest.testParameterLoading(); }
 } testDescription_suite_RentCollectionAgentUTest_testParameterLoading;
 
 static class TestDescription_suite_RentCollectionAgentUTest_testCalculateLTIRent : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_RentCollectionAgentUTest_testCalculateLTIRent() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 144, "testCalculateLTIRent" ) {}
+ TestDescription_suite_RentCollectionAgentUTest_testCalculateLTIRent() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 131, "testCalculateLTIRent" ) {}
  void runTest() { suite_RentCollectionAgentUTest.testCalculateLTIRent(); }
 } testDescription_suite_RentCollectionAgentUTest_testCalculateLTIRent;
 
 static class TestDescription_suite_RentCollectionAgentUTest_testCalculateSTIRent : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_RentCollectionAgentUTest_testCalculateSTIRent() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 153, "testCalculateSTIRent" ) {}
+ TestDescription_suite_RentCollectionAgentUTest_testCalculateSTIRent() : CxxTest::RealTestDescription( Tests_RentCollectionAgentUTest, suiteDescription_RentCollectionAgentUTest, 140, "testCalculateSTIRent" ) {}
  void runTest() { suite_RentCollectionAgentUTest.testCalculateSTIRent(); }
 } testDescription_suite_RentCollectionAgentUTest_testCalculateSTIRent;
 

@@ -3144,3 +3144,144 @@
 [2024-12-06 19:47:23:298] [INFO] Loading module "../../opencog/attention/libattention.so"
 [2024-12-06 19:47:23:299] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
 [2024-12-06 19:47:23:377] [INFO] Module "libagents.so" is already loaded.
+[2024-12-07 13:58:54:804] [WARN] No configuration file was loaded! Param=MODULES
+[2024-12-07 13:58:54:804] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-12-07 13:58:54:902] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-12-07 13:58:54:930] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-12-07 13:58:54:975] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-12-07 13:58:55:145] [WARN] Failed to load module libpy-shell.so
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/commands
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/python
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/server/
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ./
+[2024-12-07 13:58:55:145] [WARN] Searched for module at .//opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at .//opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ..//opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ..//opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../../
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../..//opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../..//opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../../../
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../../..//opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../../..//opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../../../../
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../../../..//opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at "/usr/local"/lib
+[2024-12-07 13:58:55:145] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at "/usr/local"/share
+[2024-12-07 13:58:55:145] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /usr/local/share/opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /usr/local/lib64/
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-12-07 13:58:55:145] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/local/lib/
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/local/share/
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/local/share//opencog
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/lib64/
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/lib64//opencog
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/lib/
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/lib//opencog
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/share/
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/share//opencog
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /opt/
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /opt//opencog
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /opt//opencog/modules
+[2024-12-07 13:58:55:146] [WARN] Searched for module at /
+[2024-12-07 13:58:55:146] [WARN] Searched for module at //opencog
+[2024-12-07 13:58:55:146] [WARN] Searched for module at //opencog/modules
+[2024-12-07 13:58:55:146] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-12-07 13:58:55:245] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-12-07 13:58:55:246] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-12-07 13:58:55:318] [INFO] Module "libagents.so" is already loaded.
+[2024-12-07 13:58:56:369] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-12-07 13:58:56:370] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-12-07 13:58:56:448] [INFO] Module "libagents.so" is already loaded.
+[2024-12-07 14:11:23:856] [WARN] No configuration file was loaded! Param=MODULES
+[2024-12-07 14:11:23:856] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/commands/libbuiltinreqs.so"
+[2024-12-07 14:11:23:875] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/libscheme-shell.so"
+[2024-12-07 14:11:23:896] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/libsexpr-shell.so"
+[2024-12-07 14:11:23:908] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/libjson-shell.so"
+[2024-12-07 14:11:23:922] [WARN] Failed to load module libpy-shell.so
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/commands
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/python
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/server/
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /home/tarik/cogserver/cogserver/build/opencog/cogserver/shell/
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ./
+[2024-12-07 14:11:23:922] [WARN] Searched for module at .//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at .//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ..//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ..//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../../
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../..//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../..//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../../../
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../../..//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../../..//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../../../../
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../../../..//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at ../../../..//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at "/usr/local"/lib
+[2024-12-07 14:11:23:922] [WARN] Searched for module at "/usr/local"/lib/opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at "/usr/local"/lib/opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at "/usr/local"/share
+[2024-12-07 14:11:23:922] [WARN] Searched for module at "/usr/local"/share/opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at "/usr/local"/share/opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/share/opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/share/opencog/opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/share/opencog/opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/lib64/
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/lib64//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/lib64//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/lib/
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/lib//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/lib//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/share/
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/share//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/local/share//opencog/modules
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/lib64/
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/lib64//opencog
+[2024-12-07 14:11:23:922] [WARN] Searched for module at /usr/lib64//opencog/modules
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /usr/lib/
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /usr/lib//opencog
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /usr/lib//opencog/modules
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /usr/share/
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /usr/share//opencog
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /usr/share//opencog/modules
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /opt/
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /opt//opencog
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /opt//opencog/modules
+[2024-12-07 14:11:23:923] [WARN] Searched for module at /
+[2024-12-07 14:11:23:923] [WARN] Searched for module at //opencog
+[2024-12-07 14:11:23:923] [WARN] Searched for module at //opencog/modules
+[2024-12-07 14:11:23:923] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-12-07 14:11:24:004] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-12-07 14:11:24:005] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-12-07 14:11:24:076] [INFO] Module "libagents.so" is already loaded.
+[2024-12-07 14:11:25:125] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-12-07 14:11:25:126] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-12-07 14:11:25:198] [INFO] Module "libagents.so" is already loaded.
+[2024-12-07 14:11:25:231] [INFO] Module "libattention.so" is already loaded.
+[2024-12-07 14:11:25:238] [INFO] Module "libattention.so" is already loaded.
+[2024-12-07 14:11:25:247] [INFO] Module "libattention.so" is already loaded.
+[2024-12-07 14:11:25:269] [INFO] Loading module "../../opencog/attention/libattention.so"
+[2024-12-07 14:11:25:270] [INFO] Loading module "/home/tarik/cogserver/cogserver/build/opencog/cogserver/modules/agents/libagents.so"
+[2024-12-07 14:11:25:342] [INFO] Module "libagents.so" is already loaded.
+[2024-12-07 14:11:25:370] [INFO] Module "libattention.so" is already loaded.
