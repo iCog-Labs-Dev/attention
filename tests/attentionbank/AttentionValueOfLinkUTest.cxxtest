@@ -1,5 +1,5 @@
 /*
- * tests/atomspace/AttentionValueUTest.cxxtest
+ * tests/atomspace/AttentionValueOfLinkUTest.cxxtest
  *
  * Copyright (C) 2002-2007 Novamente LLC
  * All Rights Reserved
@@ -25,6 +25,7 @@
 #include <opencog/atomspace/AtomSpace.h>
 #include <opencog/attentionbank/bank/AttentionBank.h>
 #include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/attentionbank/avalue/AttentionValueOfLink.h>
 #include <opencog/atoms/truthvalue/SimpleTruthValue.h>
 #include <opencog/util/Logger.h>
 
@@ -50,7 +51,7 @@ using namespace std;
 #define DEFAULTATOMLTI AttentionValue::DEFAULTATOMLTI;
 #define DEFAULTATOMVLTI AttentionValue::DEFAULTATOMVLTI;
 
-class AttentionValueUTest :  public CxxTest::TestSuite
+class AttentionValueOfLinkUTest :  public CxxTest::TestSuite
 {
 private:
     AtomSpace* atomSpace;
@@ -98,7 +99,7 @@ private:
     }
 
 public:
-    AttentionValueUTest() {
+    AttentionValueOfLinkUTest() {
         logger().set_level(Logger::DEBUG);
         // logger().set_print_to_stdout_flag(true);
 
@@ -340,4 +341,11 @@ public:
         TS_ASSERT(av->getLTI() == lti[3]);
         TS_ASSERT(av->getVLTI() == vlti[3]);
     }
+    static const Handle& attn_key(void)
+{
+	static Handle ak(createNode(PREDICATE_NODE, "*-AttentionValueKey-*"));
+	return ak;
+}
+
+
 };

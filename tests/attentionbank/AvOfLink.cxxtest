@@ -1,0 +1,108 @@
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/attentionbank/avalue/AttentionValueOfLink.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <cxxtest/TestSuite.h>
+#include <opencog/util/Logger.h>
+
+using namespace opencog;
+using namespace std;
+
+class AvOfLink : public CxxTest::TestSuite {
+private:
+    AtomSpace* atomSpace;
+    AttentionBank* bank;
+
+    // Helper function to set STI for a given link
+    void setLinkSTI(Handle h, AttentionValue::sti_t stiValue) {
+        AttentionValuePtr old_av = get_av(h);
+        AttentionValuePtr new_av = AttentionValue::createAV(
+            stiValue,
+            old_av->getLTI(),
+            old_av->getVLTI()
+        );
+        bank->change_av(h, new_av);
+    }
+
+public:
+    // Setup function to initialize AtomSpace and AttentionBank
+    void setUp() {
+        atomSpace = new AtomSpace();
+        bank = &attentionbank(atomSpace);
+    }
+
+    // Cleanup function to destroy AtomSpace
+    void tearDown() {
+        attentionbank(nullptr);  // Clean up AttentionBank
+        delete atomSpace;        // Delete AtomSpace instance
+    }
+
+    // Test function for STIOfLink
+    void testSTIOfLink() {
+        // Create two ConceptNodes and a ConceptLink between them
+        Handle node1 = atomSpace->add_node(CONCEPT_NODE, "Concept1");
+        Handle node2 = atomSpace->add_node(CONCEPT_NODE, "Concept2");
+        Handle link = atomSpace->add_link(CONCEPT_LINK, node1, node2);
+
+        // Set attention values (STI, LTI, VLTI) for the link
+        AttentionValuePtr av = AttentionValue::createAV(300, 500, 0.1);
+        bank->change_av(link, av);
+
+        // Test the STIOfLink function to ensure the STI is correctly set
+        AttentionValue::sti_t sti = STIOfLink(link);
+        TS_ASSERT_EQUALS(sti, 300);  // Assert that the STI is 300
+    }
+
+    // Test function for LTIOfLink
+    void testLTIOfLink() {
+        // Create two ConceptNodes and a ConceptLink between them
+        Handle node1 = atomSpace->add_node(CONCEPT_NODE, "Concept1");
+        Handle node2 = atomSpace->add_node(CONCEPT_NODE, "Concept2");
+        Handle link = atomSpace->add_link(CONCEPT_LINK, node1, node2);
+
+        // Set attention values (STI, LTI, VLTI) for the link
+        AttentionValuePtr av = AttentionValue::createAV(100, 700, 0.2);
+        bank->change_av(link, av);
+
+        // Test the LTIOfLink function to ensure the LTI is correctly set
+        AttentionValue::lti_t lti = LTIOfLink(link);
+        TS_ASSERT_EQUALS(lti, 700);  // Assert that the LTI is 700
+    }
+
+    // Test function for VLTIOfLink
+    void testVLTIOfLink() {
+        // Create two ConceptNodes and a ConceptLink between them
+        Handle node1 = atomSpace->add_node(CONCEPT_NODE, "Concept1");
+        Handle node2 = atomSpace->add_node(CONCEPT_NODE, "Concept2");
+        Handle link = atomSpace->add_link(CONCEPT_LINK, node1, node2);
+
+        // Set attention values (STI, LTI, VLTI) for the link
+        AttentionValuePtr av = AttentionValue::createAV(100, 500, 0.5);
+        bank->change_av(link, av);
+
+        // Test the VLTIOfLink function to ensure the VLTI is correctly set
+        AttentionValue::vlti_t vlti = VLTIOfLink(link);
+        TS_ASSERT_EQUALS(vlti, 0.5);  // Assert that the VLTI is 0.5
+    }
+
+    // Test function for setting and changing STI of a link
+    void testSetSTIOfLink() {
+        // Create a ConceptLink between two ConceptNodes
+        Handle node1 = atomSpace->add_node(CONCEPT_NODE, "Concept1");
+        Handle node2 = atomSpace->add_node(CONCEPT_NODE, "Concept2");
+        Handle link = atomSpace->add_link(CONCEPT_LINK, node1, node2);
+
+        // Set initial STI for the link
+        setLinkSTI(link, 400);
+
+        // Test the STIOfLink function to verify the STI is correctly set
+        AttentionValue::sti_t sti = STIOfLink(link);
+        TS_ASSERT_EQUALS(sti, 400);  // Assert that the STI is 400
+
+        // Change the STI to a new value
+        setLinkSTI(link, 600);
+        sti = STIOfLink(link);
+        TS_ASSERT_EQUALS(sti, 600);  // Assert that the STI is updated to 600
+    }
+};

@@ -9,7 +9,13 @@ ADD_CXXTEST(AttentionUTest)
 ADD_CXXTEST(BankImplUTest)
 ADD_CXXTEST(BankAsyncUTest)
 
+
 ADD_CXXTEST(AttentionalFocusCBUTest)
+
+ADD_CXXTEST(NewAttentionTest)
+# ADD_CXXTEST(AttentionValueOfLinkUTest)
+# ADD_CXXTEST(AvOfLink)
+
 
 IF (HAVE_CYTHON AND HAVE_NOSETESTS)
 	ADD_TEST(AttentionBankCythonTest ${NOSETESTS_EXECUTABLE} -vs
