@@ -1,18 +1,18 @@
-Start testing: Nov 13 21:54 EAT
+Start testing: Dec 06 22:47 EAT
 ----------------------------------------------------------
 1/9 Testing: AttentionValueUTest
 1/9 Test: AttentionValueUTest
 Command: "/home/tarik/attention/attention/build/tests/attentionbank/AttentionValueUTest"
 Directory: /home/tarik/attention/attention/build/tests/attentionbank
-"AttentionValueUTest" start time: Nov 13 21:54 EAT
+"AttentionValueUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
 <end of output>
-Test time =   0.01 sec
+Test time =   0.69 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionValueUTest" end time: Nov 13 21:54 EAT
+"AttentionValueUTest" end time: Dec 06 22:47 EAT
 "AttentionValueUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -20,15 +20,15 @@ Test Passed.
 2/9 Test: AttentionUTest
 Command: "/home/tarik/attention/attention/build/tests/attentionbank/AttentionUTest"
 Directory: /home/tarik/attention/attention/build/tests/attentionbank
-"AttentionUTest" start time: Nov 13 21:54 EAT
+"AttentionUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (3 tests)...OK!
 <end of output>
-Test time =   0.05 sec
+Test time =   0.32 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionUTest" end time: Nov 13 21:54 EAT
+"AttentionUTest" end time: Dec 06 22:47 EAT
 "AttentionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -36,15 +36,15 @@ Test Passed.
 3/9 Test: BankImplUTest
 Command: "/home/tarik/attention/attention/build/tests/attentionbank/BankImplUTest"
 Directory: /home/tarik/attention/attention/build/tests/attentionbank
-"BankImplUTest" start time: Nov 13 21:54 EAT
+"BankImplUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (10 tests)..........OK!
 <end of output>
-Test time =   0.01 sec
+Test time =   0.23 sec
 ----------------------------------------------------------
 Test Passed.
-"BankImplUTest" end time: Nov 13 21:54 EAT
+"BankImplUTest" end time: Dec 06 22:47 EAT
 "BankImplUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -52,15 +52,15 @@ Test Passed.
 4/9 Test: BankAsyncUTest
 Command: "/home/tarik/attention/attention/build/tests/attentionbank/BankAsyncUTest"
 Directory: /home/tarik/attention/attention/build/tests/attentionbank
-"BankAsyncUTest" start time: Nov 13 21:54 EAT
+"BankAsyncUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test).OK!
 <end of output>
-Test time =   0.01 sec
+Test time =   0.12 sec
 ----------------------------------------------------------
 Test Passed.
-"BankAsyncUTest" end time: Nov 13 21:54 EAT
+"BankAsyncUTest" end time: Dec 06 22:47 EAT
 "BankAsyncUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -68,10 +68,10 @@ Test Passed.
 5/9 Test: AttentionalFocusCBUTest
 Command: "/home/tarik/attention/attention/build/tests/attentionbank/AttentionalFocusCBUTest"
 Directory: /home/tarik/attention/attention/build/tests/attentionbank
-"AttentionalFocusCBUTest" start time: Nov 13 21:54 EAT
+"AttentionalFocusCBUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (1 test)[2024-11-13 18:54:38:299] [DEBUG] BEGIN TEST: test_af_bindlink
+Running cxxtest tests (1 test)[2024-12-06 19:47:11:081] [DEBUG] BEGIN TEST: test_af_bindlink
 .OK!
 ;;; note: source file /home/tarik/attention/attention/build/opencog/scm/opencog/attention-config.scm
 ;;;       newer than compiled /home/tarik/.cache/guile/ccache/3.0-LE-8-4.5/home/tarik/attention/attention/build/opencog/scm/opencog/attention-config.scm.go
@@ -80,50 +80,50 @@ Running cxxtest tests (1 test)[2024-11-13 18:54:38:299] [DEBUG] BEGIN TEST: test
 ;;; compiling /home/tarik/attention/attention/build/opencog/scm/opencog/attention-config.scm
 ;;; compiled /home/tarik/.cache/guile/ccache/3.0-LE-8-4.5/home/tarik/attention/attention/build/opencog/scm/opencog/attention-config.scm.go
 <end of output>
-Test time =   0.20 sec
+Test time =  13.13 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionalFocusCBUTest" end time: Nov 13 21:54 EAT
-"AttentionalFocusCBUTest" time elapsed: 00:00:00
+"AttentionalFocusCBUTest" end time: Dec 06 22:47 EAT
+"AttentionalFocusCBUTest" time elapsed: 00:00:13
 ----------------------------------------------------------
 
 6/9 Testing: AttentionParamQueryUTest
 6/9 Test: AttentionParamQueryUTest
 Command: "/home/tarik/attention/attention/build/tests/attention/AttentionParamQueryUTest"
 Directory: /home/tarik/attention/attention/build/tests/attention
-"AttentionParamQueryUTest" start time: Nov 13 21:54 EAT
+"AttentionParamQueryUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (4 tests)....OK!
 <end of output>
-Test time =   0.06 sec
+Test time =   1.40 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionParamQueryUTest" end time: Nov 13 21:54 EAT
-"AttentionParamQueryUTest" time elapsed: 00:00:00
+"AttentionParamQueryUTest" end time: Dec 06 22:47 EAT
+"AttentionParamQueryUTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 7/9 Testing: ImportanceDiffusionUTest
 7/9 Test: ImportanceDiffusionUTest
 Command: "/home/tarik/attention/attention/build/tests/attention/ImportanceDiffusionUTest"
 Directory: /home/tarik/attention/attention/build/tests/attention
-"ImportanceDiffusionUTest" start time: Nov 13 21:54 EAT
+"ImportanceDiffusionUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
 <end of output>
-Test time =   0.09 sec
+Test time =   1.65 sec
 ----------------------------------------------------------
 Test Passed.
-"ImportanceDiffusionUTest" end time: Nov 13 21:54 EAT
-"ImportanceDiffusionUTest" time elapsed: 00:00:00
+"ImportanceDiffusionUTest" end time: Dec 06 22:47 EAT
+"ImportanceDiffusionUTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
 8/9 Testing: HebbianCreationModuleUTest
 8/9 Test: HebbianCreationModuleUTest
 Command: "/home/tarik/attention/attention/build/tests/attention/HebbianCreationModuleUTest"
 Directory: /home/tarik/attention/attention/build/tests/attention
-"HebbianCreationModuleUTest" start time: Nov 13 21:54 EAT
+"HebbianCreationModuleUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test)
@@ -135,10 +135,10 @@ AF:
 count(HebLinks) = 12
 .OK!
 <end of output>
-Test time =   1.12 sec
+Test time =   1.22 sec
 ----------------------------------------------------------
 Test Passed.
-"HebbianCreationModuleUTest" end time: Nov 13 21:54 EAT
+"HebbianCreationModuleUTest" end time: Dec 06 22:47 EAT
 "HebbianCreationModuleUTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
@@ -146,16 +146,16 @@ Test Passed.
 9/9 Test: RentCollectionBaseAgentUTest
 Command: "/home/tarik/attention/attention/build/tests/attention/RentCollectionBaseAgentUTest"
 Directory: /home/tarik/attention/attention/build/tests/attention
-"RentCollectionBaseAgentUTest" start time: Nov 13 21:54 EAT
+"RentCollectionBaseAgentUTest" start time: Dec 06 22:47 EAT
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (4 tests)....OK!
+Running cxxtest tests (4 tests)
 <end of output>
-Test time =   0.20 sec
+Test time =   7.93 sec
 ----------------------------------------------------------
-Test Passed.
-"RentCollectionBaseAgentUTest" end time: Nov 13 21:54 EAT
-"RentCollectionBaseAgentUTest" time elapsed: 00:00:00
+Test Failed.
+"RentCollectionBaseAgentUTest" end time: Dec 06 22:47 EAT
+"RentCollectionBaseAgentUTest" time elapsed: 00:00:07
 ----------------------------------------------------------
 
-End testing: Nov 13 21:54 EAT
+End testing: Dec 06 22:47 EAT
