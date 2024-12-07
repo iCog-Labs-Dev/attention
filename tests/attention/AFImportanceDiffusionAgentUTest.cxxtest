@@ -61,9 +61,9 @@ public:
         double max_alloc_percentage = std::stod(atq->get_param_value(AttentionParamQuery::heb_max_alloc_percentage));
         double spread_hebonly = std::stod(atq->get_param_value(AttentionParamQuery::dif_spread_hebonly));
 
-        std::cout << "dif_spread_percentage: " << spread_percentage << std::endl;
-        std::cout << "heb_max_alloc_percentage: " << max_alloc_percentage << std::endl;
-        std::cout << "dif_spread_hebonly: " << spread_hebonly << std::endl;
+        // std::cout << "dif_spread_percentage: " << spread_percentage << std::endl;
+        // std::cout << "heb_max_alloc_percentage: " << max_alloc_percentage << std::endl;
+        // std::cout << "dif_spread_hebonly: " << spread_hebonly << std::endl;
 
         TS_ASSERT_EQUALS(spread_percentage, 0.4);
         TS_ASSERT_EQUALS(max_alloc_percentage, 0.05);
@@ -81,7 +81,7 @@ public:
         Handle target5 = as->add_node(CONCEPT_NODE, "Target5");
         Handle target6 = as->add_node(CONCEPT_NODE, "Target6");
 
-        std::cout << "Atoms created: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+        // std::cout << "Atoms created: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
 
         // Create a Hebbian link between source and target nodes
         Handle Link = as->add_link(HEBBIAN_LINK, source, target1);
@@ -96,7 +96,7 @@ public:
         Handle Link6 = as->add_link(INHERITANCE_LINK, source, target5);
         Handle Link7 = as->add_link(INHERITANCE_LINK, source, target6);
         
-        std::cout << "Hebbian link created between Source and Target"<< Link->to_string() << std::endl;
+        // std::cout << "Hebbian link created between Source and Target"<< Link->to_string() << std::endl;
 
         // Stimulate the atoms to bring them into the attentional focus
         AttentionBank& ab = attentionbank(as);
@@ -108,28 +108,28 @@ public:
         ab.stimulate(target5, 400);
         ab.stimulate(target6, 0);
 
-        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
+        // std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
 
         // Simulate running the agent to update the parameters
         afImportanceDiffusionAgent->run();
 
-        std::cout << "The STI of source is: " << get_sti(source) <<std::endl;
-        std::cout << "The STI of target 1 is: " << get_sti(target1) <<std::endl;
-        std::cout << "The STI of target 2 is: " << get_sti(target2) <<std::endl;
-        std::cout << "The STI of target 3 is: " << get_sti(target3) <<std::endl;
-        std::cout << "The STI of target 4 is: " << get_sti(target4) <<std::endl;
-        std::cout << "The STI of target 5 is: " << get_sti(target5) <<std::endl;
-        std::cout << "The STI of target 6 is: " << get_sti(target6) <<std::endl;
+        // std::cout << "The STI of source is: " << get_sti(source) <<std::endl;
+        // std::cout << "The STI of target 1 is: " << get_sti(target1) <<std::endl;
+        // std::cout << "The STI of target 2 is: " << get_sti(target2) <<std::endl;
+        // std::cout << "The STI of target 3 is: " << get_sti(target3) <<std::endl;
+        // std::cout << "The STI of target 4 is: " << get_sti(target4) <<std::endl;
+        // std::cout << "The STI of target 5 is: " << get_sti(target5) <<std::endl;
+        // std::cout << "The STI of target 6 is: " << get_sti(target6) <<std::endl;
 
-        std::cout << "The STI of Link is: " << get_sti(Link) <<std::endl;
-        std::cout << "The STI of Link2 is: " << get_sti(Link2) <<std::endl;
-        std::cout << "The STI of Link3 is: " << get_sti(Link3) <<std::endl;
-        std::cout << "The STI of Link4 is: " << get_sti(Link4) <<std::endl;
-        std::cout << "The STI of Link5 is: " << get_sti(Link5) <<std::endl;
-        std::cout << "The STI of Link6 is: " << get_sti(Link6) <<std::endl;
-        std::cout << "The STI of Link7 is: " << get_sti(Link7) <<std::endl;
-        std::cout << "The STI of Link8 is: " << get_sti(Link8) <<std::endl;
-        std::cout << "The STI of Link9 is: " << get_sti(Link9) <<std::endl;
+        // std::cout << "The STI of Link is: " << get_sti(Link) <<std::endl;
+        // std::cout << "The STI of Link2 is: " << get_sti(Link2) <<std::endl;
+        // std::cout << "The STI of Link3 is: " << get_sti(Link3) <<std::endl;
+        // std::cout << "The STI of Link4 is: " << get_sti(Link4) <<std::endl;
+        // std::cout << "The STI of Link5 is: " << get_sti(Link5) <<std::endl;
+        // std::cout << "The STI of Link6 is: " << get_sti(Link6) <<std::endl;
+        // std::cout << "The STI of Link7 is: " << get_sti(Link7) <<std::endl;
+        // std::cout << "The STI of Link8 is: " << get_sti(Link8) <<std::endl;
+        // std::cout << "The STI of Link9 is: " << get_sti(Link9) <<std::endl;
         // Validate that the parameters are correctly updated
         TS_ASSERT_EQUALS(1, 2);
         

@@ -61,7 +61,7 @@ void AFImportanceDiffusionAgent::run()
 void AFImportanceDiffusionAgent::spreadImportance()
 {
     HandleSeq diffusionSourceVector =  ImportanceDiffusionBase::diffusionSourceVector();
-    std::cout<<"The attoms in diffusionSourceVector are: "<< diffusionSourceVector <<std::endl;
+    // std::cout<<"The attoms in diffusionSourceVector are: "<< diffusionSourceVector <<std::endl;
     // Calculate the diffusion for each source atom, and store the diffusion
     // event in a stack
     for (Handle atomSource : diffusionSourceVector) diffuseAtom(atomSource);

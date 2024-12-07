@@ -82,21 +82,21 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
     // (1) Find the incident atoms that will be diffused to
     HandleSeq incidentAtoms =
             ImportanceDiffusionBase::incidentAtoms(source);
-    std::cout<<"the incidentAtoms for " << source->to_string() <<" is " << incidentAtoms <<std::endl<<std::endl;
+    // std::cout<<"the incidentAtoms for " << source->to_string() <<" is " << incidentAtoms <<std::endl<<std::endl;
     // (2) Find the hebbian adjacent atoms that will be diffused to
     HandleSeq hebbianAdjacentAtoms =
             ImportanceDiffusionBase::hebbianAdjacentAtoms(source);
-    std::cout<<"the hebbianAdjacentAtoms for " << source->to_string() <<" is " << hebbianAdjacentAtoms <<std::endl<<std::endl;
+    // std::cout<<"the hebbianAdjacentAtoms for " << source->to_string() <<" is " << hebbianAdjacentAtoms <<std::endl<<std::endl;
     // (3) Calculate the probability vector that determines what proportion to
     //     diffuse to each incident atom
     std::map<Handle, double> probabilityVectorIncident =
             ImportanceDiffusionBase::probabilityVectorIncident(incidentAtoms);
 
 // #ifdef DEBUG
-    std::cout << "Calculating diffusion for handle # " << source.value() <<
-                 std::endl;
-    std::cout << "Incident probability vector contains " <<
-                 probabilityVectorIncident.size() << " atoms." << std::endl;
+    // std::cout << "Calculating diffusion for handle # " << source.value() <<
+    //              std::endl;
+    // std::cout << "Incident probability vector contains " <<
+    //              probabilityVectorIncident.size() << " atoms." << std::endl;
 // #endif
 
     // (4) Calculate the probability vector that determines what proportion to
@@ -105,9 +105,9 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
             ImportanceDiffusionBase::probabilityVectorHebbianAdjacent(source, hebbianAdjacentAtoms);
 
 // #ifdef DEBUG
-    std::cout << "Hebbian adjacent probability vector contains " <<
-                 probabilityVectorHebbianAdjacent.size() << " atoms." <<
-                 std::endl;
+    // std::cout << "Hebbian adjacent probability vector contains " <<
+    //              probabilityVectorHebbianAdjacent.size() << " atoms." <<
+    //              std::endl;
 // #endif
 
     // (5) Combine the two probability vectors into one according to the
@@ -115,8 +115,8 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
     std::map<Handle, double> probabilityVector = combineIncidentAdjacentVectors(probabilityVectorIncident, probabilityVectorHebbianAdjacent);
 
 // #ifdef DEBUG
-    std::cout << "Probability vector contains " << probabilityVector.size() <<
-                 " atoms." << std::endl;
+    // std::cout << "Probability vector contains " << probabilityVector.size() <<
+    //              " atoms." << std::endl;
 // #endif
 
     // (6) Calculate the total amount that will be diffused
@@ -154,7 +154,7 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
 #endif
 
 // #ifdef DEBUG
-    std::cout << "Total diffusion amount: " << totalDiffusionAmount << std::endl;
+    // std::cout << "Total diffusion amount: " << totalDiffusionAmount << std::endl;
 // #endif
 
     /* ===================================================================== */
@@ -164,7 +164,7 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
     {
         return;
     }
-    std::cout << "totalDiffusionAmount: " << totalDiffusionAmount << std::endl;
+    // std::cout << "totalDiffusionAmount: " << totalDiffusionAmount << std::endl;
     // Perform diffusion from the source to each atom target
     for( const auto& p : probabilityVector)
     {
@@ -204,8 +204,8 @@ void ImportanceDiffusionBase::tradeSTI(DiffusionEventType event)
     _bank->set_sti(event.target, get_sti(event.target) + event.amount);
 
 
-    std::cout << "tradeSTI: " << event.amount << " from " << event.source->to_string()
-              << " to " << event.target->to_string() << "." << std::endl;
+    // std::cout << "tradeSTI: " << event.amount << " from " << event.source->to_string()
+    //           << " to " << event.target->to_string() << "." << std::endl;
 
 }
 

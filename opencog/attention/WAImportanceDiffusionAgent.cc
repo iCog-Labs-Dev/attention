@@ -63,7 +63,7 @@ void WAImportanceDiffusionAgent::spreadImportance()
 
     if (sourceVec.size() == 0)
         return;
-
+ 
     Handle target = sourceVec[0];
 
     // Check the decision function to determine if spreading will occur
