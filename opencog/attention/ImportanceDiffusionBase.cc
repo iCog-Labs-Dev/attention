@@ -24,7 +24,7 @@
  */
 #include <time.h>
 #include <math.h>
-
+#include <iostream>
 #include <opencog/util/algorithm.h>
 #include <opencog/util/Config.h>
 #include <opencog/util/mt19937ar.h>
@@ -82,11 +82,11 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
     // (1) Find the incident atoms that will be diffused to
     HandleSeq incidentAtoms =
             ImportanceDiffusionBase::incidentAtoms(source);
-
+    std::cout<<"the incidentAtoms for " << source->to_string() <<" is " << incidentAtoms <<std::endl<<std::endl;
     // (2) Find the hebbian adjacent atoms that will be diffused to
     HandleSeq hebbianAdjacentAtoms =
             ImportanceDiffusionBase::hebbianAdjacentAtoms(source);
-
+    std::cout<<"the hebbianAdjacentAtoms for " << source->to_string() <<" is " << hebbianAdjacentAtoms <<std::endl<<std::endl;
     // (3) Calculate the probability vector that determines what proportion to
     //     diffuse to each incident atom
     std::map<Handle, double> probabilityVectorIncident =
@@ -164,10 +164,11 @@ void ImportanceDiffusionBase::diffuseAtom(Handle source)
     {
         return;
     }
-
+    std::cout << "totalDiffusionAmount: " << totalDiffusionAmount << std::endl;
     // Perform diffusion from the source to each atom target
     for( const auto& p : probabilityVector)
     {
+        
         DiffusionEventType diffusionEvent;
 
         // Calculate the diffusion amount using the entry in the probability
@@ -202,13 +203,10 @@ void ImportanceDiffusionBase::tradeSTI(DiffusionEventType event)
     _bank->set_sti(event.source, get_sti(event.source) - event.amount);
     _bank->set_sti(event.target, get_sti(event.target) + event.amount);
 
-#ifdef DEBUG
-    std::cout << "tradeSTI: " << event.amount << " from " << event.source
-              << " to " << event.target << "." << std::endl;
-#endif
 
-    // TODO: How to make this a transaction? This could go wrong if there
-    // were simultaneous updates in other threads.
+    std::cout << "tradeSTI: " << event.amount << " from " << event.source->to_string()
+              << " to " << event.target->to_string() << "." << std::endl;
+
 }
 
 /*

@@ -7,4 +7,8 @@ LINK_LIBRARIES (
 ADD_CXXTEST(AttentionParamQueryUTest)
 ADD_CXXTEST(ImportanceDiffusionUTest)
 ADD_CXXTEST(HebbianCreationModuleUTest)
+ADD_CXXTEST(HebbianUpdatingAgentUTest)
+ADD_CXXTEST(NeighborsUTest)
+ADD_CXXTEST(AFImportanceDiffusionAgentUTest)
+ADD_CXXTEST(WAImportanceDiffusionAgentUTest)
 ADD_CXXTEST(AFRentCollectionAgentUTest)

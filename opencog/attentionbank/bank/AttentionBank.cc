@@ -21,7 +21,7 @@
  * Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
-
+#include <iostream>
 #include <functional>
 #include <opencog/util/mt19937ar.h>
 
@@ -222,11 +222,13 @@ double AttentionBank::getNormalisedZeroToOneSTI(AttentionValuePtr av,
 {
     AttentionValue::sti_t s = av->getSTI();
     int normaliser = getMaxSTI(average) - getMinSTI(average);
-
+    std::cout<<"MaxSTI: "<<getMaxSTI(average)<<" GetMinSTI "<<getMinSTI(average)<<std::endl;
     if (normaliser == 0) return 0.0;
 
     double val = (s - getMinSTI(average)) / (double) normaliser;
+    std::cout<<"Value" <<val<<std::endl;
     if (clip) return std::max(0.0, std::min(val, 1.0));
+    
     return val;
 }
 

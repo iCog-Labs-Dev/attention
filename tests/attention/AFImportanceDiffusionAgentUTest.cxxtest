@@ -1,0 +1,137 @@
+#include <cxxtest/TestSuite.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attention/AFImportanceDiffusionAgent.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/attentionbank/types/atom_types.h>
+#include <opencog/attention/AttentionParamQuery.h>
+#include <iostream>
+
+using namespace opencog;
+
+class AFImportanceDiffusionAgentTest : public CxxTest::TestSuite
+{
+private:
+    AtomSpace* as;
+    CogServer* cogServer;
+    Scheduler* scheduler;
+    AFImportanceDiffusionAgent* afImportanceDiffusionAgent;
+    AttentionParamQuery* atq;
+    AttentionBank* attentionBank;
+
+public:
+    void setUp()
+    {
+        cogServer = &cogserver();
+        config().set("MODULES", "opencog/attention/libattention.so");
+        cogServer->loadModules();
+        config().set("MODULES", "libagents.so");
+
+        Module* amod = cogServer->getModule("opencog::AgentsModule");
+        AgentsModule* agmod = static_cast<AgentsModule*>(amod);
+        scheduler = &agmod->get_scheduler();
+
+        as = &cogserver().getAtomSpace();
+        attentionBank = &attentionbank(as);
+        afImportanceDiffusionAgent = new AFImportanceDiffusionAgent(*cogServer);
+
+        atq = new AttentionParamQuery(as);
+
+        AbstractFactory<Agent>* afImportanceDiffusionAgentFactory = new Factory<AFImportanceDiffusionAgent, Agent>();
+        scheduler->registerAgent(AFImportanceDiffusionAgent::info().id, afImportanceDiffusionAgentFactory);
+
+        std::cout << "Setup completed for AFImportanceDiffusionAgentTest." << std::endl;
+    }
+
+    void tearDown()
+    {
+        delete afImportanceDiffusionAgent;
+        delete atq;
+        cogServer->stop();
+        std::cout << "TearDown completed for AFImportanceDiffusionAgentTest." << std::endl;
+    }
+
+    // Test for ensuring correct parameter retrieval from AttentionParamQuery
+    void testAttentionParamQueryDefaults()
+    {
+        double spread_percentage = std::stod(atq->get_param_value(AttentionParamQuery::dif_spread_percentage));
+        double max_alloc_percentage = std::stod(atq->get_param_value(AttentionParamQuery::heb_max_alloc_percentage));
+        double spread_hebonly = std::stod(atq->get_param_value(AttentionParamQuery::dif_spread_hebonly));
+
+        std::cout << "dif_spread_percentage: " << spread_percentage << std::endl;
+        std::cout << "heb_max_alloc_percentage: " << max_alloc_percentage << std::endl;
+        std::cout << "dif_spread_hebonly: " << spread_hebonly << std::endl;
+
+        TS_ASSERT_EQUALS(spread_percentage, 0.4);
+        TS_ASSERT_EQUALS(max_alloc_percentage, 0.05);
+        TS_ASSERT_EQUALS(spread_hebonly, 0);
+    }
+    // Test for running the agent and ensuring parameter updates
+    void testRunAgent()
+    {
+
+        Handle source = as->add_node(CONCEPT_NODE, "Source");
+        Handle target1 = as->add_node(CONCEPT_NODE, "Target1");
+        Handle target2 = as->add_node(CONCEPT_NODE, "Target2");
+        Handle target3 = as->add_node(CONCEPT_NODE, "Target3");
+        Handle target4 = as->add_node(CONCEPT_NODE, "Target4");
+        Handle target5 = as->add_node(CONCEPT_NODE, "Target5");
+        Handle target6 = as->add_node(CONCEPT_NODE, "Target6");
+
+        std::cout << "Atoms created: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+
+        // Create a Hebbian link between source and target nodes
+        Handle Link = as->add_link(HEBBIAN_LINK, source, target1);
+        Handle Link2 = as->add_link(HEBBIAN_LINK, source, target2);
+        Handle Link3 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source, target3);
+
+        Handle Link8 = as->add_link(INHERITANCE_LINK, target3, source);
+        Handle Link4 = as->add_link(INHERITANCE_LINK, source, target4);
+        Handle Link5 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, target1, target2);
+
+        Handle Link9 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, target2, target1);
+        Handle Link6 = as->add_link(INHERITANCE_LINK, source, target5);
+        Handle Link7 = as->add_link(INHERITANCE_LINK, source, target6);
+        
+        std::cout << "Hebbian link created between Source and Target"<< Link->to_string() << std::endl;
+
+        // Stimulate the atoms to bring them into the attentional focus
+        AttentionBank& ab = attentionbank(as);
+        ab.stimulate(source, 500);
+        ab.stimulate(target1, 400);
+        ab.stimulate(target2, 400);
+        ab.stimulate(target3, 400);
+        ab.stimulate(target4, 400);
+        ab.stimulate(target5, 400);
+        ab.stimulate(target6, 0);
+
+        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
+
+        // Simulate running the agent to update the parameters
+        afImportanceDiffusionAgent->run();
+
+        std::cout << "The STI of source is: " << get_sti(source) <<std::endl;
+        std::cout << "The STI of target 1 is: " << get_sti(target1) <<std::endl;
+        std::cout << "The STI of target 2 is: " << get_sti(target2) <<std::endl;
+        std::cout << "The STI of target 3 is: " << get_sti(target3) <<std::endl;
+        std::cout << "The STI of target 4 is: " << get_sti(target4) <<std::endl;
+        std::cout << "The STI of target 5 is: " << get_sti(target5) <<std::endl;
+        std::cout << "The STI of target 6 is: " << get_sti(target6) <<std::endl;
+
+        std::cout << "The STI of Link is: " << get_sti(Link) <<std::endl;
+        std::cout << "The STI of Link2 is: " << get_sti(Link2) <<std::endl;
+        std::cout << "The STI of Link3 is: " << get_sti(Link3) <<std::endl;
+        std::cout << "The STI of Link4 is: " << get_sti(Link4) <<std::endl;
+        std::cout << "The STI of Link5 is: " << get_sti(Link5) <<std::endl;
+        std::cout << "The STI of Link6 is: " << get_sti(Link6) <<std::endl;
+        std::cout << "The STI of Link7 is: " << get_sti(Link7) <<std::endl;
+        std::cout << "The STI of Link8 is: " << get_sti(Link8) <<std::endl;
+        std::cout << "The STI of Link9 is: " << get_sti(Link9) <<std::endl;
+        // Validate that the parameters are correctly updated
+        TS_ASSERT_EQUALS(1, 2);
+        
+    }
+};

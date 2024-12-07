@@ -1,0 +1,88 @@
+/*
+ * tests/dynamics/NeighborsUTest.cxxtest
+ *
+ * Unit test for Neighbors functions in Neighbors.h
+ *
+ * This test is designed to verify that get_target_neighbors and
+ * get_source_neighbors functions work as expected in the AtomSpace.
+ */
+
+#include <cxxtest/TestSuite.h>
+#include <iostream>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/atoms/base/Node.h>
+#include <opencog/attentionbank/types/atom_types.h>
+#include <opencog/attention/Neighbors.h> 
+
+using namespace opencog;
+
+class NeighborsUTest : public CxxTest::TestSuite
+{
+private:
+    AtomSpace* as;
+
+public:
+    void setUp()
+    {
+        as = new AtomSpace();
+        std::cout << "Setup completed for NeighborsUTest." << std::endl;
+    }
+
+    void tearDown()
+    {
+        delete as;
+        std::cout << "TearDown completed for NeighborsUTest." << std::endl;
+    }
+
+    void testGetTargetNeighbors()
+    {
+        // Create sample nodes in AtomSpace
+        Handle source = as->add_node(CONCEPT_NODE, "Source");
+        Handle target1 = as->add_node(CONCEPT_NODE, "Target1");
+        Handle target2 = as->add_node(CONCEPT_NODE, "Target2");
+
+        std::cout << "Atoms created: " << source->to_string() << " " << target1->to_string() << " " << target2->to_string() << std::endl;
+
+        // Create an asymmetric Hebbian link from source to target1
+        Handle hebbianLink1 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source, target1);
+        Handle hebbianLink2 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source, target2);
+
+        std::cout << "Hebbian links created between Source-Target1 and Source-Target2." << std::endl;
+
+        // Retrieve target neighbors of source
+        HandleSeq existingAsSourceHS = get_target_neighbors(source, ASYMMETRIC_HEBBIAN_LINK);
+        std::cout <<"ExistingAsSourceHS: " << existingAsSourceHS << std::endl;
+        // Check that the correct neighbors were found
+        TS_ASSERT_EQUALS(existingAsSourceHS.size(), 2);
+        TS_ASSERT(std::find(existingAsSourceHS.begin(), existingAsSourceHS.end(), target1) != existingAsSourceHS.end());
+        TS_ASSERT(std::find(existingAsSourceHS.begin(), existingAsSourceHS.end(), target2) != existingAsSourceHS.end());
+
+        std::cout << "testGetTargetNeighbors completed." << std::endl;
+    }
+
+    void testGetSourceNeighbors()
+    {
+        // Create sample nodes in AtomSpace
+        Handle source1 = as->add_node(CONCEPT_NODE, "Source1");
+        Handle source2 = as->add_node(CONCEPT_NODE, "Source2");
+        Handle target = as->add_node(CONCEPT_NODE, "Target");
+
+        std::cout << "Atoms created: " << source1->to_string() << " " << source2->to_string() << " " << target->to_string() << std::endl;
+
+        // Create an asymmetric Hebbian link from each source to target
+        Handle hebbianLink1 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source1, target);
+        Handle hebbianLink2 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source2, target);
+
+        std::cout << "Hebbian links created between Source1-Target and Source2-Target." << std::endl;
+
+        // Retrieve source neighbors of target
+        HandleSeq existingAsTargetHS = get_source_neighbors(target, ASYMMETRIC_HEBBIAN_LINK);
+
+        // Check that the correct neighbors were found
+        TS_ASSERT_EQUALS(existingAsTargetHS.size(), 2);
+        TS_ASSERT(std::find(existingAsTargetHS.begin(), existingAsTargetHS.end(), source1) != existingAsTargetHS.end());
+        TS_ASSERT(std::find(existingAsTargetHS.begin(), existingAsTargetHS.end(), source2) != existingAsTargetHS.end());
+
+        std::cout << "testGetSourceNeighbors completed." << std::endl;
+    }
+};
