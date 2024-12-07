@@ -1,0 +1,160 @@
+#include <cxxtest/TestSuite.h>
+
+#include <opencog/attention/AttentionModule.h>
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/util/algorithm.h>
+#include <opencog/cogserver/server/Factory.h>
+
+#include <opencog/attentionbank/types/atom_types.h>
+
+using namespace opencog;
+using namespace std;
+
+class ForgettingAgentUTest : public CxxTest::TestSuite
+{
+private:
+    AtomSpace* as;
+    AgentPtr _forgettingAgentPtr;
+    CogServer* _cogServer;
+    Scheduler* _scheduler;
+
+public:
+  void tearDown(){
+      _cogServer->stop();
+   }
+
+
+  void InitCogServer() 
+  {
+    _cogServer = &cogserver();
+    config().set("MODULES", "opencog/attention/libattention.so");
+    _cogServer->loadModules();
+    config().set("MODULES", "libagents.so");
+    Module* amod = _cogServer->getModule("opencog::AgentsModule");
+    AgentsModule* agmod = (AgentsModule*) amod;
+    _scheduler = &agmod->get_scheduler();
+
+    AttentionParamQuery _atq(&cogserver().getAtomSpace());
+    _atq.load_default_values();
+
+    Factory<ForgettingAgent, Agent> forgettingAgentFactory;
+    _scheduler->registerAgent(ForgettingAgent::info().id, &forgettingAgentFactory);
+    _forgettingAgentPtr = _scheduler->createAgent(ForgettingAgent::info().id, false);
+
+    this->as = &cogserver().getAtomSpace();
+    this->as->clear();
+    TS_ASSERT_EQUALS(this->as->get_size() ,0);
+
+  }
+
+#define ACCEPTABLE_DEV_SIZE "1"
+#define FORGET_THRESHOLD "5"
+#define MAX_ATOMSPACE_SIZE "2"
+  void testForgetAtom()
+  {
+    InitCogServer();
+    _scheduler->startAgent(_forgettingAgentPtr, true, "fa"); // agentPtr, dedicatedThread bool, threadName
+    
+    AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
+    count_t conf90 = 900;
+    
+    Handle a = as->add_node(CONCEPT_NODE, "a");
+    a->setTruthValue(SimpleTruthValue::createTV(0.001, conf90));
+    Handle b = as->add_node(CONCEPT_NODE, "b");
+    b->setTruthValue(SimpleTruthValue::createTV(0.01, conf90));
+    Handle c = as->add_node(CONCEPT_NODE, "c");
+    c->setTruthValue(SimpleTruthValue::createTV(0.1, conf90));
+    Handle d = as->add_node(CONCEPT_NODE, "d");
+    d->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
+
+    Handle kermit = as->add_node(
+        CONCEPT_NODE, "Kermit");
+    kermit->setTruthValue( SimpleTruthValue::createTV(0.002, conf90));
+    Handle frog = as->add_node(
+        CONCEPT_NODE, "Frog");
+    frog->setTruthValue( SimpleTruthValue::createTV(0.02, conf90));
+    Handle animal = as->add_node(
+        CONCEPT_NODE, "Animal");
+    animal->setTruthValue( SimpleTruthValue::createTV(0.2, conf90));
+
+    Handle link_1 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, kermit, d);
+    link_1->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+    Handle link_2 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, frog, d);
+    link_2->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+    Handle link_3 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, animal, d);
+    link_3->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+
+    std::cout << "after printing the size of the atomspace" << std::endl;
+    TS_ASSERT_EQUALS(this->as->get_size() ,10);
+    std::cout << "after printing the size of the atomspace" << std::endl;
+    // set lti values for atoms in atomspace
+    ab.set_lti(a, 7);
+    ab.set_lti(b, 6);
+    ab.set_lti(c, 6);
+    ab.set_lti(d, 2);
+
+    ab.set_lti(kermit, 2);
+    ab.set_lti(frog, 2);
+    ab.set_lti(animal, 2);
+
+    ab.set_sti(a, 7);
+    ab.set_sti(b, 8);
+    ab.set_sti(c, 8);
+    ab.set_sti(d, 8);
+
+    // get attention values for atoms
+    AttentionValuePtr aval = get_av(a);
+    AttentionValuePtr bval = get_av(b);
+    AttentionValuePtr cval = get_av(c);
+    AttentionValuePtr dval = get_av(d);
+
+
+    // assert lti value being set properly.
+    TS_ASSERT_EQUALS(aval->getLTI(), 7);
+    TS_ASSERT_EQUALS(bval->getLTI(), 6);
+    TS_ASSERT_EQUALS(cval->getLTI(), 6);
+    TS_ASSERT_EQUALS(dval->getLTI(), 2);
+
+    // configure forgettingThreshold, maxSize and accDivSize values
+    config().set("ECAN_FORGET_THRESHOLD", FORGET_THRESHOLD);
+    config().set("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD", ACCEPTABLE_DEV_SIZE);
+    config().set("ECAN_ATOMSPACE_MAXSIZE", MAX_ATOMSPACE_SIZE);
+
+    int forgettingThreshold = config().get_int("ECAN_FORGET_THRESHOLD"); 
+    int maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE"); 
+    int accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD"); 
+
+    // assert whethere configurations are set correctly
+    TS_ASSERT_EQUALS(forgettingThreshold, 5);
+    TS_ASSERT_EQUALS(maxSize, 2);
+    TS_ASSERT_EQUALS(accDivSize, 1);
+    // Allow events to propagate.
+    sleep(1);
+    AttentionValuePtr dNodeNewAV = get_av(d);
+    AttentionValuePtr kermitNodeNewAV = get_av(kermit);
+    AttentionValuePtr frogNodeNewAV = get_av(frog);
+    AttentionValuePtr animalNodeNewAV = get_av(animal);
+
+    // check if the atom with `lti < forgettingThreshold` i.e atom c, has sti and lti values equal to 0.
+    TS_ASSERT_EQUALS(dNodeNewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(dNodeNewAV->getSTI(), 0);
+    TS_ASSERT_EQUALS(kermitNodeNewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(frogNodeNewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(animalNodeNewAV->getLTI(), 0);
+
+    //TODO may be check if the number of atoms that must remain in atomspace is equal to the expected.
+
+    // TS_ASSERT(maxSize == this->as->getSize());
+    _scheduler->stopAgent(_forgettingAgentPtr);
+  }
+
+};
