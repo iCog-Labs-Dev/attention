@@ -1,42 +1,42 @@
-Start testing: Nov 14 10:25 EAT
+Start testing: Dec 08 13:21 EST
 ----------------------------------------------------------
-1/10 Testing: AttentionValueUTest
-1/10 Test: AttentionValueUTest
+1/9 Testing: AttentionValueUTest
+1/9 Test: AttentionValueUTest
 Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/AttentionValueUTest"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank
-"AttentionValueUTest" start time: Nov 14 10:25 EAT
+"AttentionValueUTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (8 tests)........OK!
 <end of output>
-Test time =   0.06 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionValueUTest" end time: Nov 14 10:25 EAT
+"AttentionValueUTest" end time: Dec 08 13:21 EST
 "AttentionValueUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/10 Testing: AttentionUTest
-2/10 Test: AttentionUTest
+2/9 Testing: AttentionUTest
+2/9 Test: AttentionUTest
 Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/AttentionUTest"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank
-"AttentionUTest" start time: Nov 14 10:25 EAT
+"AttentionUTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (3 tests)...OK!
 <end of output>
-Test time =   0.04 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionUTest" end time: Nov 14 10:25 EAT
+"AttentionUTest" end time: Dec 08 13:21 EST
 "AttentionUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/10 Testing: BankImplUTest
-3/10 Test: BankImplUTest
+3/9 Testing: BankImplUTest
+3/9 Test: BankImplUTest
 Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/BankImplUTest"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank
-"BankImplUTest" start time: Nov 14 10:25 EAT
+"BankImplUTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (10 tests)..........OK!
@@ -44,15 +44,15 @@ Running cxxtest tests (10 tests)..........OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankImplUTest" end time: Nov 14 10:25 EAT
+"BankImplUTest" end time: Dec 08 13:21 EST
 "BankImplUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/10 Testing: BankAsyncUTest
-4/10 Test: BankAsyncUTest
+4/9 Testing: BankAsyncUTest
+4/9 Test: BankAsyncUTest
 Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/BankAsyncUTest"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank
-"BankAsyncUTest" start time: Nov 14 10:25 EAT
+"BankAsyncUTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test).OK!
@@ -60,48 +60,32 @@ Running cxxtest tests (1 test).OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BankAsyncUTest" end time: Nov 14 10:25 EAT
+"BankAsyncUTest" end time: Dec 08 13:21 EST
 "BankAsyncUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/10 Testing: AttentionalFocusCBUTest
-5/10 Test: AttentionalFocusCBUTest
+5/9 Testing: AttentionalFocusCBUTest
+5/9 Test: AttentionalFocusCBUTest
 Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/AttentionalFocusCBUTest"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank
-"AttentionalFocusCBUTest" start time: Nov 14 10:25 EAT
+"AttentionalFocusCBUTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (1 test)[2024-11-14 07:25:25:805] [DEBUG] BEGIN TEST: test_af_bindlink
+Running cxxtest tests (1 test)[2024-12-08 18:21:21:811] [DEBUG] BEGIN TEST: test_af_bindlink
 .OK!
-;;; note: source file /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-bank.scm
-;;;       newer than compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-bank.scm.go
-;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
-;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-bank.scm
-;;; note: source file /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-config.scm
-;;;       newer than compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-config.scm.go
-;;; compiling /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-config.scm
-;;; compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-config.scm.go
-WARNING: Use of `load' in declarative module (opencog attention-bank).  Add #:declarative? #f to your define-module invocation.
-;;; opencog/attention-bank.scm:37:9: warning: possibly unbound variable `AttentionValue'
-;;; compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention-bank.scm.go
-;;; note: source file /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attentionbank/types/attention_types.scm
-;;;       newer than compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attentionbank/types/attention_types.scm.go
-;;; compiling /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attentionbank/types/attention_types.scm
-;;; compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attentionbank/types/attention_types.scm.go
 <end of output>
-Test time =   0.53 sec
+Test time =   0.06 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionalFocusCBUTest" end time: Nov 14 10:25 EAT
+"AttentionalFocusCBUTest" end time: Dec 08 13:21 EST
 "AttentionalFocusCBUTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/10 Testing: NewAttentionTest
-6/10 Test: NewAttentionTest
+6/9 Testing: NewAttentionTest
+6/9 Test: NewAttentionTest
 Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/NewAttentionTest"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank
-"NewAttentionTest" start time: Nov 14 10:25 EAT
+"NewAttentionTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (6 tests)......OK!
@@ -109,15 +93,15 @@ Running cxxtest tests (6 tests)......OK!
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"NewAttentionTest" end time: Nov 14 10:25 EAT
+"NewAttentionTest" end time: Dec 08 13:21 EST
 "NewAttentionTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/10 Testing: AttentionBankCythonTest
-7/10 Test: AttentionBankCythonTest
+7/9 Testing: AttentionBankCythonTest
+7/9 Test: AttentionBankCythonTest
 Command: "/usr/bin/nosetests3" "-vs" "/home/stationone/Desktop/Singularitynet/attention/tests/attentionbank/cython/"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank
-"AttentionBankCythonTest" start time: Nov 14 10:25 EAT
+"AttentionBankCythonTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
 test_atoms_in_attentional_focus (attentionbank_test.AttentionBankTest) ... ok
@@ -128,72 +112,23 @@ test_get_handles_by_av_different_as1 (attentionbank_test.AttentionBankTest) ... 
 test_get_handles_by_av_different_as2 (attentionbank_test.AttentionBankTest) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.023s
+Ran 6 tests in 0.014s
 
 OK
 Torch not found, torch truth value will not be available
 <end of output>
-Test time =   0.51 sec
+Test time =   0.30 sec
 ----------------------------------------------------------
 Test Passed.
-"AttentionBankCythonTest" end time: Nov 14 10:25 EAT
+"AttentionBankCythonTest" end time: Dec 08 13:21 EST
 "AttentionBankCythonTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/10 Testing: AttentionParamQueryUTest
-8/10 Test: AttentionParamQueryUTest
-Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/AttentionParamQueryUTest"
-Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attention
-"AttentionParamQueryUTest" start time: Nov 14 10:25 EAT
-Output:
-----------------------------------------------------------
-Running cxxtest tests (4 tests)....OK!
-;;; note: source file /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention/default-param-values.scm
-;;;       newer than compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention/default-param-values.scm.go
-;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
-;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention/default-param-values.scm
-;;; compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention/default-param-values.scm.go
-<end of output>
-Test time =   0.26 sec
-----------------------------------------------------------
-Test Passed.
-"AttentionParamQueryUTest" end time: Nov 14 10:25 EAT
-"AttentionParamQueryUTest" time elapsed: 00:00:00
-----------------------------------------------------------
-
-9/10 Testing: ImportanceDiffusionUTest
-9/10 Test: ImportanceDiffusionUTest
-Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/ImportanceDiffusionUTest"
-Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attention
-"ImportanceDiffusionUTest" start time: Nov 14 10:25 EAT
-Output:
-----------------------------------------------------------
-Running cxxtest tests (8 tests)........OK!
-;;; note: source file /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention.scm
-;;;       newer than compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention.scm.go
-;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
-;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling /home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention.scm
-WARNING: Use of `load' in declarative module (opencog attention).  Add #:declarative? #f to your define-module invocation.
-;;; opencog/attention.scm:18:5: warning: possibly unbound variable `StateLink'
-;;; opencog/attention.scm:19:6: warning: possibly unbound variable `SPREADING_FILTER'
-;;; opencog/attention.scm:20:7: warning: possibly unbound variable `MemberLink'
-;;; opencog/attention.scm:21:26: warning: possibly unbound variable `TypeNode'
-;;; compiled /root/.cache/guile/ccache/3.0-LE-8-4.5/home/stationone/Desktop/Singularitynet/attention/build/opencog/scm/opencog/attention.scm.go
-<end of output>
-Test time =   0.18 sec
-----------------------------------------------------------
-Test Passed.
-"ImportanceDiffusionUTest" end time: Nov 14 10:25 EAT
-"ImportanceDiffusionUTest" time elapsed: 00:00:00
-----------------------------------------------------------
-
-10/10 Testing: HebbianCreationModuleUTest
-10/10 Test: HebbianCreationModuleUTest
+8/9 Testing: HebbianCreationModuleUTest
+8/9 Test: HebbianCreationModuleUTest
 Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/HebbianCreationModuleUTest"
 Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attention
-"HebbianCreationModuleUTest" start time: Nov 14 10:25 EAT
+"HebbianCreationModuleUTest" start time: Dec 08 13:21 EST
 Output:
 ----------------------------------------------------------
 Running cxxtest tests (1 test)
@@ -203,13 +138,45 @@ AF:
 (ConceptNode "Animal" (stv 0.1 900)) ; [e984dcc8320aa56][1]
 (PredicateNode "alive" (stv 0.01 900)) ; [688a177a9bccc9c2][1]
 count(HebLinks) = 12
+count(HebLinks) = 24
 .OK!
 <end of output>
 Test time =   1.09 sec
 ----------------------------------------------------------
 Test Passed.
-"HebbianCreationModuleUTest" end time: Nov 14 10:25 EAT
+"HebbianCreationModuleUTest" end time: Dec 08 13:21 EST
 "HebbianCreationModuleUTest" time elapsed: 00:00:01
 ----------------------------------------------------------
 
-End testing: Nov 14 10:25 EAT
+9/9 Testing: AFRentCollectionAgentTest
+9/9 Test: AFRentCollectionAgentTest
+Command: "/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/AFRentCollectionAgentTest"
+Directory: /home/stationone/Desktop/Singularitynet/attention/build/tests/attention
+"AFRentCollectionAgentTest" start time: Dec 08 13:21 EST
+Output:
+----------------------------------------------------------
+Running cxxtest tests (1 test)Collecting rent for handle: Collecting rent for handle: 
+
+Collecting rent for handle: 
+
+Collecting rent for handle: 
+Collecting rent for handle: 
+Collecting rent for handle: 
+Collecting rent for handle: 
+Collecting rent for handle: 
+Collecting rent for handle: 
+Collecting rent for handle: 
+In AFRentCollectionAgentTest::testCollectRent:
+/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/../../../tests/attention/AFRentCollectionAgentTest.cxxtest:235: Error: Expected (sti < initial_sti), found (2000.0000 >= 2000.0000)
+Collecting rent for handle: 
+Failed 1 and Skipped 0 of 1 test
+Success rate: 0%
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"AFRentCollectionAgentTest" end time: Dec 08 13:21 EST
+"AFRentCollectionAgentTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 08 13:21 EST

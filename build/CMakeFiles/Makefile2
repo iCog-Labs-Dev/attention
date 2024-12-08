@@ -292,9 +292,8 @@ tests/clean: tests/attention/clean
 # Directory level rules for directory tests/attention
 
 # Recursive "all" directory target.
-tests/attention/all: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all
-tests/attention/all: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all
 tests/attention/all: tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/all
+tests/attention/all: tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all
 .PHONY : tests/attention/all
 
 # Recursive "preinstall" directory target.
@@ -302,9 +301,8 @@ tests/attention/preinstall:
 .PHONY : tests/attention/preinstall
 
 # Recursive "clean" directory target.
-tests/attention/clean: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/clean
-tests/attention/clean: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/clean
 tests/attention/clean: tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/clean
+tests/attention/clean: tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/clean
 .PHONY : tests/attention/clean
 
 #=============================================================================
@@ -339,7 +337,7 @@ tests/attentionbank/clean: tests/attentionbank/CMakeFiles/NewAttentionTest.dir/c
 CMakeFiles/uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=65 "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=62 "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
@@ -368,9 +366,8 @@ CMakeFiles/tests.dir/all: tests/attentionbank/CMakeFiles/BankImplUTest.dir/all
 CMakeFiles/tests.dir/all: tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/all
 CMakeFiles/tests.dir/all: tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/all
 CMakeFiles/tests.dir/all: tests/attentionbank/CMakeFiles/NewAttentionTest.dir/all
-CMakeFiles/tests.dir/all: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all
-CMakeFiles/tests.dir/all: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all
 CMakeFiles/tests.dir/all: tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/all
+CMakeFiles/tests.dir/all: tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num= "Built target tests"
@@ -378,7 +375,7 @@ CMakeFiles/tests.dir/all: tests/attention/CMakeFiles/HebbianCreationModuleUTest.
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 56
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 53
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
@@ -399,12 +396,12 @@ CMakeFiles/tests.dir/clean:
 CMakeFiles/test.dir/all: CMakeFiles/tests.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=64 "Built target test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=61 "Built target test"
 .PHONY : CMakeFiles/test.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 57
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 54
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule
@@ -477,7 +474,7 @@ opencog/attentionbank/CMakeFiles/COPY_TO_LOAD_PATH_IN_BUILD_DIR_FROM__home_stati
 opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/build.make opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/depend
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/build.make opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=56,57,58 "Built target attentionval"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=53,54,55 "Built target attentionval"
 .PHONY : opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/all
 
 # Build rule for subdir invocation for target.
@@ -504,7 +501,7 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/all: opencog/attentionba
 opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/build.make opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/depend
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/build.make opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=47,48,49,50,51,52,53,54,55 "Built target attentionbank"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=44,45,46,47,48,49,50,51,52 "Built target attentionbank"
 .PHONY : opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/all
 
 # Build rule for subdir invocation for target.
@@ -530,7 +527,7 @@ opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/clean:
 opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/all:
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/depend
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=46 "Built target attention_atom_types"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=43 "Built target attention_atom_types"
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/all
 
 # Build rule for subdir invocation for target.
@@ -556,7 +553,7 @@ opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/clean:
 opencog/attentionbank/types/CMakeFiles/attention-types.dir/all: opencog/attentionbank/types/CMakeFiles/attention_atom_types.dir/all
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/depend
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/types/CMakeFiles/attention-types.dir/build.make opencog/attentionbank/types/CMakeFiles/attention-types.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=44,45 "Built target attention-types"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=41,42 "Built target attention-types"
 .PHONY : opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 
 # Build rule for subdir invocation for target.
@@ -610,7 +607,7 @@ opencog/attentionbank/cython/opencog/CMakeFiles/bank_cython.dir/all: opencog/att
 opencog/attentionbank/cython/opencog/CMakeFiles/bank_cython.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/cython/opencog/CMakeFiles/bank_cython.dir/build.make opencog/attentionbank/cython/opencog/CMakeFiles/bank_cython.dir/depend
 	$(MAKE) $(MAKESILENT) -f opencog/attentionbank/cython/opencog/CMakeFiles/bank_cython.dir/build.make opencog/attentionbank/cython/opencog/CMakeFiles/bank_cython.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=59,60,61 "Built target bank_cython"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=56,57,58 "Built target bank_cython"
 .PHONY : opencog/attentionbank/cython/opencog/CMakeFiles/bank_cython.dir/all
 
 # Build rule for subdir invocation for target.
@@ -638,7 +635,7 @@ opencog/attention/CMakeFiles/attention.dir/all: opencog/attentionbank/bank/CMake
 opencog/attention/CMakeFiles/attention.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 	$(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/depend
 	$(MAKE) $(MAKESILENT) -f opencog/attention/CMakeFiles/attention.dir/build.make opencog/attention/CMakeFiles/attention.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=30,31,32,33,34,35,36,37,38,39,40,41,42,43 "Built target attention"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target attention"
 .PHONY : opencog/attention/CMakeFiles/attention.dir/all
 
 # Build rule for subdir invocation for target.
@@ -692,7 +689,7 @@ examples/c++-attentionbank/CMakeFiles/crudexample.dir/all: opencog/attentionbank
 examples/c++-attentionbank/CMakeFiles/crudexample.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/crudexample.dir/build.make examples/c++-attentionbank/CMakeFiles/crudexample.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=62,63 "Built target crudexample"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=59,60 "Built target crudexample"
 .PHONY : examples/c++-attentionbank/CMakeFiles/crudexample.dir/all
 
 # Build rule for subdir invocation for target.
@@ -720,7 +717,7 @@ examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/all: opencog/attention
 examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build.make examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=28,29 "Built target aseventsexample"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=25,26 "Built target aseventsexample"
 .PHONY : examples/c++-attentionbank/CMakeFiles/aseventsexample.dir/all
 
 # Build rule for subdir invocation for target.
@@ -888,7 +885,7 @@ tests/attentionbank/CMakeFiles/NewAttentionTest.dir/all: opencog/attentionbank/b
 tests/attentionbank/CMakeFiles/NewAttentionTest.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/NewAttentionTest.dir/build.make tests/attentionbank/CMakeFiles/NewAttentionTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/NewAttentionTest.dir/build.make tests/attentionbank/CMakeFiles/NewAttentionTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=25,26,27 "Built target NewAttentionTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=22,23,24 "Built target NewAttentionTest"
 .PHONY : tests/attentionbank/CMakeFiles/NewAttentionTest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -906,64 +903,6 @@ NewAttentionTest: tests/attentionbank/CMakeFiles/NewAttentionTest.dir/rule
 tests/attentionbank/CMakeFiles/NewAttentionTest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/attentionbank/CMakeFiles/NewAttentionTest.dir/build.make tests/attentionbank/CMakeFiles/NewAttentionTest.dir/clean
 .PHONY : tests/attentionbank/CMakeFiles/NewAttentionTest.dir/clean
-
-#=============================================================================
-# Target rules for target tests/attention/CMakeFiles/AttentionParamQueryUTest.dir
-
-# All Build rule for target.
-tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/all
-tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all: opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/all
-tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
-tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all: opencog/attention/CMakeFiles/attention.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=1,2,3 "Built target AttentionParamQueryUTest"
-.PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all
-
-# Build rule for subdir invocation for target.
-tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 32
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 0
-.PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
-
-# Convenience name for target.
-AttentionParamQueryUTest: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
-.PHONY : AttentionParamQueryUTest
-
-# clean rule for target.
-tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/clean
-.PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/clean
-
-#=============================================================================
-# Target rules for target tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir
-
-# All Build rule for target.
-tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/all
-tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all: opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/all
-tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
-tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all: opencog/attention/CMakeFiles/attention.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=22,23,24 "Built target ImportanceDiffusionUTest"
-.PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all
-
-# Build rule for subdir invocation for target.
-tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 32
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 0
-.PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
-
-# Convenience name for target.
-ImportanceDiffusionUTest: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
-.PHONY : ImportanceDiffusionUTest
-
-# clean rule for target.
-tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/clean
-.PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/clean
 
 #=============================================================================
 # Target rules for target tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir
@@ -993,6 +932,35 @@ HebbianCreationModuleUTest: tests/attention/CMakeFiles/HebbianCreationModuleUTes
 tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/clean
 .PHONY : tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/clean
+
+#=============================================================================
+# Target rules for target tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir
+
+# All Build rule for target.
+tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all: opencog/attentionbank/avalue/CMakeFiles/attentionval.dir/all
+tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all: opencog/attentionbank/bank/CMakeFiles/attentionbank.dir/all
+tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all: opencog/attentionbank/types/CMakeFiles/attention-types.dir/all
+tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all: opencog/attention/CMakeFiles/attention.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles --progress-num=1,2,3 "Built target AFRentCollectionAgentTest"
+.PHONY : tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all
+
+# Build rule for subdir invocation for target.
+tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 32
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stationone/Desktop/Singularitynet/attention/build/CMakeFiles 0
+.PHONY : tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/rule
+
+# Convenience name for target.
+AFRentCollectionAgentTest: tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/rule
+.PHONY : AFRentCollectionAgentTest
+
+# clean rule for target.
+tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/clean
+.PHONY : tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

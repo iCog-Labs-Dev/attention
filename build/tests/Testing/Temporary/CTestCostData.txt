@@ -1,12 +1,17 @@
-AttentionValueUTest 54 0.00111045
-AttentionUTest 54 0.000699598
-BankImplUTest 54 0.000190862
-BankAsyncUTest 54 0.000169857
-AttentionalFocusCBUTest 54 0.00976887
-AttentionBankCythonTest 54 0.00953621
-AttentionParamQueryUTest 54 0.00474654
-ImportanceDiffusionUTest 54 0.00339881
-HebbianCreationModuleUTest 53 0.0205459
-NewAttentionTest 35 0.000225491
+AttentionValueUTest 140 0.000106724
+AttentionUTest 140 0.000526558
+BankImplUTest 140 8.92086e-05
+BankAsyncUTest 140 9.43757e-05
+AttentionalFocusCBUTest 140 0.0004402
+AttentionBankCythonTest 140 0.00215751
+AttentionParamQueryUTest 109 0.00217166
+ImportanceDiffusionUTest 109 0.00130624
+HebbianCreationModuleUTest 131 0.00830699
+NewAttentionTest 121 6.72546e-05
 AttentionValueOfLinkUTest 1 0.00811144
+AttentionModuleTest 2 0.00430273
+AFRentCollectionAgentTest 20 0
+AFRentCollectionAgentUTestFIDT 2 0.0667864
+AFRentCollectionAgentUTestF 1 0
 ---
+AFRentCollectionAgentTest

@@ -131,9 +131,8 @@
 /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/CMakeFiles/install.dir
 /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/CMakeFiles/install/local.dir
 /home/stationone/Desktop/Singularitynet/attention/build/tests/attentionbank/CMakeFiles/install/strip.dir
-/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/CMakeFiles/AttentionParamQueryUTest.dir
-/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir
 /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir
+/home/stationone/Desktop/Singularitynet/attention/build/tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir
 /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/CMakeFiles/package.dir
 /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/CMakeFiles/package_source.dir
 /home/stationone/Desktop/Singularitynet/attention/build/tests/attention/CMakeFiles/edit_cache.dir

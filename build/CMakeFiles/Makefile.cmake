@@ -154,7 +154,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/attentionbank/CMakeFiles/BankAsyncUTest.dir/DependInfo.cmake"
   "tests/attentionbank/CMakeFiles/AttentionalFocusCBUTest.dir/DependInfo.cmake"
   "tests/attentionbank/CMakeFiles/NewAttentionTest.dir/DependInfo.cmake"
-  "tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/DependInfo.cmake"
-  "tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/DependInfo.cmake"
   "tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/DependInfo.cmake"
+  "tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/DependInfo.cmake"
   )

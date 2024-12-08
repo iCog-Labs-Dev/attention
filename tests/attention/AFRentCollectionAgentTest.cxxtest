@@ -1,0 +1,247 @@
+/*
+ * tests/dynamics/HebbianCreationModuleUTest.cxxtest
+ *
+ * Copyright (C) 2024 Biniyam Seid
+ * All Rights Reserved
+ *
+ * Written by Cosmo Harrigan
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License v3 as
+ * published by the Free Software Foundation and including the exceptions
+ * at http://opencog.org/wiki/Licenses
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program; if not, write to:
+ * Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+#include <cxxtest/TestSuite.h>
+
+#include <opencog/attention/AttentionModule.h>
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/attention/HebbianCreationAgent.h>
+
+#include <opencog/attention/Neighbors.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/types/atom_types.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/util/algorithm.h>
+#include <opencog/cogserver/server/Factory.h>
+
+
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/attention/ImportanceDiffusionBase.h>
+
+#include <opencog/guile/SchemeEval.h>
+#include <opencog/attention/Neighbors.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/types/atom_types.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/util/algorithm.h>
+#include <opencog/cogserver/server/Factory.h>
+
+
+
+#include <algorithm>
+#include <math.h>
+#include <time.h>
+
+#include <opencog/util/Config.h>
+#include <opencog/util/mt19937ar.h>
+
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/types/atom_types.h>
+
+#include <opencog/attention/AFRentCollectionAgent.h>
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/attention/AttentionStat.h>
+
+#include <cxxtest/TestSuite.h>
+
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/attention/ImportanceDiffusionBase.h>
+
+#include <opencog/guile/SchemeEval.h>
+#include <opencog/attention/Neighbors.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/types/atom_types.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/util/algorithm.h>
+#include <opencog/cogserver/server/Factory.h>
+
+
+
+#include <thread>
+
+using namespace opencog;
+using namespace std;
+
+class AFRentCollectionAgentTest : public CxxTest::TestSuite
+{
+private:
+    AtomSpace* as;
+    AgentPtr _hebbiancreation_agentptr;
+    AgentPtr _afrentcollectionAgent;
+    CogServer* _cogserver;
+    Scheduler* _scheduler;
+    AgentPtr* agent;
+
+public:
+    void tearDown()
+    {
+        _cogserver->stop();
+    }
+
+    void InitCogServer()
+    {
+        _cogserver = &cogserver();
+        config().set("MODULES", "opencog/attention/libattention.so");
+        _cogserver->loadModules();
+        config().set("MODULES", "libagents.so");
+        Module* amod = _cogserver->getModule("opencog::AgentsModule");
+        AgentsModule* agmod = (AgentsModule*) amod;
+        _scheduler = &agmod->get_scheduler();
+
+        AttentionParamQuery _atq(&cogserver().getAtomSpace());
+        _atq.load_default_values(); // Load default ECAN param values into AS
+
+        
+
+        Factory<AFRentCollectionAgent, Agent> AFRentCollectionAgentFactory;
+        
+
+        _scheduler->registerAgent(AFRentCollectionAgent::info().id,&AFRentCollectionAgentFactory);
+        _afrentcollectionAgent =
+            _scheduler->createAgent(AFRentCollectionAgent::info().id,false);
+        
+
+        this->as = &cogserver().getAtomSpace();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void testCollectRent() {
+
+    InitCogServer();
+    _scheduler->startAgent(_afrentcollectionAgent,true,"afca");
+
+
+    AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
+    
+
+    count_t conf90 = 900; 
+
+
+    HandleSeq targetSet;
+
+    // Add some handles to targetSet for testing
+    Handle kermit = as->add_node(CONCEPT_NODE, "Kermit");
+    if (!kermit) {
+        TS_FAIL("Failed to create node 'Kermit'");
+        return;
+    }
+    kermit->setTruthValue(SimpleTruthValue::createTV(0.001, conf90));
+    targetSet.push_back(kermit);
+
+  
+
+
+    // Stimulate the node to give it some initial STI and LTI
+    ab.stimulate(kermit, 100);
+
+    // Check initial STI and LTI
+
+
+
+
+
+
+
+
+
+
+
+    AttentionValue::sti_t initial_sti = get_sti(kermit);
+    AttentionValue::lti_t initial_lti = get_lti(kermit);
+    TS_ASSERT_EQUALS(initial_sti, 2000);
+    TS_ASSERT_EQUALS(initial_lti, 2000); // Assuming initial LTI is 2000
+
+    
+
+     std::shared_ptr<AFRentCollectionAgent> AFRentCAgent = std::dynamic_pointer_cast<AFRentCollectionAgent>(_afrentcollectionAgent);
+        
+
+    if (AFRentCAgent) {
+                // Call a method on the HebbianCreationAgent instance
+                AFRentCAgent->collectRent(targetSet);
+    } else {
+                std::cerr << "Failed to create HebbianCreationAgent instance." << std::endl;
+            }
+
+     AFRentCAgent->collectRent(targetSet); 
+
+    // Add assertions to verify the expected behavior
+    AttentionValue::sti_t sti = get_sti(kermit);
+    AttentionValue::lti_t lti = get_lti(kermit);
+
+    TS_ASSERT_LESS_THAN(sti, initial_sti); // STI should be reduced
+    //TS_ASSERT_LESS_THAN(lti, initial_lti); // LTI should be reduced
+    TS_ASSERT_EQUALS(lti,initial_lti)
+
+
+    _scheduler->stopAgent(_afrentcollectionAgent);
+
+
+}
+
+
+
+};

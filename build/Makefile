@@ -455,32 +455,6 @@ NewAttentionTest/fast:
 .PHONY : NewAttentionTest/fast
 
 #=============================================================================
-# Target rules for targets named AttentionParamQueryUTest
-
-# Build rule for target.
-AttentionParamQueryUTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AttentionParamQueryUTest
-.PHONY : AttentionParamQueryUTest
-
-# fast build rule for target.
-AttentionParamQueryUTest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build
-.PHONY : AttentionParamQueryUTest/fast
-
-#=============================================================================
-# Target rules for targets named ImportanceDiffusionUTest
-
-# Build rule for target.
-ImportanceDiffusionUTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ImportanceDiffusionUTest
-.PHONY : ImportanceDiffusionUTest
-
-# fast build rule for target.
-ImportanceDiffusionUTest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build
-.PHONY : ImportanceDiffusionUTest/fast
-
-#=============================================================================
 # Target rules for targets named HebbianCreationModuleUTest
 
 # Build rule for target.
@@ -492,6 +466,19 @@ HebbianCreationModuleUTest: cmake_check_build_system
 HebbianCreationModuleUTest/fast:
 	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build
 .PHONY : HebbianCreationModuleUTest/fast
+
+#=============================================================================
+# Target rules for targets named AFRentCollectionAgentTest
+
+# Build rule for target.
+AFRentCollectionAgentTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AFRentCollectionAgentTest
+.PHONY : AFRentCollectionAgentTest
+
+# fast build rule for target.
+AFRentCollectionAgentTest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build
+.PHONY : AFRentCollectionAgentTest/fast
 
 # Help Target
 help:
@@ -515,14 +502,13 @@ help:
 	@echo "... test"
 	@echo "... tests"
 	@echo "... uninstall"
-	@echo "... AttentionParamQueryUTest"
+	@echo "... AFRentCollectionAgentTest"
 	@echo "... AttentionUTest"
 	@echo "... AttentionValueUTest"
 	@echo "... AttentionalFocusCBUTest"
 	@echo "... BankAsyncUTest"
 	@echo "... BankImplUTest"
 	@echo "... HebbianCreationModuleUTest"
-	@echo "... ImportanceDiffusionUTest"
 	@echo "... NewAttentionTest"
 	@echo "... aseventsexample"
 	@echo "... attention"

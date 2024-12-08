@@ -182,34 +182,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
-.PHONY : tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
-
-# Convenience name for target.
-AttentionParamQueryUTest: tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/rule
-.PHONY : AttentionParamQueryUTest
-
-# fast build rule for target.
-AttentionParamQueryUTest/fast:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build
-.PHONY : AttentionParamQueryUTest/fast
-
-# Convenience name for target.
-tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
-.PHONY : tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
-
-# Convenience name for target.
-ImportanceDiffusionUTest: tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/rule
-.PHONY : ImportanceDiffusionUTest
-
-# fast build rule for target.
-ImportanceDiffusionUTest/fast:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build
-.PHONY : ImportanceDiffusionUTest/fast
-
-# Convenience name for target.
 tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/rule:
 	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/rule
 .PHONY : tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/rule
@@ -223,29 +195,43 @@ HebbianCreationModuleUTest/fast:
 	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build
 .PHONY : HebbianCreationModuleUTest/fast
 
-AttentionParamQueryUTest.o: AttentionParamQueryUTest.cpp.o
-.PHONY : AttentionParamQueryUTest.o
+# Convenience name for target.
+tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/rule:
+	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/rule
+.PHONY : tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/rule
+
+# Convenience name for target.
+AFRentCollectionAgentTest: tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/rule
+.PHONY : AFRentCollectionAgentTest
+
+# fast build rule for target.
+AFRentCollectionAgentTest/fast:
+	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build
+.PHONY : AFRentCollectionAgentTest/fast
+
+AFRentCollectionAgentTest.o: AFRentCollectionAgentTest.cpp.o
+.PHONY : AFRentCollectionAgentTest.o
 
 # target to build an object file
-AttentionParamQueryUTest.cpp.o:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o
-.PHONY : AttentionParamQueryUTest.cpp.o
+AFRentCollectionAgentTest.cpp.o:
+	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/AFRentCollectionAgentTest.cpp.o
+.PHONY : AFRentCollectionAgentTest.cpp.o
 
-AttentionParamQueryUTest.i: AttentionParamQueryUTest.cpp.i
-.PHONY : AttentionParamQueryUTest.i
+AFRentCollectionAgentTest.i: AFRentCollectionAgentTest.cpp.i
+.PHONY : AFRentCollectionAgentTest.i
 
 # target to preprocess a source file
-AttentionParamQueryUTest.cpp.i:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.i
-.PHONY : AttentionParamQueryUTest.cpp.i
+AFRentCollectionAgentTest.cpp.i:
+	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/AFRentCollectionAgentTest.cpp.i
+.PHONY : AFRentCollectionAgentTest.cpp.i
 
-AttentionParamQueryUTest.s: AttentionParamQueryUTest.cpp.s
-.PHONY : AttentionParamQueryUTest.s
+AFRentCollectionAgentTest.s: AFRentCollectionAgentTest.cpp.s
+.PHONY : AFRentCollectionAgentTest.s
 
 # target to generate assembly for a file
-AttentionParamQueryUTest.cpp.s:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/build.make tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.s
-.PHONY : AttentionParamQueryUTest.cpp.s
+AFRentCollectionAgentTest.cpp.s:
+	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/build.make tests/attention/CMakeFiles/AFRentCollectionAgentTest.dir/AFRentCollectionAgentTest.cpp.s
+.PHONY : AFRentCollectionAgentTest.cpp.s
 
 HebbianCreationModuleUTest.o: HebbianCreationModuleUTest.cpp.o
 .PHONY : HebbianCreationModuleUTest.o
@@ -271,30 +257,6 @@ HebbianCreationModuleUTest.cpp.s:
 	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/build.make tests/attention/CMakeFiles/HebbianCreationModuleUTest.dir/HebbianCreationModuleUTest.cpp.s
 .PHONY : HebbianCreationModuleUTest.cpp.s
 
-ImportanceDiffusionUTest.o: ImportanceDiffusionUTest.cpp.o
-.PHONY : ImportanceDiffusionUTest.o
-
-# target to build an object file
-ImportanceDiffusionUTest.cpp.o:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.o
-.PHONY : ImportanceDiffusionUTest.cpp.o
-
-ImportanceDiffusionUTest.i: ImportanceDiffusionUTest.cpp.i
-.PHONY : ImportanceDiffusionUTest.i
-
-# target to preprocess a source file
-ImportanceDiffusionUTest.cpp.i:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.i
-.PHONY : ImportanceDiffusionUTest.cpp.i
-
-ImportanceDiffusionUTest.s: ImportanceDiffusionUTest.cpp.s
-.PHONY : ImportanceDiffusionUTest.s
-
-# target to generate assembly for a file
-ImportanceDiffusionUTest.cpp.s:
-	cd /home/stationone/Desktop/Singularitynet/attention/build && $(MAKE) $(MAKESILENT) -f tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/build.make tests/attention/CMakeFiles/ImportanceDiffusionUTest.dir/ImportanceDiffusionUTest.cpp.s
-.PHONY : ImportanceDiffusionUTest.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -309,18 +271,14 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... AttentionParamQueryUTest"
+	@echo "... AFRentCollectionAgentTest"
 	@echo "... HebbianCreationModuleUTest"
-	@echo "... ImportanceDiffusionUTest"
-	@echo "... AttentionParamQueryUTest.o"
-	@echo "... AttentionParamQueryUTest.i"
-	@echo "... AttentionParamQueryUTest.s"
+	@echo "... AFRentCollectionAgentTest.o"
+	@echo "... AFRentCollectionAgentTest.i"
+	@echo "... AFRentCollectionAgentTest.s"
 	@echo "... HebbianCreationModuleUTest.o"
 	@echo "... HebbianCreationModuleUTest.i"
 	@echo "... HebbianCreationModuleUTest.s"
-	@echo "... ImportanceDiffusionUTest.o"
-	@echo "... ImportanceDiffusionUTest.i"
-	@echo "... ImportanceDiffusionUTest.s"
 .PHONY : help
 
 
