@@ -527,7 +527,6 @@ CMakeFiles/attentionexperiment.dir/SentenceGenStimulateAgent.o: \
  /usr/local/include/opencog/cogserver/server/Factory.h \
  /home/sam/Documents/repos/ecan-work/attention/experiments/ExperimentSetupModule.h \
  /home/sam/Documents/repos/ecan-work/attention/experiments/SentenceGenStimulateAgent.h \
- /usr/local/include/opencog/guile/SchemeEval.h \
  /usr/local/include/opencog/cogserver/server/CogServer.h \
  /usr/local/include/opencog/cogserver/server/Module.h \
  /usr/local/include/opencog/cogserver/server/ModuleManager.h \
@@ -1924,4 +1923,5 @@ CMakeFiles/attentionexperiment.dir/SentenceGenStimulateAgent.o: \
  /usr/local/include/boost/parameter/aux_/unwrap_cv_reference.hpp \
  /usr/local/include/boost/parameter/aux_/tagged_argument.hpp \
  /usr/local/include/boost/parameter/aux_/pack/tag_template_keyword_arg.hpp \
- /usr/local/include/boost/signals2/shared_connection_block.hpp
+ /usr/local/include/boost/signals2/shared_connection_block.hpp \
+ /usr/local/include/opencog/guile/SchemeEval.h
