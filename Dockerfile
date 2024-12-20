@@ -59,8 +59,7 @@ RUN git clone https://github.com/singnet/cogserver.git \
     && ldconfig
     
 
-# Clone and build Attention Allocation
-# COPY . /attention
+
 # Clone and build Attention Allocation
 RUN git clone https://github.com/iCog-Labs-Dev/attention.git \
     && cd attention \
@@ -71,5 +70,23 @@ RUN git clone https://github.com/iCog-Labs-Dev/attention.git \
     && ldconfig
 
 
+# Install common development tools and dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    software-properties-common gnupg git cmake make build-essential \
+    libboost-all-dev libssl-dev guile-2.2-dev cxxtest wget \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install octool
+RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg \
+    && chmod +x ocpkg \
+    && ln -s /app/ocpkg /usr/local/bin/octool
+
+RUN cd /app/attention \
+    && octool -e
+
 CMD ["/bin/bash"]
-# CMD ["/bin/bash"]
+
+
+# Docker Commands
+   # sudo docker run -it attention /bin/bash
+   # sudo docker run -it -v ~/attention:/app/attention attention /bin/bash
