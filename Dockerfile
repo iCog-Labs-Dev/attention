@@ -69,9 +69,6 @@ RUN git clone https://github.com/singnet/attention.git \
     && make install \
     && ldconfig
 
-# # Run unit tests (optional)
-# RUN cd /attention/build \
-#     # && make test
 
-# Set the entrypoint for the container (modify as needed)
+
 CMD ["/bin/bash"]
