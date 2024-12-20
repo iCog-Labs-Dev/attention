@@ -61,7 +61,8 @@ RUN git clone https://github.com/singnet/cogserver.git \
 
 # Clone and build Attention Allocation
 # COPY . /attention
-RUN git clone https://github.com/singnet/attention.git \
+# Clone and build Attention Allocation
+RUN git clone https://github.com/iCog-Labs-Dev/attention.git \
     && cd attention \
     && mkdir build && cd build \
     && cmake .. \
@@ -70,5 +71,5 @@ RUN git clone https://github.com/singnet/attention.git \
     && ldconfig
 
 
-
 CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
