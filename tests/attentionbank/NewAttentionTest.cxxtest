@@ -5,7 +5,7 @@
 #include <opencog/util/Logger.h>
 #include "sorting.h"
 
-
+#include <cxxtest/TestSuite.h>
 using namespace opencog;
 using namespace std;
 

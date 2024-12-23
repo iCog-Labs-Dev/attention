@@ -1,0 +1,13 @@
+
+
+
+#include <opencog/attentionbank/bank/AtomBins.h>
+#include <cxxtest/TestSuite.h>
+
+
+using namespace opencog;
+
+class AtomBinsUTest: public CxxTest::TestSuite
+{
+
+};

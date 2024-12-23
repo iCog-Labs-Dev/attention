@@ -28,7 +28,7 @@
 #include <opencog/attentionbank/avalue/AttentionValueOfLink.h>
 #include <opencog/atoms/truthvalue/SimpleTruthValue.h>
 #include <opencog/util/Logger.h>
-
+#include <cxxtest/TestSuite.h>
 #include "sorting.h"
 
 using namespace opencog;
