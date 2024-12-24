@@ -1,0 +1,70 @@
+
+
+#include <opencog/attentionbank/bank/AtomBins.h> // Corrected include path for AtomBins
+#include <cxxtest/TestSuite.h>
+#include <opencog/atoms/base/Handle.h>
+#include <opencog/atoms/base/Node.h> // For AtomPtr creation
+#include <vector>
+#include <memory>
+#include <iterator>
+#include <iostream>
+
+using namespace opencog;
+
+class AtomBinsUTest : public CxxTest::TestSuite {
+private:
+    AtomBins* bins; // Pointer to AtomBins object
+    Handle handleA, handleB, handleC;
+
+public:
+    void setUp() override {
+        bins = new AtomBins(5); // Initialize with 5 bins
+        
+        // Create AtomPtr instances for testing
+        AtomPtr atom1 = createNode(NODE, "Atom1");
+        AtomPtr atom2 = createNode(NODE, "Atom2");
+        AtomPtr atom3 = createNode(NODE, "Atom3");
+
+        handleA = Handle(atom1);
+        handleB = Handle(atom2);
+        handleC = Handle(atom3);
+
+        std::cout << "Setup completed for AtomBinsUTest." << std::endl;
+    }
+
+    void tearDown() override {
+        delete bins; // Clean up memory
+        bins = nullptr;
+    }
+
+    void testInsertion() {
+        bins->insert(0, handleA);
+        bins->insert(1, handleB);
+
+        TS_ASSERT_EQUALS(bins->size(0), 1); // Check size of bin 0
+        TS_ASSERT_EQUALS(bins->size(1), 1); // Check size of bin 1
+    }
+
+    void testRemoval() {
+        bins->insert(0, handleA);
+        TS_ASSERT_EQUALS(bins->size(0), 1); // Ensure insertion worked
+
+        bins->remove(0, handleA);
+        TS_ASSERT_EQUALS(bins->size(0), 0); // Ensure removal worked
+    }
+
+    void testGetContent() {
+        bins->insert(0, handleA);
+        bins->insert(0, handleB);
+
+        std::vector<Handle> content;
+        bins->getContent(0, std::back_inserter(content)); // Use std::back_inserter
+
+        TS_ASSERT_EQUALS(content.size(), 2);         // Ensure correct size
+        TS_ASSERT_EQUALS(content[0], handleA);       // Ensure correct order
+        TS_ASSERT_EQUALS(content[1], handleB);
+    }
+
+   
+};
+
