@@ -32,10 +32,10 @@ SentenceGenStimulateAgent::SentenceGenStimulateAgent(CogServer& cs) :
         Agent(cs)
 {
  //   _scm_eval = new SchemeEval(_as);
-      _scm_eval = make_shared<SchemeEval>(_as);
+      // _scm_eval = make_shared<SchemeEval>(_as);
 
     current_group = 0;
-    startcount = _scheduler.getCycleCount();
+  startcount = expMod->getScheduler()->getCycleCount();
     stime = std::time(nullptr);
 }
 
@@ -54,11 +54,11 @@ void SentenceGenStimulateAgent::run(void)
 {
     generate_stimulate_sentence();
 
-    if(_scheduler.getCycleCount() % 10 == 0){
+  if(expMod->getScheduler()->getCycleCount() % 10 == 0){
         //Print counts
-        printf("WORD_NODE = %d \n",_as->get_num_atoms_of_type(WORD_NODE));
-        printf("WORD_INSTANCE_NODE = %d \n",_as->get_num_atoms_of_type(WORD_INSTANCE_NODE));
-        printf("ASYMMETRIC_HEBBIAN_LINK = %d \n",_as->get_num_atoms_of_type(ASYMMETRIC_HEBBIAN_LINK));
+    printf("WORD_NODE = %d \n",expMod->getAtomSpace()->get_num_atoms_of_type(WORD_NODE));
+        printf("WORD_INSTANCE_NODE = %d \n",expMod->getAtomSpace()->get_num_atoms_of_type(WORD_INSTANCE_NODE));
+        printf("ASYMMETRIC_HEBBIAN_LINK = %d \n",expMod->getAtomSpace()->get_num_atoms_of_type(ASYMMETRIC_HEBBIAN_LINK));
     }
 }
 
@@ -71,7 +71,8 @@ void SentenceGenStimulateAgent::generate_stimulate_sentence()
     StringSeq selected_words;
 
     auto evalWord = [this](std::string word) -> Handle {
-        return _scm_eval->eval_h("(ConceptNode \"" + word + "\")");
+        // return _scm_eval->eval_h("(ConceptNode \"" + word + "\")");
+    return expMod->getAtomSpace()->add_node(CONCEPT_NODE, std::move(word));
     };
 
     auto select = [](int num,StringSeq &data,StringSeq &out) -> void {
@@ -89,7 +90,7 @@ void SentenceGenStimulateAgent::generate_stimulate_sentence()
         stime = time(nullptr);
     }
 
-    if (_scheduler.getCycleCount() % special_word_occurence_period == 0) { // and
+  if (expMod->getScheduler()->getCycleCount() % special_word_occurence_period == 0) { // and
     //(_cogserver.getCycleCount() - startcount) > 5 ) {
       select(4,swords[current_group],selected_words);
       select(2,words,selected_words);
@@ -103,10 +104,10 @@ void SentenceGenStimulateAgent::generate_stimulate_sentence()
     }
 
     for (Handle h : hwords)
-        _ab.stimulate(h,2);
+         expMod->getAb()->stimulate(h,2);
     for (Handle h : hword_instances)
-        _ab.stimulate(h,0.5);
+        expMod->getAb()->stimulate(h,0.5);
     this_thread::sleep_for(milliseconds(400));
 
-    printf("stifunds: %ld \n",_ab.get_STI_funds());
+  printf("stifunds: %ld \n",expMod->getAb()->getSTIFunds());
 }

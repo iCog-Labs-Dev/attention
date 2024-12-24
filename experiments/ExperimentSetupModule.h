@@ -86,6 +86,10 @@ public:
     std::string dump_ecan_data();
     static std::string file_name;
 
+    AtomSpace* getAtomSpace() { return _as ; }
+    CogServer* getCogServer() { return _cs; }
+    Scheduler* getScheduler() { return _scheduler; }
+    AttentionBank* getAb() { return _ab; }
   //std::ofstream outav;
   //std::ofstream outheb;
 
@@ -94,4 +98,4 @@ public:
 
 } /* namespace opencog */
 
-#endif /* EXPERIMENTSETUPMODULE_H_ */
+#endif // EXPERIMENTSETUPMODULE_H_ 
