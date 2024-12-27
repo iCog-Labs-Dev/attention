@@ -50,7 +50,7 @@ class ImportanceIndex
 {
     // Needs to access importanceBin
     friend class ecan::StochasticDiffusionAmountCalculator;
-private:
+public:
     mutable std::mutex _mtx;
 
     AtomBins _index;

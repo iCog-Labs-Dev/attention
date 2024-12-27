@@ -26,21 +26,44 @@ public:
         delete atomSpace;
     }
 
-    void testUpdateImportance() {
-        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
-        TS_ASSERT(h1 != Handle::UNDEFINED);
+   /**
+ * Ensures that an atom is moved to the correct bin based on its updated
+ * STI value and that it is removed from the old bin.
+ */
+void testUpdateImportance() {
+    Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+    TS_ASSERT(h1 != Handle::UNDEFINED);
 
-        auto oldAv = createAttentionValue(0);
-        auto newAv = createAttentionValue(50);
+    auto oldAv = createAttentionValue(0); 
+    auto newAv = createAttentionValue(50);
 
-        importanceIndex->updateImportance(h1, oldAv, newAv);
+    // Calculate expected bins using the public wrapper
+    size_t oldBin = importanceIndex->importanceBin(oldAv->getSTI());
+    size_t newBin = importanceIndex->importanceBin(newAv->getSTI());
 
-        auto handles = importanceIndex->getHandleSet(0, 100);
-        TS_ASSERT_EQUALS(handles.size(), 1);
-        TS_ASSERT(handles.find(h1) != handles.end());
-    }
+    // Update the importance
+    importanceIndex->updateImportance(h1, oldAv, newAv);
 
-    void testRemoveAtom() {
+    // Verify the atom is no longer in the old bin
+    UnorderedHandleSet oldBinContents;
+    importanceIndex->getContent(oldBin, std::inserter(oldBinContents, oldBinContents.end()));
+   TS_ASSERT_EQUALS(oldBinContents.size(), 0);
+
+    // Verify the atom is now in the correct new bin
+    UnorderedHandleSet newBinContents;
+    importanceIndex->getContent(newBin, std::inserter(newBinContents, newBinContents.end()));
+    TS_ASSERT_EQUALS(newBinContents.size(), 1);
+    TS_ASSERT(newBinContents.find(h1) != newBinContents.end());
+}
+
+
+
+
+    /**
+     * Verifies that an atom can be successfully removed from the index and 
+     * is no longer present in its assigned bin.
+     */
+void testRemoveAtom() {
         Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
         TS_ASSERT(h1 != Handle::UNDEFINED);
 
@@ -52,6 +75,26 @@ public:
         TS_ASSERT_EQUALS(importanceIndex->size(importanceIndex->bin_size() - 1), 0);
     }
 
+    /**
+     * Ensures that a random atom can be retrieved from the index, and 
+     * that it belongs to the set of added atoms.
+     */
+    void testGetRandomAtom() {
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
+
+        importanceIndex->updateImportance(h1, createAttentionValue(0), createAttentionValue(10));
+        importanceIndex->updateImportance(h2, createAttentionValue(0), createAttentionValue(50));
+
+        auto randomAtom = importanceIndex->getRandomAtom();
+        TS_ASSERT(randomAtom != Handle::UNDEFINED);
+        TS_ASSERT(randomAtom == h1 || randomAtom == h2);
+    }
+
+    /**
+     * Verifies that the bins containing the smallest and largest STI values 
+     * can be correctly identified and retrieved.
+     */
     void testGetMinMaxBinContents() {
         Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
         Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
@@ -66,5 +109,39 @@ public:
         TS_ASSERT_EQUALS(maxContents.size(), 1);
         TS_ASSERT(minContents.find(h1) != minContents.end());
         TS_ASSERT(maxContents.find(h2) != maxContents.end());
+    }
+
+    /**
+     * Validates that atoms within a specific STI range can be retrieved 
+     * correctly using the getHandleSet method.
+     */
+    void testGetHandleSet() {
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
+
+        importanceIndex->updateImportance(h1, createAttentionValue(0), createAttentionValue(10));
+        importanceIndex->updateImportance(h2, createAttentionValue(0), createAttentionValue(50));
+
+        auto result = importanceIndex->getHandleSet(0, 20);
+        TS_ASSERT_EQUALS(result.size(), 1);
+        TS_ASSERT(result.find(h1) != result.end());
+
+        result = importanceIndex->getHandleSet(0, 100);
+        TS_ASSERT_EQUALS(result.size(), 2);
+    }
+
+    /**
+     * Ensures that the bin size reflects the correct number of bins in use 
+     * after adding an atom.
+     */
+    void testBinSize() {
+        TS_ASSERT_EQUALS(importanceIndex->bin_size(), 0);
+
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom");
+        auto av = createAttentionValue(50);
+
+        importanceIndex->updateImportance(h1, createAttentionValue(0), av);
+
+        TS_ASSERT(importanceIndex->bin_size() > 0);
     }
 };
