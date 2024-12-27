@@ -9,6 +9,7 @@ ADD_CXXTEST(AttentionUTest)
 ADD_CXXTEST(BankImplUTest)
 ADD_CXXTEST(BankAsyncUTest)
 ADD_CXXTEST(AttentionBankUTest)
+ADD_CXXTEST(ImportanceIndexUTest)
 
 ADD_CXXTEST(AttentionalFocusCBUTest)
 

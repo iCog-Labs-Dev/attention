@@ -1,0 +1,70 @@
+#include <cxxtest/TestSuite.h>
+#include <opencog/attentionbank/bank/ImportanceIndex.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/atoms/base/Handle.h>
+
+using namespace opencog;
+
+class ImportanceIndexUTest : public CxxTest::TestSuite {
+private:
+    ImportanceIndex* importanceIndex;
+    AtomSpace* atomSpace;
+
+    AttentionValuePtr createAttentionValue(AttentionValue::sti_t sti) {
+        return AttentionValue::createAV(sti, 20, 5); // Example LTI and VLTI
+    }
+
+public:
+    void setUp() override {
+        importanceIndex = new ImportanceIndex();
+        atomSpace = new AtomSpace();
+    }
+
+    void tearDown() override {
+        delete importanceIndex;
+        delete atomSpace;
+    }
+
+    void testUpdateImportance() {
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        TS_ASSERT(h1 != Handle::UNDEFINED);
+
+        auto oldAv = createAttentionValue(0);
+        auto newAv = createAttentionValue(50);
+
+        importanceIndex->updateImportance(h1, oldAv, newAv);
+
+        auto handles = importanceIndex->getHandleSet(0, 100);
+        TS_ASSERT_EQUALS(handles.size(), 1);
+        TS_ASSERT(handles.find(h1) != handles.end());
+    }
+
+    void testRemoveAtom() {
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        TS_ASSERT(h1 != Handle::UNDEFINED);
+
+        auto av = createAttentionValue(50);
+        importanceIndex->updateImportance(h1, createAttentionValue(0), av);
+
+      
+        importanceIndex->removeAtom(h1);
+        TS_ASSERT_EQUALS(importanceIndex->size(importanceIndex->bin_size() - 1), 0);
+    }
+
+    void testGetMinMaxBinContents() {
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
+
+        importanceIndex->updateImportance(h1, createAttentionValue(0), createAttentionValue(10));
+        importanceIndex->updateImportance(h2, createAttentionValue(0), createAttentionValue(100));
+
+        auto minContents = importanceIndex->getMinBinContents();
+        auto maxContents = importanceIndex->getMaxBinContents();
+
+        TS_ASSERT_EQUALS(minContents.size(), 1);
+        TS_ASSERT_EQUALS(maxContents.size(), 1);
+        TS_ASSERT(minContents.find(h1) != minContents.end());
+        TS_ASSERT(maxContents.find(h2) != maxContents.end());
+    }
+};
