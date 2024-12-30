@@ -5,6 +5,10 @@
 #include <opencog/atomspace/AtomSpace.h>
 #include <opencog/atoms/base/Handle.h>
 
+#define GROUP_SIZE 8
+#define GROUP_NUM 12
+#define IMPORTANCE_INDEX_SIZE ((GROUP_NUM * GROUP_SIZE) + GROUP_NUM)
+
 using namespace opencog;
 
 class ImportanceIndexUTest : public CxxTest::TestSuite {
@@ -27,90 +31,141 @@ public:
         delete atomSpace;
     }
 
-   /**
- * Ensures that an atom is moved to the correct bin based on its updated
- * STI value and that it is removed from the old bin.
- */
-void testUpdateImportance() {
-    Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
-    TS_ASSERT(h1 != Handle::UNDEFINED);
+    /**
+     * Tests the behavior of the importanceBin method to ensure STI values
+     * are correctly mapped to their respective bins.
+     */
+    void testImportanceBin() {
+        TS_ASSERT_EQUALS(importanceIndex->importanceBin(0), 0); // Zero STI maps to bin 0
+        
+        // Verify maximum allowable STI doesn't exceed defined
+        size_t maxSTI = (GROUP_NUM * GROUP_SIZE) + GROUP_NUM - 1;
+        TS_ASSERT_LESS_THAN_EQUALS(importanceIndex->importanceBin(maxSTI), IMPORTANCE_INDEX_SIZE);
+    }
 
-    auto oldAv = createAttentionValue(0); 
-    auto newAv = createAttentionValue(50);
+    /**
+     * Ensures that an atom is moved to the correct bin based on its updated
+     * STI value and that it is removed from the old bin.
+     */
+    void testUpdateImportance() {
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        TS_ASSERT(h1 != Handle::UNDEFINED);
 
-    // Calculate expected bins using the public wrapper
-    size_t oldBin = importanceIndex->importanceBin(oldAv->getSTI());
-    size_t newBin = importanceIndex->importanceBin(newAv->getSTI());
+        auto oldAv = createAttentionValue(0); 
+        auto newAv = createAttentionValue(50);
 
-    // Update the importance
-    importanceIndex->updateImportance(h1, oldAv, newAv);
+        // Calculate expected bins using the public wrapper
+        size_t oldBin = importanceIndex->importanceBin(oldAv->getSTI());
+        size_t newBin = importanceIndex->importanceBin(newAv->getSTI());
 
-    // Verify the atom is no longer in the old bin
-    UnorderedHandleSet oldBinContents;
-    importanceIndex->getContent(oldBin, std::inserter(oldBinContents, oldBinContents.end()));
-   TS_ASSERT_EQUALS(oldBinContents.size(), 0);
+        // Update the importance
+        importanceIndex->updateImportance(h1, oldAv, newAv);
 
-    // Verify the atom is now in the correct new bin
-    UnorderedHandleSet newBinContents;
-    importanceIndex->getContent(newBin, std::inserter(newBinContents, newBinContents.end()));
-    TS_ASSERT_EQUALS(newBinContents.size(), 1);
-    TS_ASSERT(newBinContents.find(h1) != newBinContents.end());
-}
+        // Verify the atom is no longer in the old bin
+        UnorderedHandleSet oldBinContents;
+        importanceIndex->getContent(oldBin, std::inserter(oldBinContents, oldBinContents.end()));
+        TS_ASSERT_EQUALS(oldBinContents.size(), 0);
 
+        // Verify the atom is now in the correct new bin
+        UnorderedHandleSet newBinContents;
+        importanceIndex->getContent(newBin, std::inserter(newBinContents, newBinContents.end()));
+        TS_ASSERT_EQUALS(newBinContents.size(), 1);
+        TS_ASSERT(newBinContents.find(h1) != newBinContents.end());
+    }
 
-/**
+    /**
+     * Validates the update method to correctly retrieve the latest min and max STI.
+     */
+    void testUpdate() {
+        // Create atoms with varying STI values
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
+        Handle h3 = atomSpace->add_node(CONCEPT_NODE, "Atom3");
+
+        // Assign distinct STI values
+        set_av(atomSpace, h1, createAttentionValue(10));  // Low STI
+        set_av(atomSpace, h2, createAttentionValue(50));  // Medium STI
+        set_av(atomSpace, h3, createAttentionValue(100)); // High STI
+
+        // Update importance index for all atoms
+        importanceIndex->updateImportance(h1, createAttentionValue(0), createAttentionValue(10));
+        importanceIndex->updateImportance(h2, createAttentionValue(0), createAttentionValue(50));
+        importanceIndex->updateImportance(h3, createAttentionValue(0), createAttentionValue(100));
+
+        // Trigger update to calculate min and max STI
+        importanceIndex->update();
+
+        // Verify min and max STI values
+        TS_ASSERT_EQUALS(importanceIndex->getMinSTI(), 10);
+        TS_ASSERT_EQUALS(importanceIndex->getMaxSTI(), 100);
+
+        // Test edge case: Remove all atoms and update
+        importanceIndex->removeAtom(h1);
+        importanceIndex->removeAtom(h2);
+        importanceIndex->removeAtom(h3);
+        importanceIndex->update();
+
+        // Min and Max STI should reset to 0 if bins are empty
+        TS_ASSERT_EQUALS(importanceIndex->getMinSTI(), 0);
+        TS_ASSERT_EQUALS(importanceIndex->getMaxSTI(), 0);
+    }
+
+    /**
      * Verifies that an atom can be successfully removed from the index and 
      * is no longer present in its assigned bin.
      */
-void testRemoveAtom() {
-    // Create a concept node
-    Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
-    TS_ASSERT(h1 != Handle::UNDEFINED);
+    void testRemoveAtom() {
+        // Create a concept node
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        TS_ASSERT(h1 != Handle::UNDEFINED);
 
-    // Define an STI value and calculate the corresponding bin
-    AttentionValue::sti_t stiValue = 50;
-    auto av = AttentionValue::createAV(stiValue, 20, 5); // Example LTI and VLTI
-    size_t binIndex = importanceIndex->importanceBin(stiValue);
+        // Define an STI value and calculate the corresponding bin
+        AttentionValue::sti_t stiValue = 50;
+        auto av = AttentionValue::createAV(stiValue, 20, 5); // Example LTI and VLTI
+        size_t binIndex = importanceIndex->importanceBin(stiValue);
 
-    // Manually insert the atom into the importance index
-    importanceIndex->_index.insert(binIndex, h1);
-    set_av(atomSpace, h1, av);
+        // Manually insert the atom into the importance index
+        importanceIndex->_index.insert(binIndex, h1);
+        set_av(atomSpace, h1, av);
 
-    // Verify the atom is in the calculated bin
-    TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 1);
+        // Verify the atom is in the calculated bin
+        TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 1);
 
-    // Remove the atom
-    importanceIndex->removeAtom(h1);
+        // Remove the atom
+        importanceIndex->removeAtom(h1);
 
-    // Verify the atom is not present after removal
-    TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 0);
-}
+        // Verify the atom is not present after removal
+        TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 0);
+    }
 
-void testGetMaxMinSTI() {
-    // Add multiple atoms with different STI values
-    Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
-    Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
+    /**
+     * Tests the getMaxSTI and getMinSTI methods to ensure they
+     * return correct values based on the current bin contents.
+     */
+    void testGetMaxMinSTI() {
+        // Add multiple atoms with different STI values
+        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+        Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
 
-    // Create and assign AttentionValues with distinct STI
-    auto av1 = createAttentionValue(10); // Low STI
-    auto av2 = createAttentionValue(100); // High STI
-    set_av(atomSpace, h1, av1);
-    set_av(atomSpace, h2, av2);
+        // Create and assign AttentionValues with distinct STI
+        auto av1 = createAttentionValue(10); // Low STI
+        auto av2 = createAttentionValue(100); // High STI
+        set_av(atomSpace, h1, av1);
+        set_av(atomSpace, h2, av2);
 
-    // Update the ImportanceIndex
-    importanceIndex->updateImportance(h1, createAttentionValue(0), av1);
-    importanceIndex->updateImportance(h2, createAttentionValue(0), av2);
+        // Update the ImportanceIndex
+        importanceIndex->updateImportance(h1, createAttentionValue(0), av1);
+        importanceIndex->updateImportance(h2, createAttentionValue(0), av2);
 
-    // Force min/max STI recalculation
-    importanceIndex->update();
+        // Force min/max STI recalculation
+        importanceIndex->update();
 
-    // Verify that the calculated max and min STI are as expected
-    TS_ASSERT_EQUALS(importanceIndex->getMaxSTI(), 100);
-    TS_ASSERT_EQUALS(importanceIndex->getMinSTI(), 10);
-}
+        // Verify that the calculated max and min STI are as expected
+        TS_ASSERT_EQUALS(importanceIndex->getMaxSTI(), 100);
+        TS_ASSERT_EQUALS(importanceIndex->getMinSTI(), 10);
+    }
 
-
-/**
+    /**
      * Ensures that a random atom can be retrieved from the index, and 
      * that it belongs to the set of added atoms.
      */
@@ -125,8 +180,6 @@ void testGetMaxMinSTI() {
         TS_ASSERT(randomAtom != Handle::UNDEFINED);
         TS_ASSERT(randomAtom == h1 || randomAtom == h2);
     }
-    
-
 
     /**
      * Verifies that the bins containing the smallest and largest STI values 
