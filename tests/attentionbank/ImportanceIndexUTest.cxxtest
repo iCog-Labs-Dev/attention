@@ -1,6 +1,7 @@
 #include <cxxtest/TestSuite.h>
 #include <opencog/attentionbank/bank/ImportanceIndex.h>
 #include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
 #include <opencog/atomspace/AtomSpace.h>
 #include <opencog/atoms/base/Handle.h>
 
@@ -57,23 +58,44 @@ void testUpdateImportance() {
 }
 
 
-
-
-    /**
+/**
      * Verifies that an atom can be successfully removed from the index and 
      * is no longer present in its assigned bin.
      */
 void testRemoveAtom() {
-        Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
-        TS_ASSERT(h1 != Handle::UNDEFINED);
+    // Create a concept node
+    Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+    TS_ASSERT(h1 != Handle::UNDEFINED);
 
-        auto av = createAttentionValue(50);
-        importanceIndex->updateImportance(h1, createAttentionValue(0), av);
+    // Define an STI value and calculate the corresponding bin
+    AttentionValue::sti_t stiValue = 50;
+    size_t binIndex = importanceIndex->importanceBin(stiValue);
 
-      
-        importanceIndex->removeAtom(h1);
-        TS_ASSERT_EQUALS(importanceIndex->size(importanceIndex->bin_size() - 1), 0);
+    // Manually insert the atom into the importance index
+    importanceIndex->_index.insert(binIndex, h1);
+
+    // Verify the atom is in the calculated bin
+    TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 1);
+
+    // Remove the atom
+    importanceIndex->removeAtom(h1);
+
+    // Verify the atom is not present after removal
+    for (size_t i = 0; i < importanceIndex->bin_size(); ++i) {
+        TS_ASSERT_EQUALS(importanceIndex->size(i), 0);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Ensures that a random atom can be retrieved from the index, and 
