@@ -86,6 +86,29 @@ void testRemoveAtom() {
     TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 0);
 }
 
+void testGetMaxMinSTI() {
+    // Add multiple atoms with different STI values
+    Handle h1 = atomSpace->add_node(CONCEPT_NODE, "Atom1");
+    Handle h2 = atomSpace->add_node(CONCEPT_NODE, "Atom2");
+
+    // Create and assign AttentionValues with distinct STI
+    auto av1 = createAttentionValue(10); // Low STI
+    auto av2 = createAttentionValue(100); // High STI
+    set_av(atomSpace, h1, av1);
+    set_av(atomSpace, h2, av2);
+
+    // Update the ImportanceIndex
+    importanceIndex->updateImportance(h1, createAttentionValue(0), av1);
+    importanceIndex->updateImportance(h2, createAttentionValue(0), av2);
+
+    // Force min/max STI recalculation
+    importanceIndex->update();
+
+    // Verify that the calculated max and min STI are as expected
+    TS_ASSERT_EQUALS(importanceIndex->getMaxSTI(), 100);
+    TS_ASSERT_EQUALS(importanceIndex->getMinSTI(), 10);
+}
+
 
 /**
      * Ensures that a random atom can be retrieved from the index, and 
