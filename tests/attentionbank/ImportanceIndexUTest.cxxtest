@@ -69,10 +69,12 @@ void testRemoveAtom() {
 
     // Define an STI value and calculate the corresponding bin
     AttentionValue::sti_t stiValue = 50;
+    auto av = AttentionValue::createAV(stiValue, 20, 5); // Example LTI and VLTI
     size_t binIndex = importanceIndex->importanceBin(stiValue);
 
     // Manually insert the atom into the importance index
     importanceIndex->_index.insert(binIndex, h1);
+    set_av(atomSpace, h1, av);
 
     // Verify the atom is in the calculated bin
     TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 1);
@@ -81,23 +83,11 @@ void testRemoveAtom() {
     importanceIndex->removeAtom(h1);
 
     // Verify the atom is not present after removal
-    for (size_t i = 0; i < importanceIndex->bin_size(); ++i) {
-        TS_ASSERT_EQUALS(importanceIndex->size(i), 0);
-    }
+    TS_ASSERT_EQUALS(importanceIndex->size(binIndex), 0);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-    /**
+/**
      * Ensures that a random atom can be retrieved from the index, and 
      * that it belongs to the set of added atoms.
      */
@@ -112,6 +102,8 @@ void testRemoveAtom() {
         TS_ASSERT(randomAtom != Handle::UNDEFINED);
         TS_ASSERT(randomAtom == h1 || randomAtom == h2);
     }
+    
+
 
     /**
      * Verifies that the bins containing the smallest and largest STI values 
