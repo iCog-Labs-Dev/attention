@@ -34,7 +34,7 @@ namespace opencog
 {
     class AttentionParamQuery 
     {
-        private:
+        public:
             AtomSpace * _as;
             Handle parent_param; 
             Handle hget_params;

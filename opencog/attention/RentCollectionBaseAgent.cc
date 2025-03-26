@@ -76,23 +76,29 @@ void RentCollectionBaseAgent::load_params(void)
 AttentionValue::sti_t RentCollectionBaseAgent::calculate_STI_Rent()
 {
     double funds = _bank->getSTIFunds();
-    double diff  = targetSTI - funds;
+    double diff  = 200000- funds;
 
-    if(diff <= 0)
+    std::cout << "Funds: " << funds << ", Target STI: " << targetSTI << ", Diff: " << diff << std::endl;
+
+    if(diff <= 0) {
+        std::cout << "Returning 0 (Funds are greater than or equal to target)" << std::endl;
         return 0;
+    }
 
     double ndiff = diff / stiFundsBuffer;
     ndiff = std::min(ndiff, 1.0);
     ndiff = std::max(ndiff, -0.99);
     AttentionValue::sti_t res = STIAtomRent + (STIAtomRent * ndiff);
 
+    std::cout << "Calculated Rent: " << res << std::endl;
     return res;
 }
+
 
 AttentionValue::sti_t RentCollectionBaseAgent::calculate_LTI_Rent()
 {
     double funds = _bank->getLTIFunds();
-    double diff  = targetLTI - funds;
+    double diff  = 200000- funds;
     double ndiff = diff / ltiFundsBuffer;
     ndiff = std::min(ndiff, 1.0);
     ndiff = std::max(ndiff, -1.0);

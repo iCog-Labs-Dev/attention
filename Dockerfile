@@ -91,3 +91,4 @@ CMD ["/bin/bash"]
     # sudo docker build -t attention .
     # sudo docker run -it attention /bin/bash
     # sudo docker run -it -v ~/attention:/app/attention attention /bin/bash
+    #sudo docker run -it -v ~/docker-atten/attention:/app/attention attention /bin/bash

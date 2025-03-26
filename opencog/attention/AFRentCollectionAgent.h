@@ -54,7 +54,7 @@ namespace opencog {
      * This Agent is supposed to run in it's own Thread.
      */
     class AFRentCollectionAgent : public RentCollectionBaseAgent {
-        private:
+        public:
             time_point<high_resolution_clock> last_update;
             float update_freq;
 

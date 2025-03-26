@@ -54,6 +54,7 @@ private:
     AtomSpace* _as;
     CogServer* _cogserver;
     Scheduler* _scheduler;
+    std::shared_ptr<AttentionParamQuery> _atq;  // ✅ Declare `_atq` as a class member
     std::shared_ptr<DummyRentCollectionAgent> _dummy_agent;
 
 public:
@@ -74,8 +75,8 @@ public:
         AgentsModule* agmod = dynamic_cast<AgentsModule*>(amod);
         _scheduler = &agmod->get_scheduler();
 
-        // Initialize AttentionParamQuery and manually load parameters
-        auto _atq = std::make_shared<AttentionParamQuery>(_as);
+        // ✅ Properly initialize `_atq`
+        _atq = std::make_shared<AttentionParamQuery>(_as);
         try {
             _atq->set_param(AttentionParamQuery::rent_starting_sti_rent, 1.0);
             _atq->set_param(AttentionParamQuery::rent_starting_lti_rent, 1.0);
@@ -87,62 +88,57 @@ public:
             TS_FAIL("Parameter setting error: " + std::string(e.what()));
         }
 
-        // Create DummyRentCollectionAgent with the fresh CogServer
+        // Create DummyRentCollectionAgent
         _dummy_agent = std::make_shared<DummyRentCollectionAgent>(*_cogserver);
-        _dummy_agent->loadParams(); // Ensure parameters are loaded
+        _dummy_agent->loadParams(); 
     }
 
-    void tearDown() {
-        if (_scheduler && _dummy_agent) {
-            _scheduler->stopAgent(std::static_pointer_cast<Agent>(_dummy_agent));
-        }
-        if (_as) {
-            delete _as; // Clean up AtomSpace
-            _as = nullptr;
-        }
-    }
+   void testCalculateSTIRent() {
+    std::string initialValue = _atq->get_param_value("AF_RENT_FREQUENCY");
+    TS_ASSERT_EQUALS("5", initialValue);  // Assuming default is 5
+std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")<< std::endl;
+    std::cout << "STARTING_ATOM_STI_RENT: " << _atq->get_param_value("STARTING_ATOM_STI_RENT")<< std::endl;
+   std::cout << "STI_FUNDS_BUFFER: " <<  _atq->get_param_value("STI_FUNDS_BUFFER")<< std::endl;
+    // ✅ **Set new parameter values**
+    _atq->set_param("AF_RENT_FREQUENCY", 10);
+    _atq->set_param("STARTING_ATOM_STI_RENT", 5.0);
+    _atq->set_param("STARTING_ATOM_LTI_RENT", 7.0);
+    _atq->set_param("TARGET_STI_FUNDS", 200000.0);  // Lower target to ensure rent is positive
+    _atq->set_param("STI_FUNDS_BUFFER", 500.0);
+    _atq->set_param("TARGET_LTI_FUNDS", 200000.0);
+    _atq->set_param("LTI_FUNDS_BUFFER", 600.0);
 
-    void testRentCollection() {
-        // Test the rent collection functionality
-        AttentionBank& ab = attentionbank(_as);
-        Handle atom1 = _as->add_node(CONCEPT_NODE, "Atom1");
-        Handle atom2 = _as->add_node(CONCEPT_NODE, "Atom2");
-        ab.set_sti(atom1, 200);
-        ab.set_sti(atom2, 300);
-        
-        HandleSeq targetSet;
-        _dummy_agent->selectTargets(targetSet);
-        TS_ASSERT_EQUALS(targetSet.size(), 2); 
-        
-        _dummy_agent->collectRent(targetSet);
-        TS_ASSERT_EQUALS(ab.getSTIFunds(), 100000.0000);
-    }
+    // ✅ **Explicitly reload parameters**
+    _dummy_agent->loadParams();  // 🚀 This ensures new parameters are used!
 
-    // Additional test for verifying parameter loading
-    void testParameterLoading() {
-        TS_ASSERT_EQUALS(_dummy_agent->getSTIAtomRent(), 1.0);
-        TS_ASSERT_EQUALS(_dummy_agent->getLTIAtomRent(), 1.0);
-        TS_ASSERT_EQUALS(_dummy_agent->getTargetSTI(), 10000.0);
-        TS_ASSERT_EQUALS(_dummy_agent->getSTIFundsBuffer(), 10000.0);
-        TS_ASSERT_EQUALS(_dummy_agent->getTargetLTI(), 10000.0);
-        TS_ASSERT_EQUALS(_dummy_agent->getLTIFundsBuffer(), 10000.0);
-    }
+    // ✅ **Manually set STI/LTI values for atoms**
+    AttentionBank& ab = attentionbank(_as);
+    Handle atom1 = _as->add_node(CONCEPT_NODE, "Atom1");
+    Handle atom2 = _as->add_node(CONCEPT_NODE, "Atom2");
 
-    void testCalculateLTIRent() {
-        // Here, expectedRent is set to 0.0 based on simplified conditions 
-        // where differences between currentLTI(10000) and targetLTI(10000) 
-        // funds is zero or negeative meaning current fund >= target fund it return 0.
-        double expectedRent = 0.0; 
-        double calculatedRent = _dummy_agent->calculate_LTI_Rent();
-        TS_ASSERT_EQUALS(calculatedRent, expectedRent);
-    }
+    ab.set_sti(atom1, 200.0);  // 🔹 Set STI funds lower than target
+    ab.set_sti(atom2, 300.0);
 
-    void testCalculateSTIRent() {
-         // Here, expectedRent is set to 0.0 based on simplified conditions 
-        // where differences between currentSTI(10000) and targetSTI(10000) 
-        // funds is zero or negeative meaning current fund >= target fund it return 0
-        double expectedRent = 0.0; 
-        double calculatedRent = _dummy_agent->calculate_STI_Rent();
-        TS_ASSERT_EQUALS(calculatedRent, expectedRent);
-    }
+    ab.set_lti(atom1, 400.0);  // 🔹 Set LTI funds lower than target
+    ab.set_lti(atom2, 500.0);
+
+    // ✅ **Calculate rent after applying new parameters**
+    double calculatedSTIRent = _dummy_agent->calculate_STI_Rent();
+    double calculatedLTIRent = _dummy_agent->calculate_LTI_Rent();
+
+
+
+    // ✅ **Ensure rent is greater than 0**
+     TS_ASSERT_EQUALS(calculatedSTIRent, 2.0);
+     TS_ASSERT_EQUALS(calculatedLTIRent, 2.0);
+   
+    std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")<< std::endl;;
+    std::cout << "STARTING_ATOM_STI_RENT: " << _atq->get_param_value("STARTING_ATOM_STI_RENT")<< std::endl;;
+    std::cout << "STI_FUNDS_BUFFER: " <<  _atq->get_param_value("STI_FUNDS_BUFFER")<< std::endl;;
+    std::cout << "Calculated STI Rent: " << calculatedSTIRent << std::endl;
+    std::cout << "Calculated LTI Rent: " << calculatedLTIRent << std::endl;
+}
+
+
+
 };

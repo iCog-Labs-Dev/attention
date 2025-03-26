@@ -1,32 +1,5 @@
-/*
- * AttentionParamQueryUTest.cxxtest
- *
- * Copyright (C) 2017 by OpenCog Foundation
- * All Rights Reserved
- *
- * Written by Misgana Bayetta<misgana.bayetta@gmail.com>
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License v3 as
- * published by the Free Software Foundation and including the exceptions
- * at http://opencog.org/wiki/Licenses
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program; if not, write to:
- * Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- */
-
 #include <cxxtest/TestSuite.h>
-
-#include <opencog/util/Config.h>
 #include <opencog/atomspace/AtomSpace.h>
-
 #include <opencog/attention/AttentionParamQuery.h>
 
 using namespace opencog;
@@ -34,34 +7,34 @@ using namespace opencog;
 class AttentionParamQueryUTest : public CxxTest::TestSuite
 {
 private:
-AtomSpace as;
-AttentionParamQuery _atq;
+    AtomSpace as;
+    AttentionParamQuery _atq;
 
-std::vector<std::string> params = {"param-1", "param-2", "param-3", "param-4"
-                                   ,"param-5", "param-6"};
-Handle h1,h2,h3,h4, hvalue;
+    std::vector<std::string> params = {"param-1", "param-2", "param-3", "param-4",
+                                       "param-5", "param-6"};
+    Handle h1, h2, h3, h4, hvalue;
 
 public:
-AttentionParamQueryUTest(): _atq(&as){
-    _atq.set_param(params[0], true);
-    _atq.set_param(params[1], 2.5f);
-    _atq.set_param(params[2], 4.5);
-    _atq.set_param(params[3], 2);
-    _atq.set_param(params[5], 5);
+    AttentionParamQueryUTest() : _atq(&as) {
+        _atq.set_param(params[0], true);
+        _atq.set_param(params[1], 2.5f);
+        _atq.set_param(params[2], 4.5);
+        _atq.set_param(params[3], 2);
+        _atq.set_param(params[5], 5);
 
-    Handle h1 = as.add_node(TYPE_NODE, "MemberLink");
-    hvalue = as.add_link(MEMBER_LINK, h1);
-    _atq.set_param(params[4], hvalue);
-}
+        Handle h1 = as.add_node(TYPE_NODE, "MemberLink");
+        hvalue = as.add_link(MEMBER_LINK, h1);
+        _atq.set_param(params[4], hvalue);
+    }
 
-~AttentionParamQueryUTest(){}
+    ~AttentionParamQueryUTest() {}
 
-void test_get_param_value();
-void test_get_param_hvalue();
-void test_set_param();
-void test_get_params();
+    void test_get_param_value();
+    void test_get_param_hvalue();
+    void test_set_param();
+    void test_get_params();
+    void test_AF_RENT_FREQUENCY();
 };
-
 
 void AttentionParamQueryUTest::test_get_param_value()
 {
@@ -70,7 +43,6 @@ void AttentionParamQueryUTest::test_get_param_value()
     TS_ASSERT_EQUALS("4.5", _atq.get_param_value(params[2]));
     TS_ASSERT_EQUALS("2", _atq.get_param_value(params[3]));
     TS_ASSERT_EQUALS("5", _atq.get_param_value(params[5]));
-
 }
 
 void AttentionParamQueryUTest::test_get_param_hvalue()
@@ -89,13 +61,8 @@ void AttentionParamQueryUTest::test_set_param()
 void AttentionParamQueryUTest::test_get_params()
 {
     HandleSeq hseq = _atq.get_params();
+    TS_ASSERT_EQUALS(28, hseq.size()); // Ensure expected parameter count
 
-    // At this time, there are 22 paramters loaded from
-    // default-param-values.scm whenever an instance of
-    // AttentionParamQuery is created. This unit test
-    // creates 5 more, so that there are 27 in total now.
-    // This number subject to change.
-    TS_ASSERT_EQUALS(28, hseq.size());
     for (std::string pname : params) {
         Handle h = as.add_node(CONCEPT_NODE, std::move(pname));
         auto it = std::find(hseq.begin(), hseq.end(), h);
@@ -103,3 +70,29 @@ void AttentionParamQueryUTest::test_get_params()
     }
 }
 
+void AttentionParamQueryUTest::test_AF_RENT_FREQUENCY()
+{
+    // Retrieve the initial value
+    std::string initialValue = _atq.get_param_value("AF_RENT_FREQUENCY");
+    
+    
+    TS_ASSERT_EQUALS("5", initialValue);  // Assuming default is 5
+
+    // ✅ **Use `.` instead of `->`**
+    _atq.set_param("AF_RENT_FREQUENCY", 10);
+    _atq.set_param("STARTING_ATOM_STI_RENT", 5.0);
+    _atq.set_param("STARTING_ATOM_LTI_RENT", 7.0);
+    _atq.set_param("TARGET_STI_FUNDS", 1000.0);
+    _atq.set_param("STI_FUNDS_BUFFER", 500.0);
+    _atq.set_param("TARGET_LTI_FUNDS", 1200.0);
+    _atq.set_param("LTI_FUNDS_BUFFER", 600.0);
+
+    // Retrieve the updated value
+    std::string updatedValue = _atq.get_param_value("AF_RENT_FREQUENCY");
+    std::string AFRent = _atq.get_param_value("STARTING_ATOM_STI_RENT");
+    std::string stifunds = _atq.get_param_value("STI_FUNDS_BUFFER");
+    
+    TS_ASSERT_EQUALS("500",stifunds);
+    TS_ASSERT_EQUALS("5",AFRent); // Verify update
+     TS_ASSERT_EQUALS("10", updatedValue);
+}

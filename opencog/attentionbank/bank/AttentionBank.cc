@@ -38,8 +38,8 @@ AttentionBank::AttentionBank(AtomSpace* asp)
     startingFundsLTI = fundsLTI = 100000;
     stiFundsBuffer = 10000;
     ltiFundsBuffer = 10000;
-    targetLTI = 10000;
-    targetSTI = 10000;
+    targetLTI = 1000000;
+    targetSTI = 1000000;
     STIAtomWage = 10;
     LTIAtomWage = 10;
     maxAFSize = 100;
