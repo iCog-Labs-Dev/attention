@@ -90,7 +90,7 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_STI_Rent()
     ndiff = std::max(ndiff, -0.99);
     AttentionValue::sti_t res = STIAtomRent + (STIAtomRent * ndiff);
 
-    std::cout << "Calculated Rent: " << res << std::endl;
+    std::cout << "Calculated STIRent: " <<res<<"diff "<<ndiff<<"STI atom rent "<<STIAtomRent<<std::endl;
     return res;
 }
 
@@ -103,5 +103,6 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_LTI_Rent()
     ndiff = std::min(ndiff, 1.0);
     ndiff = std::max(ndiff, -1.0);
 
+    std::cout << "Calculated LTIRent: "<< LTIAtomRent + (LTIAtomRent * ndiff) <<ndiff<<"STI atom rent "<<LTIAtomRent<< std::endl;
     return LTIAtomRent + (LTIAtomRent * ndiff);
 }

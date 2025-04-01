@@ -42,7 +42,7 @@ AttentionBank::AttentionBank(AtomSpace* asp)
     targetSTI = 1000000;
     STIAtomWage = 10;
     LTIAtomWage = 10;
-    maxAFSize = 100;
+    maxAFSize = 2;
 
     _as = asp;
     _remove_signal = &asp->atomRemovedSignal();
@@ -295,9 +295,10 @@ void AttentionBank::updateAttentionalFocus(const Handle& h,
     }
 
     // Simply insert the new Atom if AF is not full yet.
-    else if (attentionalFocus.size() < maxAFSize)
+    else if (attentionalFocus.size() < 2)
     {
         insertable = true;
+        std::cout<<"MaxAf: "<<maxAFSize<<std::endl;
     }
 
     // Remove the least sti valued atom in the AF and replace
@@ -318,6 +319,7 @@ void AttentionBank::updateAttentionalFocus(const Handle& h,
     // Insert the new atom in to AF and emit the AddAFSignal.
     if (insertable)
     {
+        std::cout<<"MaxAf: "<<attentionalFocus.size()<<std::endl;
         attentionalFocus.insert(std::make_pair(h, new_av));
         AFCHSigl& afch = AddAFSignal();
         afch.emit(h, old_av, new_av);

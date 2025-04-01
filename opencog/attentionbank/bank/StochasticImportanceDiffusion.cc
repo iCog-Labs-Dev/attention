@@ -72,7 +72,7 @@ void StochasticDiffusionAmountCalculator::update_bin(const Handle& h)
 
 StochasticDiffusionAmountCalculator::StochasticDiffusionAmountCalculator
                                      (ImportanceIndex* imp) :
-    _imidx(imp)
+   _imidx(imp)
 {
 }
 

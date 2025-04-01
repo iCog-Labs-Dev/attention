@@ -23,15 +23,34 @@
 #ifndef _OPENCOG_WARENT_COLLECTION_AGENT_H
 #define _OPENCOG_WARENT_COLLECTION_AGENT_H
 
+#include <chrono>
 #include <string>
 #include <iostream>
 #include <sstream>
 
 #include <opencog/util/RandGen.h>
+#include <opencog/cogserver/server/CogServer.h>
 #include <opencog/cogserver/modules/agents/Agent.h>
+#include <opencog/atomspace/AtomSpace.h>
+
+#include <opencog/attentionbank/avalue/AttentionValue.h>
 #include <opencog/attentionbank/bank/StochasticImportanceDiffusion.h>
 
+
 #include "RentCollectionBaseAgent.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace opencog {
     /** \addtogroup grp_attention
@@ -49,7 +68,7 @@ namespace opencog {
      */
     class WARentCollectionAgent : public RentCollectionBaseAgent
     {
-    private:
+    public:
         ecan::StochasticDiffusionAmountCalculator _sdac;
         unsigned int _sti_rent, _lti_rent;
 

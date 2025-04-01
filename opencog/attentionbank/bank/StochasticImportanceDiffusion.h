@@ -28,7 +28,7 @@
 #include <algorithm>
 #include <chrono>
 #include <vector>
-
+#include <opencog/attentionbank/bank/ImportanceIndex.h>
 using namespace std::chrono;
 namespace opencog
 {
