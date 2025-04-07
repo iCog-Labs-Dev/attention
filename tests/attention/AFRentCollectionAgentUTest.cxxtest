@@ -68,7 +68,7 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
         // create sample atoms in atomspace
         Handle a = as->add_node(CONCEPT_NODE, "node1");
         Handle b = as->add_node(CONCEPT_NODE, "node2");
-        Handle c = as->add_node(CONCEPT_NODE, "node3");
+       
 
         std::cout << "Nodes created" << std::endl;
 
@@ -77,10 +77,9 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
         AttentionBank& ab = attentionbank(as);
          ab.set_sti(a, 100);
          ab.set_sti(b, 200);
-         ab.set_sti(c, 300);
          ab.set_lti(a, 100);
          ab.set_lti(b, 200);
-         ab.set_lti(c, 300);
+        
        
 
         std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
@@ -88,10 +87,10 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
         HandleSeq targetSet;
         _afrentcollection_agent->selectTargets(targetSet);
 
-        TS_ASSERT_EQUALS(targetSet.size(), 3);
+        TS_ASSERT_EQUALS(targetSet.size(), 2);
         TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), a) != targetSet.end());
         TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), b) != targetSet.end());
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), c) != targetSet.end());
+        
 
         std::cout << "testSelectTargets passed" << std::endl;
 

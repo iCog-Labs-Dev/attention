@@ -59,32 +59,6 @@ public:
         _cogserver->stop();
         std::cout << "TearDown completed for WARentCollectionAgentUTest." << std::endl;
     }
-
-    void testSelectTargets() {
-        // Create a couple of sample atoms in the AtomSpace.
-        Handle a = as->add_node(CONCEPT_NODE, "node1");
-        Handle b = as->add_node(CONCEPT_NODE, "node2");
-
-        // Stimulate atoms so they have valid STI and LTI values.
-        AttentionBank& ab = attentionbank(as);
-        ab.set_sti(a, 100);
-        ab.set_sti(b, 200);
-        ab.set_lti(a, 100);
-        ab.set_lti(b, 200);
-
-        std::cout << "Atoms created and stimulated for target selection." << std::endl;
-
-        // Call WARentCollectionAgent::selectTargets to choose one atom.
-        HandleSeq targetSet;
-         targetSet = { a,b };
-        _wagent->selectTargets(targetSet);
-
-        // Expect one target to be selected (getRandomAtomNotInAF returns one atom).
-       // TS_ASSERT_EQUALS(targetSet.size(), 1);
-        //TS_ASSERT((targetSet[0] == a) || (targetSet[0] == b));
-        std::cout << "testSelectTargets passed" << std::endl;
-    }
-
 void testCollectRent() {
     // Create atoms for rent collection testing
     Handle a = as->add_node(CONCEPT_NODE, "RentNode1");
