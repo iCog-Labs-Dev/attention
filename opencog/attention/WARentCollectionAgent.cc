@@ -64,8 +64,8 @@ void WARentCollectionAgent::collectRent(HandleSeq& targetSet)
         
         float last_update_time = _sdac.elapsed_time(h);
         std::cout << "last_updates" <<last_update_time<<std::endl;
-        STIAtomRent = STIAtomRent * 1;
-        LTIAtomRent = LTIAtomRent * 1;
+        STIAtomRent = STIAtomRent * last_update_time;
+        LTIAtomRent = LTIAtomRent * last_update_time;
         
         double stiRent = calculate_STI_Rent();
         double ltiRent = calculate_LTI_Rent();

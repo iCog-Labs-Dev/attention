@@ -12,6 +12,7 @@
 #include <opencog/cogserver/modules/agents/Scheduler.h>
 #include <opencog/attentionbank/bank/AttentionBank.h>
 #include <opencog/attention/WARentCollectionAgent.h>
+#include <opencog/attentionbank/bank/StochasticImportanceDiffusion.h>
 #include <opencog/util/Config.h>
 
 
@@ -84,44 +85,46 @@ public:
         std::cout << "testSelectTargets passed" << std::endl;
     }
 
-    void testCollectRent() {
-        // Create a single atom for rent collection testing.
-        Handle a = as->add_node(CONCEPT_NODE, "RentNode1");
-        Handle b = as->add_node(CONCEPT_NODE, "RentNode2");
-        Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
-        AttentionBank& ab = attentionbank(as);
-        ab.set_sti(a, 100);
-        ab.set_lti(a, 100);
-        ab.set_sti(c, 100);
-        ab.set_sti(b, 200);
-        ab.set_lti(c, 100);
-        ab.set_lti(b, 200);
-        // For this test, we call collectRent directly on a known target.
-    HandleSeq targetSet = { a };
- _wagent->collectRent(targetSet);
- // float dummy = _wagent->_sdac.elapsed_time(a);
-      //  (void)dummy; // suppress unused variable warning
-        // Wait briefly so that elapsed time (measured inside WARentCollectionAgent)
-        // is nonzero. This ensures that the scaling factor in rent collection is applied.
-        std::this_thread::sleep_for(milliseconds(500));
+void testCollectRent() {
+    // Create atoms for rent collection testing
+    Handle a = as->add_node(CONCEPT_NODE, "RentNode1");
+    Handle b = as->add_node(CONCEPT_NODE, "RentNode2");
+    Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
 
-       double initial_sti = get_sti(a);
+    AttentionBank& ab = attentionbank(as);
+    ab.set_sti(a, 100);
+    ab.set_lti(a, 100);
+    ab.set_sti(b, 200);
+    ab.set_lti(b, 200);
+    ab.set_sti(c, 100);
+    ab.set_lti(c, 100);
+
+    // Reference StochasticDiffusionAmountCalculator with the correct namespace
+    opencog::ecan::StochasticDiffusionAmountCalculator& sdac = _wagent->_sdac;
+    HandleSeq targetSet = {a};
+    // Initialize diffusion bins for test atoms
+    sdac.update_bin(a);
+    sdac.update_bin(b);
+    sdac.update_bin(c);
+
+    // Wait briefly so that elapsed time is nonzero
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+    double initial_sti = get_sti(a);
     double initial_lti = get_lti(a);
+
+    // Call collectRent to deduct rent from the atom
   
+    _wagent->collectRent(targetSet);
 
-        // Call collectRent to deduct rent from the atom.
-        _wagent->collectRent(targetSet);
+    double final_sti = get_sti(a);
+    double final_lti = get_lti(a);
 
-        double final_sti = get_sti(a);
-        double final_lti = get_lti(a);
-     
+    // Verify that the rent has been collected (the values are decreased)
+    TS_ASSERT_LESS_THAN(final_sti, initial_sti);
+    TS_ASSERT_LESS_THAN(final_lti, initial_lti);
 
-        // Verify that the rent has been collected (the values are decreased).
-       TS_ASSERT_LESS_THAN(final_sti, initial_sti);
-     TS_ASSERT_LESS_THAN(final_lti, initial_lti);
-       std::cout << "testCollectRent passed" << std::endl;
-    }
-
-
+    std::cout << "testCollectRent passed" << std::endl;
+}
     
 };
