@@ -66,7 +66,11 @@ public:
         Handle target1 = as->add_node(CONCEPT_NODE, "Target1");
         Handle target2 = as->add_node(CONCEPT_NODE, "Target2");
 
+        std::cout << std::endl;
+        std::cout << std::endl;
         std::cout << "Atoms created: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
 
         // Set truth values for each node
         double initialConfidence = 0.9;
@@ -75,12 +79,17 @@ public:
         target2->setTruthValue(SimpleTruthValue::createTV(0.7, initialConfidence));
 
         std::cout << "Truth values set: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
+
 
         // Create a Hebbian link between source and target nodes
         Handle hebbianLink = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source, target1);
         hebbianLink->setTruthValue(SimpleTruthValue::createTV(0.01, initialConfidence));
         
         std::cout << "Hebbian link created between Source and Target1 with initial truth value 0.01 "<< hebbianLink->to_string() << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
 
         // Stimulate the atoms to bring them into the attentional focus
         AttentionBank& ab = attentionbank(as);
@@ -89,11 +98,15 @@ public:
         ab.stimulate(target2, 100);
 
         std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
 
         // Run the HebbianUpdatingAgent to update the Hebbian links
         hebbianUpdatingAgent->run();
 
         std::cout << "HebbianUpdatingAgent run completed." << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
 
         // Retrieve the updated truth value of the Hebbian link
         TruthValuePtr updatedTV = hebbianLink->getTruthValue();
@@ -101,6 +114,8 @@ public:
 
         std::cout << "Updated truth value of Hebbian link: " << updatedMean << std::endl;
         std::cout << "Hebbian link updated"<< hebbianLink->to_string() << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
 
         // Check that the truth value of the link has changed based on the agent's logic
         // Intentionally made error by making the mean 0.9 so that we can see what's happening

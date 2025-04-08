@@ -56,7 +56,7 @@ class AttentionBank
     std::mutex _mtx; // For synchronizing STI & LTI funds update
     std::mutex AFMutex; // For AF fetching and update
 
-    unsigned int maxAFSize;
+    unsigned int maxAFSize = 4;
     struct compare_sti_less {
         bool operator()(const std::pair<Handle, AttentionValuePtr>& h1,
                         const std::pair<Handle, AttentionValuePtr>& h2) const

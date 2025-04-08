@@ -100,8 +100,10 @@ void HebbianUpdatingAgent::updateHebbianLinks(Handle source)
     double tc, old_tc, new_tc;
 
     IncomingSet links = source->getIncomingSetByType(ASYMMETRIC_HEBBIAN_LINK);
+    std::cout << "inside update hebbina link function" << std::endl;
 
     for (const Handle& h : links) {
+        std::cout << "inside update hebbina link function for loop section" << std::endl;
         if (source != h->getOutgoingAtom(0))
             continue;
         const HandleSeq& outgoing = h->getOutgoingSet();

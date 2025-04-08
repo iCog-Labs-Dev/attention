@@ -72,7 +72,7 @@ public:
         _scheduler = &agmod->get_scheduler();
 
         AttentionParamQuery _atq(&cogserver().getAtomSpace());
-        _atq.load_default_values(); // Load default ECAN param values into AS
+        // _atq.load_default_values(); // Load default ECAN param values into AS
 
         Factory<HebbianCreationAgent, Agent> hebbianCreationFactory;
         _scheduler->registerAgent(HebbianCreationAgent::info().id,&hebbianCreationFactory);
@@ -81,6 +81,7 @@ public:
 
         as = &cogserver().getAtomSpace();
         std:: cout << "HebbianCreationAgent registered" << std::endl;
+    
     }
 
     void testHebbianLinkCreation(void)
@@ -110,6 +111,9 @@ public:
         Handle slimy = as->add_node(
             PREDICATE_NODE, "slimy");
         slimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
+        Handle big = as->add_node(
+            PREDICATE_NODE, "big");
+        slimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
 
 
         Handle kermitFrog = as->add_link(
@@ -132,6 +136,10 @@ public:
         Handle slimyAnimal = as->add_link(
                     EVALUATION_LINK, animal, slimy);
         slimyAnimal->setTruthValue(
+                    SimpleTruthValue::createTV(0.9, conf90));
+        Handle bigAnimal = as->add_link(
+                    EVALUATION_LINK, animal, big);
+        bigAnimal->setTruthValue(
                     SimpleTruthValue::createTV(0.9, conf90));
 
         // Populate the AtomSpace with some additional dummy atoms
@@ -158,16 +166,22 @@ public:
 
         // Put these atoms in the AttentionalFocus:
         // "Kermit", "Frog", "Animal", "alive"
-        ab.stimulate(kermit, 200);
-        ab.stimulate(frog, 200);
-        ab.stimulate(animal, 200);
+        AttentionParamQuery atq(as);
+        cout << "max AF sizeeee: "<< atq.get_param_value("MAX_AF_SIZE") << endl;
+        
+        
+        ab.stimulate(kermit, 50);
+        ab.stimulate(frog, 100);
+        ab.stimulate(animal, 150);
         ab.stimulate(alive, 200);
-        ab.stimulate(slimyAnimal, 200);
+        ab.stimulate(slimyAnimal, 250);
+        ab.stimulate(bigAnimal, 300);
+       
 
         HandleSeq attentionalFocus;
         ab.get_handle_set_in_attentional_focus(back_inserter(attentionalFocus));
-        cout << "AF: "<< endl;
-        TS_ASSERT_EQUALS(attentionalFocus.size() , 5);
+        // cout << "Atoms in attentional focus: "<< attentionalFocus << endl;
+        TS_ASSERT_EQUALS(attentionalFocus.size() , 4);
     
 
         // Allow the events to propagate
@@ -189,7 +203,8 @@ public:
         HandleSeq hebbianLinks;
         as->get_handles_by_type(back_inserter(hebbianLinks), ASYMMETRIC_HEBBIAN_LINK);
         std::cout << "count(HebLinks) = " << hebbianLinks.size() << "\n";
-        TS_ASSERT(hebbianLinks.size() == 20);
+        std::cout << "hebbianLinks: " << hebbianLinks << std::endl;
+        TS_ASSERT(hebbianLinks.size() == 28);
 
         _scheduler->stopAgent(_hebbiancreation_agentptr);
     }

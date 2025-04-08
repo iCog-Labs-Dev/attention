@@ -86,6 +86,8 @@ RUN cd /app/attention \
 
 CMD ["/bin/bash"]
 
+RUN apt update && apt install -y coreutils vim nano
+
 
 # Docker Commands
     # sudo docker build -t attention .

@@ -42,7 +42,7 @@ AttentionBank::AttentionBank(AtomSpace* asp)
     targetSTI = 10000;
     STIAtomWage = 10;
     LTIAtomWage = 10;
-    maxAFSize = 100;
+    maxAFSize = 4;
 
     _as = asp;
     _remove_signal = &asp->atomRemovedSignal();
