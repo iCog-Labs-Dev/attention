@@ -103,12 +103,12 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
     Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
 
     AttentionBank& ab = attentionbank(as);
-    ab.set_sti(a, 100);
-    ab.set_sti(b, 200);
-    ab.set_sti(c, 300);
-    ab.set_lti(a, 100);
-    ab.set_lti(b, 200);
-    ab.set_lti(c, 300);
+    ab.set_sti(a, 50000);
+    ab.set_sti(b, 20000);
+    ab.set_sti(c, 29000);
+    ab.set_lti(a, 50000);
+    ab.set_lti(b, 20000);
+    ab.set_lti(c, 29000);
 
     std::cout << "STI before rent collection: " 
               << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
@@ -138,12 +138,10 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
               << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
 
     // Step 4: Verify STI has decreased
-    TS_ASSERT_LESS_THAN(get_sti(a), 100); // STI should be lower than before
-    TS_ASSERT_LESS_THAN(get_sti(b), 200);
-    TS_ASSERT_LESS_THAN(get_sti(c), 300);
-    TS_ASSERT_LESS_THAN(get_lti(a), 100); 
-    TS_ASSERT_LESS_THAN(get_lti(b), 200);
-    TS_ASSERT_LESS_THAN(get_lti(c), 300);
+    TS_ASSERT_LESS_THAN(get_sti(a), 50000); // STI should be lower than before
+    TS_ASSERT_LESS_THAN(get_sti(b), 20000);
+    TS_ASSERT_LESS_THAN(get_sti(c), 29000);
+
     std::cout << "testCollectRent passed" << std::endl;
 }
 

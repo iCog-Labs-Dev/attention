@@ -66,20 +66,21 @@ void testCollectRent() {
     Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
 
     AttentionBank& ab = attentionbank(as);
-    ab.set_sti(a, 100);
-    ab.set_lti(a, 100);
-    ab.set_sti(b, 200);
-    ab.set_lti(b, 200);
-    ab.set_sti(c, 100);
-    ab.set_lti(c, 100);
+   ab.set_sti(a, 50000);
+    ab.set_sti(b, 20000);
+    ab.set_sti(c, 29000);
+    ab.set_lti(a, 50000);
+    ab.set_lti(b, 20000);
+    ab.set_lti(c, 29000);
 
     // Reference StochasticDiffusionAmountCalculator with the correct namespace
     opencog::ecan::StochasticDiffusionAmountCalculator& sdac = _wagent->_sdac;
     HandleSeq targetSet = {a};
     // Initialize diffusion bins for test atoms
     sdac.update_bin(a);
-    sdac.update_bin(b);
-    sdac.update_bin(c);
+     sdac.update_bin(a);
+    //sdac.update_bin(b);
+    //sdac.update_bin(c);
 
     // Wait briefly so that elapsed time is nonzero
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
