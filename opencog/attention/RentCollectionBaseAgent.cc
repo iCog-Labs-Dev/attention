@@ -74,6 +74,7 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_LTI_Rent()
     double ndiff = diff / ltiFundsBuffer;
     ndiff = std::min(ndiff, 1.0);
     ndiff = std::max(ndiff, -1.0);
+    std::cout << "Calculated lti Rent: " << LTIAtomRent + (LTIAtomRent * ndiff)<< std::endl;
 
     return LTIAtomRent + (LTIAtomRent * ndiff);
 }

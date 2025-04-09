@@ -113,17 +113,18 @@ std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")
 
     // ✅ **Manually set STI/LTI values for atoms**
     AttentionBank& ab = attentionbank(_as);
-     Handle a = as->add_node(CONCEPT_NODE, "RentNode1");
-    Handle b = as->add_node(CONCEPT_NODE, "RentNode2");
-    Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
+    Handle a= _as->add_node(CONCEPT_NODE, "Atom1");
+    Handle b= _as->add_node(CONCEPT_NODE, "Atom2");
+    //Handle c= _as->add_node(CONCEPT_NODE, "Atom3");
+    //ab.stimulate(a, 3000.0);
+    //ab.stimulate(b, 1500.0);
+    //ab.stimulate(c, 290.0);
 
-    AttentionBank& ab = attentionbank(as);
-   ab.set_sti(a, 50000);
-    ab.set_sti(b, 20000);
-    ab.set_sti(c, 29000);
-    ab.set_lti(a, 50000);
-    ab.set_lti(b, 20000);
-    ab.set_lti(c, 29000);
+    ab.set_sti(a, 80000.0);  // 🔹 Set STI funds lower than target
+    ab.set_sti(b, 15000.0);
+
+    ab.set_lti(a, 80000.0);  // 🔹 Set LTI funds lower than target
+    ab.set_lti(b, 15000.0);
 
     // ✅ **Calculate rent after applying new parameters**
     double calculatedSTIRent = _dummy_agent->calculate_STI_Rent();
@@ -132,8 +133,9 @@ std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")
 
 
     // ✅ **Ensure rent is greater than 0**
-     TS_ASSERT_EQUALS(calculatedSTIRent, 0.0);
-     TS_ASSERT_EQUALS(calculatedLTIRent, 0.0);
+     // Verify rent is greater than 0
+    TS_ASSERT(calculatedSTIRent > 0.0);
+    TS_ASSERT(calculatedLTIRent > 0.0);
    
     std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")<< std::endl;;
     std::cout << "STARTING_ATOM_STI_RENT: " << _atq->get_param_value("STARTING_ATOM_STI_RENT")<< std::endl;;
