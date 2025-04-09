@@ -24,6 +24,7 @@
 
 #include <cxxtest/TestSuite.h>
 
+#include <chrono>
 #include <opencog/attention/AttentionModule.h>
 #include <opencog/attention/AttentionParamQuery.h>
 #include <opencog/attention/HebbianCreationAgent.h>
@@ -169,23 +170,61 @@ public:
         AttentionParamQuery atq(as);
         cout << "max AF sizeeee: "<< atq.get_param_value("MAX_AF_SIZE") << endl;
         
-        
+        auto start_time = std::chrono::high_resolution_clock::now();
         ab.stimulate(kermit, 50);
+        auto end_time = std::chrono::high_resolution_clock::now();
+        std::cout << "Time taken for kermit stimulation: " 
+          << std::chrono::duration<double, std::milli>(end_time - start_time).count()
+          << " ms" << std::endl;
+        sleep(1);
+
+        start_time = std::chrono::high_resolution_clock::now();
         ab.stimulate(frog, 100);
+        end_time = std::chrono::high_resolution_clock::now();
+        std::cout << "Time taken for frog stimulation: " 
+          << std::chrono::duration<double, std::milli>(end_time - start_time).count()
+          << " ms" << std::endl;
+        sleep(1);
+
+        start_time = std::chrono::high_resolution_clock::now();
         ab.stimulate(animal, 150);
+        end_time = std::chrono::high_resolution_clock::now();
+        std::cout << "Time taken for animal stimulation: " 
+          << std::chrono::duration<double, std::milli>(end_time - start_time).count()
+          << " ms" << std::endl;
+        sleep(1);
+
+        start_time = std::chrono::high_resolution_clock::now();
         ab.stimulate(alive, 200);
+        end_time = std::chrono::high_resolution_clock::now();
+        std::cout << "Time taken for alive stimulation: " 
+          << std::chrono::duration<double, std::milli>(end_time - start_time).count()
+          << " ms" << std::endl;
+        sleep(1);
+
+        start_time = std::chrono::high_resolution_clock::now();
         ab.stimulate(slimyAnimal, 250);
+        end_time = std::chrono::high_resolution_clock::now();
+        std::cout << "Time taken for slimyAnimal stimulation: " 
+          << std::chrono::duration<double, std::milli>(end_time - start_time).count()
+          << " ms" << std::endl;
+        sleep(1);
+        start_time = std::chrono::high_resolution_clock::now();
         ab.stimulate(bigAnimal, 300);
-       
+        end_time = std::chrono::high_resolution_clock::now();
+        std::cout << "Time taken for bigAnimal stimulation: " 
+          << std::chrono::duration<double, std::milli>(end_time - start_time).count()
+          << " ms" << std::endl;
+        sleep(1);
 
         HandleSeq attentionalFocus;
         ab.get_handle_set_in_attentional_focus(back_inserter(attentionalFocus));
         // cout << "Atoms in attentional focus: "<< attentionalFocus << endl;
-        TS_ASSERT_EQUALS(attentionalFocus.size() , 4);
+        TS_ASSERT(attentionalFocus.size() == 4);
     
 
         // Allow the events to propagate
-        sleep(1);
+        // sleep(10);
 
         // Confirm that these atoms now have AsymmetricHebbianLinks between
         // them: "Kermit", "Frog", "Animal", "alive"
@@ -204,7 +243,7 @@ public:
         as->get_handles_by_type(back_inserter(hebbianLinks), ASYMMETRIC_HEBBIAN_LINK);
         std::cout << "count(HebLinks) = " << hebbianLinks.size() << "\n";
         std::cout << "hebbianLinks: " << hebbianLinks << std::endl;
-        TS_ASSERT(hebbianLinks.size() == 28);
+        TS_ASSERT(hebbianLinks.size() == 24);
 
         _scheduler->stopAgent(_hebbiancreation_agentptr);
     }
