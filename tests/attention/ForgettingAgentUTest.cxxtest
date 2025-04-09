@@ -93,7 +93,8 @@ public:
     Handle link_3 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, animal, d);
     link_3->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
 
-    std::cout << "after printing the size of the atomspace" << std::endl;
+    std::cout << "\nbefore printing the size of the atomspace" << std::endl;
+    std::cout << "size of atomspace is: " << this->as->get_size() << std::endl;
     TS_ASSERT_EQUALS(this->as->get_size() ,10);
     std::cout << "after printing the size of the atomspace" << std::endl;
     // set lti values for atoms in atomspace
@@ -132,6 +133,9 @@ public:
     int forgettingThreshold = config().get_int("ECAN_FORGET_THRESHOLD"); 
     int maxSize = config().get_int("ECAN_ATOMSPACE_MAXSIZE"); 
     int accDivSize = config().get_int("ECAN_ATOMSPACE_ACCEPTABLE_SIZE_SPREAD"); 
+    std::cout << "forgettingThreshold: " << forgettingThreshold << std::endl;
+    std::cout << "maxSize: " << maxSize << std::endl;
+    std::cout << "accDivSize: " << accDivSize << std::endl;
 
     // assert whethere configurations are set correctly
     TS_ASSERT_EQUALS(forgettingThreshold, 5);

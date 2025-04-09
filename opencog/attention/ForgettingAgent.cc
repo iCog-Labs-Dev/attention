@@ -96,12 +96,18 @@ void ForgettingAgent::forget()
     // fprintf(stdout,"Forgetting Stuff, Atomspace Size: %d \n",asize);
     // Sort atoms by lti, remove the lowest unless vlti is NONDISPOSABLE
     std::sort(atomsVector.begin(), atomsVector.end(), ForgettingLTIThenTVAscendingSort(_as));
+    std:: cout << "which atoms are inside atom vector \n" << atomsVector << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << std::endl;
 
     removalAmount = asize - (maxSize - accDivSize);
     _log->info("ForgettingAgent::forget - will attempt to remove %d atoms", removalAmount);
-    
+    // std::cout << "ForgettingAgent::forget - will attempt to remove " << removalAmount << " atoms" << std::endl;
+
     for (auto atom : atomsVector)
     {
+        // std::cout << "atom: " << atom->to_string() << std::endl;
         // fprintf(stdout, "inside the loop removalAmount: %d count: %d ltiAt: %f\n", removalAmount, count, get_lti(atomsVector[i]));
         if (get_lti(atom) <= forgetThreshold
                 and count < removalAmount)
@@ -109,8 +115,9 @@ void ForgettingAgent::forget()
             if (get_vlti(atom) == AttentionValue::DISPOSABLE )
             {
                 std::string atomName = atom->to_string();
-                fprintf(stdout, "atomName %s\n", atomName);
+                // fprintf(stdout, "atomName %s\n", atomName);
                 _log->fine("Removing atom %s", atomName.c_str());
+                // std::cout << "Removing atom " << atomName << std::endl;
                 // TODO: do recursive remove if neighbours are not very important
                 IncomingSet iset = atom->getIncomingSet(_as);
                 recursive = true;
