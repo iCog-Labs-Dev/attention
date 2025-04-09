@@ -115,10 +115,10 @@ std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")
     AttentionBank& ab = attentionbank(_as);
     Handle a= _as->add_node(CONCEPT_NODE, "Atom1");
     Handle b= _as->add_node(CONCEPT_NODE, "Atom2");
-    //Handle c= _as->add_node(CONCEPT_NODE, "Atom3");
-    //ab.stimulate(a, 3000.0);
+    Handle c= _as->add_node(CONCEPT_NODE, "Atom3");
+    //ab.stimulate(a, 5000.0);
     //ab.stimulate(b, 1500.0);
-    //ab.stimulate(c, 290.0);
+    //ab.stimulate(c, 2900.0);
 
     ab.set_sti(a, 80000.0);  // 🔹 Set STI funds lower than target
     ab.set_sti(b, 15000.0);

@@ -163,6 +163,7 @@ public:
         ab.stimulate(animal, 200);
         ab.stimulate(alive, 200);
         ab.stimulate(slimyAnimal, 200);
+       
 
         HandleSeq attentionalFocus;
         ab.get_handle_set_in_attentional_focus(back_inserter(attentionalFocus));

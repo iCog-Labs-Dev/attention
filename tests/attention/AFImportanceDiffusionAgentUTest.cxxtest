@@ -107,6 +107,9 @@ public:
         ab.stimulate(target4, 400);
         ab.stimulate(target5, 400);
         ab.stimulate(target6, 0);
+        
+        AttentionValuePtr aval = get_av(source);
+        TS_ASSERT_EQUALS(aval->getLTI(), 7);
 
         // std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
 

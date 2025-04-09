@@ -108,8 +108,9 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
         ab.stimulate(c, 290.0);
 
        
-
-
+//TS_ASSERT_EQUALS(get_sti(a),60000.0 );
+//TS_ASSERT_EQUALS(get_sti(b), 30000.0);
+//TS_ASSERT_EQUALS(get_sti(c), 2900.0);
     std::cout << "STI before rent collection: " 
               << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
 
