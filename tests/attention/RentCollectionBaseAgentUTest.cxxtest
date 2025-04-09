@@ -116,32 +116,35 @@ std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")
     Handle a= _as->add_node(CONCEPT_NODE, "Atom1");
     Handle b= _as->add_node(CONCEPT_NODE, "Atom2");
     Handle c= _as->add_node(CONCEPT_NODE, "Atom3");
-    //ab.stimulate(a, 5000.0);
-    //ab.stimulate(b, 1500.0);
-    //ab.stimulate(c, 2900.0);
 
-    ab.set_sti(a, 80000.0);  // 🔹 Set STI funds lower than target
-    ab.set_sti(b, 15000.0);
+       //**Calculate rent after applying new parameters**
+    double calculatedBeforeSTIRent = _dummy_agent->calculate_STI_Rent();
+    double calculatedBeforeLTIRent = _dummy_agent->calculate_LTI_Rent();
+  //Calculate rent before applying new parameters
+    TS_ASSERT_EQUALS(calculatedBeforeSTIRent,0.0); 
+    TS_ASSERT_EQUALS(calculatedBeforeLTIRent,0.0);
+    
+    ab.stimulate(a, 290.0);
+    ab.stimulate(b, 500.0);
+    ab.stimulate(c, 25000.0);
 
-    ab.set_lti(a, 80000.0);  // 🔹 Set LTI funds lower than target
-    ab.set_lti(b, 15000.0);
+    double calculatedAfterSTIRent = _dummy_agent->calculate_STI_Rent();
+    double calculatedAfterLTIRent = _dummy_agent->calculate_LTI_Rent();
 
-    // ✅ **Calculate rent after applying new parameters**
-    double calculatedSTIRent = _dummy_agent->calculate_STI_Rent();
-    double calculatedLTIRent = _dummy_agent->calculate_LTI_Rent();
+ 
 
 
 
     // ✅ **Ensure rent is greater than 0**
      // Verify rent is greater than 0
-    TS_ASSERT(calculatedSTIRent > 0.0);
-    TS_ASSERT(calculatedLTIRent > 0.0);
+    TS_ASSERT(calculatedAfterSTIRent > 0.0);
+    TS_ASSERT(calculatedAfterLTIRent > 0.0);
    
     std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")<< std::endl;;
     std::cout << "STARTING_ATOM_STI_RENT: " << _atq->get_param_value("STARTING_ATOM_STI_RENT")<< std::endl;;
     std::cout << "STI_FUNDS_BUFFER: " <<  _atq->get_param_value("STI_FUNDS_BUFFER")<< std::endl;;
-    std::cout << "Calculated STI Rent: " << calculatedSTIRent << std::endl;
-    std::cout << "Calculated LTI Rent: " << calculatedLTIRent << std::endl;
+    std::cout << "Calculated STI Rent: " << calculatedAfterSTIRent << std::endl;
+    std::cout << "Calculated LTI Rent: " << calculatedAfterLTIRent << std::endl;
 }
 
 
