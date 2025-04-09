@@ -67,7 +67,7 @@ void HebbianUpdatingAgent::run()
     std::uniform_int_distribution<int> distribution(0,size-1);
 
     Handle source = atoms[distribution(generator)];
-
+    std::cout<<"the selected atom is source: " << source->to_string() << std::endl;
     updateHebbianLinks(source);
 
   //Experimental Code
