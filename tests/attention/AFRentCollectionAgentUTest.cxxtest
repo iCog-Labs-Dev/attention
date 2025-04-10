@@ -119,7 +119,8 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
               << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
 
     // Step 2: Add atoms to a HandleSeq (targetSet)
-    HandleSeq targetSet = {a, b, c};
+    HandleSeq targetSet;
+        _afrentcollection_agent->selectTargets(targetSet);
 
     // Step 3: Call collectRent in a loop until enough time has passed
     auto start_time = std::chrono::high_resolution_clock::now();
