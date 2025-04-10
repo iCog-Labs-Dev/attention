@@ -88,7 +88,6 @@ void testCollectRent() {
          _wagent->selectTargets(targetSet);
 
     TS_ASSERT_EQUALS(targetSet.size(), 1);
-    // Initialize diffusion bins for test atoms
     sdac.update_bin(a);
     sdac.update_bin(b);
     sdac.update_bin(c);
