@@ -61,52 +61,39 @@ public:
     }
 
 
-    void testSelectTargets(){
-    Handle f = as->add_node(CONCEPT_NODE, "RentNode1");
-    Handle g = as->add_node(CONCEPT_NODE, "RentNode2");
-    Handle h = as->add_node(CONCEPT_NODE, "RentNode3");
-    Handle d = as->add_node(CONCEPT_NODE, "RentNode4");
-    Handle e = as->add_node(CONCEPT_NODE, "RentNode5");
-
-    AttentionBank& ab = attentionbank(as);
-    ab.stimulate(f, 100.0);
-    ab.stimulate(g, 300.0);
-    ab.stimulate(d, 400.0);
-    ab.stimulate(e, 500.0);
-         
-     
-       
-
-        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
-
-        HandleSeq targetSet;
-         _wagent->selectTargets(targetSet);
-
-        //TS_ASSERT_EQUALS(targetSet.size(), 1);
-        std::cout << "testSelectTargets passed" << std::endl;
-
-    }
 void testCollectRent() {
     // Create atoms for rent collection testing
     Handle a = as->add_node(CONCEPT_NODE, "RentNode1");
     Handle b = as->add_node(CONCEPT_NODE, "RentNode2");
     Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
+    Handle d = as->add_node(CONCEPT_NODE, "RentNode4");
+    Handle e = as->add_node(CONCEPT_NODE, "RentNode5");
 
     AttentionBank& ab = attentionbank(as);
-    ab.stimulate(a, 90.0);
-    ab.stimulate(b, 500.0);
-    ab.stimulate(c, 4000.0);
-    TS_ASSERT_EQUALS(get_sti(a), 3800.0); 
-    TS_ASSERT_EQUALS(get_sti(b), 16000.0);
-    TS_ASSERT_EQUALS(get_sti(c), 80000.0);
+    ab.stimulate(a, 40.0);
+    ab.stimulate(b, 50.0);
+    ab.stimulate(c, 100.0);
+    ab.stimulate(d, 500.0);
+    ab.stimulate(e, 4000.0);
+    TS_ASSERT_EQUALS(get_sti(a), 800.0); 
+    TS_ASSERT_EQUALS(get_sti(b), 1000.0);
+    TS_ASSERT_EQUALS(get_sti(c), 2000.0);
+    TS_ASSERT_EQUALS(get_sti(d), 10000.0);
+    TS_ASSERT_EQUALS(get_sti(e), 80000.0);
 
     // Reference StochasticDiffusionAmountCalculator with the correct namespace
     opencog::ecan::StochasticDiffusionAmountCalculator& sdac = _wagent->_sdac;
-    HandleSeq targetSet = {a};
+
+    HandleSeq targetSet;
+         _wagent->selectTargets(targetSet);
+
+    TS_ASSERT_EQUALS(targetSet.size(), 1);
     // Initialize diffusion bins for test atoms
     sdac.update_bin(a);
     sdac.update_bin(b);
     sdac.update_bin(c);
+    sdac.update_bin(d);
+    sdac.update_bin(e);
 
 
 
@@ -117,9 +104,11 @@ void testCollectRent() {
     // Call collectRent to deduct rent from the atom
   
     _wagent->collectRent(targetSet);
-    TS_ASSERT_LESS_THAN(get_sti(a), 3800.0); 
-    TS_ASSERT_EQUALS(get_sti(b), 16000.0);
-    TS_ASSERT_EQUALS(get_sti(c), 80000.0);
+    TS_ASSERT_LESS_THAN(get_sti(a),800.0); 
+    TS_ASSERT_EQUALS(get_sti(b), 1000.0);
+    TS_ASSERT_EQUALS(get_sti(c), 2000.0);
+    TS_ASSERT_EQUALS(get_sti(d), 10000.0);
+    TS_ASSERT_EQUALS(get_sti(e), 80000.0);
 
     std::cout << "testCollectRent passed" << std::endl;
 }

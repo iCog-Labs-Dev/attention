@@ -63,39 +63,6 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
         std::cout << "TearDown completed for AFRentCollectionAgentTest." << std::endl;
     }
 
-    void testSelectTargets(){
-
-        // create sample atoms in atomspace
-        Handle a = as->add_node(CONCEPT_NODE, "node1");
-        Handle b = as->add_node(CONCEPT_NODE, "node2");
-       
-
-        std::cout << "Nodes created" << std::endl;
-
-        // why do we intialize attention bank like this here, why not like cogserver or scheduler"
-
-        AttentionBank& ab = attentionbank(as);
-        ab.stimulate(a, 3000.0);
-        ab.stimulate(b, 1500.0);
-        
-         
-     
-       
-
-        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
-
-        HandleSeq targetSet;
-        _afrentcollection_agent->selectTargets(targetSet);
-
-        TS_ASSERT_EQUALS(targetSet.size(), 2);
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), a) != targetSet.end());
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), b) != targetSet.end());
-        
-
-        std::cout << "testSelectTargets passed" << std::endl;
-
-    }
-
   void testCollectRent() {
     // Step 1: Create and stimulate some atoms
     Handle a = as->add_node(CONCEPT_NODE, "RentNode1");
@@ -103,16 +70,16 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
     Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
 
     AttentionBank& ab = attentionbank(as);
-    ab.stimulate(a, 290.0);
+    ab.stimulate(a, 90.0);
     ab.stimulate(b, 500.0);
-    ab.stimulate(c, 25000.0);
+    ab.stimulate(c, 4000.0);
 
    
     
 
-    TS_ASSERT_EQUALS(get_sti(a), 2900.0); 
-    TS_ASSERT_EQUALS(get_sti(b), 3550.0);
-    TS_ASSERT_EQUALS(get_sti(c), 88750.0);
+    TS_ASSERT_EQUALS(get_sti(a), 1800.0); 
+    TS_ASSERT_EQUALS(get_sti(b), 10000.0);
+    TS_ASSERT_EQUALS(get_sti(c), 80000.0);
     
     
     std::cout << "STI before rent collection: " 
@@ -121,6 +88,8 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
     // Step 2: Add atoms to a HandleSeq (targetSet)
     HandleSeq targetSet;
         _afrentcollection_agent->selectTargets(targetSet);
+
+    TS_ASSERT_EQUALS(targetSet.size(), 3);
 
     // Step 3: Call collectRent in a loop until enough time has passed
     auto start_time = std::chrono::high_resolution_clock::now();
@@ -144,9 +113,9 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
               << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
 
     // Step 4: Verify STI has decreased
-    TS_ASSERT_LESS_THAN(get_sti(a), 2900.0); // STI should be lower than before
-    TS_ASSERT_LESS_THAN(get_sti(b), 3550.0);
-    TS_ASSERT_LESS_THAN(get_sti(c), 88750.0);
+    TS_ASSERT_LESS_THAN(get_sti(a), 1800.0); // STI should be lower than before
+    TS_ASSERT_LESS_THAN(get_sti(b), 10000.0);
+    TS_ASSERT_LESS_THAN(get_sti(c), 80000.0);
 
     std::cout << "testCollectRent passed" << std::endl;
 }
