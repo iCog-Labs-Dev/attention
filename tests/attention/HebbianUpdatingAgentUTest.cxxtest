@@ -103,34 +103,41 @@ public:
         // Stimulate the atoms to bring them into the attentional focus
         AttentionBank& ab = attentionbank(as);
         ab.stimulate(source, 50);
+        sleep(1);
+
         ab.stimulate(target1, 100);
+        sleep(1);
+
         ab.stimulate(target2, 150);
+        sleep(1);
         ab.stimulate(target3, 200);
+        sleep(1);
         ab.stimulate(target4, 250);
 
         std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
+        sleep(10);
 
         // Run the HebbianUpdatingAgent to update the Hebbian links
         hebbianUpdatingAgent->run();
 
         std::cout << "HebbianUpdatingAgent run completed." << std::endl;
 
-        // Retrieve the updated truth value of the Hebbian link
-        //TruthValuePtr updatedTV = hebbianLink->getTruthValue();
-        //double updatedMean = updatedTV->get_mean();
+        // // Retrieve the updated truth value of the Hebbian link
+        // TruthValuePtr updatedTV = hebbianLink->getTruthValue();
+        // double updatedMean = updatedTV->get_mean();
 
-        //std::cout << "Updated truth value of Hebbian link: " << updatedMean << std::endl;
-        std::cout<<"Link0" << hebbianLink->to_string() << std::endl;
-        std::cout<<"Link1" << hebbianLink1->to_string() <<std::endl;
-        std::cout<<"Link2" << hebbianLink2->to_string() <<std::endl;
-        std::cout<<"Link3" << hebbianLink3->to_string() <<std::endl;
-        std::cout<<"Link4" << hebbianLink4->to_string() <<std::endl;
-        std::cout<<"Link5" << hebbianLink5->to_string() <<std::endl;
-        std::cout<<"Link6" << hebbianLink6->to_string() <<std::endl;
-        std::cout<<"Link7" << hebbianLink7->to_string() <<std::endl;
+        // std::cout << "Updated truth value of Hebbian link: " << updatedMean << std::endl;
+        std::cout<<"Link0 " << hebbianLink->getTruthValue()->get_mean() << std::endl;
+        std::cout<<"Link1 " << hebbianLink1->getTruthValue()->get_mean()<<std::endl;
+        std::cout<<"Link2 " << hebbianLink2->getTruthValue()->get_mean() <<std::endl;
+        std::cout<<"Link3 " << hebbianLink3->getTruthValue()->get_mean() <<std::endl;
+        std::cout<<"Link4 " << hebbianLink4->getTruthValue()->get_mean() <<std::endl;
+        std::cout<<"Link5 " << hebbianLink5->getTruthValue()->get_mean() <<std::endl;
+        std::cout<<"Link6 " << hebbianLink6->getTruthValue()->get_mean() <<std::endl;
+        std::cout<<"Link7 " << hebbianLink7->getTruthValue()->get_mean() <<std::endl;
         // Check that the truth value of the link has changed based on the agent's logic
         // Intentionally made error by making the mean 0.9 so that we can see what's happening
 
-        TS_ASSERT_DELTA(1, 100, 0.01); // Expected value within a delta range
+        // TS_ASSERT_DELTA(1, 100, 0.01); // Expected value within a delta range
     }
 };

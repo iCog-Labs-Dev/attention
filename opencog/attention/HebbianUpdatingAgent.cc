@@ -67,6 +67,7 @@ void HebbianUpdatingAgent::run()
     std::uniform_int_distribution<int> distribution(0,size-1);
 
     Handle source = atoms[distribution(generator)];
+    std::cout << "source: " << source->to_string() << std::endl;
 
     updateHebbianLinks(source);
 
@@ -100,15 +101,20 @@ void HebbianUpdatingAgent::updateHebbianLinks(Handle source)
     double tc, old_tc, new_tc;
 
     IncomingSet links = source->getIncomingSetByType(ASYMMETRIC_HEBBIAN_LINK);
-    std::cout << "inside update hebbina link function" << std::endl;
-
+    // std::cout << "inside update hebbina link function" << std::endl;
+    std::cout << "this are the links \n"<< links << std::endl;
     for (const Handle& h : links) {
         std::cout << "inside update hebbina link function for loop section" << std::endl;
+        std::cout << std::endl;
+        std::cout << std::endl;
+        std::cout << "h: " << h->to_string() << std::endl;
         if (source != h->getOutgoingAtom(0))
+            // std::cout << "we jumbed "<< h->to_string() <<" here "<< std::endl;
             continue;
         const HandleSeq& outgoing = h->getOutgoingSet();
+        std::cout << "outgoing: " << outgoing << std::endl;
         new_tc = targetConjunction(outgoing);
-
+        std::cout << "new_tc: " << new_tc << std::endl;
         // old link strength decays
         TruthValuePtr oldtv  = h->getTruthValue();
         old_tc = oldtv->get_mean();
@@ -116,8 +122,12 @@ void HebbianUpdatingAgent::updateHebbianLinks(Handle source)
         std::cout<<"tc: "<<tc<<std::endl;
         //update truth value accordingly
         TruthValuePtr newtv = SimpleTruthValue::createTV(tc, 0.1);
+        std::cout << "before merged value" << h->getTruthValue()->to_string() << std::endl;
+        std::cout << std::endl;
         h->setTruthValue(h->getTruthValue()->merge(newtv));
-        std::cout<<"after truthvalue update" << h->to_string()<<std::endl;
+        std::cout << "after merged value" << h->getTruthValue()->to_string() << std::endl;
+        std::cout << std::endl;
+        std::cout<<"after truthvalue update " << h->to_string()<<std::endl;
     }
 }
 
@@ -136,6 +146,6 @@ double HebbianUpdatingAgent::targetConjunction(HandleSeq handles)
 
     conj = (conj + 1.0) / 2.0;
     std::cout<<"av: " << (*get_av(handles[0])).to_string()<<std::endl;
-    std::cout << " Handles: " <<handles[0]->to_string() <<" normsti_i: " <<normsti_i <<"normsti_j: "<<normsti_j<<" conj: "<<conj<<std::endl;
+    std::cout << " Handles: " <<handles[0]->to_string() <<" normsti_i: " <<normsti_i <<" normsti_j: "<<normsti_j<<" conj: "<<conj<<std::endl;
     return conj;
 }
