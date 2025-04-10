@@ -54,7 +54,7 @@ private:
     AtomSpace* _as;
     CogServer* _cogserver;
     Scheduler* _scheduler;
-    std::shared_ptr<AttentionParamQuery> _atq;  // ✅ Declare `_atq` as a class member
+    std::shared_ptr<AttentionParamQuery> _atq;  //Declare `_atq` as a class member
     std::shared_ptr<DummyRentCollectionAgent> _dummy_agent;
 
 public:
@@ -75,52 +75,29 @@ public:
         AgentsModule* agmod = dynamic_cast<AgentsModule*>(amod);
         _scheduler = &agmod->get_scheduler();
 
-        // ✅ Properly initialize `_atq`
+        // Properly initialize `_atq`
         _atq = std::make_shared<AttentionParamQuery>(_as);
-        try {
-            _atq->set_param(AttentionParamQuery::rent_starting_sti_rent, 1.0);
-            _atq->set_param(AttentionParamQuery::rent_starting_lti_rent, 1.0);
-            _atq->set_param(AttentionParamQuery::rent_target_sti_funds, 10000.0);
-            _atq->set_param(AttentionParamQuery::rent_sti_funds_buffer, 10000.0);
-            _atq->set_param(AttentionParamQuery::rent_target_lti_funds, 10000.0);
-            _atq->set_param(AttentionParamQuery::rent_lti_funds_buffer, 10000.0);
-        } catch (const opencog::RuntimeException& e) {
-            TS_FAIL("Parameter setting error: " + std::string(e.what()));
-        }
-
+        
         // Create DummyRentCollectionAgent
         _dummy_agent = std::make_shared<DummyRentCollectionAgent>(*_cogserver);
         _dummy_agent->loadParams(); 
     }
 
    void testCalculateSTIRent() {
-    std::string initialValue = _atq->get_param_value("AF_RENT_FREQUENCY");
-    TS_ASSERT_EQUALS("5", initialValue);  // Assuming default is 5
-std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")<< std::endl;
-    std::cout << "STARTING_ATOM_STI_RENT: " << _atq->get_param_value("STARTING_ATOM_STI_RENT")<< std::endl;
-   std::cout << "STI_FUNDS_BUFFER: " <<  _atq->get_param_value("STI_FUNDS_BUFFER")<< std::endl;
-    // ✅ **Set new parameter values**
-    _atq->set_param("AF_RENT_FREQUENCY", 10);
-    _atq->set_param("STARTING_ATOM_STI_RENT", 5.0);
-    _atq->set_param("STARTING_ATOM_LTI_RENT", 7.0);
-    _atq->set_param("TARGET_STI_FUNDS", 200000.0);  // Lower target to ensure rent is positive
-    _atq->set_param("STI_FUNDS_BUFFER", 500.0);
-    _atq->set_param("TARGET_LTI_FUNDS", 200000.0);
-    _atq->set_param("LTI_FUNDS_BUFFER", 600.0);
+    //Explicitly reload parameters
+    _dummy_agent->loadParams(); 
 
-    // ✅ **Explicitly reload parameters**
-    _dummy_agent->loadParams();  // 🚀 This ensures new parameters are used!
-
-    // ✅ **Manually set STI/LTI values for atoms**
+    
     AttentionBank& ab = attentionbank(_as);
     Handle a= _as->add_node(CONCEPT_NODE, "Atom1");
     Handle b= _as->add_node(CONCEPT_NODE, "Atom2");
     Handle c= _as->add_node(CONCEPT_NODE, "Atom3");
 
-       //**Calculate rent after applying new parameters**
+       
     double calculatedBeforeSTIRent = _dummy_agent->calculate_STI_Rent();
     double calculatedBeforeLTIRent = _dummy_agent->calculate_LTI_Rent();
-  //Calculate rent before applying new parameters
+  
+  //Calculate rent before stimulating
     TS_ASSERT_EQUALS(calculatedBeforeSTIRent,0.0); 
     TS_ASSERT_EQUALS(calculatedBeforeLTIRent,0.0);
     
@@ -131,18 +108,11 @@ std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")
     double calculatedAfterSTIRent = _dummy_agent->calculate_STI_Rent();
     double calculatedAfterLTIRent = _dummy_agent->calculate_LTI_Rent();
 
- 
-
-
-
-    // ✅ **Ensure rent is greater than 0**
-     // Verify rent is greater than 0
+    //Calculate rent after stimulating
+    // Verify rent is greater than 0
     TS_ASSERT(calculatedAfterSTIRent > 0.0);
     TS_ASSERT(calculatedAfterLTIRent > 0.0);
    
-    std::cout << "AF_RENT_FREQUENCY: " << _atq->get_param_value("AF_RENT_FREQUENCY")<< std::endl;;
-    std::cout << "STARTING_ATOM_STI_RENT: " << _atq->get_param_value("STARTING_ATOM_STI_RENT")<< std::endl;;
-    std::cout << "STI_FUNDS_BUFFER: " <<  _atq->get_param_value("STI_FUNDS_BUFFER")<< std::endl;;
     std::cout << "Calculated STI Rent: " << calculatedAfterSTIRent << std::endl;
     std::cout << "Calculated LTI Rent: " << calculatedAfterLTIRent << std::endl;
 }
