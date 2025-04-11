@@ -75,10 +75,12 @@ public:
     c->setTruthValue(SimpleTruthValue::createTV(0.1, conf90));
     Handle d = as->add_node(CONCEPT_NODE, "d");
     d->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
-    
-
     Handle e = as->add_node(CONCEPT_NODE, "e");
     e->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
+    Handle f = as->add_node(CONCEPT_NODE, "f");
+    f->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
+    Handle g = as->add_node(CONCEPT_NODE, "g");
+    g->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
 
     Handle kermit = as->add_node(
         CONCEPT_NODE, "Kermit");
@@ -89,12 +91,20 @@ public:
     Handle animal = as->add_node(
         CONCEPT_NODE, "Animal");
     animal->setTruthValue( SimpleTruthValue::createTV(0.2, conf90));
+    Handle amphibian = as->add_node(
+        CONCEPT_NODE, "Amphibian");
+    amphibian->setTruthValue( SimpleTruthValue::createTV(0.2, conf90));
 
-    Handle link_1 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, kermit, d);
-    link_1->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
-    Handle link_2 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, frog, d);
-    link_2->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
-    Handle link_3 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, animal, d);
+    // only stv, source > 5, target > 5
+    // Handle link_1 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, a, b);
+    // link_1->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+
+    // only stv, source < 5, target < 5
+    // Handle link_2 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, c, d);
+    // link_2->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
+
+    // stv & av, lit > 5, source > 5, target > 5
+    Handle link_3 = as->add_link(ASYMMETRIC_HEBBIAN_LINK, a, b);
     link_3->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
 
     std::cout << "\nbefore printing the size of the atomspace" << std::endl;
@@ -104,21 +114,44 @@ public:
     // set lti values for atoms in atomspace
     ab.set_lti(a, 7);
     ab.set_lti(b, 6);
-    ab.set_lti(c, 6);
-    ab.set_lti(d, 2);
-    ab.set_lti(e, 7);
-    ab.set_lti(link_4, 8);
+    ab.set_lti(c, 2);
+    ab.set_lti(d, 3);
 
-    ab.set_lti(kermit, 2);
-    ab.set_lti(frog, 2);
-    ab.set_lti(animal, 8);
+    ab.set_lti(e, 2);
+
+    ab.set_lti(kermit, 7);
+    ab.set_lti(frog, 9);
+    ab.set_lti(animal, 3);
+    ab.set_lti(amphibian, 1);
+
+    ab.set_lti(link_3, 8);
+    ab.set_lti(link_4, 8);
+    // ab.set_lti(link_5, 4);
+    // ab.set_lti(link_6, 4);
+    ab.set_lti(link_9, 8);
+    ab.set_lti(link_10, 8);
+    // ab.set_lti(link_11, 4);
+    // ab.set_lti(link_12, 4);
 
     ab.set_sti(a, 7);
     ab.set_sti(b, 8);
     ab.set_sti(c, 8);
     ab.set_sti(d, 8);
     ab.set_sti(e, 8);
-    ab.set_sti(link_4, 4);
+
+    ab.set_sti(kermit, 7);
+    ab.set_sti(frog, 9);
+    ab.set_sti(animal, 3);
+    ab.set_sti(amphibian, 1);
+
+    ab.set_sti(link_3, 8);
+    ab.set_sti(link_4, 7);
+    // ab.set_sti(link_5, 2);
+    // ab.set_sti(link_6, 1);
+    ab.set_sti(link_9, 7);
+    ab.set_sti(link_10, 8);
+    // ab.set_sti(link_11, 1);
+    // ab.set_sti(link_12, 2);
 
     // get attention values for atoms
     AttentionValuePtr aval = get_av(a);
@@ -130,8 +163,8 @@ public:
     // assert lti value being set properly.
     TS_ASSERT_EQUALS(aval->getLTI(), 7);
     TS_ASSERT_EQUALS(bval->getLTI(), 6);
-    TS_ASSERT_EQUALS(cval->getLTI(), 6);
-    TS_ASSERT_EQUALS(dval->getLTI(), 2);
+    TS_ASSERT_EQUALS(cval->getLTI(), 2);
+    TS_ASSERT_EQUALS(dval->getLTI(), 3);
 
     // configure forgettingThreshold, maxSize and accDivSize values
     config().set("ECAN_FORGET_THRESHOLD", FORGET_THRESHOLD);
@@ -150,36 +183,48 @@ public:
     TS_ASSERT_EQUALS(maxSize, 2);
     TS_ASSERT_EQUALS(accDivSize, 1);
     // Allow events to propagate.
-    sleep(1);
+    sleep(2);
+
+    AttentionValuePtr aNodeNewAV = get_av(a);
+    AttentionValuePtr bNodeNewAV = get_av(b);
+    AttentionValuePtr cNodeNewAV = get_av(c);
     AttentionValuePtr dNodeNewAV = get_av(d);
+    AttentionValuePtr eNodeNewAV = get_av(e);
     AttentionValuePtr kermitNodeNewAV = get_av(kermit);
     AttentionValuePtr frogNodeNewAV = get_av(frog);
     AttentionValuePtr animalNodeNewAV = get_av(animal);
+    AttentionValuePtr amphibianNodeNewAV = get_av(amphibian);
+    AttentionValuePtr link_3NewAV = get_av(link_3);
+    AttentionValuePtr link_4NewAV = get_av(link_4);
+    // AttentionValuePtr link_5NewAV = get_av(link_5);
+    // AttentionValuePtr link_6NewAV = get_av(link_6);
+    AttentionValuePtr link_9NewAV = get_av(link_9);
+    AttentionValuePtr link_10NewAV = get_av(link_10);
+    // AttentionValuePtr link_11NewAV = get_av(link_11);
+    // AttentionValuePtr link_12NewAV = get_av(link_12);
 
     // check if the atom with `lti < forgettingThreshold` i.e atom c, has sti and lti values equal to 0.
+    TS_ASSERT_EQUALS(aNodeNewAV->getLTI(), 7);
+    TS_ASSERT_EQUALS(bNodeNewAV->getLTI(), 6);
+    TS_ASSERT_EQUALS(cNodeNewAV->getLTI(), 0);
     TS_ASSERT_EQUALS(dNodeNewAV->getLTI(), 0);
-    TS_ASSERT_EQUALS(dNodeNewAV->getSTI(), 0);
-    TS_ASSERT_EQUALS(kermitNodeNewAV->getLTI(), 0);
-    TS_ASSERT_EQUALS(frogNodeNewAV->getLTI(), 0);
-    TS_ASSERT_EQUALS(animalNodeNewAV->getLTI(), 8);
+    TS_ASSERT_EQUALS(eNodeNewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(kermitNodeNewAV->getLTI(), 7);
+    TS_ASSERT_EQUALS(frogNodeNewAV->getLTI(), 9);
+    TS_ASSERT_EQUALS(animalNodeNewAV->getLTI(), 3);
+    TS_ASSERT_EQUALS(amphibianNodeNewAV->getLTI(), 1);
+    TS_ASSERT_EQUALS(link_3NewAV->getLTI(), 8);
+    TS_ASSERT_EQUALS(link_4NewAV->getLTI(), 0);
+    // TS_ASSERT_EQUALS(link_5NewAV->getLTI(), 0);
+    // TS_ASSERT_EQUALS(link_6NewAV->getLTI(), 0);
+    TS_ASSERT_EQUALS(link_9NewAV->getLTI(), 8);
+    TS_ASSERT_EQUALS(link_10NewAV->getLTI(), 8);
+    // TS_ASSERT_EQUALS(link_11NewAV->getLTI(), 0);
+    // TS_ASSERT_EQUALS(link_12NewAV->getLTI(), 0);
 
     //TODO may be check if the number of atoms that must remain in atomspace is equal to the expected.
-    TS_ASSERT(6 == this->as->get_size());
+    TS_ASSERT(9 == this->as->get_size());
     std::cout << "size " << this->as->get_size() << std::endl;
-
-    // HandleSeq hebbianlinksA;
-    // as->get_handles_by_type(back_inserter(hebbianlinksA), SIMILARITY_LINK);
-    // std::cout << "handlesA " << hebbianlinksA << std::endl;
-    //
-    // HandleSeq nodesA;
-    // as->get_handles_by_type(back_inserter(nodesA), NODE , true);
-    // std::cout << "nodesA " << nodes << std::endl;
-    //
-    // HandleSeq linksA;
-    // as->get_handles_by_type(back_inserter(linksA), LINK , true);
-    // std::cout << "linksA " << linksA << std::endl;
-
-
 
     _scheduler->stopAgent(_forgettingAgentPtr);
   }
