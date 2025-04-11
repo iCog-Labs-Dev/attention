@@ -75,6 +75,10 @@ public:
     c->setTruthValue(SimpleTruthValue::createTV(0.1, conf90));
     Handle d = as->add_node(CONCEPT_NODE, "d");
     d->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
+    
+
+    Handle e = as->add_node(CONCEPT_NODE, "e");
+    e->setTruthValue(SimpleTruthValue::createTV(0.3, conf90));
 
     Handle kermit = as->add_node(
         CONCEPT_NODE, "Kermit");
@@ -94,7 +98,7 @@ public:
     link_3->setTruthValue(SimpleTruthValue::createTV(0.5, 0.1));
 
     std::cout << "after printing the size of the atomspace" << std::endl;
-    TS_ASSERT_EQUALS(this->as->get_size() ,10);
+    TS_ASSERT_EQUALS(this->as->get_size() ,11);
     std::cout << "after printing the size of the atomspace" << std::endl;
     // set lti values for atoms in atomspace
     ab.set_lti(a, 7);
@@ -152,6 +156,24 @@ public:
     TS_ASSERT_EQUALS(animalNodeNewAV->getLTI(), 0);
 
     //TODO may be check if the number of atoms that must remain in atomspace is equal to the expected.
+    TS_ASSERT(3 == this->as->get_size());
+    TS_ASSERT(3 == this->as->get_size());
+    std::cout << "size " << this->as->get_size() << std::endl;
+    std::cout << "size " << this->as->get_size() << std::endl;
+
+    // HandleSeq hebbianlinksA;
+    // as->get_handles_by_type(back_inserter(hebbianlinksA), SIMILARITY_LINK);
+    // std::cout << "handlesA " << hebbianlinksA << std::endl;
+    //
+    // HandleSeq nodesA;
+    // as->get_handles_by_type(back_inserter(nodesA), NODE , true);
+    // std::cout << "nodesA " << nodes << std::endl;
+    //
+    // HandleSeq linksA;
+    // as->get_handles_by_type(back_inserter(linksA), LINK , true);
+    // std::cout << "linksA " << linksA << std::endl;
+
+
 
     // TS_ASSERT(maxSize == this->as->getSize());
     _scheduler->stopAgent(_forgettingAgentPtr);
