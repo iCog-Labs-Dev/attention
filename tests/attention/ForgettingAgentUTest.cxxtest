@@ -110,7 +110,7 @@ public:
     ab.set_lti(c, 6);
     ab.set_lti(d, 2);
     ab.set_lti(e, 7);
-    ab.set_lti(link_4, 4);
+    ab.set_lti(link_4, 8);
 
     ab.set_lti(kermit, 2);
     ab.set_lti(frog, 2);
@@ -164,7 +164,7 @@ public:
     TS_ASSERT_EQUALS(animalNodeNewAV->getLTI(), 8);
 
     //TODO may be check if the number of atoms that must remain in atomspace is equal to the expected.
-    TS_ASSERT(5 == this->as->get_size());
+    TS_ASSERT(6 == this->as->get_size());
     std::cout << "size " << this->as->get_size() << std::endl;
 
     // HandleSeq hebbianlinksA;
