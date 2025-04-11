@@ -70,16 +70,16 @@ void testCollectRent() {
     Handle e = as->add_node(CONCEPT_NODE, "RentNode5");
 
     AttentionBank& ab = attentionbank(as);
-    ab.stimulate(a, 40.0);
+    ab.stimulate(c, 3000.0);
+    ab.stimulate(d, 1500.0);
+    ab.stimulate(e, 290.0);
     ab.stimulate(b, 50.0);
-    ab.stimulate(c, 100.0);
-    ab.stimulate(d, 500.0);
-    ab.stimulate(e, 4000.0);
-    TS_ASSERT_EQUALS(get_sti(a), 800.0); 
-    TS_ASSERT_EQUALS(get_sti(b), 1000.0);
-    TS_ASSERT_EQUALS(get_sti(c), 2000.0);
-    TS_ASSERT_EQUALS(get_sti(d), 10000.0);
-    TS_ASSERT_EQUALS(get_sti(e), 80000.0);
+    ab.stimulate(a, 5.0);
+    TS_ASSERT_EQUALS(get_sti(a), 33.725); 
+    TS_ASSERT_EQUALS(get_sti(b), 355.0);
+    TS_ASSERT_EQUALS(get_sti(c), 60000.0);
+    TS_ASSERT_EQUALS(get_sti(d), 30000.0);
+    TS_ASSERT_EQUALS(get_sti(e), 2900.0);
 
     // Reference StochasticDiffusionAmountCalculator with the correct namespace
     opencog::ecan::StochasticDiffusionAmountCalculator& sdac = _wagent->_sdac;
@@ -103,11 +103,11 @@ void testCollectRent() {
     // Call collectRent to deduct rent from the atom
   
     _wagent->collectRent(targetSet);
-    TS_ASSERT_LESS_THAN(get_sti(a),800.0); //should be lower sti than before
-    TS_ASSERT_EQUALS(get_sti(b), 1000.0);
-    TS_ASSERT_EQUALS(get_sti(c), 2000.0);
-    TS_ASSERT_EQUALS(get_sti(d), 10000.0);
-    TS_ASSERT_EQUALS(get_sti(e), 80000.0);
+    TS_ASSERT_LESS_THAN(get_sti(a),33.725); //should be lower sti than before
+    TS_ASSERT_EQUALS(get_sti(b), 355.0);
+    TS_ASSERT_EQUALS(get_sti(c), 60000.0);
+    TS_ASSERT_EQUALS(get_sti(d), 30000.0);
+    TS_ASSERT_EQUALS(get_sti(e), 2900.0);
 
     std::cout << "testCollectRent passed" << std::endl;
 }

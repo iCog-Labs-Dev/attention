@@ -101,9 +101,9 @@ public:
     TS_ASSERT_EQUALS(calculatedBeforeSTIRent,0.0); 
     TS_ASSERT_EQUALS(calculatedBeforeLTIRent,0.0);
     
-    ab.stimulate(a, 290.0);
-    ab.stimulate(b, 500.0);
-    ab.stimulate(c, 25000.0);
+    ab.stimulate(a, 3000.0);
+    ab.stimulate(b, 1500.0);
+    ab.stimulate(c, 290.0);
 
     double calculatedAfterSTIRent = _dummy_agent->calculate_STI_Rent();
     double calculatedAfterLTIRent = _dummy_agent->calculate_LTI_Rent();
