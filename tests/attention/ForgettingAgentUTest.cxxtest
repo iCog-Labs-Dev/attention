@@ -107,6 +107,7 @@ public:
     ab.set_lti(c, 6);
     ab.set_lti(d, 2);
     ab.set_lti(e, 7);
+    ab.set_lti(link_4, 4);
 
     ab.set_lti(kermit, 2);
     ab.set_lti(frog, 2);
@@ -116,6 +117,8 @@ public:
     ab.set_sti(b, 8);
     ab.set_sti(c, 8);
     ab.set_sti(d, 8);
+    ab.set_sti(e, 8);
+    ab.set_sti(link_4, 4);
 
     // get attention values for atoms
     AttentionValuePtr aval = get_av(a);
