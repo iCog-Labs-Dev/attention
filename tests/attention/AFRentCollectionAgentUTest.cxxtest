@@ -113,10 +113,12 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
               << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
 
     // Step 4: Verify STI has decreased
-    TS_ASSERT_LESS_THAN(get_sti(a), 60000.0); // STI should be lower than before
-    TS_ASSERT_LESS_THAN(get_sti(b), 30000.0);
-    TS_ASSERT_LESS_THAN(get_sti(c), 2900.0);
+  
+  const double tolerance = 0.01; // Define a small tolerance
 
+    TS_ASSERT_DELTA(get_sti(a), 59998.7, tolerance); 
+    TS_ASSERT_DELTA(get_sti(b), 29998.7, tolerance); 
+    TS_ASSERT_DELTA(get_sti(c), 2898.71, tolerance); 
     std::cout << "testCollectRent passed" << std::endl;
 }
 
