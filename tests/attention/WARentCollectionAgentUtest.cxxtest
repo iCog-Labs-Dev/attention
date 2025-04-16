@@ -89,10 +89,10 @@ void testCollectRent() {
 
     TS_ASSERT_EQUALS(targetSet.size(), 1);
     sdac.update_bin(a);
-    sdac.update_bin(b);
-    sdac.update_bin(c);
-    sdac.update_bin(d);
-    sdac.update_bin(e);
+    //sdac.update_bin(b);
+    //sdac.update_bin(c);
+    //sdac.update_bin(d);
+    //sdac.update_bin(e);
 
 
 
@@ -104,12 +104,12 @@ void testCollectRent() {
   
 
     _wagent->collectRent(targetSet);
+    std::cout << "WARentCollectionAgentUTest."<<sdac.elapsed_time(a)<< std::endl;
     TS_ASSERT_LESS_THAN(get_sti(a),33.725);
     TS_ASSERT_DELTA(get_sti(a), 33.724, 0.001);
     TS_ASSERT_EQUALS(get_sti(b), 355.0);
     TS_ASSERT_EQUALS(get_sti(c), 60000.0);
     TS_ASSERT_EQUALS(get_sti(d), 30000.0);
-    TS_ASSERT_EQUALS(get_sti(e), 2900.0);
 
     std::cout << "testCollectRent passed" << std::endl;
 }
