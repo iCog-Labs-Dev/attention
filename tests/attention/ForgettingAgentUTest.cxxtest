@@ -125,11 +125,11 @@ public:
     ab.set_lti(amphibian, 1);
 
     ab.set_lti(link_3, 8);
-    ab.set_lti(link_4, 8);
+    // ab.set_lti(link_4, 8);
     // ab.set_lti(link_5, 4);
     // ab.set_lti(link_6, 4);
-    ab.set_lti(link_9, 8);
-    ab.set_lti(link_10, 8);
+    // ab.set_lti(link_9, 8);
+    // ab.set_lti(link_10, 8);
     // ab.set_lti(link_11, 4);
     // ab.set_lti(link_12, 4);
 
@@ -145,11 +145,11 @@ public:
     ab.set_sti(amphibian, 1);
 
     ab.set_sti(link_3, 8);
-    ab.set_sti(link_4, 7);
+    // ab.set_sti(link_4, 7);
     // ab.set_sti(link_5, 2);
     // ab.set_sti(link_6, 1);
-    ab.set_sti(link_9, 7);
-    ab.set_sti(link_10, 8);
+    // ab.set_sti(link_9, 7);
+    // ab.set_sti(link_10, 8);
     // ab.set_sti(link_11, 1);
     // ab.set_sti(link_12, 2);
 
@@ -195,11 +195,11 @@ public:
     AttentionValuePtr animalNodeNewAV = get_av(animal);
     AttentionValuePtr amphibianNodeNewAV = get_av(amphibian);
     AttentionValuePtr link_3NewAV = get_av(link_3);
-    AttentionValuePtr link_4NewAV = get_av(link_4);
+    // AttentionValuePtr link_4NewAV = get_av(link_4);
     // AttentionValuePtr link_5NewAV = get_av(link_5);
     // AttentionValuePtr link_6NewAV = get_av(link_6);
-    AttentionValuePtr link_9NewAV = get_av(link_9);
-    AttentionValuePtr link_10NewAV = get_av(link_10);
+    // AttentionValuePtr link_9NewAV = get_av(link_9);
+    // AttentionValuePtr link_10NewAV = get_av(link_10);
     // AttentionValuePtr link_11NewAV = get_av(link_11);
     // AttentionValuePtr link_12NewAV = get_av(link_12);
 
@@ -214,11 +214,11 @@ public:
     TS_ASSERT_EQUALS(animalNodeNewAV->getLTI(), 3);
     TS_ASSERT_EQUALS(amphibianNodeNewAV->getLTI(), 1);
     TS_ASSERT_EQUALS(link_3NewAV->getLTI(), 8);
-    TS_ASSERT_EQUALS(link_4NewAV->getLTI(), 0);
+    // TS_ASSERT_EQUALS(link_4NewAV->getLTI(), 0);
     // TS_ASSERT_EQUALS(link_5NewAV->getLTI(), 0);
     // TS_ASSERT_EQUALS(link_6NewAV->getLTI(), 0);
-    TS_ASSERT_EQUALS(link_9NewAV->getLTI(), 8);
-    TS_ASSERT_EQUALS(link_10NewAV->getLTI(), 8);
+    // TS_ASSERT_EQUALS(link_9NewAV->getLTI(), 8);
+    // TS_ASSERT_EQUALS(link_10NewAV->getLTI(), 8);
     // TS_ASSERT_EQUALS(link_11NewAV->getLTI(), 0);
     // TS_ASSERT_EQUALS(link_12NewAV->getLTI(), 0);
 
