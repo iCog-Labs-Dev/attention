@@ -297,7 +297,7 @@
      // Simply insert the new Atom if AF is not full yet.
      else if (attentionalFocus.size() < maxAFSize)
      {
-        std::cout<<"AFsize" <<maxAFSize<<std::endl;
+        // std::cout<<"AFsize" <<maxAFSize<<std::endl;
          insertable = true;
      }
  

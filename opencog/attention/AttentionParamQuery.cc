@@ -64,7 +64,7 @@ AttentionParamQuery::AttentionParamQuery(AtomSpace* as): _as(as)
     Handle member = _as->add_link(MEMBER_LINK,
             HandleSeq {var, parent_param});
     hget_params = _as->add_link(BIND_LINK, HandleSeq{member, var});
-    set_param("MAX_AF_SIZE", 4);
+    // set_param("MAX_AF_SIZE", 4);
 }
 
 std::string AttentionParamQuery::get_param_value(std::string param)

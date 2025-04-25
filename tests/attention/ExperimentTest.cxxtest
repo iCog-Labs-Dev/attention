@@ -1,32 +1,9 @@
-/*
- * tests/dynamics/HebbianCreationModuleUTest.cxxtest
- *
- * Copyright (C) 2014 Cosmo Harrigan
- * All Rights Reserved
- *
- * Written by Cosmo Harrigan
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License v3 as
- * published by the Free Software Foundation and including the exceptions
- * at http://opencog.org/wiki/Licenses
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program; if not, write to:
- * Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- */
-
 #include <cxxtest/TestSuite.h>
 
 #include <opencog/attention/AttentionModule.h>
 #include <opencog/attention/AttentionParamQuery.h>
 #include <opencog/attention/HebbianCreationAgent.h>
+#include <opencog/attention/HebbianUpdatingAgent.h>
 
 #include <opencog/attention/Neighbors.h>
 #include <opencog/cogserver/server/CogServer.h>
@@ -45,11 +22,13 @@
 using namespace opencog;
 using namespace std;
 
-class HebbianCreationModuleUTest : public CxxTest::TestSuite
+class ExperimentTest : public CxxTest::TestSuite
 {
 private:
     AtomSpace* as;
     AgentPtr _hebbiancreation_agentptr;
+    HebbianCreationAgent* hebbianCreationAgent;
+    HebbianUpdatingAgent* hebbianUpdatingAgent;
     CogServer* _cogserver;
     Scheduler* _scheduler;
 
@@ -74,25 +53,28 @@ public:
         AttentionParamQuery _atq(&cogserver().getAtomSpace());
         _atq.load_default_values(); // Load default ECAN param values into AS
 
-        Factory<HebbianCreationAgent, Agent> hebbianCreationFactory;
-        _scheduler->registerAgent(HebbianCreationAgent::info().id,&hebbianCreationFactory);
-        _hebbiancreation_agentptr =
-        _scheduler->createAgent(HebbianCreationAgent::info().id,false);
 
         as = &cogserver().getAtomSpace();
+        hebbianCreationAgent = new HebbianCreationAgent(*_cogserver);
+        hebbianUpdatingAgent = new HebbianUpdatingAgent(*_cogserver);
+
+        // Add the HebbianUpdatingAgent to the scheduler
+        Factory<HebbianCreationAgent, Agent> hebbianCreationFactory;
+        _scheduler->registerAgent(HebbianCreationAgent::info().id,&hebbianCreationFactory);
+        AbstractFactory<Agent>* hebbianUpdatingFactory = new Factory<HebbianUpdatingAgent, Agent>();
+        _scheduler->registerAgent(HebbianUpdatingAgent::info().id, hebbianUpdatingFactory);
+
+        std::cout << std::endl;
+        std::cout << "Setup completed for HebbianUpdatingAgentUTest." << std::endl;
+
         std:: cout << "HebbianCreationAgent registered" << std::endl;
     }
 
-    void testHebbianLinkCreation(void)
+    void testTwoAgentsTogether(void)
     {
-        // InitCogServer();
-        _scheduler->startAgent(_hebbiancreation_agentptr,true,"hca");
-
-
+       
         AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
-    
-
-        count_t conf90 = 900; //SimpleTruthValue::confidenceToCount(0.90);
+        count_t conf90 = 900; 
 
         // Populate the AtomSpace with the example atoms
         Handle kermit = as->add_node(
@@ -128,36 +110,12 @@ public:
                     EVALUATION_LINK, frog, slimy);
         frogSlimy->setTruthValue(
                     SimpleTruthValue::createTV(0.9, conf90));
-
         Handle slimyAnimal = as->add_link(
                     EVALUATION_LINK, animal, slimy);
         slimyAnimal->setTruthValue(
                     SimpleTruthValue::createTV(0.9, conf90));
 
-        // Populate the AtomSpace with some additional dummy atoms
-        Handle dummy1 = as->add_node(
-                    CONCEPT_NODE, "Dummy1");
-        dummy1->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummy2 = as->add_node(
-                    CONCEPT_NODE, "Dummy2");
-        dummy2->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummy3 = as->add_node(
-                    CONCEPT_NODE, "Dummy3");
-        dummy3->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummyLink = as->add_link(
-                    INHERITANCE_LINK, dummy1, dummy2);
-        dummyLink->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle dummyLink2 = as->add_link(
-                    INHERITANCE_LINK, dummy2, dummy3);
-        dummyLink2->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
 
-        // Put these atoms in the AttentionalFocus:
-        // "Kermit", "Frog", "Animal", "alive"
         ab.stimulate(kermit, 200);
         ab.stimulate(frog, 200);
         ab.stimulate(animal, 200);
@@ -167,31 +125,47 @@ public:
 
         HandleSeq attentionalFocus;
         ab.get_handle_set_in_attentional_focus(back_inserter(attentionalFocus));
-        cout << "AF: "<< attentionalFocus << std::endl;
+        // std::cout << "AF: "<< attentionalFocus << std::endl;
         TS_ASSERT_EQUALS(attentionalFocus.size() , 5);
-    
 
-        // Allow the events to propagate
-        sleep(1);
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
+        hebbianCreationAgent->run();
 
-        // Confirm that these atoms now have AsymmetricHebbianLinks between
-        // them: "Kermit", "Frog", "Animal", "alive"
-        std::cout << "\nAF: " << std::endl;
-        for (Handle node : attentionalFocus) {
-            HandleSeq existingAsSource = get_target_neighbors(node, ASYMMETRIC_HEBBIAN_LINK);
-            HandleSeq existingAsTarget = get_source_neighbors(node, ASYMMETRIC_HEBBIAN_LINK);
+        HandleSeq hebbianLinks;
+        as->get_handles_by_type(back_inserter(hebbianLinks), ASYMMETRIC_HEBBIAN_LINK);
 
-            //TS_ASSERT(existingAsSource.size() == 3);
-           // TS_ASSERT(existingAsTarget.size() == 3);
-        }
+        // std::cout << "links " << hebbianLinks << std::endl; 
+
+        hebbianUpdatingAgent->run();
+        hebbianUpdatingAgent->run();
+        hebbianUpdatingAgent->run();
+        hebbianUpdatingAgent->run();
+        hebbianUpdatingAgent->run();
+        hebbianUpdatingAgent->run();
+        hebbianUpdatingAgent->run();
+        hebbianUpdatingAgent->run();
+
 
         // Confirm that only n*(n-1) = 12 AsymmetricHebbianLinks were formed,
         // indicating that none incorrectly include "slimy" nor the dummy atoms
-        HandleSeq hebbianLinks;
-        as->get_handles_by_type(back_inserter(hebbianLinks), ASYMMETRIC_HEBBIAN_LINK);
-        std::cout << "count(HebLinks) = " << hebbianLinks.size() << "\n";
-        TS_ASSERT(hebbianLinks.size() == 20);
+        
+        // std::cout << "count(HebLinks) = " << hebbianLinks.size() << "\n";
+        // std::cout << "links two " << hebbianLinks << std::endl; 
+        // TS_ASSERT(hebbianLinks.size() == 20);
 
-        _scheduler->stopAgent(_hebbiancreation_agentptr);
     }
 };

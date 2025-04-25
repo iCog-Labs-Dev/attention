@@ -1,0 +1,68 @@
+#include <opencog/attentionbank/StochasticImportanceDiffusion.h>
+#include <opencog/attentionbank/bank/ImportanceIndex.h>
+#include <chrono>
+#include <cmath>
+#include <vector>
+
+#include <opencog/attention/AttentionModule.h>
+#include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/attention/HebbianCreationAgent.h>
+
+#include <opencog/attention/Neighbors.h>
+#include <opencog/cogserver/server/CogServer.h>
+#include <opencog/cogserver/modules/agents/AgentsModule.h>
+#include <opencog/cogserver/modules/agents/Scheduler.h>
+#include <opencog/attentionbank/bank/AttentionBank.h>
+#include <opencog/attentionbank/types/atom_types.h>
+#include <opencog/attentionbank/avalue/AttentionValue.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
+#include <opencog/atomspace/AtomSpace.h>
+#include <opencog/util/Logger.h>
+#include <opencog/util/Config.h>
+#include <opencog/util/algorithm.h>
+#include <opencog/cogserver/server/Factory.h>
+
+#include <cxxtest/TestSuite.h>
+
+using namespace opencog;
+using namespace opencog::ecan;
+using namespace std::chrono;
+
+
+class StochasticDiffusionAmountCalculatorTest : public CxxTest::TestSuite
+{
+private:
+    AtomSpace  as;  // a standalone in‐memory AtomSpace
+public:
+    void testBinIndex() {
+        // initialize the AttentionBank on that space
+        AttentionBank& ab = attentionbank(&as);
+
+        ImportanceIndex idx;
+        StochasticDiffusionAmountCalculator calc(&idx);
+
+        Handle h1 = as.add_node(CONCEPT_NODE, "A");
+        h1->setTruthValue(SimpleTruthValue::createTV(0.1f, 1000));
+        Handle h2 = as.add_node(CONCEPT_NODE, "B");
+        h2->setTruthValue(SimpleTruthValue::createTV(0.2f, 1000));
+
+        ab.stimulate(h1, 50);
+        ab.stimulate(h2, 50);
+
+        // TS_ASSERT_DIFFERS(calc.bin_index(h1), calc.bin_index(h2));
+        size_t h1_elapsed_time = calc.elapsed_time(h1);
+        std::cout << "h1 elapsed time: " << h1_elapsed_time << std::endl;
+        AttentionValue::sti_t stih1 = get_sti(h1);
+        std::cout << "h1 sti value : " << stih1 << std::endl;
+        ab.stimulate(h1, 100);
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        size_t elapsed_time = calc.elapsed_time(h1);
+        std::cout << "h1 elapsed time after some time: " << elapsed_time << std::endl;
+         AttentionValue::sti_t stih = get_sti(h1);
+        std::cout << "h1 sti value : " << stih << std::endl;
+        // size_t h2_elapsed_time = calc.elapsed_time(h2);
+        // std::cout << "h2 elapsed time: " << h2_elapsed_time << std::endl;
+        // std::cout << "h2 elpsed time: " << h2_elapsed_time << std::endl;
+    }
+    
+};
