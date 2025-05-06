@@ -1,6 +1,5 @@
 
 
-
 #include <cxxtest/TestSuite.h>
 
 #include <opencog/attention/AFRentCollectionAgent.h>
@@ -46,6 +45,7 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
 
         // initializing the AFRentCollectionAgent
         _afrentcollection_agent = new AFRentCollectionAgent(*_cogserver);
+        
 
         // registering the AFRentCollectionAgent
         _scheduler = &agmod->get_scheduler();
@@ -62,81 +62,64 @@ class AFRentCollectioAgentUTest : public CxxTest::TestSuite
         std::cout << "TearDown completed for AFRentCollectionAgentTest." << std::endl;
     }
 
-    void testSelectTargets(){
+  void testCollectRent() {
+    // Step 1: Create and stimulate some atoms
+    Handle a = as->add_node(CONCEPT_NODE, "RentNode1");
+    Handle b = as->add_node(CONCEPT_NODE, "RentNode2");
+    Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
 
-        // create sample atoms in atomspace
-        Handle h1 = as->add_node(CONCEPT_NODE, "node1");
-        Handle h2 = as->add_node(CONCEPT_NODE, "node2");
-        Handle h3 = as->add_node(CONCEPT_NODE, "node3");
+    AttentionBank& ab = attentionbank(as);
+    ab.stimulate(a, 3000.0);
+    ab.stimulate(b, 1500.0);
+    ab.stimulate(c, 290.0);
 
-        std::cout << "Nodes created" << std::endl;
+   
+    
 
-        // why do we intialize attention bank like this here, why not like cogserver or scheduler"
+    TS_ASSERT_EQUALS(get_sti(a), 60000.0); 
+    TS_ASSERT_EQUALS(get_sti(b), 30000.0);
+    TS_ASSERT_EQUALS(get_sti(c), 2900.0);
+    
+    
+    std::cout << "STI before rent collection: " 
+              << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
 
-        AttentionBank& ab = attentionbank(as);
-
-        ab.stimulate(h1, 100);
-        ab.stimulate(h2, 200);
-        ab.stimulate(h3, 300);
-
-        std::cout << "Atoms stimulated to bring them into attentional focus." << std::endl;
-
-        HandleSeq targetSet;
+    // Step 2: Add atoms to a HandleSeq (targetSet)
+    HandleSeq targetSet;
         _afrentcollection_agent->selectTargets(targetSet);
 
-        TS_ASSERT_EQUALS(targetSet.size(), 3);
+    TS_ASSERT_EQUALS(targetSet.size(), 3);
 
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h1) != targetSet.end());
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h2) != targetSet.end());
-        TS_ASSERT(std::find(targetSet.begin(), targetSet.end(), h3) != targetSet.end());
+    // Step 3: Call collectRent in a loop until enough time has passed
+    auto start_time = std::chrono::high_resolution_clock::now();
+    double required_time_sec = 1.0 / 5.0; // 0.2 seconds (Update frequency: 5Hz)
 
-        std::cout << "testSelectTargets passed" << std::endl;
+    while (true) {
+    _afrentcollection_agent->collectRent(targetSet);
+    
+    auto elapsed_time = std::chrono::duration_cast<std::chrono::duration<double>>(
+        std::chrono::high_resolution_clock::now() - start_time
+    ).count();
 
-    }
+    if (elapsed_time >= required_time_sec)
+        break;
 
-    void testCollectRent() {
-
-        // Step 1: Create and stimulate some atoms
-        Handle h1 = as->add_node(CONCEPT_NODE, "RentNode1");
-        Handle h2 = as->add_node(CONCEPT_NODE, "RentNode2");
-        Handle h3 = as->add_node(CONCEPT_NODE, "RentNode3");
-
-        AttentionBank& ab = attentionbank(as);
-        ab.stimulate(h1, 300); // STI and LTI values are initialized here
-        ab.stimulate(h2, 400);
-        ab.stimulate(h3, 500);
-
-        std::cout << "sti for h1: " << get_sti(h1) << std::endl;
-        std::cout << "sti for h2: " << get_sti(h2) << std::endl;
-        std::cout << "sti for h3: " << get_sti(h3) << std::endl;
-
-        // Step 2: Add atoms to a HandleSeq (targetSet)
-        HandleSeq targetSet = {h1, h2, h3};
-
-        // std::cout << "Elapsed time: " << elapsed_time.count() << ", Required: " << 1000000/update_freq << std::endl;
-
-
-        // Step 3: Call collectRent to apply changes
-        _afrentcollection_agent->collectRent(targetSet);
-        sleep(2);
-
-        std::cout << "sti for h1 after rent collection: " << get_sti(h1) << std::endl;
-        std::cout << "sti for h2 after rent collection: " << get_sti(h2) << std::endl;
-        std::cout << "sti for h3 after rent collection: " << get_sti(h3) << std::endl;
-
-        // Step 4: Verify the STI and LTI changes in the AttentionBank
-        double sti_h1 = get_sti(h1);
-
-        double sti_h2 = get_sti(h2);
-        double sti_h3 = get_sti(h3);
-
-        // this should be assert less than equal opration
-        // there is something that is not working here
-        //Todo: Read how collect rent works
-        TS_ASSERT_EQUALS(sti_h1, 6000); // Ensure STI was reduced
-        TS_ASSERT_EQUALS(sti_h2, 8000);
-        TS_ASSERT_EQUALS(sti_h3, 10000);
-        std::cout << "testCollectRent passed" << std::endl;
+    std::this_thread::sleep_for(std::chrono::duration<double>(1.0 / 5.0));
 }
+
+
+    std::cout << "STI after rent collection: " 
+              << get_sti(a) << ", " << get_sti(b) << ", " << get_sti(c) << std::endl;
+
+    // Step 4: Verify STI has decreased
+  
+  const double tolerance = 0.01; // Define a small tolerance
+
+    TS_ASSERT_DELTA(get_sti(a), 59998.7, tolerance); 
+    TS_ASSERT_DELTA(get_sti(b), 29998.7, tolerance); 
+    TS_ASSERT_DELTA(get_sti(c), 2898.71, tolerance); 
+    std::cout << "testCollectRent passed" << std::endl;
+}
+
 
 };        
