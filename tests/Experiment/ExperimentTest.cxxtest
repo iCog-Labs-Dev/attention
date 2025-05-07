@@ -254,3 +254,25 @@ void ExperimentTest::testDiffuseAtom(void){
 }
 
 
+
+
+// some thoughts on the experment i am bout to do
+
+// 1. Hebbian creation just create assymetric hebbian links between atoms and add it to the typspace
+    // 1.1 check it doesnt create link more than expected
+// 2. Hebbian updating agent should update the truth value of the link
+    // 2.1 check the truth value of the link
+// 3. run importance diffusion agent with updated link and with out updated link so we can see the difference
+
+
+// what we have now
+
+// we can create two links in the typespace
+// we can update the mean and confidence of a link(link is selcted randomly based on selected atom from AF)
+// we can diffuse STI to links based on thire truth value(mean and confidence) but only for non-hebbian(Hebbbian and ASYMMETRIC_HEBBIAN_LINK) links
+//  This means we should have other types of link(link that are somehow connected to atoms found in AF) to diffuse STI
+
+// next
+
+// update the link using updating a64l
+// diffuse importance using the link(both with and without updated link)

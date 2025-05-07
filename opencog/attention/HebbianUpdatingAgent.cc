@@ -69,29 +69,6 @@ void HebbianUpdatingAgent::run()
     Handle source = atoms[distribution(generator)];
 
     updateHebbianLinks(source);
-
-  //Experimental Code
-  //HandleSeq targetSet = get_target_neighbors(source, ASYMMETRIC_HEBBIAN_LINK);
-
-  //for (Handle target : targetSet)
-  //{
-  //    Handle link = a->get_handle(ASYMMETRIC_HEBBIAN_LINK, source, target);
-
-  //    double learningRate = 0.01f;
-  //    double new_tc, old_tc;
-
-  //    auto magnitued = as->get_normalised_zero_to_one_STI(source,true,true);
-  //    auto direction = as->get_normalised_STI(target,true,true);
-
-  //    old_tc = link->getTruthValue()->get_mean();
-
-  //    new_tc = new_tc + magnitued * direction * learningRate;
-  //    new_tc = std::min(std::max(new_tc,0.0),1.0);
-
-  //    //update truth value accordingly
-  //    TruthValuePtr newtv = SimpleTruthValue::createTV(new_tc, 0.1);
-  //    link->merge(newtv);
-  //}
 }
 
 void HebbianUpdatingAgent::updateHebbianLinks(Handle source)

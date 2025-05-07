@@ -68,7 +68,7 @@ public:
         Handle target3 = as->add_node(CONCEPT_NODE, "Target3");
         Handle target4 = as->add_node(CONCEPT_NODE, "Target4");
 
-        std::cout << "Atoms created: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+        // std::cout << "Atoms created: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
 
         // Set truth values for each node
         double initialConfidence = 0.9;
@@ -78,7 +78,7 @@ public:
         target3->setTruthValue(SimpleTruthValue::createTV(0.1, initialConfidence));
         target4->setTruthValue(SimpleTruthValue::createTV(0.1, initialConfidence));
 
-        std::cout << "Truth values set: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
+        // std::cout << "Truth values set: " << source->to_string() << target1->to_string() << target2->to_string() << std::endl;
 
         // Create a Hebbian link between source and target nodes
         Handle hebbianLink = as->add_link(ASYMMETRIC_HEBBIAN_LINK, source, target1);
@@ -127,7 +127,7 @@ public:
         std::cout<<"Link4" << hebbianLink4->to_string() <<std::endl;
         std::cout<<"Link5" << hebbianLink5->to_string() <<std::endl;
         std::cout<<"Link6" << hebbianLink6->to_string() <<std::endl;
-        std::cout<<"Link7" << hebbianLink6->to_string() <<std::endl;
+        std::cout<<"Link7" << hebbianLink7->to_string() <<std::endl;
         // Check that the truth value of the link has changed based on the agent's logic
         // Intentionally made error by making the mean 0.9 so that we can see what's happening
 
