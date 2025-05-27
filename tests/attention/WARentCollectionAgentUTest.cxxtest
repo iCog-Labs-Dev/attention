@@ -70,12 +70,12 @@ void testCollectRent() {
     
     Handle e = as->add_node(CONCEPT_NODE, "RentNode5");
     Handle f = as->add_node(CONCEPT_NODE, "RentNode6");
-    Handle h = as->add_node(CONCEPT_NODE, "RentNode6");
-    Handle i = as->add_node(CONCEPT_NODE, "RentNode6");
-    Handle j = as->add_node(CONCEPT_NODE, "RentNode6");
-    Handle k = as->add_node(CONCEPT_NODE, "RentNode6");
+    Handle h = as->add_node(CONCEPT_NODE, "RentNode7");
+    Handle i = as->add_node(CONCEPT_NODE, "RentNode8");
+    Handle j = as->add_node(CONCEPT_NODE, "RentNode9");
+    Handle k = as->add_node(CONCEPT_NODE, "RentNode10");
 
-    Handle g = as->add_node(CONCEPT_NODE, "RentNode7");
+    Handle g = as->add_node(CONCEPT_NODE, "RentNode11");
  
     AttentionBank& ab = attentionbank(as);
     ab.stimulate(a, 3000.0);

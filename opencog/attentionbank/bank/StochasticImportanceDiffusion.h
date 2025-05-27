@@ -70,6 +70,7 @@ namespace opencog
 
         public:
             StochasticDiffusionAmountCalculator(ImportanceIndex*);
+            ecan::StochasticDiffusionAmountCalculator& getSdac() { return _sdac; }
 
             std::vector<DiffusionRecordBin> merge_bins(
                     const std::vector<DiffusionRecordBin>& past,
