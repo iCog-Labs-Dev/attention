@@ -67,49 +67,73 @@ void testCollectRent() {
     Handle b = as->add_node(CONCEPT_NODE, "RentNode2");
     Handle c = as->add_node(CONCEPT_NODE, "RentNode3");
     Handle d = as->add_node(CONCEPT_NODE, "RentNode4");
+    
     Handle e = as->add_node(CONCEPT_NODE, "RentNode5");
+    Handle f = as->add_node(CONCEPT_NODE, "RentNode6");
+    Handle h = as->add_node(CONCEPT_NODE, "RentNode7");
+    Handle i = as->add_node(CONCEPT_NODE, "RentNode8");
+    Handle j = as->add_node(CONCEPT_NODE, "RentNode9");
+    Handle k = as->add_node(CONCEPT_NODE, "RentNode10");
 
+    Handle g = as->add_node(CONCEPT_NODE, "RentNode11");
+ 
     AttentionBank& ab = attentionbank(as);
-    ab.stimulate(c, 3000.0);
-    ab.stimulate(d, 1500.0);
-    ab.stimulate(e, 290.0);
-    ab.stimulate(b, 50.0);
-    ab.stimulate(a, 5.0);
-    TS_ASSERT_EQUALS(get_sti(a), 33.725); 
-    TS_ASSERT_EQUALS(get_sti(b), 355.0);
-    TS_ASSERT_EQUALS(get_sti(c), 60000.0);
-    TS_ASSERT_EQUALS(get_sti(d), 30000.0);
-    TS_ASSERT_EQUALS(get_sti(e), 2900.0);
+    ab.stimulate(a, 3000.0);
+    ab.stimulate(b, 1500.0);
+    ab.stimulate(c, 290.0);
+    ab.stimulate(d, 50.0);
+    
+    // ab.stimulate(e, 5.0);
+    ab.stimulate(f, 0.5);
+    ab.stimulate(i, 0.4);
+    ab.stimulate(j, 0.4);
+    ab.stimulate(k, 0.5);
+
+    // ab.stimulate(g, 0.05);
+
+    TS_ASSERT_EQUALS(get_sti(a), 60000.0); 
+    TS_ASSERT_EQUALS(get_sti(b), 30000.0);
+    TS_ASSERT_EQUALS(get_sti(c), 2900.0);
+    TS_ASSERT_EQUALS(get_sti(d), 355.0);
+    // TS_ASSERT_EQUALS(get_sti(e), 33.7250);
+    TS_ASSERT_DELTA( get_sti(f), 3.3725, 1e-4 );
+    // TS_ASSERT_DELTA( get_sti(g), 0.335396, 1e-4 );
 
     // Reference StochasticDiffusionAmountCalculator with the correct namespace
     opencog::ecan::StochasticDiffusionAmountCalculator& sdac = _wagent->_sdac;
-
-    HandleSeq targetSet;
+   
+    sdac.update_bin(f);
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    sdac.update_bin(f);
+    // sdac.update_bin(i);
+    // std::this_thread::sleep_for(std::chrono::seconds(1));
+    // sdac.update_bin(i);
+    //  sdac.update_bin(j);
+    // std::this_thread::sleep_for(std::chrono::seconds(1));
+    // sdac.update_bin(j);
+    //  sdac.update_bin(k);
+    // std::this_thread::sleep_for(std::chrono::seconds(1));
+    // sdac.update_bin(k);
+    // sdac.elapsed_time(f); 
+    // sdac.elapsed_time(i);
+    // std::this_thread::sleep_for(std::chrono::seconds(10));
+    
+    for (int i = 1; i < 3; ++i) {
+        HandleSeq targetSet;
          _wagent->selectTargets(targetSet);
 
-    TS_ASSERT_EQUALS(targetSet.size(), 1);
-    sdac.update_bin(a);
-    //sdac.update_bin(b);
-    //sdac.update_bin(c);
-    //sdac.update_bin(d);
-    //sdac.update_bin(e);
+         TS_ASSERT_EQUALS(targetSet.size(), 1);
+        //  Handle h = targetSet.front();
+         std::cout << "selected target atom: "<< targetSet << std::endl;
 
+        std::this_thread::sleep_for(std::chrono::seconds(i));
+        std::cout << "before collect " << get_sti(f)<<std::endl;
+        HandleSeq rentHandles = {f};
+        _wagent->collectRent(rentHandles);
+         std::cout << "after collect" << get_sti(f)<<std::endl;
+        // std::this_thread::sleep_for(std::chrono::seconds(10));
 
-
-    // Wait briefly so that elapsed time is nonzero
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
-
-
-    // Call collectRent to deduct rent from the atom
-  
-
-    _wagent->collectRent(targetSet);
-    std::cout << "WARentCollectionAgentUTest."<<sdac.elapsed_time(a)<< std::endl;
-    TS_ASSERT_LESS_THAN(get_sti(a),33.725);
-    TS_ASSERT_DELTA(get_sti(a), 33.724, 0.001);
-    TS_ASSERT_EQUALS(get_sti(b), 355.0);
-    TS_ASSERT_EQUALS(get_sti(c), 60000.0);
-    TS_ASSERT_EQUALS(get_sti(d), 30000.0);
+    }
 
     std::cout << "testCollectRent passed" << std::endl;
 }

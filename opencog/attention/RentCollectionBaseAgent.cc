@@ -1,3 +1,25 @@
+/*
+ * opencog/attention/WARentCollectionAgent.h
+ *
+ * Written by Misgana Bayetta
+ * All Rights Reserved
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License v3 as
+ * published by the Free Software Foundation and including the exceptions
+ * at http://opencog.org/wiki/Licenses
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program; if not, write to:
+ * Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
 #include <algorithm>
 #include <math.h>
 #include <time.h>
@@ -55,6 +77,8 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_STI_Rent()
 {
     double funds = _bank->getSTIFunds();
     double diff  = targetSTI - funds;
+    std::cout << "what is targetSTI: " << targetSTI << std::endl;
+    std::cout << "what is funds: " << funds << std::endl;
 
     if(diff <= 0)
         return 0;
@@ -62,6 +86,7 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_STI_Rent()
     double ndiff = diff / stiFundsBuffer;
     ndiff = std::min(ndiff, 1.0);
     ndiff = std::max(ndiff, -0.99);
+    std::cout <<"what is STIAtomRent here: " << STIAtomRent << std::endl;
     AttentionValue::sti_t res = STIAtomRent + (STIAtomRent * ndiff);
 
     return res;
@@ -74,7 +99,6 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_LTI_Rent()
     double ndiff = diff / ltiFundsBuffer;
     ndiff = std::min(ndiff, 1.0);
     ndiff = std::max(ndiff, -1.0);
-    std::cout << "Calculated lti Rent: " << LTIAtomRent + (LTIAtomRent * ndiff)<< std::endl;
 
     return LTIAtomRent + (LTIAtomRent * ndiff);
 }

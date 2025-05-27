@@ -51,6 +51,7 @@ void StochasticDiffusionAmountCalculator::update_bin(const Handle& h)
     size_t index = bin_index(h);
     auto it = std::find_if(_bins.begin(), _bins.end(),
             [=](const DiffusionRecordBin& bin) { return (bin.index == index); });
+    std::cout << "inside updatebin for atom: " << h->to_string() << std::endl;
 
     if (it == _bins.end())
     {
@@ -61,18 +62,28 @@ void StochasticDiffusionAmountCalculator::update_bin(const Handle& h)
 
     bin.index = index;
     bin.count += 1;
+    // std::cout << "what is update rate before: " << bin.update_rate << std::endl;
+    // std::cout << "count for atom: " << h->to_string() << " is: " << bin.count << std::endl;
     // using duration_cast<seconds> implicitly or explicitly causes missing
     // fractional seconds.
-    duration<float> sec = high_resolution_clock::now() - bin.last_update;
+    auto now = high_resolution_clock::now();
+    duration<float> sec =  now - bin.last_update;
+    // std::cout << "what is last update before update rate: " << bin.last_update.time_since_epoch().count() << std::endl;
+    // std::cout << "what is now: " << now.time_since_epoch().count() << std::endl;
+    std::cout << "what is sec here: " << sec.count() << std::endl;
+    std::cout << "what is bin count here: " << bin.count << std::endl;
     bin.update_rate = bin.count/sec.count();
+    std::cout << "update_rate for atom: " << h->to_string() << " is: " << bin.update_rate << std::endl;
 
     bin.last_update = high_resolution_clock::now();
-    bin.size = bin_size(index);
+    // std::cout << "last update after update rate: " << bin.last_update.time_since_epoch().count() << std::endl;
+    bin.size =  bin_size(index);
+    // std::cout << "size for atom: " << h->to_string() << " is: " << bin.size << std::endl;
 }
 
 StochasticDiffusionAmountCalculator::StochasticDiffusionAmountCalculator
                                      (ImportanceIndex* imp) :
-   _imidx(imp)
+    _imidx(imp)
 {
 }
 
@@ -113,13 +124,16 @@ float StochasticDiffusionAmountCalculator::elapsed_time(const Handle& h)
     float average_elapsed_time = 0.0f;
 
     auto index = bin_index(h);
+    std::cout << "bin index for atom: " << h->to_string() << " is: " << index << std::endl;
     auto it = std::find_if(_bins.begin(), _bins.end(),
             [index](const DiffusionRecordBin& b){ return (b.index == index); });
 
     if (it != _bins.end())
         average_elapsed_time = (*it).size / (*it).update_rate;
 
+    
     update_bin(h); // Update DiffusionRecordBin.
+    std::cout << "average elapsed time for atom: " << h->to_string() << " is: " << average_elapsed_time << std::endl;
 
     return average_elapsed_time;
 }
