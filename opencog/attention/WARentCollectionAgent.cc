@@ -63,10 +63,14 @@ void WARentCollectionAgent::collectRent(HandleSeq& targetSet)
         AttentionValue::lti_t lti = get_lti(h);
         
         float last_update_time = _sdac.elapsed_time(h);
+        std::cout << "last_updates " <<last_update_time<<std::endl;
+        std::cout << "STIAtomRent: " <<STIAtomRent<<std::endl;
         STIAtomRent = STIAtomRent * last_update_time;
+        std::cout << "STIAtomRent after multiplication: " <<STIAtomRent<<std::endl;
         LTIAtomRent = LTIAtomRent * last_update_time;
         
         double stiRent = calculate_STI_Rent();
+        std::cout << "STI rent: " << stiRent << std::endl;
         double ltiRent = calculate_LTI_Rent();
         if (stiRent > sti)
             stiRent = sti;

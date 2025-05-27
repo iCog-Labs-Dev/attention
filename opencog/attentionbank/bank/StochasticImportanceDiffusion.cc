@@ -51,6 +51,7 @@ void StochasticDiffusionAmountCalculator::update_bin(const Handle& h)
     size_t index = bin_index(h);
     auto it = std::find_if(_bins.begin(), _bins.end(),
             [=](const DiffusionRecordBin& bin) { return (bin.index == index); });
+    std::cout << "inside updatebin for atom: " << h->to_string() << std::endl;
 
     if (it == _bins.end())
     {
@@ -61,13 +62,16 @@ void StochasticDiffusionAmountCalculator::update_bin(const Handle& h)
 
     bin.index = index;
     bin.count += 1;
+    std::cout << "count for atom: " << h->to_string() << " is: " << bin.count << std::endl;
     // using duration_cast<seconds> implicitly or explicitly causes missing
     // fractional seconds.
     duration<float> sec = high_resolution_clock::now() - bin.last_update;
     bin.update_rate = bin.count/sec.count();
+    std::cout << "update_rate for atom: " << h->to_string() << " is: " << bin.update_rate << std::endl;
 
     bin.last_update = high_resolution_clock::now();
-    bin.size = bin_size(index);
+    bin.size = 2;
+    std::cout << "size for atom: " << h->to_string() << " is: " << bin.size << std::endl;
 }
 
 StochasticDiffusionAmountCalculator::StochasticDiffusionAmountCalculator
@@ -117,9 +121,11 @@ float StochasticDiffusionAmountCalculator::elapsed_time(const Handle& h)
             [index](const DiffusionRecordBin& b){ return (b.index == index); });
 
     if (it != _bins.end())
-        average_elapsed_time = (*it).size / (*it).update_rate;
+        average_elapsed_time = 2 / (*it).update_rate;
+    
 
     update_bin(h); // Update DiffusionRecordBin.
+    std::cout << "average elapsed time for atom: " << h->to_string() << " is: " << average_elapsed_time << std::endl;
 
     return average_elapsed_time;
 }

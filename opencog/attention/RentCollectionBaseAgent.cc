@@ -77,6 +77,8 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_STI_Rent()
 {
     double funds = _bank->getSTIFunds();
     double diff  = targetSTI - funds;
+    std::cout << "what is targetSTI: " << targetSTI << std::endl;
+    std::cout << "what is funds: " << funds << std::endl;
 
     if(diff <= 0)
         return 0;
@@ -84,6 +86,7 @@ AttentionValue::sti_t RentCollectionBaseAgent::calculate_STI_Rent()
     double ndiff = diff / stiFundsBuffer;
     ndiff = std::min(ndiff, 1.0);
     ndiff = std::max(ndiff, -0.99);
+    std::cout <<"what is STIAtomRent here: " << STIAtomRent << std::endl;
     AttentionValue::sti_t res = STIAtomRent + (STIAtomRent * ndiff);
 
     return res;
