@@ -138,7 +138,7 @@ void AttentionBank::AVChanged(const Handle& h,
     // update AF
     updateAttentionalFocus(h, old_av, new_av);
 }
-
+ 
 void AttentionBank::stimulate(const Handle& h, double stimulus)
 {
     // XXX This is not protected or made atomic in any way ...
@@ -342,3 +342,17 @@ Handle AttentionBank::getRandomAtomNotInAF(void)
     std::advance(it, randGen().randint(atoms_not_in_af.size()));
     return *it;
 }
+
+// ; stimulating around 10000 take 6 min 
+// ; similar amount atoms in c++ take around 25 sec
+
+// ; major performance issue come from update function
+// ; when we comment out update function 
+
+// ; c++ take less than mili sec to stimulate 10,000 atoms
+// ; while petta finish less than 2 sec to stimulate 10,000 atoms
+
+
+// ; reason: 
+// ; c++ iterate over bin index array to finid minimum and maximum STI value for global prameter update
+// ; patta has to collabse all bins from the space and find the minimum and maximum STI value for global prameter update

@@ -41,6 +41,22 @@ using namespace opencog;
  * We have to add 8 since [2^c - 1 = sum 2^b , b = 0 to (c-1)] and we have 8
  * such groups
  */
+
+// | Bin Group | Bin Range | Importance Range/STI |
+// | --------- | --------- | ---------------- |
+// | Group 0   | 0-15      | 0-15             |
+// | Group 1   | 16-23     | 16-31            |
+// | Group 2   | 24-31     | 32-63            |
+// | Group 3   | 32-39     | 64-127           |
+// | Group 4   | 40-47     | 128-255          |
+// | Group 5   | 48-55     | 256-511          |
+// | Group 6   | 56-63     | 512-1023         |
+// | Group 7   | 64-71     | 1024-2047        |
+// | Group 8   | 72-79     | 2048-4095        |
+// | Group 9   | 80-87     | 4096-8191        |
+// | Group 10  | 88-95     | 8192-16383       |
+// | Group 11  | 96-103    | 16384-32767      |
+
 #define GROUP_SIZE 8
 #define GROUP_NUM 12
 #define IMPORTANCE_INDEX_SIZE (GROUP_NUM*GROUP_SIZE)+GROUP_NUM //104

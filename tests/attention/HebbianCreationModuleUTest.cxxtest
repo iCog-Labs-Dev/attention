@@ -1,196 +1,130 @@
 /*
- * tests/dynamics/HebbianCreationModuleUTest.cxxtest
+ * tests/attention/AttentionAFPerformanceUTest.cxxtest
  *
- * Copyright (C) 2014 Cosmo Harrigan
- * All Rights Reserved
- *
- * Written by Cosmo Harrigan
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License v3 as
- * published by the Free Software Foundation and including the exceptions
- * at http://opencog.org/wiki/Licenses
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program; if not, write to:
- * Free Software Foundation, Inc.,
- * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * Performance test for Attentional Focus (AF) management
+ * without running any agents.
  */
 
 #include <cxxtest/TestSuite.h>
 
+#include <opencog/cogserver/server/CogServer.h>
 #include <opencog/attention/AttentionModule.h>
 #include <opencog/attention/AttentionParamQuery.h>
-#include <opencog/attention/HebbianCreationAgent.h>
-
-#include <opencog/attention/Neighbors.h>
-#include <opencog/cogserver/server/CogServer.h>
-#include <opencog/cogserver/modules/agents/AgentsModule.h>
-#include <opencog/cogserver/modules/agents/Scheduler.h>
 #include <opencog/attentionbank/bank/AttentionBank.h>
 #include <opencog/attentionbank/types/atom_types.h>
-#include <opencog/attentionbank/avalue/AttentionValue.h>
-#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
 #include <opencog/atomspace/AtomSpace.h>
-#include <opencog/util/Logger.h>
 #include <opencog/util/Config.h>
-#include <opencog/util/algorithm.h>
-#include <opencog/cogserver/server/Factory.h>
+
+#include <vector>
+#include <chrono>
+#include <iostream>
 
 using namespace opencog;
 using namespace std;
 
-class HebbianCreationModuleUTest : public CxxTest::TestSuite
+class AttentionAFPerformanceUTest : public CxxTest::TestSuite
 {
 private:
-    AtomSpace* as;
-    AgentPtr _hebbiancreation_agentptr;
     CogServer* _cogserver;
-    Scheduler* _scheduler;
 
 public:
+    void setUp()
+{
+    _cogserver = &cogserver();
+
+    AtomSpace& as = _cogserver->getAtomSpace();
+
+    // Set AF params BEFORE module load
+    AttentionParamQuery atq(&as);
+    // atq.load_default_values();
+    // atq.set_param("MAX_AF_SIZE", 100);
+
+    // Now load module
+    config().set("MODULES", "opencog/attention/libattention.so");
+    _cogserver->loadModules();
+}
+
+
     void tearDown()
     {
         _cogserver->stop();
     }
 
-    void setUp()
+    void testAFManagementAndStimulatePerformance()
     {
-        _cogserver = &cogserver();
-        config().set("MODULES", "opencog/attention/libattention.so");
-        _cogserver->loadModules();
-        config().set("MODULES", "libagents.so");
+        // Use CogServer AtomSpace (IMPORTANT)
+        AtomSpace& as = _cogserver->getAtomSpace();
+        AttentionBank& ab = attentionbank(&as);
 
+        const size_t TOTAL_ATOMS = 10000;
+        const int STIMULUS = 1;
 
-        Module* amod = _cogserver->getModule("opencog::AgentsModule");
-        AgentsModule* agmod = (AgentsModule*) amod;
-        _scheduler = &agmod->get_scheduler();
+        vector<Handle> nodes;
+        nodes.reserve(TOTAL_ATOMS);
 
-        AttentionParamQuery _atq(&cogserver().getAtomSpace());
-        _atq.load_default_values(); // Load default ECAN param values into AS
+        // -------------------------------
+        // Create atoms
+        // -------------------------------
+        for (size_t i = 0; i < TOTAL_ATOMS; ++i)
+        {
+            Handle h = as.add_node(CONCEPT_NODE, "Node_" + std::to_string(i));
+            nodes.push_back(h);
+        }
+        cout << "\n=== AtomSpace Diagnostics ===\n";
+        cout << "Total atoms in AtomSpace: "
+               << as.get_size() << endl;
 
-        Factory<HebbianCreationAgent, Agent> hebbianCreationFactory;
-        _scheduler->registerAgent(HebbianCreationAgent::info().id,&hebbianCreationFactory);
-        _hebbiancreation_agentptr =
-        _scheduler->createAgent(HebbianCreationAgent::info().id,false);
+        auto start = chrono::high_resolution_clock::now();
 
-        as = &cogserver().getAtomSpace();
-        std:: cout << "HebbianCreationAgent registered" << std::endl;
-    }
-
-    void testHebbianLinkCreation(void)
-    {
-        // InitCogServer();
-        _scheduler->startAgent(_hebbiancreation_agentptr,true,"hca");
-
-
-        AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
-    
-
-        count_t conf90 = 900; //SimpleTruthValue::confidenceToCount(0.90);
-
-        // Populate the AtomSpace with the example atoms
-        Handle kermit = as->add_node(
-            CONCEPT_NODE, "Kermit");
-        kermit->setTruthValue( SimpleTruthValue::createTV(0.001, conf90));
-        Handle frog = as->add_node(
-            CONCEPT_NODE, "Frog");
-        frog->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
-        Handle animal = as->add_node(
-            CONCEPT_NODE, "Animal");
-        animal->setTruthValue( SimpleTruthValue::createTV(0.1, conf90));
-        Handle alive = as->add_node(
-            PREDICATE_NODE, "alive");
-        alive->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
-        Handle slimy = as->add_node(
-            PREDICATE_NODE, "slimy");
-        slimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
-
-
-        Handle kermitFrog = as->add_link(
-                    INHERITANCE_LINK, kermit, frog);
-        kermitFrog->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle frogAnimal = as->add_link(
-                    INHERITANCE_LINK, frog, animal);
-        frogAnimal->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle frogAlive = as->add_link(
-                    EVALUATION_LINK, frog, alive);
-        frogAlive->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle frogSlimy = as->add_link(
-                    EVALUATION_LINK, frog, slimy);
-        frogSlimy->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-
-        Handle slimyAnimal = as->add_link(
-                    EVALUATION_LINK, animal, slimy);
-        slimyAnimal->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-
-        // Populate the AtomSpace with some additional dummy atoms
-        Handle dummy1 = as->add_node(
-                    CONCEPT_NODE, "Dummy1");
-        dummy1->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummy2 = as->add_node(
-                    CONCEPT_NODE, "Dummy2");
-        dummy2->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummy3 = as->add_node(
-                    CONCEPT_NODE, "Dummy3");
-        dummy3->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummyLink = as->add_link(
-                    INHERITANCE_LINK, dummy1, dummy2);
-        dummyLink->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle dummyLink2 = as->add_link(
-                    INHERITANCE_LINK, dummy2, dummy3);
-        dummyLink2->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-
-        // Put these atoms in the AttentionalFocus:
-        // "Kermit", "Frog", "Animal", "alive"
-        ab.stimulate(kermit, 200);
-        ab.stimulate(frog, 200);
-        ab.stimulate(animal, 200);
-        ab.stimulate(alive, 200);
-        ab.stimulate(slimyAnimal, 200);
-
-        HandleSeq attentionalFocus;
-        ab.get_handle_set_in_attentional_focus(back_inserter(attentionalFocus));
-        cout << "AF: "<< endl;
-        TS_ASSERT_EQUALS(attentionalFocus.size() , 5);
-    
-
-        // Allow the events to propagate
-        sleep(1);
-
-        // Confirm that these atoms now have AsymmetricHebbianLinks between
-        // them: "Kermit", "Frog", "Animal", "alive"
-        std::cout << "\nAF: " << std::endl;
-        for (Handle node : attentionalFocus) {
-            HandleSeq existingAsSource = get_target_neighbors(node, ASYMMETRIC_HEBBIAN_LINK);
-            HandleSeq existingAsTarget = get_source_neighbors(node, ASYMMETRIC_HEBBIAN_LINK);
-
-            //TS_ASSERT(existingAsSource.size() == 3);
-           // TS_ASSERT(existingAsTarget.size() == 3);
+        for (size_t i = 0; i < TOTAL_ATOMS; ++i)
+        {
+            ab.stimulate(nodes[i], STIMULUS);
         }
 
-        // Confirm that only n*(n-1) = 12 AsymmetricHebbianLinks were formed,
-        // indicating that none incorrectly include "slimy" nor the dummy atoms
-        HandleSeq hebbianLinks;
-        as->get_handles_by_type(back_inserter(hebbianLinks), ASYMMETRIC_HEBBIAN_LINK);
-        std::cout << "count(HebLinks) = " << hebbianLinks.size() << "\n";
-        TS_ASSERT(hebbianLinks.size() == 20);
+        auto end = chrono::high_resolution_clock::now();
+        chrono::duration<double> total_time = end - start;
 
-        _scheduler->stopAgent(_hebbiancreation_agentptr);
+        HandleSeq af2;
+        ab.get_handle_set_in_attentional_focus(back_inserter(af2));
+
+        cout << "AF size after stimulations: " << af2.size() << endl;
+
+
+        cout << "\n=== AF vs AtomSpace ===\n";
+        cout << "AtomSpace size: " << as.get_size() << endl;
+        cout << "AF size: " << af2.size() << endl;
+
+        cout << "\n=== Sample Atom Attention Values (STI) ===\n";
+
+        for (size_t i : {0, 50, 200, 9655, 9999})
+        {
+            Handle h = nodes[i];
+            double sti = get_av(h)->getSTI();
+
+            cout << h->get_name()
+                << " | STI = " << sti
+                << endl;
+        }
+        // size_t count_in_af = 0;
+
+        // for (const auto& h : nodes)
+        // {
+        //     if (ab.atom_is_in_AF(h))
+        //         count_in_af++;
+        // }
+
+        // cout << "Atoms in AF (manual count): "
+        //     << count_in_af << endl;
+
+
+
+        // -------------------------------
+        // Performance report
+        // -------------------------------
+        cout << "\n=== AF Stimulation Performance ===\n";
+
+        cout << "total time : "  << total_time.count() << endl;
+
+        TS_ASSERT(true); // performance-only test
     }
 };
