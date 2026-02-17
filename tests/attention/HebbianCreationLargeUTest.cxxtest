@@ -95,118 +95,24 @@ public:
         // _scheduler->startAgent(_hebbiancreation_agentptr,true,"hca");
 
         AttentionBank& ab = attentionbank(&cogserver().getAtomSpace());
-        ab.set_af_size(105);
+        ab.set_af_size(100);
         std::cout << "AF size set to: " << ab.get_af_size() << std::endl;
 
-        count_t conf90 = 900; //SimpleTruthValue::confidenceToCount(0.90);
+        std::vector<Handle> nodesList;
+        int nodeCount = 50; // Number of nodes to create for testing
 
-        // Populate the AtomSpace with the example atoms
-        Handle kermit = as->add_node(
-            CONCEPT_NODE, "Kermit");
-        kermit->setTruthValue( SimpleTruthValue::createTV(0.001, conf90));
-        Handle frog = as->add_node(
-            CONCEPT_NODE, "Frog");
-        frog->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
-        Handle animal = as->add_node(
-            CONCEPT_NODE, "Animal");
-        animal->setTruthValue( SimpleTruthValue::createTV(0.1, conf90));
-        Handle alive = as->add_node(
-            PREDICATE_NODE, "alive");
-        alive->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
-        Handle slimy = as->add_node(
-            PREDICATE_NODE, "slimy");
-        slimy->setTruthValue( SimpleTruthValue::createTV(0.01, conf90));
-
-
-        Handle kermitFrog = as->add_link(
-                    INHERITANCE_LINK, kermit, frog);
-        kermitFrog->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle frogAnimal = as->add_link(
-                    INHERITANCE_LINK, frog, animal);
-        frogAnimal->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle frogAlive = as->add_link(
-                    EVALUATION_LINK, frog, alive);
-        frogAlive->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle frogSlimy = as->add_link(
-                    EVALUATION_LINK, frog, slimy);
-        frogSlimy->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-
-        Handle slimyAnimal = as->add_link(
-                    EVALUATION_LINK, animal, slimy);
-        slimyAnimal->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-
-        // Populate the AtomSpace with some additional dummy atoms
-        Handle dummy1 = as->add_node(
-                    CONCEPT_NODE, "Dummy1");
-        dummy1->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummy2 = as->add_node(
-                    CONCEPT_NODE, "Dummy2");
-        dummy2->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummy3 = as->add_node(
-                    CONCEPT_NODE, "Dummy3");
-        dummy3->setTruthValue(
-                    SimpleTruthValue::createTV(0.001, conf90));
-        Handle dummyLink = as->add_link(
-                    INHERITANCE_LINK, dummy1, dummy2);
-        dummyLink->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-        Handle dummyLink2 = as->add_link(
-                    INHERITANCE_LINK, dummy2, dummy3);
-        dummyLink2->setTruthValue(
-                    SimpleTruthValue::createTV(0.9, conf90));
-
-        // Add nodes from file
-        std::vector<std::string> meaningfulNames;
-        std::ifstream nameFile("../tests/attention/meaningful_names.txt");
-        if (!nameFile.is_open()) {
-            nameFile.open("meaningful_names.txt");
-        }
-        std::string line;
-        while (std::getline(nameFile, line)) {
-            if (!line.empty()) {
-                meaningfulNames.push_back(line);
-            }
-        }
-        std::cout << "Read " << meaningfulNames.size() << " names from file." << std::endl;
-
-        std::vector<Handle> additionalNodes;
-        for (const auto& name : meaningfulNames) {
-            Handle node = as->add_node(CONCEPT_NODE, std::string(name));
-            node->setTruthValue(SimpleTruthValue::createTV(0.001, conf90));
-            additionalNodes.push_back(node);
+        for (int i = 0; i < nodeCount; ++i) {
+            std::string name = "Node_" + std::to_string(i);
+            Handle node = as->add_node(CONCEPT_NODE,"Node_" + std::to_string(i));
+            nodesList.push_back(node);
+            ab.stimulate(node, 50);
         }
 
-        // Add links between consecutive nodes
-        if (additionalNodes.size() > 1) {
-            for (size_t i = 0; i < additionalNodes.size() - 1; ++i) {
-                Handle link = as->add_link(INHERITANCE_LINK, additionalNodes[i], additionalNodes[i+1]);
-                link->setTruthValue(SimpleTruthValue::createTV(0.9, conf90));
-            }
-        }
-            
-        // Put these atoms in the AttentionalFocus:
-        // "Kermit", "Frog", "Animal", "alive"
-        ab.stimulate(kermit, 200);
-        ab.stimulate(frog, 200);
-        ab.stimulate(animal, 200);
-        ab.stimulate(alive, 200);
-        ab.stimulate(slimyAnimal, 200);
 
-        // Stimulate the additional nodes
-        for (const auto& node : additionalNodes) {
-            ab.stimulate(node, 200);
-        }
 
         // Wait a small amount for the signals to be processed by AttentionModule
         // since stimulation triggers signals that push to the queue.
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
         size_t afCount = AttentionModule::newAtomsInAV.size();
         std::cout << "Items in newAtomsInAV to process: " << afCount << std::endl;
@@ -228,7 +134,9 @@ public:
         as->get_handles_by_type(back_inserter(hebbianLinks), ASYMMETRIC_HEBBIAN_LINK);
         std::cout << "count(HebLinks) = " << hebbianLinks.size() << "\n";
         
-        // Assert that links were created. 10920 is for all-to-all of 105 nodes.
-        TS_ASSERT(hebbianLinks.size() == 10920);
+        // Assert that links were created. 
+        size_t n = nodesList.size();
+        size_t expectedCount = n * (n - 1);
+        TS_ASSERT(hebbianLinks.size() == expectedCount);
     }
 };

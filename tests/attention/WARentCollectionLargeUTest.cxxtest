@@ -61,43 +61,48 @@ public:
         AttentionBank& ab = attentionbank(as);
         
         // 1. Restrict AF size
-        ab.set_af_size(10);
+        ab.set_af_size(100);
         std::cout << "AF size restricted to: " << ab.get_af_size() << std::endl;
 
         // 2. Populate with large number of atoms
-        int atomCount = 1000;
+        int atomCount = 101;
         std::cout << "Creating " << atomCount << " atoms..." << std::endl;
         std::vector<Handle> atoms;
         for (int i = 0; i < atomCount; ++i) {
             Handle h = as->add_node(CONCEPT_NODE, "WANode_" + std::to_string(i));
             // Keep STI low so they stay outside AF
-            ab.set_sti(h, 100);
+            ab.stimulate(h, 45);
             atoms.push_back(h);
         }
 
         // Wait a bit to ensure elapsed_time > 0 for rent calculation
         std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
-        // Get initial STI of first 5 atoms
-        std::vector<AttentionValue::sti_t> initialSTIs;
-        for (int i = 0; i < 5; ++i) {
-            initialSTIs.push_back(get_sti(atoms[i]));
-        }
-
         // 3. Benchmark WARentCollectionAgent::run()
         int runCount = 5;
         std::cout << "Benchmarking WARentCollectionAgent::run() for " << runCount << " cycles..." << std::endl;
-        
-        auto start = std::chrono::high_resolution_clock::now();
+        float x = get_sti(atoms[100]);
+        std::chrono::nanoseconds total_work_time(0);
         for (int i = 0; i < runCount; ++i) {
+            // Stimulate a subset of atoms to ensure they have recent activity
+            for (size_t j = 0; j < atoms.size(); ++j) {
+                ab.stimulate(atoms[j], 10);
+            }
+            std::this_thread::sleep_for(std::chrono::milliseconds(500)); 
+            
+            auto start_run = std::chrono::high_resolution_clock::now();
             _wagent->run();
+            auto end_run = std::chrono::high_resolution_clock::now();
+            
+            total_work_time += std::chrono::duration_cast<std::chrono::nanoseconds>(end_run - start_run);
         }
-        auto end = std::chrono::high_resolution_clock::now();
-        
-        std::chrono::duration<double> diff = end - start;
+         double total_seconds = std::chrono::duration<double>(total_work_time).count();
+
         std::cout << "Benchmark Finished." << std::endl;
-        std::cout << "Total time for " << runCount << " runs with " << atomCount << " atoms: " << diff.count() << " seconds." << std::endl;
-        std::cout << "Average time per run: " << (diff.count() / runCount) << " seconds." << std::endl;
+                std::cout <<"sti of last atom before run "<<x<<std::endl;
+        std::cout <<"sti of last atom "<<get_sti(atoms[100])<<std::endl;
+        std::cout << "Total time for " << runCount << " runs with " << atomCount << " atoms: " << total_seconds << " seconds." << std::endl;
+        std::cout << "Average time per run: " << (total_seconds / runCount) << " seconds." << std::endl;
 
  
     }

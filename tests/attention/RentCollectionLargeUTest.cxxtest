@@ -23,6 +23,7 @@ private:
     AFRentCollectionAgent* _afrentcollection_agent;
     CogServer* _cogserver;
     Scheduler* _scheduler;
+    std::vector<Handle> atomHandles;
 
 public:
     void setUp()
@@ -52,6 +53,7 @@ public:
 
     void tearDown()
     {
+        atomHandles.clear();
         delete _afrentcollection_agent;
         _cogserver->stop();
         std::cout << "TearDown completed for RentCollectionLargeUTest." << std::endl;
@@ -61,29 +63,34 @@ public:
     {
         AttentionBank& ab = attentionbank(as);
         
-        // 1. Scale AF to 1000
-        ab.set_af_size(100);
+        // 1. Scale AF to 
+        ab.set_af_size(150);
 
-        // 2. Create 1000 atoms and stimulate them high
-        int atomCount = 1000;
+        // 2. Create atoms and stimulate them high
+        int atomCount = 150;
+        atomHandles.reserve(atomCount);
         for (int i = 0; i < atomCount; ++i) {
-            Handle h = as->add_node(CONCEPT_NODE, "ScaleNode_" + std::to_string(i));
-            ab.stimulate(h, 300.0); // Sufficient to enter AF
+            Handle h = as->add_node(CONCEPT_NODE, "Node_" + std::to_string(i));
+            atomHandles.push_back(h);
+            ab.stimulate(h, 30); // Sufficient to enter AF
         }
         _afrentcollection_agent->run();
         // Wait for setup to settle
-        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
 
         // 3. Benchmark Rent Collection
         // We measure only the active work time of run(), excluding the sleeps
-        int runCount = 1;
+        int runCount = 5;
         std::chrono::nanoseconds total_work_time(0);
         
         for (int i = 0; i < runCount; ++i) {
             // Sleep to satisfy the frequency check in AFRentCollectionAgent (default 5Hz = 200ms)
             // This ensures each cycle actually performs rent collection arithmetic.
-            std::this_thread::sleep_for(std::chrono::milliseconds(210)); 
-
+            for (size_t j = 0; j < atomHandles.size(); ++j) {
+                ab.stimulate(atomHandles[j], 10);
+            }
+            std::this_thread::sleep_for(std::chrono::milliseconds(300)); 
+            
             auto start_run = std::chrono::high_resolution_clock::now();
             _afrentcollection_agent->run();
             auto end_run = std::chrono::high_resolution_clock::now();
@@ -94,7 +101,7 @@ public:
         double total_seconds = std::chrono::duration<double>(total_work_time).count();
         
         std::cout << "Benchmark Finished." << std::endl;
-        std::cout << "Processed " << runCount << " active cycles with 1000 atoms in AF." << std::endl;
+        std::cout << "Processed " << runCount << " active cycles with " << atomCount << " atoms in AF." << std::endl;
         std::cout << "Total execution time (excluding sleeps): " << total_seconds << " seconds." << std::endl;
         std::cout << "Average execution time per active cycle: " << (total_seconds / runCount) << " seconds." << std::endl;
     }

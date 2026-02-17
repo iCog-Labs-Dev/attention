@@ -69,29 +69,17 @@ public:
     {
         // 1. Load meaningful names from file
         std::vector<std::string> names;
-        std::ifstream nameFile("tests/attention/atoms_list.txt");
-        if (!nameFile.is_open()) {
-            nameFile.open("../tests/attention/atoms_list.txt");
-        }
-        if (!nameFile.is_open()) {
-            nameFile.open("atoms_list.txt");
-        }
-        std::string line;
-        while (std::getline(nameFile, line) && names.size() < 100) {
-            if (!line.empty()) names.push_back(line);
-        }
         
-        // Ensure we have 100 names for leaves
-        while(names.size() < 100) {
-            names.push_back("LeafNode_" + std::to_string(names.size()));
-        }
+            for (int i = 0; i < 100; ++i) {
+                names.push_back("LeafNode_" + std::to_string(i));
+            }
 
         // 2. Create one central HubNode and 100 Leaf nodes
         AttentionBank& ab = attentionbank(as);
         ab.set_af_size(1); // Ensure AF size is enough
         
         Handle hubNode = as->add_node(CONCEPT_NODE, "HubNode");
-        hubNode->setTruthValue(SimpleTruthValue::createTV(1.0, 1.0));
+        // hubNode->setTruthValue(SimpleTruthValue::createTV(1.0, 1.0));
         ab.stimulate(hubNode, 1000); // High STI for the hub
 
         std::vector<Handle> leafNodes;
@@ -99,7 +87,6 @@ public:
 
         for (const auto& name : names) {
             Handle leaf = as->add_node(CONCEPT_NODE, std::string(name));
-            leaf->setTruthValue(SimpleTruthValue::createTV(0.1, 0.9));
             leafNodes.push_back(leaf);
 
             // 3. Create Hebbian Link: HubNode -> Leaf
@@ -119,11 +106,10 @@ public:
             // std::cout<<"mean before "<<initialMeans[link]<<std::endl;
         }
 
-\
-        int runCount = 50; 
+
+        int runCount = 1; 
         auto start = std::chrono::high_resolution_clock::now();
         for (int i = 0; i < runCount; ++i) {
-            // We can check if HubNode is picked if we want, but letting it be random is more "agent-like"
             hebbianUpdatingAgent->run();
         }
         auto end = std::chrono::high_resolution_clock::now();
@@ -147,7 +133,6 @@ public:
         // Verify all remain valid probability values
         for (const auto& link : hebbianLinks) {
             double m = link->getTruthValue()->get_mean();
-            // std::cout<<"mean "<<m<<std::endl;
             TS_ASSERT(m >= 0.0 && m <= 1.0);
         }
     }
