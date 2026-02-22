@@ -71,7 +71,7 @@ public:
         for (int i = 0; i < atomCount; ++i) {
             Handle h = as->add_node(CONCEPT_NODE, "WANode_" + std::to_string(i));
             // Keep STI low so they stay outside AF
-            ab.stimulate(h, 45);
+            ab.stimulate(h, 50);
             atoms.push_back(h);
         }
 
@@ -79,21 +79,21 @@ public:
         std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
         // 3. Benchmark WARentCollectionAgent::run()
-        int runCount = 5;
+        int runCount = 10;
         std::cout << "Benchmarking WARentCollectionAgent::run() for " << runCount << " cycles..." << std::endl;
         float x = get_sti(atoms[100]);
         std::chrono::nanoseconds total_work_time(0);
         for (int i = 0; i < runCount; ++i) {
             // Stimulate a subset of atoms to ensure they have recent activity
-            for (size_t j = 0; j < atoms.size(); ++j) {
-                ab.stimulate(atoms[j], 10);
-            }
-            std::this_thread::sleep_for(std::chrono::milliseconds(500)); 
+            
             
             auto start_run = std::chrono::high_resolution_clock::now();
             _wagent->run();
             auto end_run = std::chrono::high_resolution_clock::now();
-            
+            for (size_t j = 0; j < atoms.size(); ++j) {
+                ab.stimulate(atoms[j], 10);
+            }
+            std::this_thread::sleep_for(std::chrono::milliseconds(500)); 
             total_work_time += std::chrono::duration_cast<std::chrono::nanoseconds>(end_run - start_run);
         }
          double total_seconds = std::chrono::duration<double>(total_work_time).count();

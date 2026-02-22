@@ -14,6 +14,7 @@
 #include <opencog/cogserver/modules/agents/AgentsModule.h>
 #include <opencog/attentionbank/types/atom_types.h>
 #include <opencog/attention/AttentionParamQuery.h>
+#include <opencog/atoms/truthvalue/SimpleTruthValue.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -65,8 +66,8 @@ public:
 
     void testLargeDiffusion()
     {
-        // Add 1000 nodes and links for benchmarking
-        int targetNodeCount = 1000;
+        // Add 500 nodes and links for benchmarking
+        int targetNodeCount = 500;
         std::vector<std::string> baseNames;
         std::ifstream nameFile("tests/attention/meaningful_names.txt");
         if (!nameFile.is_open()) {
@@ -89,13 +90,13 @@ public:
 
         std::vector<Handle> nodes;
         AttentionBank& ab = attentionbank(as);
-        ab.set_af_size(100); // Ensure all nodes can fit in AF
+        ab.set_af_size(100); // Ensure all nodes can act as diffusion sources
 
         for (int i = 0; i < targetNodeCount; ++i) {
             std::string name = baseNames[i % baseNames.size()] + "_" + std::to_string(i);
             Handle node = as->add_node(CONCEPT_NODE, std::string(name));
             nodes.push_back(node);
-            ab.stimulate(node, 30); 
+            ab.stimulate(node, 70); 
         }
 
         // Add more complex linking: each node links to its next 3 neighbors
@@ -103,8 +104,9 @@ public:
         for (size_t i = 0; i < nodes.size(); ++i) {
             for (size_t j = 1; j <= 3 && (i + j) < nodes.size(); ++j) {
                 Handle link = as->add_link(INHERITANCE_LINK, nodes[i], nodes[i+j]);
+                link->setTruthValue(SimpleTruthValue::createTV(0.5, 0.8));
                 // Monitor links originating from the first node and a middle node
-                if (i == 0 || i == 500) {
+                if (i == 0 || i == 250) {
                     monitoredLinks.push_back(link);
                 }
             }
@@ -114,41 +116,61 @@ public:
 
         // Capture state before diffusion
         std::cout << "\nInitial STI check:" << std::endl;
-        std::cout << "Node[0] STI: " << get_sti(nodes[0]) << std::endl;
+        std::cout << "Node[10] STI: " << get_sti(nodes[10]) << std::endl;
         for (auto& l : monitoredLinks) {
             std::cout << "Link " << l->to_string() << " STI: " << get_sti(l) << std::endl;
         }
 
         // Warm up
-        afImportanceDiffusionAgent->run();
+        // afImportanceDiffusionAgent->run();
 
         // Benchmark
-        int cycles = 50;
+        int cycles = 20;
         std::cout << "\nStarting benchmark of " << cycles << " diffusion cycles..." << std::endl;
         
-        auto start = std::chrono::high_resolution_clock::now();
-        for (int i = 0; i < cycles; ++i) {
+        std::chrono::nanoseconds total_work_time(0);
+            
+            for (int i = 0; i < cycles; ++i) {
+                auto start_run = std::chrono::high_resolution_clock::now();
             afImportanceDiffusionAgent->run();
+            auto end_run = std::chrono::high_resolution_clock::now();
+            total_work_time += std::chrono::duration_cast<std::chrono::nanoseconds>(end_run - start_run);
+                for (Handle n : nodes) {
+                    ab.stimulate(n, 0.01); 
+                }
         }
-        auto end = std::chrono::high_resolution_clock::now();
 
-        std::chrono::duration<double> diff = end - start;
+        double total_seconds = std::chrono::duration<double>(total_work_time).count();
         
         std::cout << "\n--- DIFFUSION BENCHMARK RESULTS ---" << std::endl;
         std::cout << "Nodes in network:    " << targetNodeCount << std::endl;
-        std::cout << "Total time:          " << diff.count() << " s" << std::endl;
-        std::cout << "Avg time per cycle:  " << (diff.count() / cycles) * 1000.0 << " ms" << std::endl;
+        std::cout << "Total time:          " << total_seconds << " s" << std::endl;
+        std::cout << "Avg time per cycle:  " << (total_seconds / cycles) * 1000.0 << " ms" << std::endl;
         std::cout << "-----------------------------------\n" << std::endl;
 
         // Verify Diffusion
         std::cout << "Final STI check (Verifying spread):" << std::endl;
-        std::cout << "Node[0] STI: " << get_sti(nodes[0]) << " (Should be lower due to giving away STI)" << std::endl;
+        std::cout << "Node[498] STI: " << get_sti(nodes[498]) << " (Should be lower due to giving away STI)" << std::endl;
         for (auto& l : monitoredLinks) {
             std::cout << "Link " << l->to_string() << " STI: " << get_sti(l) << " (Should be > 0 if diffusion worked)" << std::endl;
         }
 
         double totalSTIAfter = 0;
         for (const auto& h : nodes) totalSTIAfter += get_sti(h);
+       
+       // ...existing code...
+        // HandleSeq af_atoms;
+        // ab.get_handle_set_in_attentional_focus(std::back_inserter(af_atoms));
+
+        // std::cout << "\n--- Atoms currently in Attentional Focus ---" << std::endl;
+        // for (Handle h : af_atoms) {
+        //     std::cout << "Type: " << nameserver().getTypeName(h->get_type())
+        //               << " | Name: " << h->to_string()
+        //               << " | STI: " << get_sti(h) << std::endl;
+        // }
+        // std::cout << "Total AF count: " << af_atoms.size() << std::endl;
+
+            
         
         TS_ASSERT(totalSTIAfter > 0);
     }

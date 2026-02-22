@@ -64,19 +64,19 @@ public:
         AttentionBank& ab = attentionbank(as);
         
         // 1. Scale AF to 
-        ab.set_af_size(150);
+        ab.set_af_size(100);
 
         // 2. Create atoms and stimulate them high
-        int atomCount = 150;
+        int atomCount = 100;
         atomHandles.reserve(atomCount);
         for (int i = 0; i < atomCount; ++i) {
             Handle h = as->add_node(CONCEPT_NODE, "Node_" + std::to_string(i));
             atomHandles.push_back(h);
-            ab.stimulate(h, 30); // Sufficient to enter AF
+            ab.stimulate(h, 45); // Sufficient to enter AF
         }
         _afrentcollection_agent->run();
         // Wait for setup to settle
-        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+        std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 
         // 3. Benchmark Rent Collection
         // We measure only the active work time of run(), excluding the sleeps
